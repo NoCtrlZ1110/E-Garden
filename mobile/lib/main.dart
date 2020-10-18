@@ -1,4 +1,7 @@
+import 'package:e_garden/screens/signin.dart';
 import 'package:flutter/material.dart';
+
+import 'configs/AppConfig.dart';
 
 void main() {
   runApp(E_Garden());
@@ -13,6 +16,7 @@ class E_Garden extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
         visualDensity: VisualDensity.adaptivePlatformDensity,
+        fontFamily: 'QuickSand',
       ),
       home: HomePage(title: 'E-Garden'),
       debugShowCheckedModeBanner: false,
@@ -30,18 +34,11 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-
   @override
   Widget build(BuildContext context) {
-
+    SizeConfig().init(context);
     return Scaffold(
-      appBar: AppBar(
-
-        title: Text(widget.title),
-      ),
-      body: Center(
-
-      ),
+      body: SignIn(),
     );
   }
 }

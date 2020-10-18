@@ -24,6 +24,8 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_launcher_icons: ^0.8.1
+  flutter_form_builder: ^3.14.0
+
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -63,6 +65,16 @@ flutter:
 
   # For details regarding adding assets from package dependencies, see
   # https://flutter.dev/assets-and-images/#from-packages
+
+  fonts:
+    - family: Quicksand
+      fonts:
+        - asset: assets/fonts/Quicksand-Regular.ttf
+        - asset: assets/fonts/Quicksand-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Quicksand-SemiBold.ttf
+          weight: 500
+
 
   # To add custom fonts to your application, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a
