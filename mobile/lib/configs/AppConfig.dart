@@ -29,9 +29,9 @@ class AppColors {
   static const Color teal = Color(0xFF4FC1A6);
   static const Color yellow = Color(0xFFF6C747);
   static const Color violet = Color(0xD07038F8);
-  static const Color buttonShadow = Color(0xFF118bfa);
-  static const Color buttonBlend1 = Color(0xFF0edbf8);
-  static const Color buttonBlend2 = Color(0xFF118BFA);
+  static const Color buttonShadow = Color(0xFF1ea88d);
+  static const Color buttonBlend1 = Color(0xFF3DCC85);
+  static const Color buttonBlend2 = Color(0xFF4FC1A6);
 }
 
 class SizeConfig {
