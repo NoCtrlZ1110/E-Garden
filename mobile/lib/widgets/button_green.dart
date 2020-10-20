@@ -2,13 +2,13 @@ import 'package:e_garden/configs/AppConfig.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class CustomButtonBlue extends StatefulWidget {
+class ButtonGreen extends StatefulWidget {
   final String text;
   final double height, width;
   final Icon icon;
   final Function press;
 
-  CustomButtonBlue({
+  ButtonGreen({
     Key key,
     @required this.height,
     @required this.width,
@@ -20,11 +20,11 @@ class CustomButtonBlue extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
-    return _CustomButtonBlueState();
+    return _ButtonGreenState();
   }
 }
 
-class _CustomButtonBlueState extends State<CustomButtonBlue> {
+class _ButtonGreenState extends State<ButtonGreen> {
   bool animated = true;
 
   @override
@@ -65,16 +65,24 @@ class _CustomButtonBlueState extends State<CustomButtonBlue> {
                     gradient: LinearGradient(
                         begin: Alignment.centerLeft,
                         end: Alignment.centerRight,
-                        colors: [AppColors.buttonBlend1, AppColors.buttonBlend2]),
+                        colors: [
+                          AppColors.buttonBlend1,
+                          AppColors.buttonBlend2
+                        ]),
                     borderRadius: BorderRadius.circular(90),
                   ),
                   child: Row(children: [
                     Expanded(child: SizedBox()),
                     (widget.icon != null) ? widget.icon : SizedBox(),
-                    (widget.icon != null) ? Expanded(child: SizedBox()) : SizedBox(),
+                    (widget.icon != null)
+                        ? Expanded(child: SizedBox())
+                        : SizedBox(),
                     Text(
                       widget.text,
-                      style: TextStyle(color: Colors.white, fontSize: widget.height / 3, fontWeight: FontWeight.w600),
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: widget.height / 3,
+                          fontWeight: FontWeight.w600),
                     ),
                     Expanded(child: SizedBox()),
                   ]),

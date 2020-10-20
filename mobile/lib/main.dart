@@ -20,6 +20,7 @@ class E_Garden extends StatelessWidget {
       ),
       home: HomePage(title: 'E-Garden'),
       debugShowCheckedModeBanner: false,
+      color: AppColors.green,
     );
   }
 }

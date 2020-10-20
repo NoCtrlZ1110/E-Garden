@@ -1,6 +1,6 @@
 import 'package:e_garden/configs/AppConfig.dart';
 import 'package:e_garden/screens/home.dart';
-import 'package:e_garden/widgets/custom_button_blue.dart';
+import 'package:e_garden/widgets/button_green.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
@@ -35,7 +35,10 @@ class _SignInState extends State<SignIn> {
               ),
               Text(
                 "E-Garden",
-                style: TextStyle(fontSize: 50, color: AppColors.green),
+                style: TextStyle(
+                    fontSize: 50,
+                    color: AppColors.green,
+                    fontWeight: FontWeight.w600),
               ),
               SizedBox(
                 height: SizeConfig.screenHeight * 0.05,
@@ -136,7 +139,7 @@ class _SignInState extends State<SignIn> {
               SizedBox(
                 height: SizeConfig.safeBlockVertical * 5,
               ),
-              CustomButtonBlue(
+              ButtonGreen(
                   height: SizeConfig.safeBlockVertical * 7,
                   width: SizeConfig.safeBlockHorizontal * 40,
                   text: "Log In",
