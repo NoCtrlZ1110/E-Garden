@@ -4,6 +4,10 @@ import 'package:e_garden/widgets/text_app_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'learn/grammar.dart';
+import 'learn/listening.dart';
+import 'learn/vocabulary.dart';
+
 class LearnScreen extends StatefulWidget {
   @override
   _LearnScreenState createState() => _LearnScreenState();
@@ -29,7 +33,7 @@ class _LearnScreenState extends State<LearnScreen> {
                 press: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) {}),
+                    MaterialPageRoute(builder: (context) => VocabularyScreen()),
                   );
                 },
               ),
@@ -44,7 +48,7 @@ class _LearnScreenState extends State<LearnScreen> {
                 press: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) {}),
+                    MaterialPageRoute(builder: (context) => GrammarScreen()),
                   );
                 },
               ),
@@ -59,7 +63,7 @@ class _LearnScreenState extends State<LearnScreen> {
                 press: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) {}),
+                    MaterialPageRoute(builder: (context) => ListeningScreen()),
                   );
                 },
               ),
