@@ -14,10 +14,9 @@ class E_Garden extends StatelessWidget {
     return MaterialApp(
       title: 'E-Garden',
       theme: ThemeData(
-        primarySwatch: Colors.green,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-        fontFamily: 'QuickSand',
-      ),
+          primarySwatch: Colors.green,
+          visualDensity: VisualDensity.adaptivePlatformDensity,
+          fontFamily: 'QuickSand'),
       home: HomePage(title: 'E-Garden'),
       debugShowCheckedModeBanner: false,
       color: AppColors.green,
