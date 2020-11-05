@@ -1,119 +1,104 @@
-import express from "express";
-import compression from "compression";  // compresses requests
-import session from "express-session";
-import bodyParser from "body-parser";
-import lusca from "lusca";
-import mongo from "connect-mongo";
-import flash from "express-flash";
-import path from "path";
-import mongoose from "mongoose";
-import passport from "passport";
-import bluebird from "bluebird";
-import { MONGODB_URI, SESSION_SECRET } from "./util/secrets";
+import * as cookieParser from 'cookie-parser';
+import * as cors from 'cors';
+import * as express from 'express';
+import * as helmet from 'helmet';
+import * as hpp from 'hpp';
+import * as mongoose from 'mongoose';
+import * as logger from 'morgan';
+import Routes from './interfaces/routes.interface';
+import errorMiddleware from './middlewares/error.middleware';
 
-const MongoStore = mongo(session);
+class App {
+    public app: express.Application;
+    public port: (string | number);
+    public env: boolean;
+    express = require("express");
+    url = require("url");
+    swagger = require("swagger-node-express");
 
-// Controllers (route handlers)
-import * as homeController from "./controllers/home";
-import * as userController from "./controllers/user";
-import * as apiController from "./controllers/api";
-import * as contactController from "./controllers/contact";
+    constructor(routes: Routes[]) {
+        this.app = express();
+        this.port = process.env.PORT || 3000;
+        this.env = process.env.NODE_ENV === 'production';
 
-
-// API keys and Passport configuration
-import * as passportConfig from "./config/passport";
-
-// Create Express server
-const app = express();
-
-// Connect to MongoDB
-const mongoUrl = MONGODB_URI;
-mongoose.Promise = bluebird;
-
-mongoose.connect(mongoUrl, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true } ).then(
-    () => { /** ready to use. The `mongoose.connect()` promise resolves to undefined. */ },
-).catch(err => {
-    console.log(`MongoDB connection error. Please make sure MongoDB is running. ${err}`);
-    // process.exit();
-});
-
-// Express configuration
-app.set("port", process.env.PORT || 3000);
-app.set("views", path.join(__dirname, "../views"));
-app.set("view engine", "pug");
-app.use(compression());
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(session({
-    resave: true,
-    saveUninitialized: true,
-    secret: SESSION_SECRET,
-    store: new MongoStore({
-        url: mongoUrl,
-        autoReconnect: true
-    })
-}));
-app.use(passport.initialize());
-app.use(passport.session());
-app.use(flash());
-app.use(lusca.xframe("SAMEORIGIN"));
-app.use(lusca.xssProtection(true));
-app.use((req, res, next) => {
-    res.locals.user = req.user;
-    next();
-});
-app.use((req, res, next) => {
-    // After successful login, redirect back to the intended page
-    if (!req.user &&
-    req.path !== "/login" &&
-    req.path !== "/signup" &&
-    !req.path.match(/^\/auth/) &&
-    !req.path.match(/\./)) {
-        req.session.returnTo = req.path;
-    } else if (req.user &&
-    req.path == "/account") {
-        req.session.returnTo = req.path;
+        this.connectToDatabase();
+        this.initializeMiddlewares();
+        this.initializeRoutes(routes);
+        this.initializeSwagger();
+        this.initializeErrorHandling();
     }
-    next();
-});
 
-app.use(
-    express.static(path.join(__dirname, "public"), { maxAge: 31557600000 })
-);
+    public listen() {
+        this.app.listen(this.port, () => {
+            console.log(`🚀 App listening on the port ${this.port}`);
+        });
+    }
 
-/**
- * Primary app routes.
- */
-app.get("/", homeController.index);
-app.get("/login", userController.getLogin);
-app.post("/login", userController.postLogin);
-app.get("/logout", userController.logout);
-app.get("/forgot", userController.getForgot);
-app.post("/forgot", userController.postForgot);
-app.get("/reset/:token", userController.getReset);
-app.post("/reset/:token", userController.postReset);
-app.get("/signup", userController.getSignup);
-app.post("/signup", userController.postSignup);
-app.get("/contact", contactController.getContact);
-app.post("/contact", contactController.postContact);
-app.get("/account", passportConfig.isAuthenticated, userController.getAccount);
-app.post("/account/profile", passportConfig.isAuthenticated, userController.postUpdateProfile);
-app.post("/account/password", passportConfig.isAuthenticated, userController.postUpdatePassword);
-app.post("/account/delete", passportConfig.isAuthenticated, userController.postDeleteAccount);
-app.get("/account/unlink/:provider", passportConfig.isAuthenticated, userController.getOauthUnlink);
+    public getServer() {
+        return this.app;
+    }
 
-/**
- * API examples routes.
- */
-app.get("/api", apiController.getApi);
-app.get("/api/facebook", passportConfig.isAuthenticated, passportConfig.isAuthorized, apiController.getFacebook);
+    private initializeMiddlewares() {
+        if (this.env) {
+            this.app.use(hpp());
+            this.app.use(helmet());
+            this.app.use(logger('combined'));
+            this.app.use(cors({origin: 'your.domain.com', credentials: true}));
+        } else {
+            this.app.use(logger('dev'));
+            this.app.use(cors({origin: true, credentials: true}));
+        }
 
-/**
- * OAuth authentication routes. (Sign in)
- */
-app.get("/auth/facebook", passport.authenticate("facebook", { scope: ["email", "public_profile"] }));
-app.get("/auth/facebook/callback", passport.authenticate("facebook", { failureRedirect: "/login" }), (req, res) => {
-    res.redirect(req.session.returnTo || "/");
-});
+        this.app.use(express.json());
+        this.app.use(express.urlencoded({extended: true}));
+        this.app.use(cookieParser());
+    }
 
-export default app;
+    private initializeRoutes(routes: Routes[]) {
+        routes.forEach((route) => {
+            this.app.use('/', route.router);
+        });
+    }
+
+    private initializeErrorHandling() {
+        this.app.use(errorMiddleware);
+    }
+
+    private connectToDatabase() {
+        const {MONGO_USER, MONGO_PASSWORD, MONGO_PATH, MONGO_DATABASE} = process.env;
+        const options = {
+            useCreateIndex: true,
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+            useFindAndModify: false
+        };
+        if (MONGO_USER==''){
+            mongoose.connect(`mongodb://${MONGO_PATH}/${MONGO_DATABASE}`, {...options});
+
+        } else {
+            mongoose.connect(`mongodb://${MONGO_USER}:${MONGO_PASSWORD}${MONGO_PATH}/${MONGO_DATABASE}`, {...options});
+        }
+    }
+    private initializeSwagger() {
+        const swaggerJSDoc = require('swagger-jsdoc');
+        const swaggerUi = require('swagger-ui-express');
+
+        const options = {
+            swaggerDefinition: {
+                info: {
+                    title: 'REST API',
+                    version: '1.0.0',
+                    description: 'Example docs',
+                },
+            },
+            apis: ['swagger.yaml'],
+        };
+
+        const specs = swaggerJSDoc(options);
+        this.app.use('/swagger', swaggerUi.serve, swaggerUi.setup(specs));
+    }
+
+
+}
+
+export default App;
