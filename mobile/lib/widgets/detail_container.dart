@@ -8,18 +8,23 @@ import 'button_green.dart';
 class DetailContainer extends StatefulWidget {
   String text_type;
   String text_description;
+  Function previous;
+  Function next;
 
-  DetailContainer({
-    Key key,
-    @required this.text_type,
-    @required this.text_description,
-  }) : super(key: key);
+  DetailContainer(
+      {Key key,
+      @required this.text_type,
+      @required this.text_description,
+      this.previous,
+      this.next})
+      : super(key: key);
 
   @override
   _DetailContainerState createState() => _DetailContainerState();
 }
 
 class _DetailContainerState extends State<DetailContainer> {
+  bool bookmark = false;
   @override
   Widget build(BuildContext context) {
     return DottedBorder(
@@ -43,11 +48,17 @@ class _DetailContainerState extends State<DetailContainer> {
               top: 20,
             ),
             Positioned(
-              child: Icon(
-                Icons.bookmark_border,
-                color: AppColors.red,
-                size: 45,
-              ),
+              child: GestureDetector(
+                  onTap:  () {
+                    setState(() {
+                      bookmark = !bookmark;
+                    });
+                  },
+                  child: Icon(
+                    bookmark ? Icons.bookmark_outlined : Icons.bookmark_border,
+                    color: AppColors.red,
+                    size: 45,
+                  )),
               top: 20,
               right: 20,
             ),
@@ -61,6 +72,11 @@ class _DetailContainerState extends State<DetailContainer> {
             ),
             Positioned(
               child: ButtonGreen(
+                press: () {
+                  if (widget.previous != null) {
+                    widget.previous();
+                  }
+                },
                 height: 40,
                 width: 130,
                 text: 'previous',
@@ -70,6 +86,11 @@ class _DetailContainerState extends State<DetailContainer> {
             ),
             Positioned(
               child: ButtonGreen(
+                press: () {
+                  if (widget.previous != null) {
+                    widget.next();
+                  }
+                },
                 height: 40,
                 width: 130,
                 text: 'next',
