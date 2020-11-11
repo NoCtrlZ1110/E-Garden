@@ -8,8 +8,9 @@ class UsersController {
     public userService = new NoteService();
 
     public getUsers = async (req: Request, res: Response, next: NextFunction) => {
+        const userId: string = req.params.id;
         try {
-            const findAllUsersData: Note[] = await this.userService.findAllUser();
+            const findAllUsersData: Note[] = await this.userService.findNotes(userId);
             res.status(200).json({ data: findAllUsersData, message: 'findAll' });
         } catch (error) {
             next(error);

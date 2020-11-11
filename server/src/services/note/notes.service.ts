@@ -1,12 +1,12 @@
 import noteModel from "../../models/note/notes.model";
-import {Note} from "../../interfaces/note/note.interface";
+import { Note } from "../../interfaces/note/note.interface";
 
 
 class NoteService {
     public notes = noteModel;
 
-    public async findAllUser(): Promise<Note[]> {
-        const notes: Note[] = await this.notes.find();
+    public async findNotes(userId: string): Promise<Note[]> {
+        const notes: Note[] = await this.notes.find({ userId: userId });
         return notes;
     }
 
