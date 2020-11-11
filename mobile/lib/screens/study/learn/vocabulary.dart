@@ -1,8 +1,17 @@
+<<<<<<< HEAD
+=======
+import 'dart:convert';
+
+>>>>>>> 8940da5cf9d525b22e87d02ce8c6ea8256d6a903
 import 'package:e_garden/configs/AppConfig.dart';
 import 'package:e_garden/widgets/detail_container.dart';
 import 'package:e_garden/widgets/text_app_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
+=======
+import 'package:flutter/services.dart';
+>>>>>>> 8940da5cf9d525b22e87d02ce8c6ea8256d6a903
 
 class VocabularyScreen extends StatefulWidget {
   @override
@@ -10,10 +19,52 @@ class VocabularyScreen extends StatefulWidget {
 }
 
 class _VocabularyScreenState extends State<VocabularyScreen> {
+<<<<<<< HEAD
   String word = 'Rain';
   String meaning = 'Cơn mưa';
   String type = 'Noun';
   String description = "don't go out in the rain\ntrời mưa đừng đi ra ngoài";
+=======
+  var data;
+  int index = 0;
+
+  next() {
+    if (data != null) {
+      setState(() {
+        if (index + 2 > data.length)
+          index = 0;
+        else
+          index++;
+      });
+    }
+  }
+
+  previous() {
+    if (data != null) {
+      setState(() {
+        if (index - 1 < 0)
+          index = data.length - 1;
+        else
+          index--;
+      });
+    }
+  }
+
+  loadJson() async {
+    String fakedata =
+        await rootBundle.loadString('assets/data/vocabulary.json');
+    setState(() {
+      data = json.decode(fakedata);
+    });
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    loadJson();
+  }
+>>>>>>> 8940da5cf9d525b22e87d02ce8c6ea8256d6a903
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +102,11 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
                   ],
                 ),
                 child: Text(
+<<<<<<< HEAD
                   word,
+=======
+                  data != null ? data.elementAt(index)["word"] : 'null',
+>>>>>>> 8940da5cf9d525b22e87d02ce8c6ea8256d6a903
                   style: TextStyle(
                       fontSize: 50,
                       color: AppColors.green,
@@ -62,7 +117,11 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
                 height: 50,
               ),
               Text(
+<<<<<<< HEAD
                 meaning,
+=======
+                data != null ? data.elementAt(index)["meaning"] : '',
+>>>>>>> 8940da5cf9d525b22e87d02ce8c6ea8256d6a903
                 style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.w600,
@@ -71,7 +130,17 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
               SizedBox(
                 height: 50,
               ),
+<<<<<<< HEAD
               DetailContainer(text_type: type, text_description: description),
+=======
+              DetailContainer(
+                text_type: data != null ? data.elementAt(index)["type"] : '',
+                text_description:
+                    data != null ? data.elementAt(index)["description"] : '',
+                previous: previous,
+                next: next,
+              ),
+>>>>>>> 8940da5cf9d525b22e87d02ce8c6ea8256d6a903
             ],
             mainAxisAlignment: MainAxisAlignment.center,
           ),

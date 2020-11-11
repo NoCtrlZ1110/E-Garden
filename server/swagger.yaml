@@ -48,7 +48,7 @@ paths:
         in: path
         description: User Id
         required: true
-        type: integer
+        type: string
       responses:
         200:
           description: 'OK'
@@ -67,7 +67,7 @@ paths:
         in: path
         description: user Id
         required: true
-        type: integer
+        type: string
       - name: body
         in: body
         description: user Data
@@ -94,7 +94,7 @@ paths:
         in: path
         description: user Id
         required: true
-        type: integer
+        type: string
       responses:
         200:
           description: 'OK'

@@ -8,18 +8,35 @@ import 'button_green.dart';
 class DetailContainer extends StatefulWidget {
   String text_type;
   String text_description;
+<<<<<<< HEAD
 
   DetailContainer({
     Key key,
     @required this.text_type,
     @required this.text_description,
   }) : super(key: key);
+=======
+  Function previous;
+  Function next;
+
+  DetailContainer(
+      {Key key,
+      @required this.text_type,
+      @required this.text_description,
+      this.previous,
+      this.next})
+      : super(key: key);
+>>>>>>> 8940da5cf9d525b22e87d02ce8c6ea8256d6a903
 
   @override
   _DetailContainerState createState() => _DetailContainerState();
 }
 
 class _DetailContainerState extends State<DetailContainer> {
+<<<<<<< HEAD
+=======
+  bool bookmark = false;
+>>>>>>> 8940da5cf9d525b22e87d02ce8c6ea8256d6a903
   @override
   Widget build(BuildContext context) {
     return DottedBorder(
@@ -43,11 +60,25 @@ class _DetailContainerState extends State<DetailContainer> {
               top: 20,
             ),
             Positioned(
+<<<<<<< HEAD
               child: Icon(
                 Icons.bookmark_border,
                 color: AppColors.red,
                 size: 45,
               ),
+=======
+              child: GestureDetector(
+                  onTap:  () {
+                    setState(() {
+                      bookmark = !bookmark;
+                    });
+                  },
+                  child: Icon(
+                    bookmark ? Icons.bookmark_outlined : Icons.bookmark_border,
+                    color: AppColors.red,
+                    size: 45,
+                  )),
+>>>>>>> 8940da5cf9d525b22e87d02ce8c6ea8256d6a903
               top: 20,
               right: 20,
             ),
@@ -61,6 +92,14 @@ class _DetailContainerState extends State<DetailContainer> {
             ),
             Positioned(
               child: ButtonGreen(
+<<<<<<< HEAD
+=======
+                press: () {
+                  if (widget.previous != null) {
+                    widget.previous();
+                  }
+                },
+>>>>>>> 8940da5cf9d525b22e87d02ce8c6ea8256d6a903
                 height: 40,
                 width: 130,
                 text: 'previous',
@@ -70,6 +109,14 @@ class _DetailContainerState extends State<DetailContainer> {
             ),
             Positioned(
               child: ButtonGreen(
+<<<<<<< HEAD
+=======
+                press: () {
+                  if (widget.previous != null) {
+                    widget.next();
+                  }
+                },
+>>>>>>> 8940da5cf9d525b22e87d02ce8c6ea8256d6a903
                 height: 40,
                 width: 130,
                 text: 'next',

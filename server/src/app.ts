@@ -72,20 +72,25 @@ class App {
             useUnifiedTopology: true,
             useFindAndModify: false
         };
-        if (MONGO_USER==''){
-            mongoose.connect(`mongodb://${MONGO_PATH}/${MONGO_DATABASE}`, {...options});
+        if (MONGO_USER == '') {
+            mongoose.connect(`mongodb://${MONGO_PATH}/${MONGO_DATABASE}`, {...options}).then(() => {
+                console.log("conected")
+            });
 
         } else {
-            mongoose.connect(`mongodb://${MONGO_USER}:${MONGO_PASSWORD}${MONGO_PATH}/${MONGO_DATABASE}`, {...options});
+            mongoose.connect(`mongodb://${MONGO_USER}:${MONGO_PASSWORD}${MONGO_PATH}/${MONGO_DATABASE}`, {...options}).then(() => {
+                console.log("conected")
+            });
         }
     }
+
     private initializeSwagger() {
         const swaggerJSDoc = require('swagger-jsdoc');
         const swaggerUi = require('swagger-ui-express');
 
         const options = {
             swaggerDefinition: {
-                info: {
+                info: {         
                     title: 'REST API',
                     version: '1.0.0',
                     description: 'Example docs',
