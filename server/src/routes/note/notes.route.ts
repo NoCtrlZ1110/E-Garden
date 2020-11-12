@@ -1,25 +1,25 @@
 import { Router } from 'express';
 import validationMiddleware from "../../middlewares/validation.middleware";
-import {CreateUserDto} from "../../dtos/user/users.dto";
+import {CreateNoteDto} from "../../dtos/note/notes.dto";
 import Route from "../../interfaces/routes.interface";
-import UsersController from "../../controllers/user/users.controller";
+import NotesController from "../../controllers/note/notes.controller";
 
 
 class NotesRoute implements Route {
     public path = '/notes';
     public router = Router();
-    public usersController = new UsersController();
+    public notesController = new NotesController();
 
     constructor() {
         this.initializeRoutes();
     }
 
     private initializeRoutes() {
-        this.router.get(`${this.path}`, this.usersController.getUsers);
-        this.router.get(`${this.path}/:id`, this.usersController.getUserById);
-        this.router.post(`${this.path}`, validationMiddleware(CreateUserDto), this.usersController.createUser);
-        this.router.put(`${this.path}/:id`, validationMiddleware(CreateUserDto, true), this.usersController.updateUser);
-        this.router.delete(`${this.path}/:id`, this.usersController.deleteUser);
+        this.router.get(`${this.path}`, this.notesController.getNotes);
+        this.router.get(`${this.path}/:id`, this.notesController.getNoteById);
+        this.router.post(`${this.path}`, this.notesController.createNote);
+        this.router.put(`${this.path}/:id`, this.notesController.updateNote);
+        this.router.delete(`${this.path}/:id`, this.notesController.deleteNote);
     }
 }
 

@@ -3,60 +3,61 @@ import {User} from "../../interfaces/user/users.interface";
 import {CreateUserDto} from "../../dtos/user/users.dto";
 import NoteService from "../../services/note/notes.service";
 import {Note} from "../../interfaces/note/note.interface";
+import {CreateNoteDto} from "../../dtos/note/notes.dto";
 
-class UsersController {
-    public userService = new NoteService();
+class NotesController {
+    public noteService = new NoteService();
 
-    public getUsers = async (req: Request, res: Response, next: NextFunction) => {
-        const userId: string = req.params.id;
+    public getNotes = async (req: Request, res: Response, next: NextFunction) => {
+        const userId: string = req.params.userId;
         try {
-            const findAllUsersData: Note[] = await this.userService.findNotes(userId);
+            const findAllUsersData: Note[] = await this.noteService.findNotes(userId);
             res.status(200).json({ data: findAllUsersData, message: 'findAll' });
         } catch (error) {
             next(error);
         }
     }
 
-    public getUserById = async (req: Request, res: Response, next: NextFunction) => {
-        const userId: string = req.params.id;
+    public getNoteById = async (req: Request, res: Response, next: NextFunction) => {
+        const noteId: string = req.params.id;
 
         try {
-            const findOneUserData: Note = await this.userService.findUserById(userId);
-            res.status(200).json({ data: findOneUserData, message: 'findOne' });
+            const findOneNoteData: Note = await this.noteService.findNoteById(noteId);
+            res.status(200).json({ data: findOneNoteData, message: 'findOne' });
         } catch (error) {
             next(error);
         }
     }
 
-    public createUser = async (req: Request, res: Response, next: NextFunction) => {
-        const userData: CreateUserDto = req.body;
+    public createNote = async (req: Request, res: Response, next: NextFunction) => {
+        const noteData: CreateNoteDto = req.body;
 
         try {
-            const createUserData: User = await this.userService.createUser(userData);
-            res.status(201).json({ data: createUserData, message: 'created' });
+            const createNoteData: Note = await this.noteService.createNote(noteData);
+            res.status(201).json({ data: createNoteData, message: 'created' });
         } catch (error) {
             next(error);
         }
     }
 
-    public updateUser = async (req: Request, res: Response, next: NextFunction) => {
-        const userId: string = req.params.id;
-        const userData: User = req.body;
+    public updateNote = async (req: Request, res: Response, next: NextFunction) => {
+        const noteId: string = req.params.id;
+        const noteData: Note = req.body;
 
         try {
-            const updateUserData: User = await this.userService.updateUser(userId, userData);
-            res.status(200).json({ data: updateUserData, message: 'updated' });
+            const updateNoteData: Note = await this.noteService.updateNote(noteId, noteData);
+            res.status(200).json({ data: updateNoteData, message: 'updated' });
         } catch (error) {
             next(error);
         }
     }
 
-    public deleteUser = async (req: Request, res: Response, next: NextFunction) => {
-        const userId: string = req.params.id;
+    public deleteNote = async (req: Request, res: Response, next: NextFunction) => {
+        const noteId: string = req.params.id;
 
         try {
-            const deleteUserData: User = await this.userService.deleteUserData(userId);
-            res.status(200).json({ data: deleteUserData, message: 'deleted' });
+            const deleteNoteData: Note = await this.noteService.deleteNoteData(noteId);
+            res.status(200).json({ data: deleteNoteData, message: 'deleted' });
         } catch (error) {
             next(error);
         }

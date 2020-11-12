@@ -91,7 +91,7 @@ class App {
         const options = {
             swaggerDefinition: {
                 info: {         
-                    title: 'REST API',
+                    title: 'EGARDEN API',
                     version: '1.0.0',
                     description: 'Example docs',
                 },
