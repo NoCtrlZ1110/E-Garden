@@ -66,12 +66,12 @@ class _TileWidgetState extends State<TileWidget> {
               child: Text(
                 widget.text,
                 style: TextStyle(
-                    fontSize: 60,
-                    fontWeight: FontWeight.w700,
+                    fontSize: 50,
+                    fontWeight: FontWeight.w600,
                     letterSpacing: -2,
                     color: Colors.white),
               ),
-              top: 40,
+              bottom: 35,
               left: 20,
             ),
             Positioned(

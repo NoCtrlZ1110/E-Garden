@@ -26,6 +26,7 @@ dependencies:
   flutter_launcher_icons: ^0.8.1
   flutter_form_builder: ^3.14.0
   flutter_svg: ^0.19.1
+  dotted_border: ^1.0.6
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -60,6 +61,8 @@ flutter:
   assets:
     - assets/images/
     - assets/svgs/tile/
+    - assets/data/grammar.json
+    - assets/data/vocabulary.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
