@@ -1,10 +1,10 @@
 import 'package:e_garden/configs/AppConfig.dart';
+import 'package:e_garden/screens/study/review.dart';
 import 'package:e_garden/widgets/custom_app_bar.dart';
 import 'package:e_garden/widgets/custom_tile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'file:///C:/Users/NoCtrlZ/Desktop/E-Garden/mobile/lib/screens/study/review.dart';
 
 import 'exam.dart';
 import 'learn.dart';
