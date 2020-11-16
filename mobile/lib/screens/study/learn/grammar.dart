@@ -1,17 +1,11 @@
-<<<<<<< HEAD
-=======
-import 'dart:convert';
 
->>>>>>> 8940da5cf9d525b22e87d02ce8c6ea8256d6a903
+import 'dart:convert';
 import 'package:e_garden/configs/AppConfig.dart';
 import 'package:e_garden/widgets/detail_container.dart';
 import 'package:e_garden/widgets/text_app_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
-=======
 import 'package:flutter/services.dart';
->>>>>>> 8940da5cf9d525b22e87d02ce8c6ea8256d6a903
 
 class GrammarScreen extends StatefulWidget {
   @override
@@ -19,13 +13,6 @@ class GrammarScreen extends StatefulWidget {
 }
 
 class _GrammarScreenState extends State<GrammarScreen> {
-<<<<<<< HEAD
-  String word = 'IF + S + V (present),\nS + will + V-inf ...';
-  String meaning = 'Câu điều kiện loại I';
-  String type = 'Example';
-  String description =
-      "If he says 'I love you',\nshe will feel extremely happy.";
-=======
   var data;
   int index = 0;
 
@@ -64,7 +51,6 @@ class _GrammarScreenState extends State<GrammarScreen> {
     super.initState();
     loadJson();
   }
->>>>>>> 8940da5cf9d525b22e87d02ce8c6ea8256d6a903
 
   @override
   Widget build(BuildContext context) {
@@ -84,11 +70,7 @@ class _GrammarScreenState extends State<GrammarScreen> {
                 alignment: Alignment.center,
                 height: 200,
                 width: SizeConfig.screenWidth * 0.8,
-<<<<<<< HEAD
-                padding: EdgeInsets.all(8.0),
-=======
                 padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
->>>>>>> 8940da5cf9d525b22e87d02ce8c6ea8256d6a903
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
@@ -106,11 +88,7 @@ class _GrammarScreenState extends State<GrammarScreen> {
                   ],
                 ),
                 child: Text(
-<<<<<<< HEAD
-                  word,
-=======
                   data != null ? data.elementAt(index)["grammar"] : '',
->>>>>>> 8940da5cf9d525b22e87d02ce8c6ea8256d6a903
                   style: TextStyle(
                       fontSize: 30,
                       color: AppColors.green,
@@ -121,11 +99,7 @@ class _GrammarScreenState extends State<GrammarScreen> {
                 height: 50,
               ),
               Text(
-<<<<<<< HEAD
-                meaning,
-=======
                 data != null ? data.elementAt(index)["meaning"] : '',
->>>>>>> 8940da5cf9d525b22e87d02ce8c6ea8256d6a903
                 style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.w600,
@@ -134,9 +108,6 @@ class _GrammarScreenState extends State<GrammarScreen> {
               SizedBox(
                 height: 50,
               ),
-<<<<<<< HEAD
-              DetailContainer(text_type: type, text_description: description),
-=======
               DetailContainer(
                 text_type: data != null ? data.elementAt(index)["type"] : '',
                 text_description:
@@ -144,7 +115,6 @@ class _GrammarScreenState extends State<GrammarScreen> {
                 previous: previous,
                 next: next,
               ),
->>>>>>> 8940da5cf9d525b22e87d02ce8c6ea8256d6a903
             ],
             mainAxisAlignment: MainAxisAlignment.center,
           ),

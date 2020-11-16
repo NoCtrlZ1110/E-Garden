@@ -1,17 +1,10 @@
-<<<<<<< HEAD
-=======
 import 'dart:convert';
-
->>>>>>> 8940da5cf9d525b22e87d02ce8c6ea8256d6a903
 import 'package:e_garden/configs/AppConfig.dart';
 import 'package:e_garden/widgets/detail_container.dart';
 import 'package:e_garden/widgets/text_app_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
-=======
 import 'package:flutter/services.dart';
->>>>>>> 8940da5cf9d525b22e87d02ce8c6ea8256d6a903
 
 class ListeningScreen extends StatefulWidget {
   @override
@@ -19,11 +12,9 @@ class ListeningScreen extends StatefulWidget {
 }
 
 class _ListeningScreenState extends State<ListeningScreen> {
-<<<<<<< HEAD
   String meaning = 'Cloudy';
   String type = 'Adjective';
   String description = "a cloudy sky\nbầu trời đầy mây";
-=======
   var data;
   int index = 0;
   var ttsState;
@@ -64,7 +55,6 @@ class _ListeningScreenState extends State<ListeningScreen> {
     super.initState();
     loadJson();
   }
->>>>>>> 8940da5cf9d525b22e87d02ce8c6ea8256d6a903
 
   @override
   Widget build(BuildContext context) {
@@ -101,12 +91,6 @@ class _ListeningScreenState extends State<ListeningScreen> {
                     ),
                   ],
                 ),
-<<<<<<< HEAD
-                child: Icon(
-                  Icons.play_circle_outline,
-                  color: AppColors.green,
-                  size: 80,
-=======
                 child: GestureDetector(
                   child: Icon(
                     Icons.play_circle_outline,
@@ -114,18 +98,13 @@ class _ListeningScreenState extends State<ListeningScreen> {
                     size: 80,
                   ),
                   onTap: () {},
->>>>>>> 8940da5cf9d525b22e87d02ce8c6ea8256d6a903
                 ),
               ),
               SizedBox(
                 height: 50,
               ),
               Text(
-<<<<<<< HEAD
-                meaning,
-=======
                 data != null ? data.elementAt(index)["meaning"] : '',
->>>>>>> 8940da5cf9d525b22e87d02ce8c6ea8256d6a903
                 style: TextStyle(
                     fontSize: 40,
                     fontWeight: FontWeight.w600,
@@ -134,9 +113,6 @@ class _ListeningScreenState extends State<ListeningScreen> {
               SizedBox(
                 height: 50,
               ),
-<<<<<<< HEAD
-              DetailContainer(text_type: type, text_description: description),
-=======
               DetailContainer(
                 text_type: data != null ? data.elementAt(index)["type"] : '',
                 text_description:
@@ -144,7 +120,6 @@ class _ListeningScreenState extends State<ListeningScreen> {
                 previous: previous,
                 next: next,
               ),
->>>>>>> 8940da5cf9d525b22e87d02ce8c6ea8256d6a903
             ],
             mainAxisAlignment: MainAxisAlignment.center,
           ),

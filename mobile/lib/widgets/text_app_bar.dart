@@ -2,18 +2,11 @@ import 'package:e_garden/configs/AppConfig.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-<<<<<<< HEAD
-class TextAppBar extends PreferredSize {
-  final String text;
-  final double height;
-  final Color color;
-=======
+
 class TextAppBar extends StatefulWidget implements PreferredSizeWidget {
   String text;
   double height;
   Color color;
->>>>>>> 8940da5cf9d525b22e87d02ce8c6ea8256d6a903
-
   TextAppBar({
     @required this.text,
     this.height = kToolbarHeight,
@@ -24,12 +17,7 @@ class TextAppBar extends StatefulWidget implements PreferredSizeWidget {
   Size get preferredSize => Size.fromHeight(height);
 
   @override
-<<<<<<< HEAD
-  Widget build(BuildContext context) {
-    return Container(
-      height: preferredSize.height,
-      color: color != null ? color : Colors.white,
-=======
+
   _TextAppBarState createState() => _TextAppBarState();
 }
 
@@ -40,7 +28,6 @@ class _TextAppBarState extends State<TextAppBar> {
     return Container(
       height: widget.preferredSize.height,
       color: widget.color != null ? widget.color : Colors.white,
->>>>>>> 8940da5cf9d525b22e87d02ce8c6ea8256d6a903
       alignment: Alignment.center,
       child: SafeArea(
           child: Row(
@@ -66,11 +53,7 @@ class _TextAppBarState extends State<TextAppBar> {
           RaisedButton(
               onPressed: () {},
               child: Text(
-<<<<<<< HEAD
-                text,
-=======
                 widget.text,
->>>>>>> 8940da5cf9d525b22e87d02ce8c6ea8256d6a903
                 style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
               ),
               color: AppColors.green,
@@ -81,36 +64,6 @@ class _TextAppBarState extends State<TextAppBar> {
           Expanded(
             child: Container(),
           ),
-<<<<<<< HEAD
-          DropdownButton(
-              items: <String>[
-                'Unit 1',
-                'Unit 2',
-                'Unit 3',
-                'Unit 4',
-                'Unit 5',
-                'Unit 6',
-                'Unit 7',
-                'Unit 8',
-                'Unit 9',
-                'Unit 10'
-              ].map<DropdownMenuItem<String>>((String value) {
-                return DropdownMenuItem<String>(
-                  value: value,
-                  child: Text(value),
-                );
-              }).toList(),
-              onChanged: null),
-          GestureDetector(
-            child: Text(
-              "UNIT 1",
-              style: TextStyle(
-                  color: AppColors.green,
-                  fontWeight: FontWeight.w700,
-                  fontSize: 18),
-            ),
-            onTap: () {},
-=======
           // GestureDetector(
           //   child: Text(
           //     "UNIT 1",
@@ -160,7 +113,6 @@ class _TextAppBarState extends State<TextAppBar> {
                 child: Text(value),
               );
             }).toList(),
->>>>>>> 8940da5cf9d525b22e87d02ce8c6ea8256d6a903
           ),
           SizedBox(
             width: SizeConfig.screenWidth * 0.075,
@@ -170,8 +122,7 @@ class _TextAppBarState extends State<TextAppBar> {
     );
   }
 }
-<<<<<<< HEAD
-=======
+
 
 //
 // class TextAppBar extends StatefulWidget{
@@ -300,4 +251,3 @@ class _TextAppBarState extends State<TextAppBar> {
 //     );
 //   }
 // }
->>>>>>> 8940da5cf9d525b22e87d02ce8c6ea8256d6a903
