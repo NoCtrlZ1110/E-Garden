@@ -1,9 +1,9 @@
-import 'package:e_garden/screens/dictionary/dictionary.dart';
+import 'package:e_garden/screens/dictionary/home_dictionary.dart';
 import 'package:e_garden/screens/notes/notes.dart';
+import 'package:e_garden/screens/study/study.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'file:///C:/Users/NoCtrlZ/Desktop/E-Garden/mobile/lib/screens/study/study.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -20,7 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   static List<Widget> _widgetOptions = <Widget>[
     StudyScreen(),
-    DictionaryScreen(),
+    HomeDictionaryScreen(),
     NotesScreen()
   ];
 
