@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:e_garden/configs/AppConfig.dart';
 import 'package:e_garden/widgets/detail_container.dart';
 import 'package:e_garden/widgets/text_app_bar.dart';
@@ -13,6 +12,10 @@ class VocabularyScreen extends StatefulWidget {
 }
 
 class _VocabularyScreenState extends State<VocabularyScreen> {
+  String word = 'Rain';
+  String meaning = 'Cơn mưa';
+  String type = 'Noun';
+  String description = "don't go out in the rain\ntrời mưa đừng đi ra ngoài";
   var data;
   int index = 0;
 

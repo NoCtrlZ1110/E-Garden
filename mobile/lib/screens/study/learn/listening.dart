@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:e_garden/configs/AppConfig.dart';
 import 'package:e_garden/widgets/detail_container.dart';
 import 'package:e_garden/widgets/text_app_bar.dart';
@@ -13,6 +12,9 @@ class ListeningScreen extends StatefulWidget {
 }
 
 class _ListeningScreenState extends State<ListeningScreen> {
+  String meaning = 'Cloudy';
+  String type = 'Adjective';
+  String description = "a cloudy sky\nbầu trời đầy mây";
   var data;
   int index = 0;
   var ttsState;

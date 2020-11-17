@@ -1,14 +1,20 @@
-
+swagger: "2.0"
+basePath: /api
+info:
+  title: Sample API
+  description: API description in Markdown.
+  version: 1.0.0
+host: api.example.com
 tags:
-  - name: users
-    description: users API
+- name: users
+  description: users API
 
 paths:
-  # [GET] users
+# [GET] users
   /users:
     get:
-      tags:
-        - users
+      tags: 
+      - users
       summary: Find All Users
       responses:
         200:
@@ -16,18 +22,18 @@ paths:
         500:
           description: 'Server Error'
 
-    # [POST] users
+# [POST] users
     post:
       tags:
-        - users
+      - users
       summary: Add User
       parameters:
-        - name: body
-          in: body
-          description: user Data
-          required: true
-          schema:
-            $ref: '#/definitions/users'
+      - name: body
+        in: body
+        description: user Data
+        required: true
+        schema:
+          $ref: '#/definitions/users'
       responses:
         201:
           description: 'Created'
@@ -38,18 +44,18 @@ paths:
         500:
           description: 'Server Error'
 
-  # [GET] users/id
+# [GET] users/id
   /users/{id}:
     get:
       tags:
-        - users
+      - users
       summary: Find User By Id
       parameters:
-        - name: id
-          in: path
-          description: User Id
-          required: true
-          type: string
+      - name: id
+        in: path
+        description: User Id
+        required: true
+        type: string
       responses:
         200:
           description: 'OK'
@@ -58,23 +64,23 @@ paths:
         500:
           description: 'Server Error'
 
-    # [PUT] users/id
+# [PUT] users/id
     put:
       tags:
-        - users
+      - users
       summary: Update User By Id
       parameters:
-        - name: id
-          in: path
-          description: user Id
-          required: true
-          type: string
-        - name: body
-          in: body
-          description: user Data
-          required: true
-          schema:
-            $ref: '#/definitions/users'
+      - name: id
+        in: path
+        description: user Id
+        required: true
+        type: string
+      - name: body
+        in: body
+        description: user Data
+        required: true
+        schema:
+          $ref: '#/definitions/users'
       responses:
         200:
           description: 'OK'
@@ -85,17 +91,17 @@ paths:
         500:
           description: 'Server Error'
 
-    # [DELETE] users/id
+# [DELETE] users/id
     delete:
       tags:
-        - users
+      - users
       summary: Delete User By Id
       parameters:
-        - name: id
-          in: path
-          description: user Id
-          required: true
-          type: string
+      - name: id
+        in: path
+        description: user Id
+        required: true
+        type: string
       responses:
         200:
           description: 'OK'
@@ -103,72 +109,71 @@ paths:
           description: 'Conflict'
         500:
           description: 'Server Error'
-  # [GET] notes
   /notes:
-    get:
-      tags:
+      get:
+        tags: 
         - Notes
-      summary: Find All Note
-      parameters:
+        summary: Find All Note
+        parameters:
         - name: userId
           in: path
           description: User Id
           required: true
           type: string
-      responses:
-        200:
-          description: 'OK'
-        500:
-          description: 'Server Error'
+        responses:
+          200:
+            description: 'OK'
+          500:
+            description: 'Server Error'
 
-    # [POST] notes
-    post:
-      tags:
+  # [POST] users
+      post:
+        tags:
         - Notes
-      summary: Add Note
-      parameters:
+        summary: Add Note
+        parameters:
         - name: body
           in: body
           description: user Data
           required: true
           schema:
             $ref: '#/definitions/notes'
-      responses:
-        201:
-          description: 'Created'
-        400:
-          description: 'Bad Request'
-        409:
-          description: 'Conflict'
-        500:
-          description: 'Server Error'
+        responses:
+          201:
+            description: 'Created'
+          400:
+            description: 'Bad Request'
+          409:
+            description: 'Conflict'
+          500:
+            description: 'Server Error'
 
   # [GET] notes/id
   /notes/{id}:
-    get:
-      tags:
+      get:
+        tags:
         - Notes
-      summary: Find User By Id
-      parameters:
+        summary: Find User By Id
+        parameters:
         - name: id
           in: path
           description: Note Id
           required: true
           type: string
-      responses:
-        200:
-          description: 'OK'
-        409:
-          description: 'Conflict'
-        500:
-          description: 'Server Error'
+        responses:
+          200:
+            description: 'OK'
+          409:
+            description: 'Conflict'
+          500:
+            description: 'Server Error'
 
-    # [PUT] notes/id
-    put:
-      tags:
+  # [PUT] users/id
+      put:
+        tags:
         - Notes
-      summary: Update User By Id
-      parameters:
+        summary: Update User By Id
+        parameters:
         - name: id
           in: path
           description: user Id
@@ -180,34 +185,34 @@ paths:
           required: true
           schema:
             $ref: '#/definitions/notes'
-      responses:
-        200:
-          description: 'OK'
-        400:
-          description: 'Bad Request'
-        409:
-          description: 'Conflict'
-        500:
-          description: 'Server Error'
+        responses:
+          200:
+            description: 'OK'
+          400:
+            description: 'Bad Request'
+          409:
+            description: 'Conflict'
+          500:
+            description: 'Server Error'
 
-    # [DELETE] notes/id
-    delete:
-      tags:
+  # [DELETE] users/id
+      delete:
+        tags:
         - Notes
-      summary: Delete User By Id
-      parameters:
+        summary: Delete User By Id
+        parameters:
         - name: id
           in: path
           description: user Id
           required: true
           type: string
-      responses:
-        200:
-          description: 'OK'
-        409:
-          description: 'Conflict'
-        500:
-          description: 'Server Error'
+        responses:
+          200:
+            description: 'OK'
+          409:
+            description: 'Conflict'
+          500:
+            description: 'Server Error'
 # definitions
 definitions:
   notes:
@@ -232,8 +237,8 @@ definitions:
   users:
     type: object
     required:
-      - email
-      - password
+        - email
+        - password
     properties:
       id:
         type: integer
@@ -246,5 +251,5 @@ definitions:
         description: user Password
 
 schemes:
-  - https
-  - http
+ - https
+ - http

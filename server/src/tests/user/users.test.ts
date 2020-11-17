@@ -1,7 +1,7 @@
 import * as mongoose from 'mongoose';
-import * as request from 'supertest';
-import App from '../app';
-import UsersRoute from '../routes/users.route';
+import UsersRoute from "../../routes/user/users.route";
+import App from "../../app";
+import {request} from "express";
 
 afterAll(async () => {
   await new Promise(resolve => setTimeout(() => resolve(), 500));
@@ -21,6 +21,7 @@ describe('Testing Users', () => {
 
       (mongoose as any).connect = jest.fn();
       const app = new App([usersRoute]);
+      // @ts-ignore
       return request(app.getServer())
       .get(`${usersRoute.path}`)
       .expect(200);
