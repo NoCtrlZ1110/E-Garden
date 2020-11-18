@@ -1,12 +1,10 @@
 import 'package:e_garden/configs/AppConfig.dart';
-import 'package:e_garden/screens/study/learn/grammar.dart';
-import 'package:e_garden/screens/study/learn/listening.dart';
-import 'package:e_garden/screens/study/learn/vocabulary.dart';
-import 'package:e_garden/widgets/custom_tile.dart';
 import 'package:e_garden/widgets/text_app_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
+
+import 'dictionary_meaning/dictionary_meaning.dart';
 
 class DictionaryScreen extends StatefulWidget {
   @override
@@ -15,7 +13,8 @@ class DictionaryScreen extends StatefulWidget {
 
 class _DictionaryScreenState extends State<DictionaryScreen> {
   TextEditingController _search = TextEditingController();
-  bool hihi  = true;
+  bool hihi = true;
+
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +62,7 @@ class _DictionaryScreenState extends State<DictionaryScreen> {
           ),
           Center(
             child: Container(
-              width: SizeConfig.blockSizeHorizontal * 70,
+              width: SizeConfig.blockSizeHorizontal * 95,
               height: SizeConfig.blockSizeVertical * 17,
               alignment: Alignment.center,
               decoration: BoxDecoration(
@@ -75,7 +74,7 @@ class _DictionaryScreenState extends State<DictionaryScreen> {
                 boxShadow: <BoxShadow>[
                   BoxShadow(
                     color: Colors.grey,
-                    offset: Offset(1.0, 6.0),
+                    offset: Offset(0.0, 6.0),
                     blurRadius: 10.0,
                   ),
                 ],
@@ -152,19 +151,36 @@ class _DictionaryScreenState extends State<DictionaryScreen> {
               ),
             ),
           ),
-          Row(
-            children: [
-              FlatButton(
-                child: Text("Ahihi"),
-                onPressed: () {
-                  setState(() {
-                    hihi = !hihi;
-                  });
-                },
-              ),
-            ],
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                FlatButton(
+                  color: (hihi) ? Colors.green : Colors.white,
+                  minWidth: SizeConfig.blockSizeHorizontal * 45,
+                  child: Text("Sysnonyms"),
+                  onPressed: () {
+                    setState(() {
+                      hihi = true;
+                    });
+                  },
+                ),
+                FlatButton(
+                  color: (!hihi) ? Colors.green : Colors.white,
+                  minWidth: SizeConfig.blockSizeHorizontal * 45,
+                  child: Text("Meaning"),
+                  onPressed: () {
+                    setState(() {
+                      hihi = false;
+                    });
+                  },
+                ),
+              ],
+            ),
           ),
-          (hihi) ? Text("manh") : Text("kien")
+          (hihi) ? DictionaryMeaningTab() : Text("kien")
         ],
       ),
     );
