@@ -17,8 +17,12 @@ class DictionaryMeaningTab extends StatefulWidget {
 class _DictionaryMeaningTabState extends State<DictionaryMeaningTab> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text('a'),
+    return Row(
+      children: [
+        Container(
+          child: Text('a'),
+        ),
+      ],
     );
   }
 }

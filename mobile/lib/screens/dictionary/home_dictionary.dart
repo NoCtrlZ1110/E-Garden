@@ -21,27 +21,27 @@ class _HomeDictionaryScreenState extends State<HomeDictionaryScreen> {
           height: 120,
           child: SafeArea(
               child: Row(
-                children: [
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Image.asset(
-                    "assets/images/logo.png",
-                    height: 60,
-                  ),
-                  Expanded(
-                    child: Container(),
-                  ),
-                  Icon(
-                    Icons.library_books_outlined,
-                    color: AppColors.green,
-                    size: 40,
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                ],
-              ))),
+            children: [
+              SizedBox(
+                width: 20,
+              ),
+              Image.asset(
+                "assets/images/logo.png",
+                height: 60,
+              ),
+              Expanded(
+                child: Container(),
+              ),
+              Icon(
+                Icons.library_books_outlined,
+                color: AppColors.green,
+                size: 40,
+              ),
+              SizedBox(
+                width: 20,
+              ),
+            ],
+          ))),
       body: Center(
         child: SingleChildScrollView(
           child: Column(
