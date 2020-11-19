@@ -32,8 +32,8 @@ class _DictionaryMeaningTabState extends State<DictionaryMeaningTab> {
                 strokeCap: StrokeCap.round,
                 radius: Radius.circular(20),
                 child: Container(
+                  height: SizeConfig.blockSizeVertical*2,
                   padding: EdgeInsets.all(10),
-                  height: 10,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     color: index%2==0? Colors.lightGreen: Colors.lime,
@@ -48,34 +48,32 @@ class _DictionaryMeaningTabState extends State<DictionaryMeaningTab> {
                     minHeight: SizeConfig.blockSizeVertical * 20,
                     minWidth: double.infinity,
                   ),
-                  child: Stack(children: [
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Flexible(
-                          child: Text(
-                            'Used as a greeting or to begin a phone conversation.',
-                            style: TextStyle(
-                                fontSize: 28,
-                                color: AppColors.black,
-                                fontWeight: FontWeight.bold),
-                          ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Flexible(
+                        child: Text(
+                          'Used as a greeting or to begin a phone conversation.',
+                          style: TextStyle(
+                              fontSize: 20,
+                              color: AppColors.black,
+                              fontWeight: FontWeight.bold),
                         ),
-                        SizedBox(height: 20),
-                        Flexible(
-                          child: Text(
-                            'Ex: hello there, Katie!',
-                            style: TextStyle(
-                                fontSize: 28,
-                                color: AppColors.grey,
-                                fontWeight: FontWeight.normal,
-                                fontStyle: FontStyle.italic),
-                          ),
+                      ),
+                      SizedBox(height: 20),
+                      Flexible(
+                        child: Text(
+                          'Ex: hello there, Katie!',
+                          style: TextStyle(
+                              fontSize: 20,
+                              color: AppColors.grey,
+                              fontWeight: FontWeight.normal,
+                              fontStyle: FontStyle.italic),
                         ),
-                      ],
-                    ),
-                  ]),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             );

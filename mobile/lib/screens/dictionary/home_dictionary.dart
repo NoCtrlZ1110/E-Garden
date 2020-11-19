@@ -1,5 +1,6 @@
 import 'package:e_garden/configs/AppConfig.dart';
 import 'package:e_garden/screens/dictionary/dictionary/dictionary.dart';
+import 'package:e_garden/screens/dictionary/translate/translate.dart';
 import 'package:e_garden/widgets/custom_app_bar.dart';
 import 'package:e_garden/widgets/custom_tile.dart';
 import 'package:flutter/cupertino.dart';
@@ -61,7 +62,7 @@ class _HomeDictionaryScreenState extends State<HomeDictionaryScreen> {
                 press: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => DictionaryScreen()),
+                    MaterialPageRoute(builder: (context) => TranslateScreen()),
                   );
                 },
               ),

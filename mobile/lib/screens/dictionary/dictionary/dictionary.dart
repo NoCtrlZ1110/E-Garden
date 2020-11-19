@@ -121,7 +121,7 @@ class _DictionaryScreenState extends State<DictionaryScreen>
               margin: EdgeInsets.all(10),
               padding: EdgeInsets.all(10),
               width: SizeConfig.blockSizeHorizontal * 80,
-              height: SizeConfig.blockSizeVertical * 17,
+              height: SizeConfig.blockSizeVertical * 20,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                     begin: Alignment.topCenter,
@@ -222,6 +222,13 @@ class _DictionaryScreenState extends State<DictionaryScreen>
                 return Container(
                   width: SizeConfig.blockSizeHorizontal * 50,
                   margin: EdgeInsets.only(top: 20),
+                  decoration: BoxDecoration(boxShadow: <BoxShadow>[
+                    BoxShadow(
+                      color: Colors.grey,
+                      offset: Offset(0.0, 6.0),
+                      blurRadius: 10.0,
+                    )
+                  ]),
                   key: _keys[index],
                   child: ButtonTheme(
                     child: AnimatedBuilder(
@@ -251,7 +258,7 @@ class _DictionaryScreenState extends State<DictionaryScreen>
                                   _textLable[index],
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 20),
+                                      fontSize: 15),
                                 ),
                               ),
                             ],
