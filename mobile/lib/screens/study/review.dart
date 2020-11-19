@@ -1,8 +1,11 @@
 import 'package:e_garden/configs/AppConfig.dart';
+import 'package:e_garden/screens/study/review/grammar.dart';
+import 'package:e_garden/screens/study/review/vocabulary.dart';
 import 'package:e_garden/widgets/custom_tile.dart';
 import 'package:e_garden/widgets/text_app_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class ReviewScreen extends StatefulWidget {
   @override
@@ -29,7 +32,8 @@ class _ReviewScreenState extends State<ReviewScreen> {
                 press: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) {}),
+                    MaterialPageRoute(
+                        builder: (context) => ReviewVocabularyScreen()),
                   );
                 },
               ),
@@ -44,7 +48,8 @@ class _ReviewScreenState extends State<ReviewScreen> {
                 press: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) {}),
+                    MaterialPageRoute(
+                        builder: (context) => ReviewGrammarScreen()),
                   );
                 },
               ),
@@ -57,10 +62,17 @@ class _ReviewScreenState extends State<ReviewScreen> {
                 leftText: "51 Units",
                 rightText: "09%",
                 press: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) {}),
-                  );
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(builder: (context) {}),
+                  // );
+                  Fluttertoast.showToast(
+                      msg: "In development!",
+                      toastLength: Toast.LENGTH_SHORT,
+                      timeInSecForIosWeb: 1,
+                      backgroundColor: Colors.red,
+                      textColor: Colors.white,
+                      fontSize: 16.0);
                 },
               ),
               SizedBox(
