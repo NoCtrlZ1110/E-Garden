@@ -1,8 +1,5 @@
 import 'package:e_garden/configs/AppConfig.dart';
 import 'package:e_garden/screens/dictionary/dictionary/dictionary.dart';
-import 'package:e_garden/screens/study/exam.dart';
-import 'package:e_garden/screens/study/learn.dart';
-import 'package:e_garden/screens/study/review.dart';
 import 'package:e_garden/widgets/custom_app_bar.dart';
 import 'package:e_garden/widgets/custom_tile.dart';
 import 'package:flutter/cupertino.dart';
@@ -21,27 +18,34 @@ class _HomeDictionaryScreenState extends State<HomeDictionaryScreen> {
           height: 120,
           child: SafeArea(
               child: Row(
-                children: [
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Image.asset(
-                    "assets/images/logo.png",
-                    height: 60,
-                  ),
-                  Expanded(
-                    child: Container(),
-                  ),
-                  Icon(
-                    Icons.library_books_outlined,
-                    color: AppColors.green,
-                    size: 40,
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                ],
-              ))),
+            children: [
+              SizedBox(
+                width: 46,
+              ),
+              Image.asset(
+                "assets/images/logo_text.png",
+                height: 40,
+              ),
+              Expanded(
+                child: Container(),
+              ),
+              IconButton(
+                icon: Icon(
+                  Icons.logout,
+                  color: AppColors.green,
+                  size: 30,
+                ),
+                onPressed: () {
+                  return PopupMenuButton(itemBuilder: (BuildContext context) {
+                    return [PopupMenuItem(child: Text("ABC"))];
+                  });
+                },
+              ),
+              SizedBox(
+                width: 40,
+              ),
+            ],
+          ))),
       body: Center(
         child: SingleChildScrollView(
           child: Column(
