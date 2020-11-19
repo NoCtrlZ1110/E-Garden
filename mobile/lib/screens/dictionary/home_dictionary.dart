@@ -1,8 +1,5 @@
 import 'package:e_garden/configs/AppConfig.dart';
 import 'package:e_garden/screens/dictionary/dictionary/dictionary.dart';
-import 'package:e_garden/screens/study/exam.dart';
-import 'package:e_garden/screens/study/learn.dart';
-import 'package:e_garden/screens/study/review.dart';
 import 'package:e_garden/widgets/custom_app_bar.dart';
 import 'package:e_garden/widgets/custom_tile.dart';
 import 'package:flutter/cupertino.dart';

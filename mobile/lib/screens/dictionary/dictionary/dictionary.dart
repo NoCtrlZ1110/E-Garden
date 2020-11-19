@@ -1,10 +1,10 @@
 import 'package:e_garden/configs/AppConfig.dart';
+import 'package:e_garden/screens/dictionary/dictionary/dictionary_meaning/dictionary_meaning.dart';
+import 'package:e_garden/screens/dictionary/dictionary/dictionary_sysnonyms/dictionary_sysnonyms.dart';
 import 'package:e_garden/widgets/text_app_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
-
-import 'dictionary_meaning/dictionary_meaning.dart';
 
 class DictionaryScreen extends StatefulWidget {
   @override
@@ -26,6 +26,7 @@ class _DictionaryScreenState extends State<DictionaryScreen>
   double _aniValue = 0.0;
   double _prevAniValue = 0.0;
   List _icons = [Icons.star, Icons.whatshot];
+  List _textLable = ['MEANINGS', 'SYNONYMS'];
   Color _foregroundOn = Colors.white;
   Color _foregroundOff = Colors.black;
   Color _backgroundOn = AppColors.green;
@@ -117,7 +118,9 @@ class _DictionaryScreenState extends State<DictionaryScreen>
           ),
           Center(
             child: Container(
-              width: SizeConfig.blockSizeHorizontal * 90,
+              margin: EdgeInsets.all(10),
+              padding: EdgeInsets.all(10),
+              width: SizeConfig.blockSizeHorizontal * 80,
               height: SizeConfig.blockSizeVertical * 17,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
@@ -172,6 +175,7 @@ class _DictionaryScreenState extends State<DictionaryScreen>
                               color: Colors.black,
                               size: 35,
                             ),
+                            onPressed: () {},
                           ))
                     ],
                   ),
@@ -197,7 +201,8 @@ class _DictionaryScreenState extends State<DictionaryScreen>
                               Icons.add_box_sharp,
                               color: Colors.black,
                               size: 35,
-                            ), onPressed: () {  },
+                            ),
+                            onPressed: () {},
                           ))
                     ],
                   )
@@ -207,7 +212,7 @@ class _DictionaryScreenState extends State<DictionaryScreen>
           ),
           Container(
             // margin: EdgeInsets.only(left: ),
-            height: 49.0,
+            height: SizeConfig.blockSizeVertical * 7,
             child: ListView.builder(
               physics: BouncingScrollPhysics(),
               controller: _scrollController,
@@ -215,7 +220,7 @@ class _DictionaryScreenState extends State<DictionaryScreen>
               itemCount: _icons.length,
               itemBuilder: (BuildContext context, int index) {
                 return Container(
-                  width: SizeConfig.blockSizeHorizontal*50,
+                  width: SizeConfig.blockSizeHorizontal * 50,
                   margin: EdgeInsets.only(top: 20),
                   key: _keys[index],
                   child: ButtonTheme(
@@ -233,9 +238,23 @@ class _DictionaryScreenState extends State<DictionaryScreen>
                               _scrollTo(index);
                             });
                           },
-                          child: Icon(
-                            _icons[index],
-                            color: _getForegroundColor(index),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(
+                                _icons[index],
+                                color: _getForegroundColor(index),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  _textLable[index],
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20),
+                                ),
+                              ),
+                            ],
                           )),
                     ),
                   ),
@@ -244,10 +263,10 @@ class _DictionaryScreenState extends State<DictionaryScreen>
             ),
           ),
           Flexible(
-              child: TabBarView(
-            controller: _controller,
-            children: <Widget>[Icon(_icons[0]), Icon(_icons[1])],
-          )),
+              child: TabBarView(controller: _controller, children: [
+            DictionaryMeaningTab(),
+            DictionarySysnonymTab(),
+          ])),
         ],
       ),
     );
