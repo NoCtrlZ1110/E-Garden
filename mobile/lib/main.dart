@@ -1,10 +1,21 @@
 import 'package:e_garden/screens/signin.dart';
+import 'package:e_garden/utils/api.dart';
+import 'package:e_garden/utils/shared_preferences.dart';
+import 'package:e_garden/application.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'provider_setup.dart' as ProviderSetup;
 
 import 'configs/AppConfig.dart';
 
-void main() {
-  runApp(E_Garden());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  Application.api = API();
+  Application.sharePreference = await SpUtil.getInstance();
+  runApp(MultiProvider(
+    providers: ProviderSetup.getProviders(),
+    child: E_Garden(),
+  ));
 }
 
 class E_Garden extends StatelessWidget {
