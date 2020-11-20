@@ -1,5 +1,6 @@
 import 'package:e_garden/configs/AppConfig.dart';
 import 'package:e_garden/screens/dictionary/dictionary/dictionary.dart';
+import 'package:e_garden/screens/dictionary/translate/translate.dart';
 import 'package:e_garden/widgets/custom_app_bar.dart';
 import 'package:e_garden/widgets/custom_tile.dart';
 import 'package:flutter/cupertino.dart';
@@ -20,22 +21,29 @@ class _HomeDictionaryScreenState extends State<HomeDictionaryScreen> {
               child: Row(
             children: [
               SizedBox(
-                width: 20,
+                width: 46,
               ),
               Image.asset(
-                "assets/images/logo.png",
-                height: 60,
+                "assets/images/logo_text.png",
+                height: 40,
               ),
               Expanded(
                 child: Container(),
               ),
-              Icon(
-                Icons.library_books_outlined,
-                color: AppColors.green,
-                size: 40,
+              IconButton(
+                icon: Icon(
+                  Icons.logout,
+                  color: AppColors.green,
+                  size: 30,
+                ),
+                onPressed: () {
+                  return PopupMenuButton(itemBuilder: (BuildContext context) {
+                    return [PopupMenuItem(child: Text("ABC"))];
+                  });
+                },
               ),
               SizedBox(
-                width: 20,
+                width: 40,
               ),
             ],
           ))),
@@ -61,7 +69,7 @@ class _HomeDictionaryScreenState extends State<HomeDictionaryScreen> {
                 press: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => DictionaryScreen()),
+                    MaterialPageRoute(builder: (context) => TranslateScreen()),
                   );
                 },
               ),

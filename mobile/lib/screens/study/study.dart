@@ -4,7 +4,7 @@ import 'package:e_garden/widgets/custom_app_bar.dart';
 import 'package:e_garden/widgets/custom_tile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:fluttertoast/fluttertoast.dart';
 
 import 'exam.dart';
 import 'learn.dart';
@@ -24,22 +24,29 @@ class _StudyScreenState extends State<StudyScreen> {
               child: Row(
             children: [
               SizedBox(
-                width: 20,
+                width: 46,
               ),
               Image.asset(
-                "assets/images/logo.png",
-                height: 60,
+                "assets/images/logo_text.png",
+                height: 40,
               ),
               Expanded(
                 child: Container(),
               ),
-              Icon(
-                Icons.library_books_outlined,
-                color: AppColors.green,
-                size: 40,
+              IconButton(
+                icon: Icon(
+                  Icons.logout,
+                  color: AppColors.green,
+                  size: 30,
+                ),
+                onPressed: () {
+                  return PopupMenuButton(itemBuilder: (BuildContext context) {
+                    return [PopupMenuItem(child: Text("ABC"))];
+                  });
+                },
               ),
               SizedBox(
-                width: 20,
+                width: 40,
               ),
             ],
           ))),
@@ -82,10 +89,17 @@ class _StudyScreenState extends State<StudyScreen> {
                 leftText: "51 Units",
                 rightText: "09%",
                 press: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => ExamScreen()),
-                  );
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(builder: (context) => ExamScreen()),
+                  // );
+                  Fluttertoast.showToast(
+                      msg: "In development!",
+                      toastLength: Toast.LENGTH_SHORT,
+                      timeInSecForIosWeb: 1,
+                      backgroundColor: Colors.red,
+                      textColor: Colors.white,
+                      fontSize: 16.0);
                 },
               ),
               SizedBox(

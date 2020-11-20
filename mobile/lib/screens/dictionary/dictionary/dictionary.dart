@@ -1,10 +1,14 @@
 import 'package:e_garden/configs/AppConfig.dart';
+import 'package:e_garden/core/models/dictionary/dictionary.dart';
 import 'package:e_garden/screens/dictionary/dictionary/dictionary_meaning/dictionary_meaning.dart';
 import 'package:e_garden/screens/dictionary/dictionary/dictionary_sysnonyms/dictionary_sysnonyms.dart';
 import 'package:e_garden/widgets/text_app_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
+import 'package:provider/provider.dart';
+import 'package:e_garden/core/view_model/dictionary_model.dart';
+
 
 class DictionaryScreen extends StatefulWidget {
   @override
@@ -95,8 +99,11 @@ class _DictionaryScreenState extends State<DictionaryScreen>
                 controller: _search,
                 decoration: InputDecoration(
                   suffixIcon: IconButton(
-                    icon: Icon(Icons.mic),
-                    onPressed: () => {},
+                    icon: Icon(Icons.search),
+                    onPressed: () async {
+                      Dictionary _data = await Provider.of<DictionaryModel>(context, listen: false).fetchWord('hello');
+                       print(_data.word.toString());
+                    },
                   ),
                   contentPadding: EdgeInsets.only(
                       left: SizeConfig.safeBlockHorizontal * 5,
@@ -121,7 +128,7 @@ class _DictionaryScreenState extends State<DictionaryScreen>
               margin: EdgeInsets.all(10),
               padding: EdgeInsets.all(10),
               width: SizeConfig.blockSizeHorizontal * 80,
-              height: SizeConfig.blockSizeVertical * 17,
+              height: SizeConfig.blockSizeVertical * 20,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                     begin: Alignment.topCenter,
@@ -222,6 +229,13 @@ class _DictionaryScreenState extends State<DictionaryScreen>
                 return Container(
                   width: SizeConfig.blockSizeHorizontal * 50,
                   margin: EdgeInsets.only(top: 20),
+                  decoration: BoxDecoration(boxShadow: <BoxShadow>[
+                    BoxShadow(
+                      color: Colors.grey,
+                      offset: Offset(0.0, 6.0),
+                      blurRadius: 10.0,
+                    )
+                  ]),
                   key: _keys[index],
                   child: ButtonTheme(
                     child: AnimatedBuilder(
@@ -251,7 +265,7 @@ class _DictionaryScreenState extends State<DictionaryScreen>
                                   _textLable[index],
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 20),
+                                      fontSize: 15),
                                 ),
                               ),
                             ],

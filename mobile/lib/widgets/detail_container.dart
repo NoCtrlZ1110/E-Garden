@@ -2,6 +2,7 @@ import 'package:dotted_border/dotted_border.dart';
 import 'package:e_garden/configs/AppConfig.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 import 'button_green.dart';
 
@@ -49,10 +50,17 @@ class _DetailContainerState extends State<DetailContainer> {
             ),
             Positioned(
               child: GestureDetector(
-                  onTap:  () {
+                  onTap: () {
                     setState(() {
                       bookmark = !bookmark;
                     });
+                    Fluttertoast.showToast(
+                        msg: bookmark ? "Bookmarked!" : "Removed bookmark",
+                        toastLength: Toast.LENGTH_SHORT,
+                        timeInSecForIosWeb: 1,
+                        backgroundColor: Colors.red,
+                        textColor: Colors.white,
+                        fontSize: 16.0);
                   },
                   child: Icon(
                     bookmark ? Icons.bookmark_outlined : Icons.bookmark_border,
