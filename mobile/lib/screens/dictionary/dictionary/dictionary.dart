@@ -1,10 +1,14 @@
 import 'package:e_garden/configs/AppConfig.dart';
+import 'package:e_garden/core/models/dictionary/dictionary.dart';
 import 'package:e_garden/screens/dictionary/dictionary/dictionary_meaning/dictionary_meaning.dart';
 import 'package:e_garden/screens/dictionary/dictionary/dictionary_sysnonyms/dictionary_sysnonyms.dart';
 import 'package:e_garden/widgets/text_app_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
+import 'package:provider/provider.dart';
+import 'package:e_garden/core/view_model/dictionary_model.dart';
+
 
 class DictionaryScreen extends StatefulWidget {
   @override
@@ -95,8 +99,11 @@ class _DictionaryScreenState extends State<DictionaryScreen>
                 controller: _search,
                 decoration: InputDecoration(
                   suffixIcon: IconButton(
-                    icon: Icon(Icons.mic),
-                    onPressed: () => {},
+                    icon: Icon(Icons.search),
+                    onPressed: () async {
+                      Dictionary _data = await Provider.of<DictionaryModel>(context, listen: false).fetchWord('hello');
+                       print(_data.word.toString());
+                    },
                   ),
                   contentPadding: EdgeInsets.only(
                       left: SizeConfig.safeBlockHorizontal * 5,
