@@ -2,7 +2,6 @@ import 'package:e_garden/configs/AppConfig.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-
 class TextAppBar extends StatefulWidget implements PreferredSizeWidget {
   String text;
   double height;
@@ -17,7 +16,6 @@ class TextAppBar extends StatefulWidget implements PreferredSizeWidget {
   Size get preferredSize => Size.fromHeight(height);
 
   @override
-
   _TextAppBarState createState() => _TextAppBarState();
 }
 
@@ -110,7 +108,10 @@ class _TextAppBarState extends State<TextAppBar> {
             ].map<DropdownMenuItem<String>>((String value) {
               return DropdownMenuItem<String>(
                 value: value,
-                child: Text(value),
+                child: Text(
+                  value,
+                  style: TextStyle(fontFamily: "QuickSand"),
+                ),
               );
             }).toList(),
           ),
@@ -122,7 +123,6 @@ class _TextAppBarState extends State<TextAppBar> {
     );
   }
 }
-
 
 //
 // class TextAppBar extends StatefulWidget{

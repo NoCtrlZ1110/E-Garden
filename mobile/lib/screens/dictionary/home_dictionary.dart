@@ -21,22 +21,29 @@ class _HomeDictionaryScreenState extends State<HomeDictionaryScreen> {
               child: Row(
             children: [
               SizedBox(
-                width: 20,
+                width: 46,
               ),
               Image.asset(
-                "assets/images/logo.png",
-                height: 60,
+                "assets/images/logo_text.png",
+                height: 40,
               ),
               Expanded(
                 child: Container(),
               ),
-              Icon(
-                Icons.library_books_outlined,
-                color: AppColors.green,
-                size: 40,
+              IconButton(
+                icon: Icon(
+                  Icons.logout,
+                  color: AppColors.green,
+                  size: 30,
+                ),
+                onPressed: () {
+                  return PopupMenuButton(itemBuilder: (BuildContext context) {
+                    return [PopupMenuItem(child: Text("ABC"))];
+                  });
+                },
               ),
               SizedBox(
-                width: 20,
+                width: 40,
               ),
             ],
           ))),

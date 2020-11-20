@@ -27,6 +27,7 @@ dependencies:
   flutter_form_builder: ^3.14.0
   flutter_svg: ^0.19.1
   dotted_border: ^1.0.6
+  fluttertoast: ^7.1.1
 
 
   # The following adds the Cupertino Icons font to your application.
