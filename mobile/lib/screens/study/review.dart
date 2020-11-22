@@ -1,6 +1,6 @@
 import 'package:e_garden/configs/AppConfig.dart';
-import 'package:e_garden/screens/study/review/grammar.dart';
-import 'package:e_garden/screens/study/review/vocabulary.dart';
+import 'package:e_garden/screens/study/review/select_grammar_topic.dart';
+import 'package:e_garden/screens/study/review/select_vocabulary_topic.dart';
 import 'package:e_garden/widgets/custom_tile.dart';
 import 'package:e_garden/widgets/text_app_bar.dart';
 import 'package:flutter/cupertino.dart';
@@ -20,6 +20,7 @@ class _ReviewScreenState extends State<ReviewScreen> {
         text: "REVIEW",
         height: 100,
       ),
+      backgroundColor: Colors.white,
       body: Center(
         child: SingleChildScrollView(
           child: Column(
@@ -33,7 +34,7 @@ class _ReviewScreenState extends State<ReviewScreen> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => ReviewVocabularyScreen()),
+                        builder: (context) => SelectVocabularyTopic()),
                   );
                 },
               ),
@@ -49,7 +50,7 @@ class _ReviewScreenState extends State<ReviewScreen> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => ReviewGrammarScreen()),
+                        builder: (context) => SelectGrammarTopic()),
                   );
                 },
               ),

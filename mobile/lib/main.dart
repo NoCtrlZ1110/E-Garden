@@ -1,12 +1,12 @@
+import 'package:e_garden/application.dart';
 import 'package:e_garden/screens/signin.dart';
 import 'package:e_garden/utils/api.dart';
 import 'package:e_garden/utils/shared_preferences.dart';
-import 'package:e_garden/application.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'provider_setup.dart' as ProviderSetup;
 
 import 'configs/AppConfig.dart';
+import 'provider_setup.dart' as ProviderSetup;
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -50,6 +50,7 @@ class _HomePageState extends State<HomePage> {
     SizeConfig().init(context);
     return Scaffold(
       body: SignIn(),
+      // body: HomeScreen(),
     );
   }
 }
