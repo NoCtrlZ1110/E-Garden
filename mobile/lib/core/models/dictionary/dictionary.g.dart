@@ -51,16 +51,20 @@ Meanings _$MeaningsFromJson(Map<String, dynamic> json) {
 
 Map<String, dynamic> _$MeaningsToJson(Meanings instance) => <String, dynamic>{
       'partOfSpeech': instance.partOfSpeech,
-      'definitions': instance.definitions,
+      'definitions': instance.definitions?.map((e) => e?.toJson())?.toList(),
     };
 
 Definitions _$DefinitionsFromJson(Map<String, dynamic> json) {
   return Definitions(
     definition: json['definition'] as String,
+    example: json['example'] as String,
+    synonyms: (json['synonyms'] as List)?.map((e) => e as String)?.toList(),
   );
 }
 
 Map<String, dynamic> _$DefinitionsToJson(Definitions instance) =>
     <String, dynamic>{
       'definition': instance.definition,
+      'example': instance.example,
+      'synonyms': instance.synonyms,
     };
