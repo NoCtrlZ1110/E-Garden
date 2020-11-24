@@ -2,11 +2,10 @@ import 'package:e_garden/configs/AppConfig.dart';
 import 'package:e_garden/screens/study/review.dart';
 import 'package:e_garden/widgets/custom_app_bar.dart';
 import 'package:e_garden/widgets/custom_tile.dart';
+import 'package:e_garden/widgets/image_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 
-import 'exam.dart';
 import 'learn.dart';
 
 class StudyScreen extends StatefulWidget {
@@ -18,6 +17,7 @@ class _StudyScreenState extends State<StudyScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: CustomAppBar(
           height: 120,
           child: SafeArea(
@@ -40,9 +40,7 @@ class _StudyScreenState extends State<StudyScreen> {
                   size: 30,
                 ),
                 onPressed: () {
-                  return PopupMenuButton(itemBuilder: (BuildContext context) {
-                    return [PopupMenuItem(child: Text("ABC"))];
-                  });
+                  _showLogoutDialog();
                 },
               ),
               SizedBox(
@@ -54,6 +52,19 @@ class _StudyScreenState extends State<StudyScreen> {
         child: SingleChildScrollView(
           child: Column(
             children: [
+              ImageSlider(),
+              SizedBox(
+                height: 10,
+              ),
+              Divider(
+                color: AppColors.green,
+                height: 20,
+                indent: 100,
+                endIndent: 100,
+              ),
+              SizedBox(
+                height: 20,
+              ),
               TileWidget(
                 text: "Learn",
                 color: AppColors.lightBlue,
@@ -83,33 +94,78 @@ class _StudyScreenState extends State<StudyScreen> {
               SizedBox(
                 height: 40,
               ),
-              TileWidget(
-                color: Colors.orangeAccent,
-                text: "Exam",
-                leftText: "51 Units",
-                rightText: "09%",
-                press: () {
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => ExamScreen()),
-                  // );
-                  Fluttertoast.showToast(
-                      msg: "In development!",
-                      toastLength: Toast.LENGTH_SHORT,
-                      timeInSecForIosWeb: 1,
-                      backgroundColor: Colors.red,
-                      textColor: Colors.white,
-                      fontSize: 16.0);
-                },
-              ),
-              SizedBox(
-                height: 20,
-              )
+              // TileWidget(
+              //   color: Colors.orangeAccent,
+              //   text: "Exam",
+              //   leftText: "51 Units",
+              //   rightText: "09%",
+              //   press: () {
+              //     // Navigator.push(
+              //     //   context,
+              //     //   MaterialPageRoute(builder: (context) => ExamScreen()),
+              //     // );
+              //     Fluttertoast.showToast(
+              //         msg: "In development!",
+              //         toastLength: Toast.LENGTH_SHORT,
+              //         timeInSecForIosWeb: 1,
+              //         backgroundColor: Colors.red,
+              //         textColor: Colors.white,
+              //         fontSize: 16.0);
+              //   },
+              // ),
+              // SizedBox(
+              //   height: 10,
+              // )
             ],
             mainAxisAlignment: MainAxisAlignment.center,
           ),
         ),
       ),
+    );
+  }
+
+  Future<void> _showLogoutDialog() async {
+    return showDialog<void>(
+      barrierDismissible: false,
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text(
+            'Logout',
+            style: TextStyle(
+                color: AppColors.green,
+                fontWeight: FontWeight.bold,
+                fontSize: 20),
+          ),
+          content: SingleChildScrollView(
+            child: Text(
+              'Are you sure?',
+              style: TextStyle(fontSize: 20),
+            ),
+          ),
+          actions: <Widget>[
+            FlatButton(
+              child: Text(
+                'Yes',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
+              onPressed: () {
+                Navigator.pop(context);
+                Navigator.pop(context);
+              },
+            ),
+            FlatButton(
+              child: Text(
+                'No',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            ),
+          ],
+        );
+      },
     );
   }
 }
