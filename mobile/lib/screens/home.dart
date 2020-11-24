@@ -21,7 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
   static List<Widget> _widgetOptions = <Widget>[
     StudyScreen(),
     HomeDictionaryScreen(),
-    NotesScreen()
+    CalendarPage()
   ];
 
   @override
