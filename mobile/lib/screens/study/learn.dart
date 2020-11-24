@@ -17,6 +17,7 @@ class _LearnScreenState extends State<LearnScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: TextAppBar(
         text: "LEARN",
         height: 100,

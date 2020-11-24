@@ -1,7 +1,11 @@
+import 'dart:math';
+
 import 'package:dotted_border/dotted_border.dart';
 import 'package:e_garden/configs/AppConfig.dart';
 import 'package:e_garden/widgets/button_green.dart';
+import 'package:e_garden/widgets/custom_buton_component.dart';
 import 'package:e_garden/widgets/text_app_bar.dart';
+import 'package:english_words/english_words.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -13,13 +17,13 @@ class ReviewVocabularyScreen extends StatefulWidget {
 }
 
 class _ReviewVocabularyScreenState extends State<ReviewVocabularyScreen> {
-  final List<String> entries = <String>[
-    'distinguished',
-    'archievement',
-    'talented',
-    'respectable',
-    'generosity'
-  ];
+  String sentence;
+  int count = 1;
+  int result = 0;
+  int max_length = 10;
+  final _random = new Random();
+
+  List<String> keys = <String>[];
 
   final List<String> meaning = <String>[
     'gifted, having a nature ability to do something well',
@@ -31,8 +35,94 @@ class _ReviewVocabularyScreenState extends State<ReviewVocabularyScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
+    sentence = meaning[0];
+    for (int i = 0; i < 4; i++) {
+      keys.add(WordPair.random().asString);
+    }
+  }
+
+  void refresh() {
+    setState(() {
+      List<String> temp = <String>[];
+      for (int i = 0; i < 4; i++) {
+        temp.add(WordPair.random().asString);
+      }
+      keys = temp;
+      sentence = meaning[_random.nextInt(meaning.length)];
+      if (count < max_length)
+        count++;
+      else
+        _showDialog();
+    });
+  }
+
+  void handleAnswer() {
+    bool correct = (_random.nextInt(4) == 0);
+    if (correct) {
+      result++;
+    }
+    Fluttertoast.showToast(
+        msg: correct ? "Correct!" : "Wrong!",
+        toastLength: Toast.LENGTH_SHORT,
+        timeInSecForIosWeb: 1,
+        backgroundColor: correct ? AppColors.green : Colors.red,
+        textColor: Colors.white,
+        fontSize: 20);
+    refresh();
+  }
+
+  Future<void> _showDialog() async {
+    return showDialog<void>(
+      barrierDismissible: false,
+      context: context,
+      builder: (BuildContext context) {
+        return WillPopScope(
+            onWillPop: () {},
+            child: AlertDialog(
+              title: Text(
+                'Result',
+                style: TextStyle(
+                    color: AppColors.green,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20),
+              ),
+              content: SingleChildScrollView(
+                child: Text(
+                  'Correct ${result}/${max_length}',
+                  style: TextStyle(fontSize: 20),
+                ),
+              ),
+              actions: <Widget>[
+                FlatButton(
+                  child: Text(
+                    'Share',
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
+                  onPressed: () {
+                    Fluttertoast.showToast(
+                        msg: "Development",
+                        toastLength: Toast.LENGTH_SHORT,
+                        timeInSecForIosWeb: 1,
+                        backgroundColor: AppColors.green,
+                        textColor: Colors.white,
+                        fontSize: 20);
+                  },
+                ),
+                FlatButton(
+                  child: Text(
+                    'Exit',
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
+                  onPressed: () {
+                    Navigator.pop(context);
+                    Navigator.pop(context);
+                  },
+                ),
+              ],
+            ));
+      },
+    );
   }
 
   @override
@@ -47,18 +137,10 @@ class _ReviewVocabularyScreenState extends State<ReviewVocabularyScreen> {
         child: Column(
           children: [
             ButtonGreen(
-              width: 120,
+              width: 100,
               height: 50,
-              text: "Next",
-              press: () {
-                Fluttertoast.showToast(
-                    msg: "In development!",
-                    toastLength: Toast.LENGTH_SHORT,
-                    timeInSecForIosWeb: 1,
-                    backgroundColor: Colors.red,
-                    textColor: Colors.white,
-                    fontSize: 16.0);
-              },
+              text: count.toString() + '/' + max_length.toString(),
+              press: () {},
             )
           ],
         ),
@@ -78,22 +160,19 @@ class _ReviewVocabularyScreenState extends State<ReviewVocabularyScreen> {
                   DottedBorder(
                     dashPattern: [4, 1],
                     borderType: BorderType.RRect,
-                    color: AppColors.green,
+                    color: AppColors.darkGreen,
                     strokeWidth: 2,
                     strokeCap: StrokeCap.round,
                     radius: Radius.circular(3),
                     padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                     child: Text(
-                      "Ex1",
+                      "Q",
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 25,
-                          color: AppColors.green),
+                          color: AppColors.darkGreen),
                     ),
                   ),
-                  // OutlineButton(
-                  //   child: ,
-                  // ),
                   SizedBox(
                     width: 20,
                   ),
@@ -104,74 +183,66 @@ class _ReviewVocabularyScreenState extends State<ReviewVocabularyScreen> {
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 19,
-                          color: AppColors.green),
+                          color: AppColors.darkGreen),
                     ),
-                  )
+                  ),
                 ],
               ),
               SizedBox(
-                height: 25,
+                height: 40,
               ),
               Container(
-                height: 80,
-                width: SizeConfig.screenWidth * 0.8,
-                child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    padding: const EdgeInsets.all(8),
-                    itemCount: entries.length,
-                    itemBuilder: (BuildContext context, int index) {
-                      return Container(
-                        margin: EdgeInsets.all(10),
-                        child: DottedBorder(
-                          dashPattern: [6, 4],
-                          borderType: BorderType.RRect,
-                          color: AppColors.green,
-                          strokeWidth: 1,
-                          strokeCap: StrokeCap.round,
-                          radius: Radius.circular(30),
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 20, vertical: 10),
-                          child: Text(
-                            entries[index],
-                            style: TextStyle(
-                                fontWeight: FontWeight.w600,
-                                fontSize: 20,
-                                color: AppColors.green),
-                          ),
-                        ),
-                      );
-                    }),
+                padding: EdgeInsets.all(20),
+                height: 150,
+                alignment: Alignment.center,
+                width: SizeConfig.screenWidth * 0.78,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(20),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Color.fromRGBO(0, 0, 0, 0.1),
+                      offset: Offset(2, 2),
+                      blurRadius: 10,
+                      spreadRadius: 2,
+                    )
+                  ],
+                ),
+                child: Text(sentence,
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 19,
+                        color: AppColors.green)),
               ),
               SizedBox(
-                height: 20,
+                height: 40,
               ),
               Container(
-                height: SizeConfig.screenHeight * 0.45,
-                child: ListView.builder(
-                    itemCount: entries.length,
-                    itemBuilder: (BuildContext context, int index) {
-                      return Row(
-                        children: [
-                          SizedBox(width: 20),
-                          Container(
-                            width: SizeConfig.screenWidth * 0.25,
-                            child: TextField(),
-                            margin: EdgeInsets.symmetric(
-                                horizontal: 20, vertical: 20),
-                          ),
-                          Container(
-                            width: SizeConfig.screenWidth * 0.55,
-                            child: Text(
-                              meaning[index],
-                              style: TextStyle(
-                                  color: AppColors.green,
-                                  fontSize: 17,
-                                  fontWeight: FontWeight.w600),
-                            ),
-                          )
-                        ],
-                      );
-                    }),
+                width: SizeConfig.screenWidth * 0.8,
+                height: 400,
+                child: GridView.count(
+                  childAspectRatio: 100 / 85,
+                  crossAxisCount: 2,
+                  children: List.generate(4, (index) {
+                    return Center(
+                        child: CustomButton(
+                      height: SizeConfig.blockSizeVertical * 15,
+                      width: SizeConfig.blockSizeHorizontal * 38,
+                      onPressed: () => {handleAnswer()},
+                      shadowColor: AppColors.buttonShadow,
+                      borderColor: AppColors.green,
+                      radius: 10,
+                      child: Text(
+                        keys.elementAt(index),
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: AppColors.darkGreen),
+                      ),
+                    ));
+                  }),
+                ),
               )
             ],
           ),
