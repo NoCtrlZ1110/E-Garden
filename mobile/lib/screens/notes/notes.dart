@@ -1,9 +1,9 @@
 import 'package:e_garden/widgets/back_button.dart';
 import 'package:e_garden/widgets/light_color.dart';
-import 'file:///D:/Project/AndroidStudioProjects/E-Garden/mobile/lib/screens/notes/component/task_container.dart';
 import 'package:flutter/material.dart';
 
 import 'component/calender.dart';
+import 'component/task_container.dart';
 import 'create_new_note.dart';
 import 'date_list.dart';
 
