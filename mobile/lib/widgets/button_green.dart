@@ -49,6 +49,7 @@ class _ButtonGreenState extends State<ButtonGreen> {
               AnimatedPositioned(
                 onEnd: () {
                   setState(() {
+
                     if (!animated) {
                       animated = true;
                       if (widget.press != null) {
