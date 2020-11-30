@@ -28,95 +28,116 @@ class _TextAppBarState extends State<TextAppBar> {
       color: widget.color != null ? widget.color : Colors.white,
       alignment: Alignment.center,
       child: SafeArea(
-          child: Row(
+          child: Stack(
         children: [
-          SizedBox(
-            width: SizeConfig.screenWidth * 0.075,
-          ),
-          GestureDetector(
-            child: Text(
-              "BACK",
-              style: TextStyle(
-                  color: AppColors.green,
-                  fontWeight: FontWeight.w700,
-                  fontSize: 18),
-            ),
-            onTap: () {
-              Navigator.pop(context);
-            },
-          ),
-          Expanded(
-            child: Container(),
-          ),
-          RaisedButton(
-              onPressed: () {},
-              child: Text(
-                widget.text,
-                style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
+          Row(
+            children: [
+              SizedBox(
+                width: SizeConfig.screenWidth * 0.075,
               ),
-              color: AppColors.green,
-              textColor: Colors.white,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(8),
-              )),
-          Expanded(
-            child: Container(),
-          ),
-          // GestureDetector(
-          //   child: Text(
-          //     "UNIT 1",
-          //     style: TextStyle(
-          //         color: AppColors.green,
-          //         fontWeight: FontWeight.w700,
-          //         fontSize: 18),
-          //   ),
-          //   onTap: () {},
-          // ),
-          DropdownButton<String>(
-            value: dropdownValue,
-            icon: Icon(
-              Icons.arrow_downward,
-              size: 16,
-              color: AppColors.green,
-            ),
-            iconSize: 24,
-            elevation: 16,
-            style: TextStyle(
-                color: AppColors.green,
-                fontWeight: FontWeight.w700,
-                fontSize: 18),
-            // underline: Container(
-            //   height: 2,
-            //   color: Colors.deepPurpleAccent,
-            // ),
-            onChanged: (String newValue) {
-              setState(() {
-                dropdownValue = newValue;
-              });
-            },
-            items: <String>[
-              'Unit 1',
-              'Unit 2',
-              'Unit 3',
-              'Unit 4',
-              'Unit 5',
-              'Unit 6',
-              'Unit 7',
-              'Unit 8',
-              'Unit 9',
-              'Unit 10'
-            ].map<DropdownMenuItem<String>>((String value) {
-              return DropdownMenuItem<String>(
-                value: value,
-                child: Text(
-                  value,
-                  style: TextStyle(fontFamily: "QuickSand"),
+              GestureDetector(
+                child: Wrap(
+                  crossAxisAlignment: WrapCrossAlignment.center,
+                  children: [
+                    Icon(
+                      Icons.arrow_back_rounded,
+                      color: AppColors.green,
+                    ),
+                    Text(
+                      " BACK",
+                      style: TextStyle(
+                          color: AppColors.green,
+                          fontWeight: FontWeight.w700,
+                          fontSize: 18),
+                    ),
+                  ],
                 ),
-              );
-            }).toList(),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+              Expanded(
+                child: Container(),
+              ),
+
+              // GestureDetector(
+              //   child: Text(
+              //     "UNIT 1",
+              //     style: TextStyle(
+              //         color: AppColors.green,
+              //         fontWeight: FontWeight.w700,
+              //         fontSize: 18),
+              //   ),
+              //   onTap: () {},
+              // ),
+              DropdownButton<String>(
+                value: dropdownValue,
+                icon: Icon(
+                  Icons.arrow_downward,
+                  size: 16,
+                  color: AppColors.green,
+                ),
+                iconSize: 24,
+                elevation: 16,
+                style: TextStyle(
+                    color: AppColors.green,
+                    fontWeight: FontWeight.w700,
+                    fontSize: 18),
+                // underline: Container(
+                //   height: 2,
+                //   color: Colors.deepPurpleAccent,
+                // ),
+                onChanged: (String newValue) {
+                  setState(() {
+                    dropdownValue = newValue;
+                  });
+                },
+                items: <String>[
+                  'Unit 1',
+                  'Unit 2',
+                  'Unit 3',
+                  'Unit 4',
+                  'Unit 5',
+                  'Unit 6',
+                  'Unit 7',
+                  'Unit 8',
+                  'Unit 9',
+                  'Unit 10'
+                ].map<DropdownMenuItem<String>>((String value) {
+                  return DropdownMenuItem<String>(
+                    value: value,
+                    child: Text(
+                      value,
+                      style: TextStyle(fontFamily: "QuickSand"),
+                    ),
+                  );
+                }).toList(),
+              ),
+              SizedBox(
+                width: SizeConfig.screenWidth * 0.075,
+              )
+            ],
           ),
-          SizedBox(
-            width: SizeConfig.screenWidth * 0.075,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                margin: EdgeInsets.symmetric(vertical: 20),
+                height: 45,
+                child: RaisedButton(
+                    onPressed: () {},
+                    child: Text(
+                      widget.text,
+                      style:
+                          TextStyle(fontWeight: FontWeight.w600, fontSize: 18),
+                    ),
+                    color: AppColors.green,
+                    textColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    )),
+              ),
+            ],
           )
         ],
       )),

@@ -2,9 +2,11 @@ import 'package:e_garden/configs/AppConfig.dart';
 import 'package:e_garden/screens/dictionary/dictionary/dictionary.dart';
 import 'package:e_garden/screens/dictionary/translate/translate.dart';
 import 'package:e_garden/widgets/custom_app_bar.dart';
+import 'package:e_garden/widgets/custom_buton_component.dart';
 import 'package:e_garden/widgets/custom_tile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 
 class HomeDictionaryScreen extends StatefulWidget {
   @override
@@ -15,6 +17,7 @@ class _HomeDictionaryScreenState extends State<HomeDictionaryScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: CustomAppBar(
           height: 120,
           child: SafeArea(
@@ -51,28 +54,40 @@ class _HomeDictionaryScreenState extends State<HomeDictionaryScreen> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              TileWidget(
-                text: "Dictionary",
-                color: AppColors.lightGreen,
-                press: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => DictionaryScreen()),
-                  );
-                },
+              CustomButton(
+                backgroundColor: AppColors.lightGreen,
+                child: TileWidget(
+                  text: "Dictionary",
+                ),
+                height: SizeConfig.safeBlockHorizontal * 40,
+                width: SizeConfig.safeBlockHorizontal * 80,
+                shadowColor: Color(0xFF6CA243),
+                onPressed: () => Navigator.push(
+                  context,
+                  PageTransition(
+                      type: PageTransitionType.rightToLeft,
+                      duration: Duration(milliseconds: 400),
+                      child: DictionaryScreen()),
+                ),
               ),
               SizedBox(
                 height: 40,
               ),
-              TileWidget(
-                text: "Translate",
-                press: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => TranslateScreen()),
-                  );
-                },
-              ),
+              CustomButton(
+                  backgroundColor: AppColors.green,
+                  child: TileWidget(
+                    text: "Translate",
+                  ),
+                  height: SizeConfig.safeBlockHorizontal * 40,
+                  width: SizeConfig.safeBlockHorizontal * 80,
+                  shadowColor: Color(0xFF6CA243),
+                  onPressed: () => Navigator.push(
+                        context,
+                        PageTransition(
+                            type: PageTransitionType.rightToLeft,
+                            duration: Duration(milliseconds: 400),
+                            child: TranslateScreen()),
+                      )),
             ],
             mainAxisAlignment: MainAxisAlignment.center,
           ),
