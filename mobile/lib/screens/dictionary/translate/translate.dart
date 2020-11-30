@@ -18,14 +18,14 @@ class TranslateScreen extends StatefulWidget {
 }
 
 class _TranslateScreenState extends State<TranslateScreen> {
-  StreamController<String> _streamWritingController = StreamController();
   bool change;
   bool translating;
   String fromLang;
   String toLang;
-  Stream<String> a;
   String language1 = Translations.languages.first;
   String language2 = Translations.languages.first;
+  String _textTranslate;
+  TextEditingController _translateController = TextEditingController();
 
   @override
   void initState() {
@@ -34,79 +34,128 @@ class _TranslateScreenState extends State<TranslateScreen> {
     fromLang = "es";
     toLang = "en";
     super.initState();
+    _textTranslate = "";
   }
 
   @override
   Widget build(BuildContext context) {
-    Container inputText = Container(
-      height: SizeConfig.blockSizeVertical * 16,
-      padding: const EdgeInsets.all(25.0),
-      child: TextField(
-        textAlign: TextAlign.justify,
-        minLines: 1,
-        maxLines: 7,
-        textCapitalization: TextCapitalization.sentences,
-        onChanged: (string) {
-          if (string.length == 1) {
-            translating = false;
-            //translatorBLoC.translator("Escribiendo...");
-          } else if (string.length == 0) {
-            translating = false;
-            //translatorBLoC.translator("");
-          }
-          _streamWritingController.add(string);
-        },
-        onSubmitted: (string) {
-          //translatorBLoC.translator(string);
-        },
-        autocorrect: false,
-        style: TextStyle(fontSize: 16.0),
-        maxLength: 300,
-        decoration: InputDecoration.collapsed(hintText: "Enter text ..."),
-      ),
-    );
-    return Consumer<TranslateModel>(
-      builder: (context,cart,child){
-        return Scaffold(
-          appBar: TextAppBar(
-            text: "TRANSLATE",
-            height: 100,
-          ),
-          body: Container(
-            color: Colors.white,
-            child: SingleChildScrollView(
-              child: Column(
-                children: <Widget>[
-                  buildLanguageTitle(),
-                  SizedBox(
-                    height: SizeConfig.blockSizeVertical * 6,
+    return Consumer<TranslateModel>(builder: (context, cart, child) {
+      return Scaffold(
+        backgroundColor: Colors.white,
+        appBar: TextAppBar(
+          text: "TRANSLATE",
+          height: 100,
+        ),
+        body: Container(
+          child: SingleChildScrollView(
+            child: Column(
+              children: <Widget>[
+                buildLanguageTitle(),
+                SizedBox(
+                  height: SizeConfig.blockSizeVertical * 6,
+                ),
+                Card(
+                  margin: const EdgeInsets.symmetric(horizontal: 15.0),
+                  child: Stack(
+                    children: <Widget>[
+                      Container(
+                        height: SizeConfig.blockSizeVertical * 16,
+                        padding: const EdgeInsets.all(25.0),
+                        child: TextField(
+                          textAlign: TextAlign.justify,
+                          minLines: 1,
+                          maxLines: 7,
+                          textCapitalization: TextCapitalization.sentences,
+                          controller: _translateController,
+                          onChanged: (value) async {
+                            //print("${_translateController.text} ${Translations.getLanguageCode(language1)} ${language2.codeUnits}");
+                            if (_translateController.text.length == 1) {
+                              translating = false;
+                            } else if (_translateController.text.length == 0) {
+                              translating = false;
+                            } else {
+                              translating = true;
+                            }
+                            if (translating) {
+                              _textTranslate=_translateController.text;
+                              print(_textTranslate);
+                            }
+                          },
+                          onSubmitted: (string) {},
+                          autocorrect: false,
+                          style: TextStyle(fontSize: 16.0),
+                          maxLength: 300,
+                          decoration: InputDecoration.collapsed(hintText: "Enter text ..."),
+                        ),
+                      )
+                    ],
                   ),
-                  Card(
-                    margin: const EdgeInsets.symmetric(horizontal: 15.0),
-                    child: Stack(
-                      children: <Widget>[
-                        inputText,
-                      ],
-                    ),
-                  ),
-                  SizedBox(
-                    height: SizeConfig.blockSizeVertical,
-                  ),
-                  Card(
-                    margin: const EdgeInsets.symmetric(horizontal: 15.0),
-                    child: Stack(
-                      children: <Widget>[
-                        inputText,
-                      ],
-                    ),
-                  ),
-                ],
-              ),
+                ),
+                SizedBox(
+                  height: SizeConfig.blockSizeVertical,
+                ),
+                FutureBuilder(
+                  future: cart.translate2(_textTranslate,
+                      Translations.getLanguageCode(language1), Translations.getLanguageCode(language2)),
+                    builder: (context, snapshot){
+                      if (snapshot.hasData){
+                      return Card(
+                        margin: const EdgeInsets.symmetric(horizontal: 15.0),
+                        color: Colors.lightGreen,
+                        child: Stack(
+                          children: <Widget>[
+                            Container(
+                              padding: EdgeInsets.all(25.0),
+                              width: SizeConfig.blockSizeHorizontal * 100,
+                              child: ConstrainedBox(
+                                constraints: BoxConstraints(
+                                  minHeight: SizeConfig.blockSizeVertical * 15,
+                                ),
+                                child: Text(
+                                  cart.translateText,
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 20.0,
+                                  ),
+                                  textAlign: TextAlign.justify,
+                                ),
+                              ),
+                            ),
+                            Positioned(
+                              bottom: 0,
+                              right: 0,
+                              child: Row(
+                                children: [
+                                  IconButton(
+                                    icon: Icon(
+                                      Icons.volume_up_rounded,
+                                      color: Colors.white,
+                                    ),
+                                    onPressed: () {},
+                                  ),
+                                  IconButton(
+                                    icon: Icon(
+                                      Icons.share,
+                                      color: Colors.white,
+                                    ),
+                                    onPressed: () {},
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      );
+                      }
+                      return Container();
+                    }
+                )
+              ],
             ),
           ),
-        );
-       }
-    );
+        ),
+      );
+    });
   }
 
   Widget buildLanguageTitle() => LanguageWidget(
@@ -120,4 +169,10 @@ class _TranslateScreenState extends State<TranslateScreen> {
           language2 = newLanguage;
         }),
       );
+
+  // Widget resultCard() {
+  //   return (_resultTranslate.isNotEmpty)
+  //       ?
+  //       : Container();
+  // }
 }

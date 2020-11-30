@@ -5,9 +5,10 @@ import 'package:http/http.dart' as http;
 import 'package:translator/translator.dart';
 
 class TranslateModel extends ChangeNotifier {
-  static final _apiKey = 'AIzaSyDmf-zlsUHhh_9kgfAfXfsUdGqWmiiYSQU';
+  String _translateText;
+  final _apiKey = 'AIzaSyDmf-zlsUHhh_9kgfAfXfsUdGqWmiiYSQU';
 
-  static Future<String> translate(String message, String toLanguageCode) async {
+  Future<String> translate(String message, String toLanguageCode) async {
     final response = await http.post(
       'https://translation.googleapis.com/language/translate/v2?target=$toLanguageCode&key=$_apiKey&q=$message',
     );
@@ -23,13 +24,19 @@ class TranslateModel extends ChangeNotifier {
     }
   }
 
-  static Future<String> translate2(String message, String fromLanguageCode, String toLanguageCode) async {
+  Future<String> translate2(String message, String fromLanguageCode, String toLanguageCode) async {
     final translation = await GoogleTranslator().translate(
       message,
       from: fromLanguageCode,
       to: toLanguageCode,
     );
+    translateText=translation.text;
+    return translateText;
+  }
 
-    return translation.text;
+  String get translateText => _translateText;
+  set translateText(String value) {
+    _translateText = value;
+    ChangeNotifier();
   }
 }
