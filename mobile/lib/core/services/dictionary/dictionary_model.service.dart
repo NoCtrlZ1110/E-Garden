@@ -63,8 +63,9 @@ class DictionaryModel extends ChangeNotifier {
 
   String get type_word => _type_word;
 
-  set type_word(String value) {
+  void changeWord(String value) {
     _type_word = value;
+    notifyListeners();
   }
 
   List<String> get synonyms => _synonyms;
