@@ -21,6 +21,7 @@ class _DictionaryScreenState extends State<DictionaryScreen> with TickerProvider
   TabController _controller;
   String fetchWordValue;
   AudioPlayer audioPlayer = AudioPlayer();
+
   @override
   initState() {
     super.initState();

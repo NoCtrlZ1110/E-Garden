@@ -77,7 +77,9 @@ class _TranslateScreenState extends State<TranslateScreen> {
                               translating = true;
                             }
                             if (translating) {
+
                               _textTranslate = _translateController.text;
+
                               print(_textTranslate);
                             }
                           },
@@ -87,6 +89,7 @@ class _TranslateScreenState extends State<TranslateScreen> {
                           maxLength: 300,
                           decoration: InputDecoration.collapsed(
                               hintText: "Enter text ..."),
+
                         ),
                       )
                     ],
@@ -173,6 +176,7 @@ class _TranslateScreenState extends State<TranslateScreen> {
             setState(() {
               language2 = newLanguage;
             }),
+
       );
 
   // Widget resultCard() {

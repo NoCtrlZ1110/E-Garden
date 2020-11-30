@@ -16,6 +16,7 @@ class CalendarPage extends StatelessWidget {
         maxLines: 1,
         style:
             TextStyle(fontSize: 20.0, color: Colors.black12, letterSpacing: 5),
+
       ),
     );
   }
@@ -156,6 +157,7 @@ class CalendarPage extends StatelessWidget {
                                 title: 'Project Research',
                                 subtitle:
                                     'Discuss with the colleagues about the future plan',
+
                                 boxColor: LightColors.kLightYellow2,
                               ),
                               _dashedText(),
@@ -173,6 +175,7 @@ class CalendarPage extends StatelessWidget {
                                 title: 'Design Meeting',
                                 subtitle:
                                     'Discuss with designers for new task for the medical app',
+
                                 boxColor: LightColors.kLightGreen,
                               ),
                             ],
