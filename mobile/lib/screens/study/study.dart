@@ -1,10 +1,12 @@
 import 'package:e_garden/configs/AppConfig.dart';
 import 'package:e_garden/screens/study/review.dart';
 import 'package:e_garden/widgets/custom_app_bar.dart';
+import 'package:e_garden/widgets/custom_buton_component.dart';
 import 'package:e_garden/widgets/custom_tile.dart';
 import 'package:e_garden/widgets/image_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 
 import 'learn.dart';
 
@@ -65,32 +67,43 @@ class _StudyScreenState extends State<StudyScreen> {
               SizedBox(
                 height: 20,
               ),
-              TileWidget(
-                text: "Learn",
-                color: AppColors.lightBlue,
-                leftText: "15 Units",
-                rightText: "95%",
-                press: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => LearnScreen()),
-                  );
-                },
-              ),
+              CustomButton(
+                  backgroundColor: AppColors.green,
+                  child: TileWidget(
+                    text: "Learn",
+                    color: AppColors.lightBlue,
+                    leftText: "15 Units",
+                    rightText: "95%",
+                  ),
+                  height: SizeConfig.safeBlockHorizontal * 40,
+                  width: SizeConfig.safeBlockHorizontal * 80,
+                  shadowColor: Color(0xFF6CA243),
+                  onPressed: () => Navigator.push(
+                        context,
+                    PageTransition(
+                        type: PageTransitionType.rightToLeft,
+                        duration: Duration(milliseconds: 400),
+                        child: LearnScreen()),                      )),
               SizedBox(
                 height: 40,
               ),
-              TileWidget(
-                text: "Review",
-                leftText: "23 Units",
-                rightText: "37%",
-                press: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => ReviewScreen()),
-                  );
-                },
-              ),
+              CustomButton(
+                  backgroundColor: AppColors.green,
+                  child: TileWidget(
+                    text: "Review",
+                    leftText: "23 Units",
+                    rightText: "37%",
+                  ),
+                  height: SizeConfig.safeBlockHorizontal * 40,
+                  width: SizeConfig.safeBlockHorizontal * 80,
+                  shadowColor: Color(0xFF6CA243),
+                  onPressed: () => Navigator.push(
+                        context,
+                      PageTransition(
+                          type: PageTransitionType.rightToLeft,
+                          duration: Duration(milliseconds: 400),
+                          child: ReviewScreen()),
+                      )),
               SizedBox(
                 height: 40,
               ),

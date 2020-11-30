@@ -37,6 +37,7 @@ dependencies:
   english_words: ^3.1.5
   audioplayers: any
   html_unescape: ^1.0.2
+  page_transition: ^1.1.7+2
 
 
 
