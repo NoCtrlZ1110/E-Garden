@@ -4,6 +4,7 @@ import 'package:e_garden/widgets/custom_buton_component.dart';
 import 'package:e_garden/widgets/text_app_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 
 class SelectVocabularyTopic extends StatefulWidget {
   @override
@@ -41,9 +42,10 @@ class _SelectVocabularyTopicState extends State<SelectVocabularyTopic> {
                             onPressed: () => {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        ReviewVocabularyScreen()),
+                                PageTransition(
+                                    type: PageTransitionType.rightToLeft,
+                                    duration: Duration(milliseconds: 400),
+                                    child: ReviewVocabularyScreen()),
                               )
                             },
                             shadowColor: AppColors.buttonShadow,

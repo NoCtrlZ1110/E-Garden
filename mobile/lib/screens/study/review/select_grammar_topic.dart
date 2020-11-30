@@ -3,6 +3,7 @@ import 'package:e_garden/widgets/custom_buton_component.dart';
 import 'package:e_garden/widgets/text_app_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 
 import 'grammar.dart';
 
@@ -42,9 +43,10 @@ class _SelectGrammarTopicState extends State<SelectGrammarTopic> {
                             onPressed: () => {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        ReviewGrammarScreen()),
+                                PageTransition(
+                                    type: PageTransitionType.rightToLeft,
+                                    duration: Duration(milliseconds: 400),
+                                    child: ReviewGrammarScreen()),
                               )
                             },
                             shadowColor: AppColors.buttonShadow,
