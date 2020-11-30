@@ -77,7 +77,9 @@ class _TranslateScreenState extends State<TranslateScreen> {
                               translating = true;
                             }
                             if (translating) {
-                              _textTranslate=_translateController.text;
+
+                              _textTranslate = _translateController.text;
+
                               print(_textTranslate);
                             }
                           },
@@ -85,7 +87,9 @@ class _TranslateScreenState extends State<TranslateScreen> {
                           autocorrect: false,
                           style: TextStyle(fontSize: 16.0),
                           maxLength: 300,
-                          decoration: InputDecoration.collapsed(hintText: "Enter text ..."),
+                          decoration: InputDecoration.collapsed(
+                              hintText: "Enter text ..."),
+
                         ),
                       )
                     ],
@@ -95,57 +99,59 @@ class _TranslateScreenState extends State<TranslateScreen> {
                   height: SizeConfig.blockSizeVertical,
                 ),
                 FutureBuilder(
-                  future: cart.translate2(_textTranslate,
-                      Translations.getLanguageCode(language1), Translations.getLanguageCode(language2)),
-                    builder: (context, snapshot){
-                      if (snapshot.hasData){
-                      return Card(
-                        margin: const EdgeInsets.symmetric(horizontal: 15.0),
-                        color: Colors.lightGreen,
-                        child: Stack(
-                          children: <Widget>[
-                            Container(
-                              padding: EdgeInsets.all(25.0),
-                              width: SizeConfig.blockSizeHorizontal * 100,
-                              child: ConstrainedBox(
-                                constraints: BoxConstraints(
-                                  minHeight: SizeConfig.blockSizeVertical * 15,
-                                ),
-                                child: Text(
-                                  cart.translateText,
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 20.0,
+                    future: cart.translate2(_textTranslate,
+                        Translations.getLanguageCode(language1),
+                        Translations.getLanguageCode(language2)),
+                    builder: (context, snapshot) {
+                      if (snapshot.hasData) {
+                        return Card(
+                          margin: const EdgeInsets.symmetric(horizontal: 15.0),
+                          color: Colors.lightGreen,
+                          child: Stack(
+                            children: <Widget>[
+                              Container(
+                                padding: EdgeInsets.all(25.0),
+                                width: SizeConfig.blockSizeHorizontal * 100,
+                                child: ConstrainedBox(
+                                  constraints: BoxConstraints(
+                                    minHeight: SizeConfig.blockSizeVertical *
+                                        15,
                                   ),
-                                  textAlign: TextAlign.justify,
+                                  child: Text(
+                                    cart.translateText,
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 20.0,
+                                    ),
+                                    textAlign: TextAlign.justify,
+                                  ),
                                 ),
                               ),
-                            ),
-                            Positioned(
-                              bottom: 0,
-                              right: 0,
-                              child: Row(
-                                children: [
-                                  IconButton(
-                                    icon: Icon(
-                                      Icons.volume_up_rounded,
-                                      color: Colors.white,
+                              Positioned(
+                                bottom: 0,
+                                right: 0,
+                                child: Row(
+                                  children: [
+                                    IconButton(
+                                      icon: Icon(
+                                        Icons.volume_up_rounded,
+                                        color: Colors.white,
+                                      ),
+                                      onPressed: () {},
                                     ),
-                                    onPressed: () {},
-                                  ),
-                                  IconButton(
-                                    icon: Icon(
-                                      Icons.share,
-                                      color: Colors.white,
+                                    IconButton(
+                                      icon: Icon(
+                                        Icons.share,
+                                        color: Colors.white,
+                                      ),
+                                      onPressed: () {},
                                     ),
-                                    onPressed: () {},
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
-                            ),
-                          ],
-                        ),
-                      );
+                            ],
+                          ),
+                        );
                       }
                       return Container();
                     }
@@ -157,17 +163,20 @@ class _TranslateScreenState extends State<TranslateScreen> {
       );
     });
   }
-
-  Widget buildLanguageTitle() => LanguageWidget(
+  Widget buildLanguageTitle() =>
+      LanguageWidget(
         language1: language1,
         language2: language2,
-        onChangedLanguage1: (newLanguage) => setState(() {
-          language1 = newLanguage;
-          print(language1);
-        }),
-        onChangedLanguage2: (newLanguage) => setState(() {
-          language2 = newLanguage;
-        }),
+        onChangedLanguage1: (newLanguage) =>
+            setState(() {
+              language1 = newLanguage;
+              print(language1);
+            }),
+        onChangedLanguage2: (newLanguage) =>
+            setState(() {
+              language2 = newLanguage;
+            }),
+
       );
 
   // Widget resultCard() {
@@ -176,3 +185,8 @@ class _TranslateScreenState extends State<TranslateScreen> {
   //       : Container();
   // }
 }
+// Widget resultCard() {
+//   return (_resultTranslate.isNotEmpty)
+//       ?
+//       : Container();
+// }

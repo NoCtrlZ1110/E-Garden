@@ -15,7 +15,8 @@ class CalendarPage extends StatelessWidget {
         '------------------------------------------',
         maxLines: 1,
         style:
-        TextStyle(fontSize: 20.0, color: Colors.black12, letterSpacing: 5),
+            TextStyle(fontSize: 20.0, color: Colors.black12, letterSpacing: 5),
+
       ),
     );
   }
@@ -106,7 +107,7 @@ class CalendarPage extends StatelessWidget {
                       date: dates[index],
                       dayColor: index == 0 ? LightColors.kRed : Colors.black54,
                       dateColor:
-                      index == 0 ? LightColors.kRed : LightColors.kDarkBlue,
+                          index == 0 ? LightColors.kRed : LightColors.kDarkBlue,
                     );
                   },
                 ),
@@ -127,19 +128,19 @@ class CalendarPage extends StatelessWidget {
                             physics: NeverScrollableScrollPhysics(),
                             itemBuilder: (BuildContext context, int index) =>
                                 Padding(
-                                  padding:
+                              padding:
                                   const EdgeInsets.symmetric(vertical: 15.0),
-                                  child: Align(
-                                    alignment: Alignment.centerLeft,
-                                    child: Text(
-                                      '${time[index]} ${time[index] > 8 ? 'PM' : 'AM'}',
-                                      style: TextStyle(
-                                        fontSize: 16.0,
-                                        color: Colors.black54,
-                                      ),
-                                    ),
+                              child: Align(
+                                alignment: Alignment.centerLeft,
+                                child: Text(
+                                  '${time[index]} ${time[index] > 8 ? 'PM' : 'AM'}',
+                                  style: TextStyle(
+                                    fontSize: 16.0,
+                                    color: Colors.black54,
                                   ),
                                 ),
+                              ),
+                            ),
                           ),
                         ),
                         SizedBox(
@@ -155,7 +156,8 @@ class CalendarPage extends StatelessWidget {
                               TaskContainer(
                                 title: 'Project Research',
                                 subtitle:
-                                'Discuss with the colleagues about the future plan',
+                                    'Discuss with the colleagues about the future plan',
+
                                 boxColor: LightColors.kLightYellow2,
                               ),
                               _dashedText(),
@@ -172,7 +174,8 @@ class CalendarPage extends StatelessWidget {
                               TaskContainer(
                                 title: 'Design Meeting',
                                 subtitle:
-                                'Discuss with designers for new task for the medical app',
+                                    'Discuss with designers for new task for the medical app',
+
                                 boxColor: LightColors.kLightGreen,
                               ),
                             ],
