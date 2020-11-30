@@ -1,5 +1,4 @@
 import 'package:e_garden/configs/AppConfig.dart';
-import 'package:e_garden/core/models/dictionary/dictionary.dart';
 import 'package:e_garden/core/services/dictionary/dictionary_model.service.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +13,6 @@ class DictionaryMeaningTab extends StatefulWidget {
 }
 
 class _DictionaryMeaningTabState extends State<DictionaryMeaningTab> {
-  ScrollController _scrollController = new ScrollController();
   List<Meanings_Word> _definitions;
 
   _DictionaryMeaningTabState(this._definitions);
@@ -25,8 +23,10 @@ class _DictionaryMeaningTabState extends State<DictionaryMeaningTab> {
         itemCount: _definitions.length,
         itemBuilder: (BuildContext context, int index) {
           return Container(
-            margin: EdgeInsets.only(top: 50, left: 20, right: 20),
-            padding: EdgeInsets.only(top: 20, bottom: 20, left: 10, right: 10),
+            margin: EdgeInsets.only(
+                top: SizeConfig.blockSizeVertical * 3, left: 20, right: 20, bottom: SizeConfig.blockSizeVertical * 3),
+            padding: EdgeInsets.only(
+                top: SizeConfig.blockSizeVertical * 3, left: 10, right: 10, bottom: SizeConfig.blockSizeVertical * 3),
             decoration: BoxDecoration(
               border: Border.all(color: Colors.blueAccent),
               borderRadius: BorderRadius.circular(20),
