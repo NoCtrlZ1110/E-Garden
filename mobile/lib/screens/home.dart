@@ -34,7 +34,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
   static List<Widget> _widgetOptions = <Widget>[
     StudyScreen(),
     HomeDictionaryScreen(),
-    NotesScreen()
+    CalendarPage()
   ];
 
   @override

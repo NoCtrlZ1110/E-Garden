@@ -28,6 +28,7 @@ dependencies:
   flutter_svg: ^0.19.1
   dotted_border: ^1.0.6
   fluttertoast: ^7.1.1
+
   translator: ^0.1.5
   provider: ^4.3.2+2
   dio: ^3.0.10
@@ -38,8 +39,7 @@ dependencies:
   audioplayers: any
   html_unescape: ^1.0.2
   page_transition: ^1.1.7+2
-
-
+  table_calendar: ^2.3.0
 
 
   # The following adds the Cupertino Icons font to your application.

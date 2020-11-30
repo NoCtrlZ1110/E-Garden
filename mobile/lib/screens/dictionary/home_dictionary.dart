@@ -17,6 +17,7 @@ class _HomeDictionaryScreenState extends State<HomeDictionaryScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: CustomAppBar(
           height: 120,
           child: SafeArea(
