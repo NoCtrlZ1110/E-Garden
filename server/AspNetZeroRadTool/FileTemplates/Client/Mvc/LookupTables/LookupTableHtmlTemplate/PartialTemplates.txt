@@ -1,0 +1,14 @@
+{
+"conditionalTemplates":[
+		{
+			"placeholder": "{{Container_Class_Here}}",
+			"condition": "{{Project_Version_Here}} < 070200",
+			"content": "kt-content"
+		},
+		{
+			"placeholder": "{{Container_Class_V2_Here}}",
+			"condition": "{{Project_Version_Here}} >= 070200",
+			"content": "kt-container kt-container--fluid kt-grid__item kt-grid__item--fluid"
+		}
+	]
+}

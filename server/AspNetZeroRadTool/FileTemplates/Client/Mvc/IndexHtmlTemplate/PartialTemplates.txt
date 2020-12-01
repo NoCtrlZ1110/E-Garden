@@ -1,0 +1,148 @@
+{
+"propertyTemplates":[
+		{
+			"placeholder" : "{{Property_Filter_Template_Here}}",
+			"condition" : "{{Property_Advanced_Filter_Here}} == true",
+			"templates" : [
+					{
+					"type" : "enum",
+					"content" : "
+							<div class=\"col-md-3\">
+								<label for=\"{{Property_Name_Here}}FilterId\">@L(\"{{Property_Name_Here}}\")</label>
+								<select class=\"form-control\" name=\"{{Property_Name_Here}}Filter\" id=\"{{Property_Name_Here}}FilterId\">
+								<option value=\"-1\">@L(\"All\")</option>
+									{{Enum_Option_Looped_Template_Here}}
+								</select>
+                            </div>"
+					},
+					{
+					"type" : "bool",
+					"content" : "
+							<div class=\"col-md-3\">
+								<label for=\"{{Property_Name_Here}}FilterId\">@L(\"{{Property_Name_Here}}\")</label>
+								<select class=\"form-control\" name=\"{{Property_Name_Here}}Filter\" id=\"{{Property_Name_Here}}FilterId\">
+									<option value=\"-1\">@L(\"All\")</option>
+									<option value=\"0\">@L(\"False\")</option>
+									<option value=\"1\">@L(\"True\")</option>
+								</select>
+                            </div>"
+					},
+					{
+					"type" : "DateTime",
+					"content" : "
+                            <div class=\"col-md-3\">
+                                    <div class=\"form-group\">
+										<label for=\"Min{{Property_Name_Here}}FilterId\">@L(\"{{Property_Name_Here}}Range\")</label>
+										<div class=\"input-group\">
+											<input class=\"form-control m-input date-picker\" type=\"text\" placeholder=\"@L(\"MinValue\")\"  id=\"Min{{Property_Name_Here}}FilterId\">
+											<span style=\"line-height: 40px;padding: 0 15px 0 15px;\"> &mdash; </span>
+											<input class=\"form-control m-input date-picker\" type=\"text\" placeholder=\"@L(\"MaxValue\")\"  id=\"Max{{Property_Name_Here}}FilterId\">
+										</div>
+									</div>
+                            </div>"
+					},
+					{
+					"type" : "numeric",
+					"content" : "
+                            <div class=\"col-md-3\">
+                                 <div class=\"form-group\">
+									<label  for=\"Min{{Property_Name_Here}}FilterId\">@L(\"MinMax\") @L(\"{{Property_Name_Here}}\")</label>
+									<div class=\"input-group\">
+										<input type=\"number\" class=\"form-control m-input\" placeholder=\"@L(\"MinValue\")\" name=\"min{{Property_Name_Here}}Filter\" id=\"Min{{Property_Name_Here}}FilterId\"/>
+                                        <input type=\"number\" class=\"form-control m-input\" placeholder=\"@L(\"MaxValue\")\" name=\"max{{Property_Name_Here}}Filter\"  id=\"Max{{Property_Name_Here}}FilterId\"/>
+									</div>
+                                </div>
+                            </div>"
+					},
+					{
+					"type" : "default",
+					"content" : "
+							<div class=\"col-md-3\">
+								<div class=\"form-group\">
+									<label for=\"{{Property_Name_Here}}FilterId\">@L(\"{{Property_Name_Here}}\")</label>
+									<input type=\"text\" class=\"form-control\" name=\"{{property_Name_Here}}Filter\" id=\"{{Property_Name_Here}}FilterId\">
+								</div>
+                            </div>"
+					}
+				]
+		},
+		{
+			"placeholder" : "{{Property_Looped_Template_Here}}",
+			"condition" : "{{Property_Listed_Here}} == true",
+			"templates" : [
+					{
+					"type" : "default",
+					"content" : "
+								<th>@L(\"{{Property_Name_Here}}\")</th>"
+					}
+				]
+		}
+	],
+"navigationPropertyTemplates":[
+		{
+			"placeholder" : "{{NP_Looped_Template_Here}}",
+			"templates" : [
+					{
+					"relation" : "single",
+					"content" : "
+								<th>@L(\"{{NP_Foreign_Entity_Name_Here}}{{NP_Display_Property_Name_Here}}\")</th>"
+					}
+				]
+		},
+		{
+			"placeholder" : "{{NP_Filter_Template_Here}}",
+			"templates" : [
+					{
+					"relation" : "single",
+					"content" : "
+							<div class=\"col-md-3\">
+								<div class=\"form-group\">
+									<label for=\"{{NP_Foreign_Entity_Name_Here}}{{NP_Display_Property_Name_Here}}{{NP_Duplication_Number_Here}}FilterId\">(@L(\"{{NP_Foreign_Entity_Name_Here}}\")) @L(\"{{NP_Display_Property_Name_Here}}\")</label>
+									<input type=\"text\" class=\"form-control\" name=\"{{nP_Foreign_Entity_Name_Here}}{{NP_Display_Property_Name_Here}}{{NP_Duplication_Number_Here}}Filter\" id=\"{{NP_Foreign_Entity_Name_Here}}{{NP_Display_Property_Name_Here}}{{NP_Duplication_Number_Here}}FilterId\">
+								</div>
+                            </div>"
+					}
+				]
+		}
+	],
+"enumTemplates":[
+		{
+			"placeholder" : "{{Enum_Option_Looped_Template_Here}}",
+			"content" : "										<option value=\"{{Enum_Property_Value_Here}}\">@L(\"Enum_{{Enum_Name_Here}}_{{Enum_Property_Value_Here}}\")</option>
+"
+		}
+	],
+"conditionalTemplates":[
+		{
+			"placeholder": "{{Get_Excel_Button_Here}}",
+			"condition": "{{Create_Excel_Export_Here}} == true",
+			"content": "<button id=\"ExportToExcelButton\" class=\"btn btn-outline-success\"><i class=\"fa fa-file-excel\"></i> @L(\"ExportToExcel\")</button>
+            "
+		},
+		{
+			"placeholder": "{{Container_Class_Here}}",
+			"condition": "{{Project_Version_Here}} < 070200",
+			"content": "kt-content"
+		},
+		{
+			"placeholder": "{{Container_Class_V2_Here}}",
+			"condition": "{{Project_Version_Here}} >= 070200",
+			"content": "@(await GetContainerClass()) kt-grid__item kt-grid__item--fluid"
+		},
+		{
+			"placeholder": "{{Div_After_Metronic_V606}}",
+			"condition": "{{Project_Version_Here}} >= 070200",
+			"content": "</div>"
+		},
+		{
+			"placeholder": "{{Content_Class_After_Metronic_V606}}",
+			"condition": "{{Project_Version_Here}} >= 070200",
+			"content": "<div class=\"kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor\">"
+		},
+		{
+			"placeholder": "{{Container_Class_After_Metronic_V606}}",
+			"condition": "{{Project_Version_Here}} >= 070200",
+			"content": "<div class=\"@(await GetContainerClass())\">"
+		}
+	]
+}

@@ -1,0 +1,28 @@
+{
+"conditionalTemplates":[
+		{
+			"placeholder": "{{TurboTable_Import_Here}}",
+			"condition": "{{Project_Version_Here}} >= 050400",
+			"content": "import { Table } from 'primeng/components/table/table'"
+		},
+		{
+			"placeholder": "{{DataTable_Import_Here}}",
+			"condition": "{{Project_Version_Here}} < 050400",
+			"content": "import { DataTable } from 'primeng/components/datatable/datatable'"
+		},
+		{
+			"placeholder": "{{DataTable_Dec_Here}}",
+			"condition": "{{Project_Version_Here}} < 050400",
+			"content": "Data"
+		},
+		{
+			"placeholder": "{{TruboTable_Primenghelper_Here}}",
+			"condition": "{{Project_Version_Here}} >= 050400",
+			"content": "primengTableHelper"
+		},
+		{
+			"placeholder": "{{DataTable_Primenghelper_Here}}",
+			"condition": "{{Project_Version_Here}} < 050400",
+			"content": "primengDatatableHelper"
+		}
+	]}
