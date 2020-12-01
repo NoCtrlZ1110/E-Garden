@@ -1,0 +1,278 @@
+{
+"propertyTemplates":[
+		{
+			"placeholder" : "{{Property_Looped_Header_Template_Here}}",
+			"condition" : "{{Property_Listed_Here}} == true",
+			"templates" : [
+					{
+					"type" : "default",
+					"content" : "                                    <th style=\"width: 150px\" pSortableColumn=\"{{property_Name_Here}}\">
+                                        {{l('{{Property_Name_Here}}')}}
+                                        <p-sortIcon field=\"{{entity_Name_Here}}.{{property_Name_Here}}\"></p-sortIcon>
+                                    </th>
+"
+					}
+				]
+		},	
+		{
+			"placeholder" : "{{Property_Looped_Template_Here}}",
+			"condition" : "{{Property_Listed_Here}} == true",
+			"templates" : [
+					{
+					"type" : "enum",
+					"content" : "                                    <td style=\"width:150px\">
+										<span class=\"ui-column-title\"> {{l('{{Property_Name_Here}}')}}</span>
+										{{l({{Enum_Localization_Before_060600}} {{property_Type_Here}}[record.{{entity_Name_Here}}.{{property_Name_Here}}])}}
+                                    </td>
+"
+					},
+					{
+					"type" : "bool",
+					"content" : "                                    <td style=\"width:150px\">
+										<span class=\"ui-column-title\"> {{l('{{Property_Name_Here}}')}}</span>
+                                        <div *ngIf=\"record.{{entity_Name_Here}}.{{property_Name_Here}}\" class=\"text-center\"><i class=\"fa fa-check-circle kt--font-success\" title=\"True\"></i></div>
+										<div *ngIf=\"!record.{{entity_Name_Here}}.{{property_Name_Here}}\" class=\"text-center\"><i class=\"fa fa-times-circle\" title=\"False\"></i></div>
+                                    </td>
+"
+					},
+					{
+					"type" : "DateTime",
+					"content" : "                                    <td style=\"width:150px\">
+										<span class=\"ui-column-title\"> {{l('{{Property_Name_Here}}')}}</span>
+                                        <span *ngIf=\"record.{{entity_Name_Here}}.{{property_Name_Here}}\">
+											{{record.{{entity_Name_Here}}.{{property_Name_Here}} | momentFormat:\'L\'}}
+                                        </span>
+                                        <span *ngIf=\"!record.{{entity_Name_Here}}.{{property_Name_Here}}\">-</span>
+                                    </td>
+"
+					},
+					{
+					"type" : "default",
+					"content" : "                                    <td style=\"width:150px\">
+											<span class=\"ui-column-title\"> {{l('{{Property_Name_Here}}')}}</span>
+											{{record.{{entity_Name_Here}}.{{property_Name_Here}}}}
+										</td>
+"
+					}
+				]
+		},
+		{
+			"placeholder" : "{{Property_Filter_Template_Here}}",
+			"condition" : "{{Property_Advanced_Filter_Here}} == true",
+			"templates" : [
+					{
+					"type" : "enum",
+					"content" : "
+							<div class=\"col-md-3\">
+								<label for=\"{{Property_Name_Here}}FilterSelect\">{{l(\"{{Property_Name_Here}}\")}}</label>
+								<select class=\"form-control\" name=\"{{Property_Name_Here}}Filter\" id=\"{{Property_Name_Here}}FilterSelect\" [(ngModel)]=\"{{property_Name_Here}}Filter\">
+								<option value=\"-1\">{{l(\"All\")}}</option>
+									{{Enum_Option_Looped_Template_Here}}
+								</select>
+                            </div>"
+					},
+					{
+					"type" : "bool",
+					"content" : "	
+							<div class=\"col-md-3\">
+								<label for=\"{{Property_Name_Here}}FilterSelect\">{{l(\"{{Property_Name_Here}}\")}}</label>
+								<select class=\"form-control\" name=\"{{Property_Name_Here}}Filter\" id=\"{{Property_Name_Here}}FilterSelect\" [(ngModel)]=\"{{property_Name_Here}}Filter\">
+								<option value=\"-1\">{{l(\"All\")}}</option>
+								<option value=\"0\">{{l(\"False\")}}</option>
+								<option value=\"1\">{{l(\"True\")}}</option>
+								</select>
+                            </div>"
+					},
+					{
+					"type" : "DateTime",
+					"content" : "
+                            <div class=\"col-md-3\">
+                                <div class=\"form-group\">
+									<label  for=\"Min{{Property_Name_Here}}Filter\">{{l(\"{{Property_Name_Here}}Range\")}}</label>
+									<div class=\"input-group\">
+                                        {{DateTimePicker_Before_V6}}{{DateTimePicker_After_V6}}
+									</div>
+                                </div>
+                            </div>"
+					},
+					{
+					"type" : "numeric",
+					"content" : "
+                            <div class=\"col-md-3\">
+                                <div class=\"form-group\">
+									<label for=\"Min{{Property_Name_Here}}Filter\">{{l(\"MinMax\")}} {{l(\"{{Property_Name_Here}}\")}}</label>
+									<div class=\"input-group\">
+                                        <input type=\"number\" class=\"form-control\" id=\"Min{{Property_Name_Here}}Filter\" [(ngModel)]=\"min{{Property_Name_Here}}Filter\" placeholder=\"{{l('MinValue')}}\" name=\"min{{Property_Name_Here}}Filter\" />
+                                        <input type=\"number\" class=\"form-control\" [(ngModel)]=\"max{{Property_Name_Here}}Filter\" placeholder=\"{{l('MaxValue')}}\" name=\"max{{Property_Name_Here}}Filter\" />
+									</div>
+                                </div>
+                            </div>"
+					},
+					{
+					"type" : "default",
+					"content" : "
+							<div class=\"col-md-3\">
+								<div class=\"form-group\">
+									<label for=\"{{Property_Name_Here}}Filter\">{{l(\"{{Property_Name_Here}}\")}}</label>
+									<input type=\"text\" class=\"form-control\" id=\"{{Property_Name_Here}}Filter\" name=\"{{property_Name_Here}}Filter\" [(ngModel)]=\"{{property_Name_Here}}Filter\">
+								</div>
+                            </div>"
+					}
+				]
+		}
+	],
+"navigationPropertyTemplates":[
+		{
+			"placeholder" : "{{NP_Looped_Header_Template_Here}}",
+			"templates" : [
+					{
+					"relation" : "single",
+					"content" : "                                    <th style=\"width: 150px\" pSortableColumn=\"{{nP_Object_Name_Here}}Fk.{{nP_Display_Property_Name_Here}}\">
+                                        {{l('{{NP_Display_Property_Name_Here}}')}}
+                                        <p-sortIcon field=\"{{nP_Foreign_Entity_Name_Here}}{{NP_Display_Property_Name_Here}}{{NP_Duplication_Number_Here}}\"></p-sortIcon>
+                                    </th>
+"
+					}
+				]
+		},
+		{
+			"placeholder" : "{{NP_Looped_Template_Here}}",
+			"templates" : [
+					{
+					"relation" : "single",
+					"content" : "                                    <td style=\"width:150px\">
+												<span class=\"ui-column-title\"> {{l('{{NP_Display_Property_Name_Here}}')}}</span>
+												{{record.{{nP_Foreign_Entity_Name_Here}}{{NP_Display_Property_Name_Here}}{{NP_Duplication_Number_Here}}}}
+											</td>
+"
+					}
+				]
+		},
+		{
+			"placeholder" : "{{NP_Filter_Template_Here}}",
+			"templates" : [
+					{
+					"relation" : "single",
+					"content" : "
+							<div class=\"col-md-3\">
+								<div class=\"form-group\">
+									<label for=\"{{NP_Foreign_Entity_Name_Here}}{{NP_Display_Property_Name_Here}}{{NP_Duplication_Number_Here}}Filter\">({{l(\"{{NP_Foreign_Entity_Name_Here}}{{NP_Duplication_Number_Here}}\")}}) {{l(\"{{NP_Display_Property_Name_Here}}\")}}</label>
+									<input type=\"text\" class=\"form-control\" id=\"{{NP_Foreign_Entity_Name_Here}}{{NP_Display_Property_Name_Here}}{{NP_Duplication_Number_Here}}Filter\" name=\"{{nP_Foreign_Entity_Name_Here}}{{NP_Display_Property_Name_Here}}{{NP_Duplication_Number_Here}}Filter\" [(ngModel)]=\"{{nP_Foreign_Entity_Name_Here}}{{NP_Display_Property_Name_Here}}{{NP_Duplication_Number_Here}}Filter\">
+                                </div>
+                            </div>"
+					}
+				]
+		}
+	],
+"enumTemplates":[
+		{
+			"placeholder" : "{{Enum_Option_Looped_Template_Here}}",
+			"content" : "										<option value=\"{{Enum_Property_Value_Here}}\">{{l(\'{{Enum_Property_Name_Here}}\')}}</option>
+"
+		}
+	],
+"conditionalTemplates":[
+		{
+			"placeholder": "{{EntityHistoryModal_Action_Here}}",
+			"condition": "{{Entity_History_Here}} == true",
+			"content": "
+                                                <li>
+                                                    <a href=\"javascript:;\" *ngIf=\"entityHistoryEnabled\"
+                                                       (click)=\"showHistory(record.{{entity_Name_Here}})\">{{l('History')}}</a>
+                                                </li>"
+		},
+		{
+			"placeholder": "{{History_Modal_Tag_Here}}",
+			"condition": "{{Entity_History_Here}} == true",
+			"content": " <entityTypeHistoryModal #entityTypeHistoryModal></entityTypeHistoryModal>"
+		},
+		{
+			"placeholder": "{{View_Button_Here}}",
+			"condition": "{{Create_View_Only_Here}} == true",
+			"content": "												<li>
+													<a {{Dropdown_Href_Attrr_After_V6}}
+														(click)=\"view{{Entity_Name_Here}}Modal.show(record)\">{{l('View')}}</a>
+												</li>"
+		},
+		{
+			"placeholder": "{{View_Modal_Tag_Here}}",
+			"condition": "{{Create_View_Only_Here}} == true",
+			"content": "<view{{Entity_Name_Here}}Modal #view{{Entity_Name_Here}}Modal></view{{Entity_Name_Here}}Modal>"
+		},
+		{
+			"placeholder": "{{Get_Excel_Button_Here}}",
+			"condition": "{{Create_Excel_Export_Here}} == true",
+			"content": "<button (click)=\"exportToExcel()\" class=\"btn btn-outline-success\"><i class=\"fa fa-file-excel\"></i> {{l(\"ExportToExcel\")}}</button>
+                "
+		},
+		{
+			"placeholder": "{{DateTimePicker_Before_V6}}",
+			"condition": "{{Project_Version_Here}} < 060000",
+			"content": "<input class=\"form-control m-input\" id=\"Min{{Property_Name_Here}}Filter\" type=\"datetime\" datePicker  placeholder=\"{{l('MinValue')}}\" [(selectedDate)]=\"min{{Property_Name_Here}}Filter\">
+                                        <span style=\"line-height: 40px;padding: 0 15px 0 15px;\"> &mdash; </span>
+										<input class=\"form-control m-input\" type=\"datetime\" datePicker  placeholder=\"{{l('MaxValue')}}\" [(selectedDate)]=\"max{{Property_Name_Here}}Filter\">"
+		},
+		{
+			"placeholder": "{{DateTimePicker_After_V6}}",
+			"condition": "{{Project_Version_Here}} >= 060000",
+			"content": "<input class=\"form-control m-input\" id=\"Min{{Property_Name_Here}}Filter\" name=\"Min{{Property_Name_Here}}Filter\" type=\"datetime\" bsDatepicker  placeholder=\"{{l('MinValue')}}\" [(ngModel)]=\"min{{Property_Name_Here}}Filter\">
+			                            <span style=\"line-height: 40px;padding: 0 15px 0 15px;\"> &mdash; </span>
+                                        <input class=\"form-control m-input\" id=\"Max{{Property_Name_Here}}Filter\" name=\"Max{{Property_Name_Here}}Filter\" type=\"datetime\" bsDatepicker  placeholder=\"{{l('MaxValue')}}\" [(ngModel)]=\"max{{Property_Name_Here}}Filter\">"
+		},
+		{
+			"placeholder": "{{Dropdown_Href_Attrr_After_V6}}",
+			"condition": "{{Project_Version_Here}} >= 060000",
+			"content": "href=\"javascript:;\""
+		},
+		{
+			"placeholder": "{{Dropdown_Menu_Dropdown_Attrr_After_V6}}",
+			"condition": "{{Project_Version_Here}} >= 060000",
+			"content": " *dropdownMenu"
+		},
+		{
+			"placeholder": "{{Dropdown_Div_Before_V6}}",
+			"condition": "{{Project_Version_Here}} < 060000",
+			"content": "<div class=\"btn-group dropdown\" normalizePosition>
+                                            <button class=\"dropdown-toggle btn btn-sm btn-primary\"
+                                                    data-toggle=\"dropdown\"
+                                                    aria-haspopup=\"true\"
+                                                    aria-expanded=\"false\">"
+		},
+		{
+			"placeholder": "{{Dropdown_Div_After_V6}}",
+			"condition": "{{Project_Version_Here}} >= 060000",
+			"content": "<div class=\"btn-group dropdown\" dropdown container=\"body\">
+                                            <button class=\"dropdown-toggle btn btn-sm btn-primary\" dropdownToggle>"
+		},
+		{
+			"placeholder": "{{Enum_Localization_Before_060600}}",
+			"condition": "{{Project_Version_Here}} < 060600",
+			"content": "'Enum_{{Property_Type_Here}}' + "
+		},
+		{
+			"placeholder": "{{Container_Class_Here}}",
+			"condition": "{{Project_Version_Here}} < 070200",
+			"content": "class=\"kt-content\""
+		},
+		{
+			"placeholder": "{{Container_Class_V2_Here}}",
+			"condition": "{{Project_Version_Here}} >= 070200",
+			"content": "[class]=\"containerClass + ' kt-grid__item kt-grid__item--fluid'\""
+		},
+		{
+			"placeholder": "{{Div_After_Metronic_V606}}",
+			"condition": "{{Project_Version_Here}} >= 070200",
+			"content": "</div>"
+		},
+		{
+			"placeholder": "{{Content_Class_After_Metronic_V606}}",
+			"condition": "{{Project_Version_Here}} >= 070200",
+			"content": "<div class=\"kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor\">"
+		},
+		{
+			"placeholder": "{{Container_Class_After_Metronic_V606}}",
+			"condition": "{{Project_Version_Here}} >= 070200",
+			"content": "<div [class]=\"containerClass\">"
+		}
+	]
+}
