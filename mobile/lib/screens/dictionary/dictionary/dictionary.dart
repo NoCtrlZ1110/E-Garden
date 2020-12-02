@@ -13,7 +13,7 @@ class DictionaryScreen extends StatefulWidget {
   @override
   _DictionaryScreenState createState() => _DictionaryScreenState();
   final String newWord;
-  DictionaryScreen({@required this.newWord});
+  DictionaryScreen({this.newWord});
 }
 
 class _DictionaryScreenState extends State<DictionaryScreen> with TickerProviderStateMixin {

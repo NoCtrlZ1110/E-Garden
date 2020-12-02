@@ -1,31 +1,24 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:e_garden/configs/AppConfig.dart';
+import 'package:e_garden/widgets/button_green.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
-import 'button_green.dart';
-
+// ignore: must_be_immutable
 class DetailContainer extends StatefulWidget {
-  String text_type;
-  String text_description;
+  String type;
+  String example;
   Function previous;
   Function next;
-
-  DetailContainer(
-      {Key key,
-      @required this.text_type,
-      @required this.text_description,
-      this.previous,
-      this.next})
-      : super(key: key);
-
+  DetailContainer({this.next, this.previous, this.type, this.example});
   @override
   _DetailContainerState createState() => _DetailContainerState();
 }
 
 class _DetailContainerState extends State<DetailContainer> {
   bool bookmark = false;
+
   @override
   Widget build(BuildContext context) {
     return DottedBorder(
@@ -42,7 +35,7 @@ class _DetailContainerState extends State<DetailContainer> {
           children: [
             Positioned(
               child: Text(
-                widget.text_type,
+                widget.type,
                 style: TextStyle(fontSize: 28, color: AppColors.green),
               ),
               left: 25,
@@ -71,12 +64,15 @@ class _DetailContainerState extends State<DetailContainer> {
               right: 20,
             ),
             Positioned(
-              child: Text(
-                widget.text_description,
-                style: TextStyle(fontSize: 20, color: AppColors.brown),
+              left: 20,
+              top: 80,
+              child: Container(
+                width: SizeConfig.screenWidth * 0.8,
+                child: Text(
+                  widget.example,
+                  style: TextStyle(fontSize: 20, color: AppColors.brown),
+                ),
               ),
-              left: 25,
-              top: 70,
             ),
             Positioned(
               child: ButtonGreen(
@@ -87,7 +83,7 @@ class _DetailContainerState extends State<DetailContainer> {
                 },
                 height: 40,
                 width: 130,
-                text: 'previous',
+                text: 'Previous',
               ),
               bottom: 20,
               left: 20,
@@ -101,7 +97,7 @@ class _DetailContainerState extends State<DetailContainer> {
                 },
                 height: 40,
                 width: 130,
-                text: 'next',
+                text: 'Next',
               ),
               bottom: 20,
               right: 20,

@@ -2,6 +2,8 @@ import 'package:e_garden/configs/AppConfig.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:bordered_text/bordered_text.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 
 class TileWidget extends StatefulWidget {
   final String text, leftText, rightText;
@@ -54,13 +56,26 @@ class _TileWidgetState extends State<TileWidget> {
             left: 20,
           ),
           Positioned(
-            child: Text(
-              widget.text,
-              style: TextStyle(
-                  fontSize: 50,
-                  fontWeight: FontWeight.w600,
-                  letterSpacing: -2,
-                  color: Colors.white),
+            child: Container(
+              alignment: Alignment.centerLeft,
+              width: SizeConfig.screenWidth * 0.7,
+              height: 80,
+              child: FittedBox(
+                fit: BoxFit.fitWidth,
+                child: BorderedText(
+                  strokeWidth: SizeConfig.blockSizeVertical,
+                  strokeColor: Colors.white,
+                  child: Text(
+                    widget.text,
+                    style: TextStyle(
+                        fontSize: SizeConfig.blockSizeVertical * 6,
+                        fontWeight: FontWeight.w600,
+                        letterSpacing: -2,
+                        color: widget.color
+                    ),
+                  ),
+                ),
+              ),
             ),
             bottom: 35,
             left: 20,
@@ -68,7 +83,7 @@ class _TileWidgetState extends State<TileWidget> {
           Positioned(
             child: Icon(
               Icons.keyboard_arrow_right_rounded,
-              color: Colors.white,
+              color: widget.color,
               size: 40,
             ),
             right: 10,
@@ -77,7 +92,7 @@ class _TileWidgetState extends State<TileWidget> {
           Positioned(
             child: Text(
               widget.leftText != null ? widget.leftText : '',
-              style: TextStyle(fontSize: 16, color: Colors.white),
+              style: TextStyle(fontSize: 16, color: widget.color, fontWeight: FontWeight.w800),
             ),
             left: 25,
             bottom: 10,
@@ -85,7 +100,7 @@ class _TileWidgetState extends State<TileWidget> {
           Positioned(
             child: Text(
               widget.rightText != null ? widget.rightText : '',
-              style: TextStyle(fontSize: 16, color: Colors.white),
+              style: TextStyle(fontSize: 16, color: widget.color, fontWeight: FontWeight.w800),
             ),
             right: 25,
             bottom: 10,

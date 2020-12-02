@@ -124,13 +124,13 @@ class _ListeningScreenState extends State<ListeningScreen> {
               SizedBox(
                 height: 50,
               ),
-              DetailContainer(
-                text_type: data != null ? data.elementAt(index)["type"] : '',
-                text_description:
-                    data != null ? data.elementAt(index)["description"] : '',
-                previous: previous,
-                next: next,
-              ),
+              // DetailContainer(
+              //   text_type: data != null ? data.elementAt(index)["type"] : '',
+              //   text_description:
+              //       data != null ? data.elementAt(index)["description"] : '',
+              //   previous: previous,
+              //   next: next,
+              // ),
             ],
             mainAxisAlignment: MainAxisAlignment.center,
           ),

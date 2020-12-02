@@ -8,4 +8,11 @@ class BookModel extends ChangeNotifier{
     _current = value;
     notifyListeners();
   }
+
+  bool _isPlaying = false;
+  get  isPlaying => _isPlaying;
+  void play(){
+    _isPlaying = !_isPlaying;
+    notifyListeners();
+  }
 }
