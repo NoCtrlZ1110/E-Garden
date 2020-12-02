@@ -2,6 +2,7 @@ import 'package:e_garden/application.dart';
 import 'package:e_garden/core/services/dictionary/dictionary_model.service.dart';
 import 'package:e_garden/core/services/translate/translate_model.service.dart';
 import 'package:e_garden/screens/signin.dart';
+import 'package:e_garden/screens/study/learn/learn_model.dart';
 import 'package:e_garden/screens/study/study.provider.dart';
 import 'package:e_garden/utils/api.dart';
 import 'package:e_garden/utils/shared_preferences.dart';
@@ -20,6 +21,7 @@ Future<void> main() async {
       ChangeNotifierProvider(create: (_) => BookModel()),
       ChangeNotifierProvider(create: (_) => DictionaryModel()),
       ChangeNotifierProvider(create: (_) => TranslateModel()),
+      ChangeNotifierProvider(create: (_) => LearnModel()),
     ],
     child: E_Garden(),
   ));

@@ -49,7 +49,6 @@ class _ButtonGreenState extends State<ButtonGreen> {
               AnimatedPositioned(
                 onEnd: () {
                   setState(() {
-
                     if (!animated) {
                       animated = true;
                       if (widget.press != null) {
@@ -82,7 +81,7 @@ class _ButtonGreenState extends State<ButtonGreen> {
                       widget.text,
                       style: TextStyle(
                           color: Colors.white,
-                          fontSize: widget.height / 3,
+                          fontSize: widget.height / 2,
                           fontWeight: FontWeight.w600),
                     ),
                     Expanded(child: SizedBox()),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'light_color.dart';
+import '../utils/light_color.dart';
 
 
 class MyBackButton extends StatelessWidget {

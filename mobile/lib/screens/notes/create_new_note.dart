@@ -1,5 +1,5 @@
 import 'package:e_garden/widgets/back_button.dart';
-import 'package:e_garden/widgets/light_color.dart';
+import 'file:///D:/Project/AndroidStudioProjects/E-Garden/mobile/lib/utils/light_color.dart';
 import 'package:flutter/material.dart';
 
 import 'component/my_textField.dart';

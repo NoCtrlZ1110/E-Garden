@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class LightColors  {
+class LightColors {
   static const Color kLightYellow = Color(0xFFFFF9EC);
   static const Color kLightYellow2 = Color(0xFFFFE4C7);
   static const Color kDarkYellow = Color(0xFFF9BE7C);
@@ -13,4 +13,20 @@ class LightColors  {
   static const Color kGreen = Color(0xFF309397);
 
   static const Color kDarkBlue = Color(0xFF0D253F);
+
+  List<Color> bookColor = [
+    Color(0xFF00AB08),
+    Color(0xFF4ae54a),
+    Color(0xFF00ab5e),
+    Color(0xFF26D701),
+    Color(0xFF0f9200),
+  ];
+
+  List <Color> buttonLightColor = [
+    Color(0xFF26D701),
+    Color(0xFFa4fab6),
+    Color(0xFF54e360),
+    Color(0xFF95F985),
+    Color(0xFF4ae54a),
+  ];
 }
