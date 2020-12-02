@@ -1,3 +1,4 @@
+import 'package:e_garden/configs/AppConfig.dart';
 import 'package:e_garden/screens/dictionary/home_dictionary.dart';
 import 'package:e_garden/screens/notes/notes.dart';
 import 'package:e_garden/screens/study/study.dart';
@@ -10,8 +11,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateMixin {
-  int _selectedIndex = 0;
   TabController _controller;
+
   @override
   void initState() {
     // TODO: implement initState
@@ -25,17 +26,8 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
     super.dispose();
     _controller.dispose();
   }
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
 
-  static List<Widget> _widgetOptions = <Widget>[
-    StudyScreen(),
-    HomeDictionaryScreen(),
-    CalendarPage()
-  ];
+  static List<Widget> _widgetOptions = <Widget>[StudyScreen(), HomeDictionaryScreen(), CalendarPage()];
 
   @override
   Widget build(BuildContext context) {
@@ -48,18 +40,13 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                 child: TabBarView(
                   controller: _controller,
                   physics: BouncingScrollPhysics(),
-                  children: [
-                    StudyScreen(),
-                    HomeDictionaryScreen(),
-                    CalendarPage()
-                  ],
+                  children: [StudyScreen(), HomeDictionaryScreen(), CalendarPage()],
                 ),
               ),
               Container(
                 width: double.infinity,
-                height: 70,
-                decoration:
-                    BoxDecoration(color: const Color(0xFFF1F1F1), boxShadow: [
+                height: 60,
+                decoration: BoxDecoration(color: const Color(0xFFF1F1F1), boxShadow: [
                   BoxShadow(
                     color: Colors.grey,
                     blurRadius: 2.0,
@@ -69,8 +56,9 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                   length: _widgetOptions.length,
                   child: TabBar(
                     indicatorWeight: 2,
-                    indicatorColor: Color(0xFFADD6F3),
-                    unselectedLabelColor: Colors.black,
+                    indicatorColor: Colors.green,
+                    unselectedLabelColor: Colors.grey,
+                    labelColor: Colors.green,
                     indicatorSize: TabBarIndicatorSize.tab,
                     tabs: [
                       Tab(
