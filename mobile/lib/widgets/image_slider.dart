@@ -1,65 +1,63 @@
+import 'package:carousel_slider/carousel_options.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:e_garden/configs/AppConfig.dart';
+import 'package:e_garden/screens/study/study.provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-final List<String> imgList = [
-  'assets/images/slogan/slogan-02.png',
-  'assets/images/slogan/slogan-01.png',
-  'assets/images/slogan/slogan-03.png',
-];
-
-class ImageSlider extends StatelessWidget {
-  final List<Widget> imageSliders = imgList
-      .map((item) => Container(
-            child: Container(
-              margin: EdgeInsets.all(5.0),
-              child: ClipRRect(
-                  borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                  child: Stack(
-                    children: <Widget>[
-                      Image.asset(item),
-                      Positioned(
-                        bottom: 0.0,
-                        left: 0.0,
-                        right: 0.0,
-                        child: Container(
-                          decoration: BoxDecoration(
-                            gradient: LinearGradient(
-                              colors: [
-                                Color.fromARGB(200, 0, 0, 0),
-                                Color.fromARGB(0, 0, 0, 0)
-                              ],
-                              begin: Alignment.bottomCenter,
-                              end: Alignment.topCenter,
-                            ),
-                          ),
-                          padding: EdgeInsets.symmetric(
-                              vertical: 10.0, horizontal: 20.0),
-                          child: Text(
-                            'E-Garden #${imgList.indexOf(item)}',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20.0,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  )),
-            ),
-          ))
-      .toList();
-
+class ImageSlider extends StatefulWidget {
   @override
+  _ImageSliderState createState() => _ImageSliderState();
+}
+
+class _ImageSliderState extends State<ImageSlider> {
+  CarouselSlider carouselSlider;
+  int _current;
   Widget build(BuildContext context) {
-    return CarouselSlider(
-      options: CarouselOptions(
-        autoPlay: true,
-        aspectRatio: 2.0,
-        enlargeCenterPage: true,
+    _current = Provider.of<BookModel>(context, listen: false).getGrade();
+    return Container(
+      height: SizeConfig.blockSizeVertical * 25,
+      child: CarouselSlider.builder(
+        itemBuilder: (context, index) => listClassImage(index, _current),
+        options: CarouselOptions(
+            viewportFraction: 0.8,
+            initialPage: _current,
+            autoPlay: false,
+            enlargeCenterPage: true,
+            aspectRatio: 2,
+            onPageChanged: (index, reason) {
+              setState(() {
+                Provider.of<BookModel>(context, listen: false).setGrade(index);
+              });
+            }),
+        itemCount: classImage.length,
       ),
-      items: imageSliders,
     );
   }
+  listClassImage(int index, int _current) {
+    return Container(
+        decoration: BoxDecoration(
+          color: (index == _current) ? Color(0xFFFFC639) : Color(0xFFDEF0FD),
+          borderRadius: BorderRadius.circular(15),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.3),
+              spreadRadius: 5,
+              blurRadius: 12,
+              offset: Offset(0, 2), // changes position of shadow
+            ),
+          ],
+        ),
+        width: SizeConfig.safeBlockHorizontal * 80,
+        padding: EdgeInsets.all(SizeConfig.safeBlockHorizontal * 8),
+        child: Image.asset(classImage[index]));
+  }
+  static List<String> classImage = [
+    'assets/images/class/class1.png',
+    'assets/images/class/class2.png',
+    'assets/images/class/class3.png',
+    'assets/images/class/class4.png',
+    'assets/images/class/class5.png',
+  ];
 }
+

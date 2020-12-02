@@ -1,5 +1,8 @@
 import 'package:e_garden/application.dart';
+import 'package:e_garden/core/services/dictionary/dictionary_model.service.dart';
+import 'package:e_garden/core/services/translate/translate_model.service.dart';
 import 'package:e_garden/screens/signin.dart';
+import 'package:e_garden/screens/study/study.provider.dart';
 import 'package:e_garden/utils/api.dart';
 import 'package:e_garden/utils/shared_preferences.dart';
 import 'package:flutter/material.dart';
@@ -13,7 +16,11 @@ Future<void> main() async {
   Application.api = API();
   Application.sharePreference = await SpUtil.getInstance();
   runApp(MultiProvider(
-    providers: ProviderSetup.getProviders(),
+    providers: [
+      ChangeNotifierProvider(create: (_) => BookModel()),
+      ChangeNotifierProvider(create: (_) => DictionaryModel()),
+      ChangeNotifierProvider(create: (_) => TranslateModel()),
+    ],
     child: E_Garden(),
   ));
 }
