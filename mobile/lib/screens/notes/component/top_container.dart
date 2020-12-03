@@ -1,4 +1,4 @@
-import 'file:///D:/Project/AndroidStudioProjects/E-Garden/mobile/lib/utils/light_color.dart';
+import 'package:e_garden/utils/light_color.dart';
 import 'package:flutter/material.dart';
 
 class TopContainer extends StatelessWidget {
@@ -8,11 +8,11 @@ class TopContainer extends StatelessWidget {
   final EdgeInsets padding;
   TopContainer({this.height, this.width, this.child, this.padding});
 
-
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: padding!=null ? padding : EdgeInsets.symmetric(horizontal: 20.0),
+      padding:
+          padding != null ? padding : EdgeInsets.symmetric(horizontal: 20.0),
       decoration: BoxDecoration(
           color: LightColors.kDarkYellow,
           borderRadius: BorderRadius.only(
