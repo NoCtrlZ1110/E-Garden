@@ -1,5 +1,6 @@
 import 'package:e_garden/screens/dictionary/home_dictionary.dart';
 import 'package:e_garden/screens/notes/notes.dart';
+import 'package:e_garden/screens/notes/test.dart';
 import 'package:e_garden/screens/study/study.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -51,7 +52,8 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                   children: [
                     StudyScreen(),
                     HomeDictionaryScreen(),
-                    CalendarPage()
+                    // CalendarPage()
+                    Test()
                   ],
                 ),
               ),
