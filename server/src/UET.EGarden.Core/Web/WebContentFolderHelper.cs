@@ -20,7 +20,7 @@ namespace UET.EGarden.Web
             }
 
             var directoryInfo = new DirectoryInfo(coreAssemblyDirectoryPath);
-            while (!DirectoryContains(directoryInfo.FullName, "UET.EGarden.Web.sln"))
+            while (!DirectoryContains(directoryInfo.FullName, "UET.EGarden.sln"))
             {
                 if (directoryInfo.Parent == null)
                 {
@@ -30,13 +30,13 @@ namespace UET.EGarden.Web
                 directoryInfo = directoryInfo.Parent;
             }
 
-            var webMvcFolder = Path.Combine(directoryInfo.FullName, $"src{Path.DirectorySeparatorChar}UET.EGarden.Web.Mvc");
+            var webMvcFolder = Path.Combine(directoryInfo.FullName, "src", "UET.EGarden.Web.Mvc");
             if (Directory.Exists(webMvcFolder))
             {
                 return webMvcFolder;
             }
 
-            var webHostFolder = Path.Combine(directoryInfo.FullName, $"src{Path.DirectorySeparatorChar}UET.EGarden.Web.Host");
+            var webHostFolder = Path.Combine(directoryInfo.FullName, "src", "UET.EGarden.Web.Host");
             if (Directory.Exists(webHostFolder))
             {
                 return webHostFolder;

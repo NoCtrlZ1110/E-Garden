@@ -1,10 +1,6 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
-using Abp;
 using Abp.Authorization.Roles;
 using Abp.Domain.Repositories;
 using Abp.Domain.Uow;
-using JetBrains.Annotations;
 using UET.EGarden.Authorization.Users;
 
 namespace UET.EGarden.Authorization.Roles
@@ -20,7 +16,6 @@ namespace UET.EGarden.Authorization.Roles
                 roleRepository,
                 rolePermissionSettingRepository)
         {
-
         }
     }
 }

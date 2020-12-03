@@ -1,8 +1,7 @@
-﻿using System.Collections.Generic;
-using Abp.AspNetZeroCore.Web.Authentication.External;
-using Abp.AutoMapper;
+﻿using Abp.AutoMapper;
+using UET.EGarden.Authentication.External;
 
-namespace UET.EGarden.Web.Models.TokenAuth
+namespace UET.EGarden.Models.TokenAuth
 {
     [AutoMapFrom(typeof(ExternalLoginProviderInfo))]
     public class ExternalLoginProviderInfoModel
@@ -10,8 +9,5 @@ namespace UET.EGarden.Web.Models.TokenAuth
         public string Name { get; set; }
 
         public string ClientId { get; set; }
-
-        public Dictionary<string, string> AdditionalParams { get; set; }
-
     }
 }

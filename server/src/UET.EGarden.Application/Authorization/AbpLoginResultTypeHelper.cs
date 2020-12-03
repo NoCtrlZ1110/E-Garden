@@ -1,11 +1,18 @@
 ﻿using System;
+using Abp;
 using Abp.Authorization;
 using Abp.Dependency;
+using Abp.UI;
 
 namespace UET.EGarden.Authorization
 {
-    public class AbpLoginResultTypeHelper : EGardenServiceBase, ITransientDependency
+    public class AbpLoginResultTypeHelper : AbpServiceBase, ITransientDependency
     {
+        public AbpLoginResultTypeHelper()
+        {
+            LocalizationSourceName = EGardenConsts.LocalizationSourceName;
+        }
+
         public Exception CreateExceptionForFailedLoginAttempt(AbpLoginResultType result, string usernameOrEmailAddress, string tenancyName)
         {
             switch (result)
@@ -14,20 +21,20 @@ namespace UET.EGarden.Authorization
                     return new Exception("Don't call this method with a success result!");
                 case AbpLoginResultType.InvalidUserNameOrEmailAddress:
                 case AbpLoginResultType.InvalidPassword:
-                    return new AbpAuthorizationException(L("InvalidUserNameOrPassword"));
+                    return new UserFriendlyException(L("LoginFailed"), L("InvalidUserNameOrPassword"));
                 case AbpLoginResultType.InvalidTenancyName:
-                    return new AbpAuthorizationException(L("ThereIsNoTenantDefinedWithName{0}", tenancyName));
+                    return new UserFriendlyException(L("LoginFailed"), L("ThereIsNoTenantDefinedWithName{0}", tenancyName));
                 case AbpLoginResultType.TenantIsNotActive:
-                    return new AbpAuthorizationException(L("TenantIsNotActive", tenancyName));
+                    return new UserFriendlyException(L("LoginFailed"), L("TenantIsNotActive", tenancyName));
                 case AbpLoginResultType.UserIsNotActive:
-                    return new AbpAuthorizationException(L("UserIsNotActiveAndCanNotLogin", usernameOrEmailAddress));
+                    return new UserFriendlyException(L("LoginFailed"), L("UserIsNotActiveAndCanNotLogin", usernameOrEmailAddress));
                 case AbpLoginResultType.UserEmailIsNotConfirmed:
-                    return new AbpAuthorizationException(L("UserEmailIsNotConfirmedAndCanNotLogin"));
+                    return new UserFriendlyException(L("LoginFailed"), L("UserEmailIsNotConfirmedAndCanNotLogin"));
                 case AbpLoginResultType.LockedOut:
-                    return new AbpAuthorizationException(L("UserLockedOutMessage"));
-                default: //Can not fall to default actually. But other result types can be added in the future and we may forget to handle it
+                    return new UserFriendlyException(L("LoginFailed"), L("UserLockedOutMessage"));
+                default: // Can not fall to default actually. But other result types can be added in the future and we may forget to handle it
                     Logger.Warn("Unhandled login fail reason: " + result);
-                    return new AbpAuthorizationException(L("LoginFailed"));
+                    return new UserFriendlyException(L("LoginFailed"));
             }
         }
 
@@ -48,9 +55,7 @@ namespace UET.EGarden.Authorization
                     return L("UserIsNotActiveAndCanNotLogin", usernameOrEmailAddress);
                 case AbpLoginResultType.UserEmailIsNotConfirmed:
                     return L("UserEmailIsNotConfirmedAndCanNotLogin");
-                case AbpLoginResultType.LockedOut:
-                    return L("UserLockedOutMessage");
-                default: //Can not fall to default actually. But other result types can be added in the future and we may forget to handle it
+                default: // Can not fall to default actually. But other result types can be added in the future and we may forget to handle it
                     Logger.Warn("Unhandled login fail reason: " + result);
                     return L("LoginFailed");
             }

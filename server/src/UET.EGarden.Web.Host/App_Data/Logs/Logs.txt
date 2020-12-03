@@ -1,0 +1,1069 @@
+DEBUG 2020-11-25 16:01:59,417 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2020-11-25 16:01:59,776 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2020-11-25 16:01:59,830 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.Web.Host.Startup.EGardenWebHostModule, UET.EGarden.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-11-25 16:01:59,833 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EGardenWebCoreModule, UET.EGarden.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-11-25 16:01:59,834 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EGardenApplicationModule, UET.EGarden.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-11-25 16:01:59,834 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EGardenCoreModule, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-11-25 16:01:59,835 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-11-25 16:01:59,835 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-11-25 16:01:59,835 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-11-25 16:01:59,836 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-11-25 16:01:59,836 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EntityFrameworkCore.EGardenEntityFrameworkModule, UET.EGarden.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-11-25 16:01:59,836 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-11-25 16:01:59,837 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-11-25 16:01:59,837 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-11-25 16:01:59,837 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-11-25 16:01:59,838 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-11-25 16:01:59,838 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-11-25 16:01:59,842 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2020-11-25 16:02:00,199 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-11-25 16:02:00,200 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-11-25 16:02:00,200 [1    ] o.Configuration.LanguageManagementConfig - Converted EGarden (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-11-25 16:02:00,200 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-11-25 16:02:00,901 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: UET.EGarden.EntityFrameworkCore.EGardenDbContext, UET.EGarden.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-11-25 16:02:01,897 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2020-11-25 16:02:01,940 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2020-11-25 16:02:01,949 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2020-11-25 16:02:01,957 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EGarden
+DEBUG 2020-11-25 16:02:01,963 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2020-11-25 16:02:02,145 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2020-11-25 16:02:02,251 [1    ] , Culture=neutral, PublicKeyToken=null]] - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[UET.EGarden.MultiTenancy.Tenant, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[UET.EGarden.Authorization.Users.User, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2020-11-25 16:02:02,311 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 8 classes define auto mapping attributes
+DEBUG 2020-11-25 16:02:02,311 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2020-11-25 16:02:02,318 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Users.Dto.CreateUserDto
+DEBUG 2020-11-25 16:02:02,318 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Users.Dto.UserDto
+DEBUG 2020-11-25 16:02:02,319 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2020-11-25 16:02:02,319 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Sessions.Dto.UserLoginInfoDto
+DEBUG 2020-11-25 16:02:02,319 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Roles.Dto.PermissionDto
+DEBUG 2020-11-25 16:02:02,319 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2020-11-25 16:02:02,319 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.MultiTenancy.Dto.TenantDto
+DEBUG 2020-11-25 16:31:05,494 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2020-11-25 16:31:05,677 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2020-11-25 16:31:05,698 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.Web.Host.Startup.EGardenWebHostModule, UET.EGarden.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-11-25 16:31:05,700 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EGardenWebCoreModule, UET.EGarden.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-11-25 16:31:05,701 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EGardenApplicationModule, UET.EGarden.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-11-25 16:31:05,701 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EGardenCoreModule, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-11-25 16:31:05,701 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-11-25 16:31:05,701 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-11-25 16:31:05,702 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-11-25 16:31:05,702 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-11-25 16:31:05,702 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EntityFrameworkCore.EGardenEntityFrameworkModule, UET.EGarden.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-11-25 16:31:05,703 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-11-25 16:31:05,703 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-11-25 16:31:05,703 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-11-25 16:31:05,703 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-11-25 16:31:05,703 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-11-25 16:31:05,703 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-11-25 16:31:05,706 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2020-11-25 16:31:05,785 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-11-25 16:31:05,785 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-11-25 16:31:05,785 [1    ] o.Configuration.LanguageManagementConfig - Converted EGarden (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-11-25 16:31:05,785 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-11-25 16:31:06,170 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: UET.EGarden.EntityFrameworkCore.EGardenDbContext, UET.EGarden.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-11-25 16:31:07,078 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2020-11-25 16:31:07,117 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2020-11-25 16:31:07,142 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2020-11-25 16:31:07,149 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EGarden
+DEBUG 2020-11-25 16:31:07,157 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2020-11-25 16:31:07,352 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2020-11-25 16:31:07,469 [1    ] , Culture=neutral, PublicKeyToken=null]] - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[UET.EGarden.MultiTenancy.Tenant, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[UET.EGarden.Authorization.Users.User, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2020-11-25 16:31:07,547 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 8 classes define auto mapping attributes
+DEBUG 2020-11-25 16:31:07,547 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2020-11-25 16:31:07,555 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Users.Dto.CreateUserDto
+DEBUG 2020-11-25 16:31:07,556 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Users.Dto.UserDto
+DEBUG 2020-11-25 16:31:07,556 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2020-11-25 16:31:07,556 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Sessions.Dto.UserLoginInfoDto
+DEBUG 2020-11-25 16:31:07,557 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Roles.Dto.PermissionDto
+DEBUG 2020-11-25 16:31:07,557 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2020-11-25 16:31:07,557 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.MultiTenancy.Dto.TenantDto
+INFO  2020-11-25 16:31:10,305 [1    ] tCore.Builder.RequestLocalizationOptions - Supported Request Localization Cultures: en,es-MX,fr,de,it,nl,pt-BR,tr,ru,ar,ja,zh-Hans
+INFO  2020-11-25 16:31:10,954 [1    ] taProtection.KeyManagement.XmlKeyManager - User profile is available. Using 'C:\Users\ADMIN\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+INFO  2020-11-25 16:31:12,268 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2020-11-25 16:31:12,541 [9    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Web.Host.Controllers.HomeController.Index (UET.EGarden.Web.Host)'
+INFO  2020-11-25 16:31:15,970 [9    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller UET.EGarden.Web.Host.Controllers.HomeController (UET.EGarden.Web.Host).
+INFO  2020-11-25 16:31:17,113 [10   ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2020-11-25 16:31:17,125 [10   ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Web.Host.Controllers.HomeController.Index (UET.EGarden.Web.Host) in 1144.3386ms
+INFO  2020-11-25 16:31:17,128 [10   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Web.Host.Controllers.HomeController.Index (UET.EGarden.Web.Host)'
+INFO  2020-11-25 16:31:17,142 [10   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 4874.7829ms 302 
+INFO  2020-11-25 16:31:17,170 [10   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger  
+INFO  2020-11-25 16:31:17,198 [10   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 27.989ms 301 
+INFO  2020-11-25 16:31:17,205 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2020-11-25 16:31:17,359 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 153.4825ms 200 text/html;charset=utf-8
+INFO  2020-11-25 16:31:17,468 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-bundle.js  
+INFO  2020-11-25 16:31:17,469 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui.css  
+INFO  2020-11-25 16:31:17,472 [10   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-standalone-preset.js  
+INFO  2020-11-25 16:31:17,474 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/ui/abp.js  
+INFO  2020-11-25 16:31:17,476 [13   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/ui/abp.swagger.js  
+INFO  2020-11-25 16:31:17,519 [12   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+INFO  2020-11-25 16:31:17,520 [5    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger/ui/abp.js'. Physical path: 'C:\Users\ADMIN\Desktop\module-zero-core\aspnet-core\src\UET.EGarden.Web.Host\wwwroot\swagger\ui\abp.js'
+INFO  2020-11-25 16:31:17,520 [13   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger/ui/abp.swagger.js'. Physical path: 'C:\Users\ADMIN\Desktop\module-zero-core\aspnet-core\src\UET.EGarden.Web.Host\wwwroot\swagger\ui\abp.swagger.js'
+INFO  2020-11-25 16:31:17,522 [15   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+INFO  2020-11-25 16:31:17,523 [13   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 46.5996ms 200 application/javascript
+INFO  2020-11-25 16:31:17,525 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 48.6999ms 200 application/javascript
+INFO  2020-11-25 16:31:17,529 [12   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 56.0994ms 200 application/javascript
+INFO  2020-11-25 16:31:17,530 [15   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 61.8279ms 200 text/css
+INFO  2020-11-25 16:31:17,536 [15   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+INFO  2020-11-25 16:31:17,538 [15   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 71.9965ms 200 application/javascript
+INFO  2020-11-25 16:31:17,817 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/AntiForgery/SetCookie  
+INFO  2020-11-25 16:31:17,823 [5    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Web.Host.Controllers.AntiForgeryController.SetCookie (UET.EGarden.Web.Host)'
+INFO  2020-11-25 16:31:17,836 [5    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "SetCookie", controller = "AntiForgery", area = ""}. Executing controller action with signature Void SetCookie() on controller UET.EGarden.Web.Host.Controllers.AntiForgeryController (UET.EGarden.Web.Host).
+INFO  2020-11-25 16:31:17,859 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2020-11-25 16:31:17,869 [10   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-11-25 16:31:17,899 [10   ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Web.Host.Controllers.AntiForgeryController.SetCookie (UET.EGarden.Web.Host) in 60.5763ms
+INFO  2020-11-25 16:31:17,901 [10   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Web.Host.Controllers.AntiForgeryController.SetCookie (UET.EGarden.Web.Host)'
+INFO  2020-11-25 16:31:17,902 [10   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 85.277ms 200 application/json; charset=utf-8
+INFO  2020-11-25 16:31:17,958 [12   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/favicon-32x32.png  
+INFO  2020-11-25 16:31:17,965 [12   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+INFO  2020-11-25 16:31:17,967 [12   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 34.7685ms 200 image/png
+INFO  2020-11-25 16:31:18,146 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 286.6505ms 200 application/json;charset=utf-8
+INFO  2020-11-25 16:31:35,760 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/login  
+INFO  2020-11-25 16:31:35,765 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 4.8811ms 404 
+INFO  2020-11-25 16:31:38,989 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/UI  
+INFO  2020-11-25 16:31:38,996 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 11.6378ms 404 
+INFO  2020-11-25 16:31:45,152 [10   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/Ui/Login  
+INFO  2020-11-25 16:31:45,157 [10   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 3.9585ms 404 
+INFO  2020-11-25 16:31:50,050 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2020-11-25 16:31:50,127 [9    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Web.Host.Controllers.HomeController.Index (UET.EGarden.Web.Host)'
+INFO  2020-11-25 16:31:50,137 [9    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller UET.EGarden.Web.Host.Controllers.HomeController (UET.EGarden.Web.Host).
+INFO  2020-11-25 16:31:50,162 [9    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2020-11-25 16:31:50,165 [9    ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Web.Host.Controllers.HomeController.Index (UET.EGarden.Web.Host) in 24.9291ms
+INFO  2020-11-25 16:31:50,169 [9    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Web.Host.Controllers.HomeController.Index (UET.EGarden.Web.Host)'
+INFO  2020-11-25 16:31:50,172 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 122.1586ms 302 
+INFO  2020-11-25 16:31:50,175 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger  
+INFO  2020-11-25 16:31:50,178 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 3.9689ms 301 
+INFO  2020-11-25 16:31:50,180 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2020-11-25 16:31:50,184 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 3.9546ms 200 text/html;charset=utf-8
+INFO  2020-11-25 16:31:54,834 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2020-11-25 16:31:54,839 [5    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Web.Host.Controllers.HomeController.Index (UET.EGarden.Web.Host)'
+INFO  2020-11-25 16:31:54,847 [5    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller UET.EGarden.Web.Host.Controllers.HomeController (UET.EGarden.Web.Host).
+INFO  2020-11-25 16:31:54,861 [11   ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2020-11-25 16:31:54,863 [11   ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Web.Host.Controllers.HomeController.Index (UET.EGarden.Web.Host) in 14.1313ms
+INFO  2020-11-25 16:31:54,864 [11   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Web.Host.Controllers.HomeController.Index (UET.EGarden.Web.Host)'
+INFO  2020-11-25 16:31:54,866 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 33.479ms 302 
+INFO  2020-11-25 16:31:54,873 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2020-11-25 16:31:54,877 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 4.187ms 200 text/html;charset=utf-8
+INFO  2020-11-25 16:31:55,214 [10   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/AntiForgery/SetCookie  
+INFO  2020-11-25 16:31:55,217 [10   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Web.Host.Controllers.AntiForgeryController.SetCookie (UET.EGarden.Web.Host)'
+INFO  2020-11-25 16:31:55,221 [10   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "SetCookie", controller = "AntiForgery", area = ""}. Executing controller action with signature Void SetCookie() on controller UET.EGarden.Web.Host.Controllers.AntiForgeryController (UET.EGarden.Web.Host).
+INFO  2020-11-25 16:31:55,233 [5    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-11-25 16:31:55,236 [5    ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Web.Host.Controllers.AntiForgeryController.SetCookie (UET.EGarden.Web.Host) in 13.1687ms
+INFO  2020-11-25 16:31:55,237 [5    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Web.Host.Controllers.AntiForgeryController.SetCookie (UET.EGarden.Web.Host)'
+INFO  2020-11-25 16:31:55,239 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 25.7245ms 200 application/json; charset=utf-8
+INFO  2020-11-25 16:31:55,252 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2020-11-25 16:31:55,269 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 16.9585ms 200 application/json;charset=utf-8
+INFO  2020-11-25 16:32:07,942 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 POST http://localhost:21021/api/TokenAuth/Authenticate application/json 54
+INFO  2020-11-25 16:32:07,948 [5    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2020-11-25 16:32:07,950 [5    ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2020-11-25 16:32:07,953 [5    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Controllers.TokenAuthController.Authenticate (UET.EGarden.Web.Core)'
+INFO  2020-11-25 16:32:07,974 [5    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Authenticate", controller = "TokenAuth", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[UET.EGarden.Models.TokenAuth.AuthenticateResultModel] Authenticate(UET.EGarden.Models.TokenAuth.AuthenticateModel) on controller UET.EGarden.Controllers.TokenAuthController (UET.EGarden.Web.Core).
+ERROR 2020-11-25 16:32:07,992 [5    ] idateAntiforgeryTokenAuthorizationFilter - The required antiforgery header value "X-XSRF-TOKEN" is not present.
+Microsoft.AspNetCore.Antiforgery.AntiforgeryValidationException: The required antiforgery header value "X-XSRF-TOKEN" is not present.
+   at Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery.ValidateRequestAsync(HttpContext httpContext)
+   at Abp.AspNetCore.Mvc.Antiforgery.AbpValidateAntiforgeryTokenAuthorizationFilter.OnAuthorizationAsync(AuthorizationFilterContext context)
+INFO  2020-11-25 16:32:08,070 [5    ] c.Infrastructure.ControllerActionInvoker - Authorization failed for the request at filter 'Abp.AspNetCore.Mvc.Antiforgery.AbpAutoValidateAntiforgeryTokenAuthorizationFilter'.
+INFO  2020-11-25 16:32:08,079 [5    ] icrosoft.AspNetCore.Mvc.StatusCodeResult - Executing HttpStatusCodeResult, setting HTTP status code 400
+INFO  2020-11-25 16:32:08,082 [5    ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Controllers.TokenAuthController.Authenticate (UET.EGarden.Web.Core) in 105.0595ms
+INFO  2020-11-25 16:32:08,085 [5    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Controllers.TokenAuthController.Authenticate (UET.EGarden.Web.Core)'
+INFO  2020-11-25 16:32:08,090 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 146.9553ms 400 
+INFO  2020-11-25 16:32:22,949 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-11-25 16:32:22,952 [9    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Sessions.SessionAppService.GetCurrentLoginInformations (UET.EGarden.Application)'
+INFO  2020-11-25 16:32:22,960 [9    ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing controller action with signature System.Threading.Tasks.Task`1[UET.EGarden.Sessions.Dto.GetCurrentLoginInformationsOutput] GetCurrentLoginInformations() on controller UET.EGarden.Sessions.SessionAppService (UET.EGarden.Application).
+INFO  2020-11-25 16:32:23,386 [9    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-11-25 16:32:23,400 [9    ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Sessions.SessionAppService.GetCurrentLoginInformations (UET.EGarden.Application) in 437.7453ms
+INFO  2020-11-25 16:32:23,402 [9    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Sessions.SessionAppService.GetCurrentLoginInformations (UET.EGarden.Application)'
+INFO  2020-11-25 16:32:23,404 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 454.9845ms 200 application/json; charset=utf-8
+INFO  2020-11-25 16:32:45,044 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/User/Get?Id=1  
+INFO  2020-11-25 16:32:45,050 [5    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Users.UserAppService.GetAsync (UET.EGarden.Application)'
+INFO  2020-11-25 16:32:45,062 [5    ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "Get", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[UET.EGarden.Users.Dto.UserDto] GetAsync(Abp.Application.Services.Dto.EntityDto`1[System.Int64]) on controller UET.EGarden.Users.UserAppService (UET.EGarden.Application).
+WARN  2020-11-25 16:32:45,851 [11   ] Mvc.ExceptionHandling.AbpExceptionFilter - Current user did not login to the application!
+Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(IEnumerable`1 authorizeAttributes)
+   at Abp.Authorization.AuthorizationHelper.CheckPermissionsAsync(MethodInfo methodInfo, Type type)
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(MethodInfo methodInfo, Type type)
+   at Abp.Authorization.AuthorizationInterceptor.InternalInterceptAsynchronous[TResult](IInvocation invocation)
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.InternalInterceptAsynchronous[TResult](IInvocation invocation)
+   at Abp.Auditing.AuditingInterceptor.InternalInterceptAsynchronous[TResult](IInvocation invocation)
+   at Abp.Runtime.Validation.Interception.ValidationInterceptor.InternalInterceptAsynchronous[TResult](IInvocation invocation)
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+INFO  2020-11-25 16:32:45,857 [11   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-11-25 16:32:45,862 [11   ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Users.UserAppService.GetAsync (UET.EGarden.Application) in 797.1769ms
+INFO  2020-11-25 16:32:45,864 [11   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Users.UserAppService.GetAsync (UET.EGarden.Application)'
+INFO  2020-11-25 16:32:45,865 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 821.5827ms 401 application/json; charset=utf-8
+INFO  2020-11-25 16:32:55,454 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/User/GetAll?IsActive=true  
+INFO  2020-11-25 16:32:55,457 [9    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Users.UserAppService.GetAllAsync (UET.EGarden.Application)'
+INFO  2020-11-25 16:32:55,466 [9    ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Abp.Application.Services.Dto.PagedResultDto`1[UET.EGarden.Users.Dto.UserDto]] GetAllAsync(UET.EGarden.Users.Dto.PagedUserResultRequestDto) on controller UET.EGarden.Users.UserAppService (UET.EGarden.Application).
+WARN  2020-11-25 16:32:55,496 [10   ] Mvc.ExceptionHandling.AbpExceptionFilter - Current user did not login to the application!
+Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(IEnumerable`1 authorizeAttributes)
+   at Abp.Authorization.AuthorizationHelper.CheckPermissionsAsync(MethodInfo methodInfo, Type type)
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(MethodInfo methodInfo, Type type)
+   at Abp.Authorization.AuthorizationInterceptor.InternalInterceptAsynchronous[TResult](IInvocation invocation)
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.InternalInterceptAsynchronous[TResult](IInvocation invocation)
+   at Abp.Auditing.AuditingInterceptor.InternalInterceptAsynchronous[TResult](IInvocation invocation)
+   at Abp.Runtime.Validation.Interception.ValidationInterceptor.InternalInterceptAsynchronous[TResult](IInvocation invocation)
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+INFO  2020-11-25 16:32:55,498 [10   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-11-25 16:32:55,500 [10   ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Users.UserAppService.GetAllAsync (UET.EGarden.Application) in 31.8758ms
+INFO  2020-11-25 16:32:55,502 [10   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Users.UserAppService.GetAllAsync (UET.EGarden.Application)'
+INFO  2020-11-25 16:32:55,503 [10   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 49.8153ms 401 application/json; charset=utf-8
+INFO  2020-11-25 16:32:59,323 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/User/GetAll?IsActive=true&SkipCount=0&MaxResultCount=10  
+INFO  2020-11-25 16:32:59,325 [11   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Users.UserAppService.GetAllAsync (UET.EGarden.Application)'
+INFO  2020-11-25 16:32:59,330 [11   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Abp.Application.Services.Dto.PagedResultDto`1[UET.EGarden.Users.Dto.UserDto]] GetAllAsync(UET.EGarden.Users.Dto.PagedUserResultRequestDto) on controller UET.EGarden.Users.UserAppService (UET.EGarden.Application).
+WARN  2020-11-25 16:32:59,342 [5    ] Mvc.ExceptionHandling.AbpExceptionFilter - Current user did not login to the application!
+Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(IEnumerable`1 authorizeAttributes)
+   at Abp.Authorization.AuthorizationHelper.CheckPermissionsAsync(MethodInfo methodInfo, Type type)
+   at Abp.Authorization.AuthorizationHelper.AuthorizeAsync(MethodInfo methodInfo, Type type)
+   at Abp.Authorization.AuthorizationInterceptor.InternalInterceptAsynchronous[TResult](IInvocation invocation)
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.InternalInterceptAsynchronous[TResult](IInvocation invocation)
+   at Abp.Auditing.AuditingInterceptor.InternalInterceptAsynchronous[TResult](IInvocation invocation)
+   at Abp.Runtime.Validation.Interception.ValidationInterceptor.InternalInterceptAsynchronous[TResult](IInvocation invocation)
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+INFO  2020-11-25 16:32:59,344 [5    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-11-25 16:32:59,346 [5    ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Users.UserAppService.GetAllAsync (UET.EGarden.Application) in 15.0113ms
+INFO  2020-11-25 16:32:59,348 [5    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Users.UserAppService.GetAllAsync (UET.EGarden.Application)'
+INFO  2020-11-25 16:32:59,349 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 26.2514ms 401 application/json; charset=utf-8
+INFO  2020-11-25 16:33:40,937 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 POST http://localhost:21021/api/TokenAuth/Authenticate application/json 54
+INFO  2020-11-25 16:33:40,939 [11   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2020-11-25 16:33:40,941 [11   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2020-11-25 16:33:40,944 [11   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Controllers.TokenAuthController.Authenticate (UET.EGarden.Web.Core)'
+INFO  2020-11-25 16:33:40,949 [11   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Authenticate", controller = "TokenAuth", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[UET.EGarden.Models.TokenAuth.AuthenticateResultModel] Authenticate(UET.EGarden.Models.TokenAuth.AuthenticateModel) on controller UET.EGarden.Controllers.TokenAuthController (UET.EGarden.Web.Core).
+ERROR 2020-11-25 16:33:40,950 [11   ] idateAntiforgeryTokenAuthorizationFilter - The required antiforgery header value "X-XSRF-TOKEN" is not present.
+Microsoft.AspNetCore.Antiforgery.AntiforgeryValidationException: The required antiforgery header value "X-XSRF-TOKEN" is not present.
+   at Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery.ValidateRequestAsync(HttpContext httpContext)
+   at Abp.AspNetCore.Mvc.Antiforgery.AbpValidateAntiforgeryTokenAuthorizationFilter.OnAuthorizationAsync(AuthorizationFilterContext context)
+INFO  2020-11-25 16:33:40,952 [11   ] c.Infrastructure.ControllerActionInvoker - Authorization failed for the request at filter 'Abp.AspNetCore.Mvc.Antiforgery.AbpAutoValidateAntiforgeryTokenAuthorizationFilter'.
+INFO  2020-11-25 16:33:40,953 [11   ] icrosoft.AspNetCore.Mvc.StatusCodeResult - Executing HttpStatusCodeResult, setting HTTP status code 400
+INFO  2020-11-25 16:33:40,955 [11   ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Controllers.TokenAuthController.Authenticate (UET.EGarden.Web.Core) in 4.1128ms
+INFO  2020-11-25 16:33:40,956 [11   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Controllers.TokenAuthController.Authenticate (UET.EGarden.Web.Core)'
+INFO  2020-11-25 16:33:40,958 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 21.2538ms 400 
+INFO  2020-11-25 16:33:51,012 [10   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 POST http://localhost:21021/api/TokenAuth/Authenticate application/json 56
+INFO  2020-11-25 16:33:51,014 [10   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2020-11-25 16:33:51,015 [10   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2020-11-25 16:33:51,017 [10   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Controllers.TokenAuthController.Authenticate (UET.EGarden.Web.Core)'
+INFO  2020-11-25 16:33:51,021 [10   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Authenticate", controller = "TokenAuth", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[UET.EGarden.Models.TokenAuth.AuthenticateResultModel] Authenticate(UET.EGarden.Models.TokenAuth.AuthenticateModel) on controller UET.EGarden.Controllers.TokenAuthController (UET.EGarden.Web.Core).
+ERROR 2020-11-25 16:33:51,021 [10   ] idateAntiforgeryTokenAuthorizationFilter - The required antiforgery header value "X-XSRF-TOKEN" is not present.
+Microsoft.AspNetCore.Antiforgery.AntiforgeryValidationException: The required antiforgery header value "X-XSRF-TOKEN" is not present.
+   at Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery.ValidateRequestAsync(HttpContext httpContext)
+   at Abp.AspNetCore.Mvc.Antiforgery.AbpValidateAntiforgeryTokenAuthorizationFilter.OnAuthorizationAsync(AuthorizationFilterContext context)
+INFO  2020-11-25 16:33:51,023 [10   ] c.Infrastructure.ControllerActionInvoker - Authorization failed for the request at filter 'Abp.AspNetCore.Mvc.Antiforgery.AbpAutoValidateAntiforgeryTokenAuthorizationFilter'.
+INFO  2020-11-25 16:33:51,024 [10   ] icrosoft.AspNetCore.Mvc.StatusCodeResult - Executing HttpStatusCodeResult, setting HTTP status code 400
+INFO  2020-11-25 16:33:51,027 [10   ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Controllers.TokenAuthController.Authenticate (UET.EGarden.Web.Core) in 3.6066ms
+INFO  2020-11-25 16:33:51,028 [10   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Controllers.TokenAuthController.Authenticate (UET.EGarden.Web.Core)'
+INFO  2020-11-25 16:33:51,030 [10   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 18.0138ms 400 
+INFO  2020-11-25 16:40:45,251 [30   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-11-25 16:40:45,253 [30   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:40:45,257 [30   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 5.7578ms 204 
+INFO  2020-11-25 16:40:45,263 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-11-25 16:40:45,265 [5    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:40:45,268 [5    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-11-25 16:40:45,278 [5    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpUserConfiguration", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] GetAll() on controller Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController (Abp.AspNetCore).
+INFO  2020-11-25 16:40:45,893 [15   ] tonsoftJson.NewtonsoftJsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-11-25 16:40:45,951 [15   ] c.Infrastructure.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 658.9124ms
+INFO  2020-11-25 16:40:45,956 [15   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-11-25 16:40:45,962 [15   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 694.7739ms 200 application/json; charset=utf-8
+INFO  2020-11-25 16:40:46,062 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-11-25 16:40:46,064 [5    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:40:46,066 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 4.412ms 204 
+INFO  2020-11-25 16:40:46,071 [30   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-11-25 16:40:46,073 [30   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:40:46,075 [30   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Sessions.SessionAppService.GetCurrentLoginInformations (UET.EGarden.Application)'
+INFO  2020-11-25 16:40:46,079 [30   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing controller action with signature System.Threading.Tasks.Task`1[UET.EGarden.Sessions.Dto.GetCurrentLoginInformationsOutput] GetCurrentLoginInformations() on controller UET.EGarden.Sessions.SessionAppService (UET.EGarden.Application).
+INFO  2020-11-25 16:40:46,097 [30   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-11-25 16:40:46,100 [30   ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Sessions.SessionAppService.GetCurrentLoginInformations (UET.EGarden.Application) in 19.2087ms
+INFO  2020-11-25 16:40:46,102 [30   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Sessions.SessionAppService.GetCurrentLoginInformations (UET.EGarden.Application)'
+INFO  2020-11-25 16:40:46,105 [30   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 32.9544ms 200 application/json; charset=utf-8
+INFO  2020-11-25 16:47:03,032 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-11-25 16:47:03,035 [4    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:47:03,038 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 7.1847ms 204 
+INFO  2020-11-25 16:47:03,046 [31   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-11-25 16:47:03,049 [31   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:47:03,052 [31   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-11-25 16:47:03,066 [31   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpUserConfiguration", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] GetAll() on controller Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController (Abp.AspNetCore).
+INFO  2020-11-25 16:47:03,157 [4    ] tonsoftJson.NewtonsoftJsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-11-25 16:47:03,178 [4    ] c.Infrastructure.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 96.6154ms
+INFO  2020-11-25 16:47:03,185 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-11-25 16:47:03,190 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 142.5252ms 200 application/json; charset=utf-8
+INFO  2020-11-25 16:47:03,375 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-11-25 16:47:03,377 [4    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:47:03,379 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 4.7686ms 204 
+INFO  2020-11-25 16:47:03,382 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-11-25 16:47:03,384 [5    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:47:03,387 [5    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Sessions.SessionAppService.GetCurrentLoginInformations (UET.EGarden.Application)'
+INFO  2020-11-25 16:47:03,394 [5    ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing controller action with signature System.Threading.Tasks.Task`1[UET.EGarden.Sessions.Dto.GetCurrentLoginInformationsOutput] GetCurrentLoginInformations() on controller UET.EGarden.Sessions.SessionAppService (UET.EGarden.Application).
+INFO  2020-11-25 16:47:03,400 [5    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-11-25 16:47:03,403 [5    ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Sessions.SessionAppService.GetCurrentLoginInformations (UET.EGarden.Application) in 6.4743ms
+INFO  2020-11-25 16:47:03,405 [5    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Sessions.SessionAppService.GetCurrentLoginInformations (UET.EGarden.Application)'
+INFO  2020-11-25 16:47:03,407 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 24.9498ms 200 application/json; charset=utf-8
+INFO  2020-11-25 16:47:25,996 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/TokenAuth/Authenticate  
+INFO  2020-11-25 16:47:25,998 [4    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:47:26,000 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 4.0488ms 204 
+INFO  2020-11-25 16:47:26,007 [16   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 POST http://localhost:21021/api/TokenAuth/Authenticate application/json;charset=UTF-8 54
+INFO  2020-11-25 16:47:26,009 [16   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:47:26,011 [16   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Controllers.TokenAuthController.Authenticate (UET.EGarden.Web.Core)'
+INFO  2020-11-25 16:47:26,017 [16   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Authenticate", controller = "TokenAuth", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[UET.EGarden.Models.TokenAuth.AuthenticateResultModel] Authenticate(UET.EGarden.Models.TokenAuth.AuthenticateModel) on controller UET.EGarden.Controllers.TokenAuthController (UET.EGarden.Web.Core).
+INFO  2020-11-25 16:47:26,865 [16   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-11-25 16:47:26,874 [16   ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Controllers.TokenAuthController.Authenticate (UET.EGarden.Web.Core) in 850.9174ms
+INFO  2020-11-25 16:47:26,876 [16   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Controllers.TokenAuthController.Authenticate (UET.EGarden.Web.Core)'
+INFO  2020-11-25 16:47:26,878 [16   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 872.1663ms 200 application/json; charset=utf-8
+INFO  2020-11-25 16:47:27,444 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-11-25 16:47:27,449 [11   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:47:27,452 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 7.2241ms 204 
+INFO  2020-11-25 16:47:27,455 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/AbpUserConfiguration/GetAll  
+INFO  2020-11-25 16:47:27,459 [4    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:47:27,532 [4    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-11-25 16:47:27,685 [10   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-11-25 16:47:27,690 [10   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpUserConfiguration", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] GetAll() on controller Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController (Abp.AspNetCore).
+INFO  2020-11-25 16:47:27,858 [4    ] tonsoftJson.NewtonsoftJsonResultExecutor - Executing JsonResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-11-25 16:47:27,862 [4    ] c.Infrastructure.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore) in 169.7278ms
+INFO  2020-11-25 16:47:27,863 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpUserConfigurationController.GetAll (Abp.AspNetCore)'
+INFO  2020-11-25 16:47:27,867 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 410.792ms 200 application/json; charset=utf-8
+INFO  2020-11-25 16:47:27,913 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-11-25 16:47:27,922 [4    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:47:27,924 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 26.2522ms 204 
+INFO  2020-11-25 16:47:27,927 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Session/GetCurrentLoginInformations  
+INFO  2020-11-25 16:47:27,929 [4    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:47:27,932 [4    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-11-25 16:47:27,934 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Sessions.SessionAppService.GetCurrentLoginInformations (UET.EGarden.Application)'
+INFO  2020-11-25 16:47:27,940 [4    ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetCurrentLoginInformations", controller = "Session"}. Executing controller action with signature System.Threading.Tasks.Task`1[UET.EGarden.Sessions.Dto.GetCurrentLoginInformationsOutput] GetCurrentLoginInformations() on controller UET.EGarden.Sessions.SessionAppService (UET.EGarden.Application).
+INFO  2020-11-25 16:47:27,978 [16   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-11-25 16:47:27,982 [16   ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Sessions.SessionAppService.GetCurrentLoginInformations (UET.EGarden.Application) in 41.0064ms
+INFO  2020-11-25 16:47:27,985 [16   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Sessions.SessionAppService.GetCurrentLoginInformations (UET.EGarden.Application)'
+INFO  2020-11-25 16:47:27,987 [16   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 59.2114ms 200 application/json; charset=utf-8
+INFO  2020-11-25 16:47:43,663 [10   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/User/GetAll?maxResultCount=10&skipCount=0&keyword=  
+INFO  2020-11-25 16:47:43,665 [10   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:47:43,668 [10   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 4.7659ms 204 
+INFO  2020-11-25 16:47:43,670 [10   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/User/GetAll?maxResultCount=10&skipCount=0&keyword=  
+INFO  2020-11-25 16:47:43,672 [10   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:47:43,676 [10   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-11-25 16:47:43,678 [10   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Users.UserAppService.GetAllAsync (UET.EGarden.Application)'
+INFO  2020-11-25 16:47:43,683 [10   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Abp.Application.Services.Dto.PagedResultDto`1[UET.EGarden.Users.Dto.UserDto]] GetAllAsync(UET.EGarden.Users.Dto.PagedUserResultRequestDto) on controller UET.EGarden.Users.UserAppService (UET.EGarden.Application).
+INFO  2020-11-25 16:47:43,834 [10   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-11-25 16:47:43,841 [10   ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Users.UserAppService.GetAllAsync (UET.EGarden.Application) in 156.8811ms
+INFO  2020-11-25 16:47:43,843 [10   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Users.UserAppService.GetAllAsync (UET.EGarden.Application)'
+INFO  2020-11-25 16:47:43,845 [10   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 175.3957ms 200 application/json; charset=utf-8
+INFO  2020-11-25 16:47:45,233 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Role/GetAll?maxResultCount=10&skipCount=0&keyword=  
+INFO  2020-11-25 16:47:45,235 [11   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:47:45,237 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 3.9187ms 204 
+INFO  2020-11-25 16:47:45,239 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Role/GetAll?maxResultCount=10&skipCount=0&keyword=  
+INFO  2020-11-25 16:47:45,241 [4    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:47:45,243 [4    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-11-25 16:47:45,245 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Roles.RoleAppService.GetAllAsync (UET.EGarden.Application)'
+INFO  2020-11-25 16:47:45,258 [4    ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "Role"}. Executing controller action with signature System.Threading.Tasks.Task`1[Abp.Application.Services.Dto.PagedResultDto`1[UET.EGarden.Roles.Dto.RoleDto]] GetAllAsync(UET.EGarden.Roles.Dto.PagedRoleResultRequestDto) on controller UET.EGarden.Roles.RoleAppService (UET.EGarden.Application).
+INFO  2020-11-25 16:47:45,503 [16   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-11-25 16:47:45,508 [16   ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Roles.RoleAppService.GetAllAsync (UET.EGarden.Application) in 247.2774ms
+INFO  2020-11-25 16:47:45,509 [16   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Roles.RoleAppService.GetAllAsync (UET.EGarden.Application)'
+INFO  2020-11-25 16:47:45,511 [16   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 271.8644ms 200 application/json; charset=utf-8
+INFO  2020-11-25 16:47:45,992 [10   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Tenant/GetAll?maxResultCount=10&skipCount=0&keyword=  
+INFO  2020-11-25 16:47:45,994 [10   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:47:45,996 [10   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 6.3427ms 204 
+INFO  2020-11-25 16:47:45,999 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Tenant/GetAll?maxResultCount=10&skipCount=0&keyword=  
+INFO  2020-11-25 16:47:46,001 [11   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:47:46,005 [11   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-11-25 16:47:46,008 [11   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.MultiTenancy.TenantAppService.GetAllAsync (UET.EGarden.Application)'
+INFO  2020-11-25 16:47:46,021 [11   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "Tenant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Abp.Application.Services.Dto.PagedResultDto`1[UET.EGarden.MultiTenancy.Dto.TenantDto]] GetAllAsync(UET.EGarden.MultiTenancy.Dto.PagedTenantResultRequestDto) on controller UET.EGarden.MultiTenancy.TenantAppService (UET.EGarden.Application).
+INFO  2020-11-25 16:47:46,320 [14   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-11-25 16:47:46,325 [14   ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.MultiTenancy.TenantAppService.GetAllAsync (UET.EGarden.Application) in 302.2016ms
+INFO  2020-11-25 16:47:46,327 [14   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.MultiTenancy.TenantAppService.GetAllAsync (UET.EGarden.Application)'
+INFO  2020-11-25 16:47:46,329 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 329.9914ms 200 application/json; charset=utf-8
+INFO  2020-11-25 16:47:47,842 [10   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Tenant/GetAll?maxResultCount=10&skipCount=0&keyword=  
+INFO  2020-11-25 16:47:47,845 [10   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:47:47,849 [10   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-11-25 16:47:47,853 [10   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.MultiTenancy.TenantAppService.GetAllAsync (UET.EGarden.Application)'
+INFO  2020-11-25 16:47:47,859 [10   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "Tenant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Abp.Application.Services.Dto.PagedResultDto`1[UET.EGarden.MultiTenancy.Dto.TenantDto]] GetAllAsync(UET.EGarden.MultiTenancy.Dto.PagedTenantResultRequestDto) on controller UET.EGarden.MultiTenancy.TenantAppService (UET.EGarden.Application).
+INFO  2020-11-25 16:47:47,883 [11   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-11-25 16:47:47,885 [11   ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.MultiTenancy.TenantAppService.GetAllAsync (UET.EGarden.Application) in 24.159ms
+INFO  2020-11-25 16:47:47,887 [11   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.MultiTenancy.TenantAppService.GetAllAsync (UET.EGarden.Application)'
+INFO  2020-11-25 16:47:47,889 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 46.5692ms 200 application/json; charset=utf-8
+INFO  2020-11-25 16:48:03,602 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/User/GetAll?maxResultCount=10&skipCount=0&keyword=  
+INFO  2020-11-25 16:48:03,604 [5    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:48:03,606 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 4.0706ms 204 
+INFO  2020-11-25 16:48:03,612 [31   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/User/GetAll?maxResultCount=10&skipCount=0&keyword=  
+INFO  2020-11-25 16:48:03,614 [31   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:48:03,616 [31   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-11-25 16:48:03,618 [31   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Users.UserAppService.GetAllAsync (UET.EGarden.Application)'
+INFO  2020-11-25 16:48:03,623 [31   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Abp.Application.Services.Dto.PagedResultDto`1[UET.EGarden.Users.Dto.UserDto]] GetAllAsync(UET.EGarden.Users.Dto.PagedUserResultRequestDto) on controller UET.EGarden.Users.UserAppService (UET.EGarden.Application).
+INFO  2020-11-25 16:48:03,649 [14   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-11-25 16:48:03,651 [14   ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Users.UserAppService.GetAllAsync (UET.EGarden.Application) in 26.8397ms
+INFO  2020-11-25 16:48:03,654 [14   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Users.UserAppService.GetAllAsync (UET.EGarden.Application)'
+INFO  2020-11-25 16:48:03,656 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 43.3878ms 200 application/json; charset=utf-8
+INFO  2020-11-25 16:48:05,790 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Tenant/GetAll?maxResultCount=10&skipCount=0&keyword=  
+INFO  2020-11-25 16:48:05,792 [14   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:48:05,794 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 4.5954ms 204 
+INFO  2020-11-25 16:48:05,797 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Tenant/GetAll?maxResultCount=10&skipCount=0&keyword=  
+INFO  2020-11-25 16:48:05,800 [5    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:48:05,803 [5    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-11-25 16:48:05,805 [5    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.MultiTenancy.TenantAppService.GetAllAsync (UET.EGarden.Application)'
+INFO  2020-11-25 16:48:05,809 [5    ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "Tenant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Abp.Application.Services.Dto.PagedResultDto`1[UET.EGarden.MultiTenancy.Dto.TenantDto]] GetAllAsync(UET.EGarden.MultiTenancy.Dto.PagedTenantResultRequestDto) on controller UET.EGarden.MultiTenancy.TenantAppService (UET.EGarden.Application).
+INFO  2020-11-25 16:48:05,829 [5    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-11-25 16:48:05,831 [5    ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.MultiTenancy.TenantAppService.GetAllAsync (UET.EGarden.Application) in 20.2381ms
+INFO  2020-11-25 16:48:05,832 [5    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.MultiTenancy.TenantAppService.GetAllAsync (UET.EGarden.Application)'
+INFO  2020-11-25 16:48:05,834 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 37.5112ms 200 application/json; charset=utf-8
+INFO  2020-11-25 16:48:06,470 [10   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Role/GetAll?maxResultCount=10&skipCount=0&keyword=  
+INFO  2020-11-25 16:48:06,472 [10   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:48:06,474 [10   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 14.9307ms 204 
+INFO  2020-11-25 16:48:06,479 [10   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Role/GetAll?maxResultCount=10&skipCount=0&keyword=  
+INFO  2020-11-25 16:48:06,481 [10   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:48:06,485 [10   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-11-25 16:48:06,487 [10   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Roles.RoleAppService.GetAllAsync (UET.EGarden.Application)'
+INFO  2020-11-25 16:48:06,493 [10   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "Role"}. Executing controller action with signature System.Threading.Tasks.Task`1[Abp.Application.Services.Dto.PagedResultDto`1[UET.EGarden.Roles.Dto.RoleDto]] GetAllAsync(UET.EGarden.Roles.Dto.PagedRoleResultRequestDto) on controller UET.EGarden.Roles.RoleAppService (UET.EGarden.Application).
+INFO  2020-11-25 16:48:06,520 [11   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-11-25 16:48:06,523 [11   ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Roles.RoleAppService.GetAllAsync (UET.EGarden.Application) in 27.8463ms
+INFO  2020-11-25 16:48:06,524 [11   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Roles.RoleAppService.GetAllAsync (UET.EGarden.Application)'
+INFO  2020-11-25 16:48:06,526 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 49.4109ms 200 application/json; charset=utf-8
+INFO  2020-11-25 16:48:13,065 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Role/GetAll?maxResultCount=10&skipCount=0&keyword=  
+INFO  2020-11-25 16:48:13,068 [4    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:48:13,070 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 4.9939ms 204 
+INFO  2020-11-25 16:48:13,073 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Role/GetAll?maxResultCount=10&skipCount=0&keyword=  
+INFO  2020-11-25 16:48:13,075 [4    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:48:13,077 [4    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-11-25 16:48:13,079 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Roles.RoleAppService.GetAllAsync (UET.EGarden.Application)'
+INFO  2020-11-25 16:48:13,084 [4    ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "Role"}. Executing controller action with signature System.Threading.Tasks.Task`1[Abp.Application.Services.Dto.PagedResultDto`1[UET.EGarden.Roles.Dto.RoleDto]] GetAllAsync(UET.EGarden.Roles.Dto.PagedRoleResultRequestDto) on controller UET.EGarden.Roles.RoleAppService (UET.EGarden.Application).
+INFO  2020-11-25 16:48:13,112 [4    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-11-25 16:48:13,114 [4    ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Roles.RoleAppService.GetAllAsync (UET.EGarden.Application) in 28.9855ms
+INFO  2020-11-25 16:48:13,116 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Roles.RoleAppService.GetAllAsync (UET.EGarden.Application)'
+INFO  2020-11-25 16:48:13,119 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 45.9173ms 200 application/json; charset=utf-8
+INFO  2020-11-25 16:48:13,874 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/User/GetAll?maxResultCount=10&skipCount=0&keyword=  
+INFO  2020-11-25 16:48:13,876 [11   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:48:13,879 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 4.1257ms 204 
+INFO  2020-11-25 16:48:13,882 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/User/GetAll?maxResultCount=10&skipCount=0&keyword=  
+INFO  2020-11-25 16:48:13,884 [4    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:48:13,887 [4    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-11-25 16:48:13,889 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Users.UserAppService.GetAllAsync (UET.EGarden.Application)'
+INFO  2020-11-25 16:48:13,894 [4    ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Abp.Application.Services.Dto.PagedResultDto`1[UET.EGarden.Users.Dto.UserDto]] GetAllAsync(UET.EGarden.Users.Dto.PagedUserResultRequestDto) on controller UET.EGarden.Users.UserAppService (UET.EGarden.Application).
+INFO  2020-11-25 16:48:13,920 [4    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-11-25 16:48:13,922 [4    ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Users.UserAppService.GetAllAsync (UET.EGarden.Application) in 26.0104ms
+INFO  2020-11-25 16:48:13,924 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Users.UserAppService.GetAllAsync (UET.EGarden.Application)'
+INFO  2020-11-25 16:48:13,926 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 43.7124ms 200 application/json; charset=utf-8
+INFO  2020-11-25 16:48:21,134 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Tenant/GetAll?maxResultCount=10&skipCount=0&keyword=  
+INFO  2020-11-25 16:48:21,136 [11   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:48:21,138 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 6.4591ms 204 
+INFO  2020-11-25 16:48:21,141 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Tenant/GetAll?maxResultCount=10&skipCount=0&keyword=  
+INFO  2020-11-25 16:48:21,142 [11   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:48:21,144 [11   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-11-25 16:48:21,146 [11   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.MultiTenancy.TenantAppService.GetAllAsync (UET.EGarden.Application)'
+INFO  2020-11-25 16:48:21,150 [11   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "Tenant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Abp.Application.Services.Dto.PagedResultDto`1[UET.EGarden.MultiTenancy.Dto.TenantDto]] GetAllAsync(UET.EGarden.MultiTenancy.Dto.PagedTenantResultRequestDto) on controller UET.EGarden.MultiTenancy.TenantAppService (UET.EGarden.Application).
+INFO  2020-11-25 16:48:21,166 [5    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-11-25 16:48:21,168 [5    ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.MultiTenancy.TenantAppService.GetAllAsync (UET.EGarden.Application) in 16.5228ms
+INFO  2020-11-25 16:48:21,170 [5    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.MultiTenancy.TenantAppService.GetAllAsync (UET.EGarden.Application)'
+INFO  2020-11-25 16:48:21,171 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 31.3216ms 200 application/json; charset=utf-8
+INFO  2020-11-25 16:48:22,626 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Role/GetAll?maxResultCount=10&skipCount=0&keyword=  
+INFO  2020-11-25 16:48:22,629 [5    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:48:22,631 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 6.3855ms 204 
+INFO  2020-11-25 16:48:22,634 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Role/GetAll?maxResultCount=10&skipCount=0&keyword=  
+INFO  2020-11-25 16:48:22,636 [4    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:48:22,638 [4    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-11-25 16:48:22,640 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Roles.RoleAppService.GetAllAsync (UET.EGarden.Application)'
+INFO  2020-11-25 16:48:22,644 [4    ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "Role"}. Executing controller action with signature System.Threading.Tasks.Task`1[Abp.Application.Services.Dto.PagedResultDto`1[UET.EGarden.Roles.Dto.RoleDto]] GetAllAsync(UET.EGarden.Roles.Dto.PagedRoleResultRequestDto) on controller UET.EGarden.Roles.RoleAppService (UET.EGarden.Application).
+INFO  2020-11-25 16:48:22,668 [31   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-11-25 16:48:22,670 [31   ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Roles.RoleAppService.GetAllAsync (UET.EGarden.Application) in 24.5951ms
+INFO  2020-11-25 16:48:22,672 [31   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Roles.RoleAppService.GetAllAsync (UET.EGarden.Application)'
+INFO  2020-11-25 16:48:22,674 [31   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 39.9775ms 200 application/json; charset=utf-8
+INFO  2020-11-25 16:48:23,763 [31   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/User/GetAll?maxResultCount=10&skipCount=0&keyword=  
+INFO  2020-11-25 16:48:23,766 [31   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:48:23,768 [31   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 4.1794ms 204 
+INFO  2020-11-25 16:48:23,770 [31   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/User/GetAll?maxResultCount=10&skipCount=0&keyword=  
+INFO  2020-11-25 16:48:23,772 [31   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:48:23,774 [31   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-11-25 16:48:23,777 [31   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Users.UserAppService.GetAllAsync (UET.EGarden.Application)'
+INFO  2020-11-25 16:48:23,781 [31   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Abp.Application.Services.Dto.PagedResultDto`1[UET.EGarden.Users.Dto.UserDto]] GetAllAsync(UET.EGarden.Users.Dto.PagedUserResultRequestDto) on controller UET.EGarden.Users.UserAppService (UET.EGarden.Application).
+INFO  2020-11-25 16:48:23,806 [11   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-11-25 16:48:23,808 [11   ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Users.UserAppService.GetAllAsync (UET.EGarden.Application) in 25.7446ms
+INFO  2020-11-25 16:48:23,810 [11   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Users.UserAppService.GetAllAsync (UET.EGarden.Application)'
+INFO  2020-11-25 16:48:23,812 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 42.2967ms 200 application/json; charset=utf-8
+INFO  2020-11-25 16:48:24,893 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/User/GetAll?maxResultCount=10&skipCount=0&keyword=  
+INFO  2020-11-25 16:48:24,895 [11   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:48:24,898 [11   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-11-25 16:48:24,901 [11   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Users.UserAppService.GetAllAsync (UET.EGarden.Application)'
+INFO  2020-11-25 16:48:24,906 [11   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Abp.Application.Services.Dto.PagedResultDto`1[UET.EGarden.Users.Dto.UserDto]] GetAllAsync(UET.EGarden.Users.Dto.PagedUserResultRequestDto) on controller UET.EGarden.Users.UserAppService (UET.EGarden.Application).
+INFO  2020-11-25 16:48:24,950 [5    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-11-25 16:48:24,953 [5    ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Users.UserAppService.GetAllAsync (UET.EGarden.Application) in 44.2647ms
+INFO  2020-11-25 16:48:24,955 [5    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Users.UserAppService.GetAllAsync (UET.EGarden.Application)'
+INFO  2020-11-25 16:48:24,957 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 63.6931ms 200 application/json; charset=utf-8
+INFO  2020-11-25 16:48:36,573 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/User/GetAll?maxResultCount=10&skipCount=0&keyword=  
+INFO  2020-11-25 16:48:36,576 [5    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:48:36,579 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 5.2815ms 204 
+INFO  2020-11-25 16:48:36,582 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/User/GetAll?maxResultCount=10&skipCount=0&keyword=  
+INFO  2020-11-25 16:48:36,584 [5    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:48:36,587 [5    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-11-25 16:48:36,589 [5    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Users.UserAppService.GetAllAsync (UET.EGarden.Application)'
+INFO  2020-11-25 16:48:36,594 [5    ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Abp.Application.Services.Dto.PagedResultDto`1[UET.EGarden.Users.Dto.UserDto]] GetAllAsync(UET.EGarden.Users.Dto.PagedUserResultRequestDto) on controller UET.EGarden.Users.UserAppService (UET.EGarden.Application).
+INFO  2020-11-25 16:48:36,620 [14   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-11-25 16:48:36,623 [14   ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Users.UserAppService.GetAllAsync (UET.EGarden.Application) in 26.2974ms
+INFO  2020-11-25 16:48:36,625 [14   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Users.UserAppService.GetAllAsync (UET.EGarden.Application)'
+INFO  2020-11-25 16:48:36,627 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 44.2884ms 200 application/json; charset=utf-8
+INFO  2020-11-25 16:48:37,031 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Role/GetAll?maxResultCount=10&skipCount=0&keyword=  
+INFO  2020-11-25 16:48:37,036 [14   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:48:37,038 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 7.422ms 204 
+INFO  2020-11-25 16:48:37,041 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Role/GetAll?maxResultCount=10&skipCount=0&keyword=  
+INFO  2020-11-25 16:48:37,043 [14   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:48:37,045 [14   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-11-25 16:48:37,046 [14   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Roles.RoleAppService.GetAllAsync (UET.EGarden.Application)'
+INFO  2020-11-25 16:48:37,050 [14   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "Role"}. Executing controller action with signature System.Threading.Tasks.Task`1[Abp.Application.Services.Dto.PagedResultDto`1[UET.EGarden.Roles.Dto.RoleDto]] GetAllAsync(UET.EGarden.Roles.Dto.PagedRoleResultRequestDto) on controller UET.EGarden.Roles.RoleAppService (UET.EGarden.Application).
+INFO  2020-11-25 16:48:37,072 [14   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-11-25 16:48:37,074 [14   ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Roles.RoleAppService.GetAllAsync (UET.EGarden.Application) in 22.7546ms
+INFO  2020-11-25 16:48:37,076 [14   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Roles.RoleAppService.GetAllAsync (UET.EGarden.Application)'
+INFO  2020-11-25 16:48:37,078 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 37.6347ms 200 application/json; charset=utf-8
+INFO  2020-11-25 16:48:39,035 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Tenant/GetAll?maxResultCount=10&skipCount=0&keyword=  
+INFO  2020-11-25 16:48:39,039 [14   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:48:39,041 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 5.3711ms 204 
+INFO  2020-11-25 16:48:39,043 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Tenant/GetAll?maxResultCount=10&skipCount=0&keyword=  
+INFO  2020-11-25 16:48:39,045 [14   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:48:39,047 [14   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-11-25 16:48:39,049 [14   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.MultiTenancy.TenantAppService.GetAllAsync (UET.EGarden.Application)'
+INFO  2020-11-25 16:48:39,053 [14   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "Tenant"}. Executing controller action with signature System.Threading.Tasks.Task`1[Abp.Application.Services.Dto.PagedResultDto`1[UET.EGarden.MultiTenancy.Dto.TenantDto]] GetAllAsync(UET.EGarden.MultiTenancy.Dto.PagedTenantResultRequestDto) on controller UET.EGarden.MultiTenancy.TenantAppService (UET.EGarden.Application).
+INFO  2020-11-25 16:48:39,068 [10   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-11-25 16:48:39,070 [10   ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.MultiTenancy.TenantAppService.GetAllAsync (UET.EGarden.Application) in 15.9171ms
+INFO  2020-11-25 16:48:39,072 [10   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.MultiTenancy.TenantAppService.GetAllAsync (UET.EGarden.Application)'
+INFO  2020-11-25 16:48:39,074 [10   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 31.7269ms 200 application/json; charset=utf-8
+INFO  2020-11-25 16:48:43,117 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/User/GetAll?maxResultCount=10&skipCount=0&keyword=  
+INFO  2020-11-25 16:48:43,122 [4    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:48:43,124 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 6.4995ms 204 
+INFO  2020-11-25 16:48:43,127 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/User/GetAll?maxResultCount=10&skipCount=0&keyword=  
+INFO  2020-11-25 16:48:43,129 [4    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:48:43,132 [4    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-11-25 16:48:43,133 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Users.UserAppService.GetAllAsync (UET.EGarden.Application)'
+INFO  2020-11-25 16:48:43,137 [4    ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Abp.Application.Services.Dto.PagedResultDto`1[UET.EGarden.Users.Dto.UserDto]] GetAllAsync(UET.EGarden.Users.Dto.PagedUserResultRequestDto) on controller UET.EGarden.Users.UserAppService (UET.EGarden.Application).
+INFO  2020-11-25 16:48:43,163 [4    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-11-25 16:48:43,165 [4    ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Users.UserAppService.GetAllAsync (UET.EGarden.Application) in 26.1727ms
+INFO  2020-11-25 16:48:43,168 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Users.UserAppService.GetAllAsync (UET.EGarden.Application)'
+INFO  2020-11-25 16:48:43,170 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 43.2712ms 200 application/json; charset=utf-8
+INFO  2020-11-25 16:48:51,783 [10   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/Role/GetAll?maxResultCount=10&skipCount=0&keyword=  
+INFO  2020-11-25 16:48:51,786 [10   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:48:51,804 [10   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 10.3511ms 204 
+INFO  2020-11-25 16:48:51,812 [10   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Role/GetAll?maxResultCount=10&skipCount=0&keyword=  
+INFO  2020-11-25 16:48:51,814 [10   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:48:51,816 [10   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-11-25 16:48:51,818 [10   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Roles.RoleAppService.GetAllAsync (UET.EGarden.Application)'
+INFO  2020-11-25 16:48:51,826 [10   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "Role"}. Executing controller action with signature System.Threading.Tasks.Task`1[Abp.Application.Services.Dto.PagedResultDto`1[UET.EGarden.Roles.Dto.RoleDto]] GetAllAsync(UET.EGarden.Roles.Dto.PagedRoleResultRequestDto) on controller UET.EGarden.Roles.RoleAppService (UET.EGarden.Application).
+INFO  2020-11-25 16:48:51,857 [5    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-11-25 16:48:51,861 [5    ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Roles.RoleAppService.GetAllAsync (UET.EGarden.Application) in 31.528ms
+INFO  2020-11-25 16:48:51,864 [5    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Roles.RoleAppService.GetAllAsync (UET.EGarden.Application)'
+INFO  2020-11-25 16:48:51,866 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 60.0238ms 200 application/json; charset=utf-8
+INFO  2020-11-25 16:48:53,788 [16   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 OPTIONS http://localhost:21021/api/services/app/User/GetAll?maxResultCount=10&skipCount=0&keyword=  
+INFO  2020-11-25 16:48:53,790 [16   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:48:53,796 [16   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 3.7235ms 204 
+INFO  2020-11-25 16:48:53,800 [16   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/User/GetAll?maxResultCount=10&skipCount=0&keyword=  
+INFO  2020-11-25 16:48:53,802 [16   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2020-11-25 16:48:53,805 [16   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-11-25 16:48:53,807 [16   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Users.UserAppService.GetAllAsync (UET.EGarden.Application)'
+INFO  2020-11-25 16:48:53,815 [16   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Abp.Application.Services.Dto.PagedResultDto`1[UET.EGarden.Users.Dto.UserDto]] GetAllAsync(UET.EGarden.Users.Dto.PagedUserResultRequestDto) on controller UET.EGarden.Users.UserAppService (UET.EGarden.Application).
+INFO  2020-11-25 16:48:53,847 [5    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-11-25 16:48:53,849 [5    ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Users.UserAppService.GetAllAsync (UET.EGarden.Application) in 32.178ms
+INFO  2020-11-25 16:48:53,851 [5    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Users.UserAppService.GetAllAsync (UET.EGarden.Application)'
+INFO  2020-11-25 16:48:53,854 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 55.5363ms 200 application/json; charset=utf-8
+DEBUG 2020-12-01 18:25:51,099 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2020-12-01 18:25:51,414 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2020-12-01 18:25:51,428 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.Web.Host.Startup.EGardenWebHostModule, UET.EGarden.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:25:51,430 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EGardenWebCoreModule, UET.EGarden.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:25:51,431 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EGardenApplicationModule, UET.EGarden.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:25:51,431 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EGardenCoreModule, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:25:51,432 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:25:51,432 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:25:51,432 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:25:51,433 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:25:51,433 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EntityFrameworkCore.EGardenEntityFrameworkModule, UET.EGarden.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:25:51,433 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:25:51,433 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:25:51,433 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:25:51,434 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:25:51,434 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:25:51,434 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:25:51,437 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2020-12-01 18:25:51,632 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-01 18:25:51,632 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-01 18:25:51,632 [1    ] o.Configuration.LanguageManagementConfig - Converted EGarden (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-01 18:25:51,632 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-01 18:25:52,106 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: UET.EGarden.EntityFrameworkCore.EGardenDbContext, UET.EGarden.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:25:52,911 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2020-12-01 18:25:52,960 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2020-12-01 18:25:52,970 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2020-12-01 18:25:52,974 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EGarden
+DEBUG 2020-12-01 18:25:52,978 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2020-12-01 18:25:53,152 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2020-12-01 18:25:53,263 [1    ] , Culture=neutral, PublicKeyToken=null]] - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[UET.EGarden.MultiTenancy.Tenant, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[UET.EGarden.Authorization.Users.User, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2020-12-01 18:25:53,317 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 8 classes define auto mapping attributes
+DEBUG 2020-12-01 18:25:53,317 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2020-12-01 18:25:53,323 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Users.Dto.CreateUserDto
+DEBUG 2020-12-01 18:25:53,324 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Users.Dto.UserDto
+DEBUG 2020-12-01 18:25:53,324 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2020-12-01 18:25:53,324 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Sessions.Dto.UserLoginInfoDto
+DEBUG 2020-12-01 18:25:53,324 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Roles.Dto.PermissionDto
+DEBUG 2020-12-01 18:25:53,325 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2020-12-01 18:25:53,325 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.MultiTenancy.Dto.TenantDto
+INFO  2020-12-01 18:25:55,931 [1    ] tCore.Builder.RequestLocalizationOptions - Supported Request Localization Cultures: en,es-MX,fr,de,it,nl,pt-BR,tr,ru,ar,ja,zh-Hans
+INFO  2020-12-01 18:25:56,428 [1    ] taProtection.KeyManagement.XmlKeyManager - User profile is available. Using 'C:\Users\ADMIN\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+INFO  2020-12-01 18:25:57,281 [10   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2020-12-01 18:25:57,569 [10   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Web.Host.Controllers.HomeController.Index (UET.EGarden.Web.Host)'
+INFO  2020-12-01 18:26:01,213 [10   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller UET.EGarden.Web.Host.Controllers.HomeController (UET.EGarden.Web.Host).
+INFO  2020-12-01 18:26:02,456 [7    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2020-12-01 18:26:02,463 [7    ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Web.Host.Controllers.HomeController.Index (UET.EGarden.Web.Host) in 1245.0492ms
+INFO  2020-12-01 18:26:02,465 [7    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Web.Host.Controllers.HomeController.Index (UET.EGarden.Web.Host)'
+INFO  2020-12-01 18:26:02,475 [7    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 5204.7337ms 302 
+INFO  2020-12-01 18:26:02,496 [7    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2020-12-01 18:26:02,662 [7    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 165.5857ms 200 text/html;charset=utf-8
+INFO  2020-12-01 18:26:02,828 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/ui/abp.js  
+INFO  2020-12-01 18:26:02,835 [12   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/ui/abp.swagger.js  
+INFO  2020-12-01 18:26:02,865 [12   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger/ui/abp.swagger.js'. Physical path: 'C:\Users\ADMIN\Documents\GitHub\EGarden\server\src\UET.EGarden.Web.Host\wwwroot\swagger\ui\abp.swagger.js'
+INFO  2020-12-01 18:26:02,865 [4    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger/ui/abp.js'. Physical path: 'C:\Users\ADMIN\Documents\GitHub\EGarden\server\src\UET.EGarden.Web.Host\wwwroot\swagger\ui\abp.js'
+INFO  2020-12-01 18:26:02,867 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 39.5464ms 200 application/javascript
+INFO  2020-12-01 18:26:02,869 [12   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 31.7449ms 200 application/javascript
+INFO  2020-12-01 18:26:03,064 [12   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/AntiForgery/SetCookie  
+INFO  2020-12-01 18:26:03,072 [12   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Web.Host.Controllers.AntiForgeryController.SetCookie (UET.EGarden.Web.Host)'
+INFO  2020-12-01 18:26:03,085 [12   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "SetCookie", controller = "AntiForgery", area = ""}. Executing controller action with signature Void SetCookie() on controller UET.EGarden.Web.Host.Controllers.AntiForgeryController (UET.EGarden.Web.Host).
+INFO  2020-12-01 18:26:03,121 [12   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-12-01 18:26:03,126 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2020-12-01 18:26:03,147 [12   ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Web.Host.Controllers.AntiForgeryController.SetCookie (UET.EGarden.Web.Host) in 59.7368ms
+INFO  2020-12-01 18:26:03,149 [12   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Web.Host.Controllers.AntiForgeryController.SetCookie (UET.EGarden.Web.Host)'
+INFO  2020-12-01 18:26:03,152 [12   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 87.3372ms 200 application/json; charset=utf-8
+INFO  2020-12-01 18:26:03,330 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 204.966ms 200 application/json;charset=utf-8
+DEBUG 2020-12-01 18:40:39,895 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2020-12-01 18:40:40,057 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2020-12-01 18:40:40,075 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.Web.Host.Startup.EGardenWebHostModule, UET.EGarden.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:40:40,077 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EGardenWebCoreModule, UET.EGarden.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:40:40,077 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EGardenApplicationModule, UET.EGarden.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:40:40,077 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EGardenCoreModule, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:40:40,077 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:40:40,078 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:40:40,078 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:40:40,078 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:40:40,078 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EntityFrameworkCore.EGardenEntityFrameworkModule, UET.EGarden.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:40:40,079 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:40:40,079 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:40:40,079 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:40:40,080 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:40:40,080 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:40:40,080 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:40:40,082 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2020-12-01 18:40:40,229 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-01 18:40:40,229 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-01 18:40:40,229 [1    ] o.Configuration.LanguageManagementConfig - Converted EGarden (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-01 18:40:40,229 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-01 18:40:40,627 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: UET.EGarden.EntityFrameworkCore.EGardenDbContext, UET.EGarden.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:40:41,455 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2020-12-01 18:40:41,490 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2020-12-01 18:40:41,511 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2020-12-01 18:40:41,515 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EGarden
+DEBUG 2020-12-01 18:40:41,520 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2020-12-01 18:40:41,707 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2020-12-01 18:40:41,819 [1    ] , Culture=neutral, PublicKeyToken=null]] - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[UET.EGarden.MultiTenancy.Tenant, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[UET.EGarden.Authorization.Users.User, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2020-12-01 18:40:41,869 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 8 classes define auto mapping attributes
+DEBUG 2020-12-01 18:40:41,869 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2020-12-01 18:40:41,875 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Users.Dto.CreateUserDto
+DEBUG 2020-12-01 18:40:41,875 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Users.Dto.UserDto
+DEBUG 2020-12-01 18:40:41,875 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2020-12-01 18:40:41,876 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Sessions.Dto.UserLoginInfoDto
+DEBUG 2020-12-01 18:40:41,876 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Roles.Dto.PermissionDto
+DEBUG 2020-12-01 18:40:41,876 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2020-12-01 18:40:41,876 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.MultiTenancy.Dto.TenantDto
+INFO  2020-12-01 18:40:45,459 [1    ] tCore.Builder.RequestLocalizationOptions - Supported Request Localization Cultures: en,es-MX,fr,de,it,nl,pt-BR,tr,ru,ar,ja,zh-Hans
+INFO  2020-12-01 18:40:45,717 [1    ] taProtection.KeyManagement.XmlKeyManager - User profile is available. Using 'C:\Users\ADMIN\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+INFO  2020-12-01 18:40:46,859 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2020-12-01 18:40:47,036 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Web.Host.Controllers.HomeController.Index (UET.EGarden.Web.Host)'
+INFO  2020-12-01 18:40:50,319 [4    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller UET.EGarden.Web.Host.Controllers.HomeController (UET.EGarden.Web.Host).
+INFO  2020-12-01 18:40:51,474 [9    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2020-12-01 18:40:51,482 [9    ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Web.Host.Controllers.HomeController.Index (UET.EGarden.Web.Host) in 1156.9064ms
+INFO  2020-12-01 18:40:51,484 [9    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Web.Host.Controllers.HomeController.Index (UET.EGarden.Web.Host)'
+INFO  2020-12-01 18:40:51,493 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 4651.9628ms 302 
+INFO  2020-12-01 18:40:51,512 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2020-12-01 18:40:51,670 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 156.9723ms 200 text/html;charset=utf-8
+INFO  2020-12-01 18:40:51,714 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/ui/abp.js  
+INFO  2020-12-01 18:40:51,716 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/ui/abp.swagger.js  
+INFO  2020-12-01 18:40:51,726 [9    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger/ui/abp.swagger.js was not modified
+INFO  2020-12-01 18:40:51,727 [4    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger/ui/abp.js was not modified
+INFO  2020-12-01 18:40:51,732 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 16.1255ms 304 application/javascript
+INFO  2020-12-01 18:40:51,733 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 18.3143ms 304 application/javascript
+INFO  2020-12-01 18:40:51,951 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/AntiForgery/SetCookie  
+INFO  2020-12-01 18:40:51,956 [9    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Web.Host.Controllers.AntiForgeryController.SetCookie (UET.EGarden.Web.Host)'
+INFO  2020-12-01 18:40:51,965 [9    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "SetCookie", controller = "AntiForgery", area = ""}. Executing controller action with signature Void SetCookie() on controller UET.EGarden.Web.Host.Controllers.AntiForgeryController (UET.EGarden.Web.Host).
+INFO  2020-12-01 18:40:51,988 [15   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-12-01 18:40:51,995 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2020-12-01 18:40:52,011 [15   ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Web.Host.Controllers.AntiForgeryController.SetCookie (UET.EGarden.Web.Host) in 43.843ms
+INFO  2020-12-01 18:40:52,014 [15   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Web.Host.Controllers.AntiForgeryController.SetCookie (UET.EGarden.Web.Host)'
+INFO  2020-12-01 18:40:52,016 [15   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 64.6928ms 200 application/json; charset=utf-8
+INFO  2020-12-01 18:40:52,152 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 158.6069ms 200 application/json;charset=utf-8
+INFO  2020-12-01 18:41:58,659 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 POST http://localhost:21021/api/services/app/UserNote/CreateOrUpdateNote application/json-patch+json 150
+INFO  2020-12-01 18:41:58,669 [5    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2020-12-01 18:41:58,673 [5    ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2020-12-01 18:41:58,686 [5    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Note.UserNoteAppService.CreateOrUpdateNote (UET.EGarden.Application)'
+INFO  2020-12-01 18:41:58,705 [5    ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "CreateOrUpdateNote", controller = "UserNote"}. Executing controller action with signature System.Threading.Tasks.Task CreateOrUpdateNote(UET.EGarden.Note.Dto.InputCreate.CreateOrUpdateNoteInput) on controller UET.EGarden.Note.UserNoteAppService (UET.EGarden.Application).
+ERROR 2020-12-01 18:41:58,720 [5    ] idateAntiforgeryTokenAuthorizationFilter - The required antiforgery header value "X-XSRF-TOKEN" is not present.
+Microsoft.AspNetCore.Antiforgery.AntiforgeryValidationException: The required antiforgery header value "X-XSRF-TOKEN" is not present.
+   at Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery.ValidateRequestAsync(HttpContext httpContext)
+   at Abp.AspNetCore.Mvc.Antiforgery.AbpValidateAntiforgeryTokenAuthorizationFilter.OnAuthorizationAsync(AuthorizationFilterContext context)
+INFO  2020-12-01 18:41:58,780 [5    ] c.Infrastructure.ControllerActionInvoker - Authorization failed for the request at filter 'Abp.AspNetCore.Mvc.Antiforgery.AbpAutoValidateAntiforgeryTokenAuthorizationFilter'.
+INFO  2020-12-01 18:41:58,785 [5    ] icrosoft.AspNetCore.Mvc.StatusCodeResult - Executing HttpStatusCodeResult, setting HTTP status code 400
+INFO  2020-12-01 18:41:58,787 [5    ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Note.UserNoteAppService.CreateOrUpdateNote (UET.EGarden.Application) in 80.1331ms
+INFO  2020-12-01 18:41:58,789 [5    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Note.UserNoteAppService.CreateOrUpdateNote (UET.EGarden.Application)'
+INFO  2020-12-01 18:41:58,791 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 133.4988ms 400 
+INFO  2020-12-01 18:42:17,245 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 POST http://localhost:21021/api/services/app/UserNote/CreateOrUpdateNote application/json-patch+json 148
+INFO  2020-12-01 18:42:17,247 [4    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2020-12-01 18:42:17,250 [4    ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2020-12-01 18:42:17,260 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Note.UserNoteAppService.CreateOrUpdateNote (UET.EGarden.Application)'
+INFO  2020-12-01 18:42:17,265 [4    ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "CreateOrUpdateNote", controller = "UserNote"}. Executing controller action with signature System.Threading.Tasks.Task CreateOrUpdateNote(UET.EGarden.Note.Dto.InputCreate.CreateOrUpdateNoteInput) on controller UET.EGarden.Note.UserNoteAppService (UET.EGarden.Application).
+ERROR 2020-12-01 18:42:17,266 [4    ] idateAntiforgeryTokenAuthorizationFilter - The required antiforgery header value "X-XSRF-TOKEN" is not present.
+Microsoft.AspNetCore.Antiforgery.AntiforgeryValidationException: The required antiforgery header value "X-XSRF-TOKEN" is not present.
+   at Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery.ValidateRequestAsync(HttpContext httpContext)
+   at Abp.AspNetCore.Mvc.Antiforgery.AbpValidateAntiforgeryTokenAuthorizationFilter.OnAuthorizationAsync(AuthorizationFilterContext context)
+INFO  2020-12-01 18:42:17,268 [4    ] c.Infrastructure.ControllerActionInvoker - Authorization failed for the request at filter 'Abp.AspNetCore.Mvc.Antiforgery.AbpAutoValidateAntiforgeryTokenAuthorizationFilter'.
+INFO  2020-12-01 18:42:17,269 [4    ] icrosoft.AspNetCore.Mvc.StatusCodeResult - Executing HttpStatusCodeResult, setting HTTP status code 400
+INFO  2020-12-01 18:42:17,271 [4    ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Note.UserNoteAppService.CreateOrUpdateNote (UET.EGarden.Application) in 4.3646ms
+INFO  2020-12-01 18:42:17,273 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Note.UserNoteAppService.CreateOrUpdateNote (UET.EGarden.Application)'
+INFO  2020-12-01 18:42:17,278 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 32.5585ms 400 
+INFO  2020-12-01 18:42:21,201 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 POST http://localhost:21021/api/services/app/UserNote/CreateOrUpdateNote application/json-patch+json 148
+INFO  2020-12-01 18:42:21,203 [5    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2020-12-01 18:42:21,205 [5    ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2020-12-01 18:42:21,209 [5    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Note.UserNoteAppService.CreateOrUpdateNote (UET.EGarden.Application)'
+INFO  2020-12-01 18:42:21,214 [5    ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "CreateOrUpdateNote", controller = "UserNote"}. Executing controller action with signature System.Threading.Tasks.Task CreateOrUpdateNote(UET.EGarden.Note.Dto.InputCreate.CreateOrUpdateNoteInput) on controller UET.EGarden.Note.UserNoteAppService (UET.EGarden.Application).
+ERROR 2020-12-01 18:42:21,216 [5    ] idateAntiforgeryTokenAuthorizationFilter - The required antiforgery header value "X-XSRF-TOKEN" is not present.
+Microsoft.AspNetCore.Antiforgery.AntiforgeryValidationException: The required antiforgery header value "X-XSRF-TOKEN" is not present.
+   at Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery.ValidateRequestAsync(HttpContext httpContext)
+   at Abp.AspNetCore.Mvc.Antiforgery.AbpValidateAntiforgeryTokenAuthorizationFilter.OnAuthorizationAsync(AuthorizationFilterContext context)
+INFO  2020-12-01 18:42:21,218 [5    ] c.Infrastructure.ControllerActionInvoker - Authorization failed for the request at filter 'Abp.AspNetCore.Mvc.Antiforgery.AbpAutoValidateAntiforgeryTokenAuthorizationFilter'.
+INFO  2020-12-01 18:42:21,219 [5    ] icrosoft.AspNetCore.Mvc.StatusCodeResult - Executing HttpStatusCodeResult, setting HTTP status code 400
+INFO  2020-12-01 18:42:21,221 [5    ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Note.UserNoteAppService.CreateOrUpdateNote (UET.EGarden.Application) in 4.826ms
+INFO  2020-12-01 18:42:21,222 [5    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Note.UserNoteAppService.CreateOrUpdateNote (UET.EGarden.Application)'
+INFO  2020-12-01 18:42:21,225 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 23.961ms 400 
+INFO  2020-12-01 18:43:17,749 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 POST http://localhost:21021/api/TokenAuth/Authenticate application/json 54
+INFO  2020-12-01 18:43:17,751 [5    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2020-12-01 18:43:17,753 [5    ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2020-12-01 18:43:17,760 [5    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Controllers.TokenAuthController.Authenticate (UET.EGarden.Web.Core)'
+INFO  2020-12-01 18:43:18,310 [5    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Authenticate", controller = "TokenAuth", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[UET.EGarden.Models.TokenAuth.AuthenticateResultModel] Authenticate(UET.EGarden.Models.TokenAuth.AuthenticateModel) on controller UET.EGarden.Controllers.TokenAuthController (UET.EGarden.Web.Core).
+ERROR 2020-12-01 18:43:18,312 [5    ] idateAntiforgeryTokenAuthorizationFilter - The required antiforgery header value "X-XSRF-TOKEN" is not present.
+Microsoft.AspNetCore.Antiforgery.AntiforgeryValidationException: The required antiforgery header value "X-XSRF-TOKEN" is not present.
+   at Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery.ValidateRequestAsync(HttpContext httpContext)
+   at Abp.AspNetCore.Mvc.Antiforgery.AbpValidateAntiforgeryTokenAuthorizationFilter.OnAuthorizationAsync(AuthorizationFilterContext context)
+INFO  2020-12-01 18:43:18,327 [5    ] c.Infrastructure.ControllerActionInvoker - Authorization failed for the request at filter 'Abp.AspNetCore.Mvc.Antiforgery.AbpAutoValidateAntiforgeryTokenAuthorizationFilter'.
+INFO  2020-12-01 18:43:18,332 [5    ] icrosoft.AspNetCore.Mvc.StatusCodeResult - Executing HttpStatusCodeResult, setting HTTP status code 400
+INFO  2020-12-01 18:43:18,337 [5    ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Controllers.TokenAuthController.Authenticate (UET.EGarden.Web.Core) in 21.4011ms
+INFO  2020-12-01 18:43:18,339 [5    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Controllers.TokenAuthController.Authenticate (UET.EGarden.Web.Core)'
+INFO  2020-12-01 18:43:18,341 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 592.5212ms 400 
+INFO  2020-12-01 18:43:23,275 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 POST http://localhost:21021/api/TokenAuth/Authenticate application/json 54
+INFO  2020-12-01 18:43:23,277 [22   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2020-12-01 18:43:23,279 [22   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2020-12-01 18:43:23,283 [22   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Controllers.TokenAuthController.Authenticate (UET.EGarden.Web.Core)'
+INFO  2020-12-01 18:43:23,289 [22   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Authenticate", controller = "TokenAuth", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[UET.EGarden.Models.TokenAuth.AuthenticateResultModel] Authenticate(UET.EGarden.Models.TokenAuth.AuthenticateModel) on controller UET.EGarden.Controllers.TokenAuthController (UET.EGarden.Web.Core).
+ERROR 2020-12-01 18:43:23,290 [22   ] idateAntiforgeryTokenAuthorizationFilter - The required antiforgery header value "X-XSRF-TOKEN" is not present.
+Microsoft.AspNetCore.Antiforgery.AntiforgeryValidationException: The required antiforgery header value "X-XSRF-TOKEN" is not present.
+   at Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery.ValidateRequestAsync(HttpContext httpContext)
+   at Abp.AspNetCore.Mvc.Antiforgery.AbpValidateAntiforgeryTokenAuthorizationFilter.OnAuthorizationAsync(AuthorizationFilterContext context)
+INFO  2020-12-01 18:43:23,291 [22   ] c.Infrastructure.ControllerActionInvoker - Authorization failed for the request at filter 'Abp.AspNetCore.Mvc.Antiforgery.AbpAutoValidateAntiforgeryTokenAuthorizationFilter'.
+INFO  2020-12-01 18:43:23,293 [22   ] icrosoft.AspNetCore.Mvc.StatusCodeResult - Executing HttpStatusCodeResult, setting HTTP status code 400
+INFO  2020-12-01 18:43:23,294 [22   ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Controllers.TokenAuthController.Authenticate (UET.EGarden.Web.Core) in 4.0266ms
+INFO  2020-12-01 18:43:23,296 [22   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Controllers.TokenAuthController.Authenticate (UET.EGarden.Web.Core)'
+INFO  2020-12-01 18:43:23,298 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 23.218ms 400 
+INFO  2020-12-01 18:44:17,035 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 POST http://localhost:21021/api/TokenAuth/Authenticate application/json 54
+INFO  2020-12-01 18:44:17,036 [4    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2020-12-01 18:44:17,037 [4    ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2020-12-01 18:44:17,039 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Controllers.TokenAuthController.Authenticate (UET.EGarden.Web.Core)'
+INFO  2020-12-01 18:44:17,044 [4    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Authenticate", controller = "TokenAuth", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[UET.EGarden.Models.TokenAuth.AuthenticateResultModel] Authenticate(UET.EGarden.Models.TokenAuth.AuthenticateModel) on controller UET.EGarden.Controllers.TokenAuthController (UET.EGarden.Web.Core).
+ERROR 2020-12-01 18:44:17,045 [4    ] idateAntiforgeryTokenAuthorizationFilter - The required antiforgery header value "X-XSRF-TOKEN" is not present.
+Microsoft.AspNetCore.Antiforgery.AntiforgeryValidationException: The required antiforgery header value "X-XSRF-TOKEN" is not present.
+   at Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery.ValidateRequestAsync(HttpContext httpContext)
+   at Abp.AspNetCore.Mvc.Antiforgery.AbpValidateAntiforgeryTokenAuthorizationFilter.OnAuthorizationAsync(AuthorizationFilterContext context)
+INFO  2020-12-01 18:44:17,046 [4    ] c.Infrastructure.ControllerActionInvoker - Authorization failed for the request at filter 'Abp.AspNetCore.Mvc.Antiforgery.AbpAutoValidateAntiforgeryTokenAuthorizationFilter'.
+INFO  2020-12-01 18:44:17,048 [4    ] icrosoft.AspNetCore.Mvc.StatusCodeResult - Executing HttpStatusCodeResult, setting HTTP status code 400
+INFO  2020-12-01 18:44:17,049 [4    ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Controllers.TokenAuthController.Authenticate (UET.EGarden.Web.Core) in 3.9886ms
+INFO  2020-12-01 18:44:17,051 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Controllers.TokenAuthController.Authenticate (UET.EGarden.Web.Core)'
+INFO  2020-12-01 18:44:17,055 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 20.4748ms 400 
+INFO  2020-12-01 18:44:19,723 [28   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2020-12-01 18:44:19,731 [28   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 7.617ms 200 text/html;charset=utf-8
+INFO  2020-12-01 18:44:19,764 [28   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/ui/abp.js  
+INFO  2020-12-01 18:44:19,767 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/ui/abp.swagger.js  
+INFO  2020-12-01 18:44:19,769 [28   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger/ui/abp.js was not modified
+INFO  2020-12-01 18:44:19,773 [28   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 6.7837ms 304 application/javascript
+INFO  2020-12-01 18:44:19,775 [5    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger/ui/abp.swagger.js was not modified
+INFO  2020-12-01 18:44:19,779 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 10.1007ms 304 application/javascript
+INFO  2020-12-01 18:44:19,983 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/AntiForgery/SetCookie  
+INFO  2020-12-01 18:44:19,986 [5    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Web.Host.Controllers.AntiForgeryController.SetCookie (UET.EGarden.Web.Host)'
+INFO  2020-12-01 18:44:19,992 [5    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "SetCookie", controller = "AntiForgery", area = ""}. Executing controller action with signature Void SetCookie() on controller UET.EGarden.Web.Host.Controllers.AntiForgeryController (UET.EGarden.Web.Host).
+INFO  2020-12-01 18:44:20,013 [29   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-12-01 18:44:20,016 [29   ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Web.Host.Controllers.AntiForgeryController.SetCookie (UET.EGarden.Web.Host) in 21.9176ms
+INFO  2020-12-01 18:44:20,017 [29   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Web.Host.Controllers.AntiForgeryController.SetCookie (UET.EGarden.Web.Host)'
+INFO  2020-12-01 18:44:20,018 [29   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 35.5657ms 200 application/json; charset=utf-8
+INFO  2020-12-01 18:44:20,029 [29   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2020-12-01 18:44:20,040 [28   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/favicon-32x32.png  
+INFO  2020-12-01 18:44:20,053 [29   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 25.5053ms 200 application/json;charset=utf-8
+INFO  2020-12-01 18:44:20,054 [28   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+INFO  2020-12-01 18:44:20,056 [28   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 15.0521ms 200 image/png
+INFO  2020-12-01 18:45:13,047 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 POST http://localhost:21021/api/TokenAuth/Authenticate application/json 54
+INFO  2020-12-01 18:45:13,048 [5    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2020-12-01 18:45:13,049 [5    ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2020-12-01 18:45:13,051 [5    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Controllers.TokenAuthController.Authenticate (UET.EGarden.Web.Core)'
+INFO  2020-12-01 18:45:13,055 [5    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Authenticate", controller = "TokenAuth", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[UET.EGarden.Models.TokenAuth.AuthenticateResultModel] Authenticate(UET.EGarden.Models.TokenAuth.AuthenticateModel) on controller UET.EGarden.Controllers.TokenAuthController (UET.EGarden.Web.Core).
+ERROR 2020-12-01 18:45:13,056 [5    ] idateAntiforgeryTokenAuthorizationFilter - The required antiforgery header value "X-XSRF-TOKEN" is not present.
+Microsoft.AspNetCore.Antiforgery.AntiforgeryValidationException: The required antiforgery header value "X-XSRF-TOKEN" is not present.
+   at Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery.ValidateRequestAsync(HttpContext httpContext)
+   at Abp.AspNetCore.Mvc.Antiforgery.AbpValidateAntiforgeryTokenAuthorizationFilter.OnAuthorizationAsync(AuthorizationFilterContext context)
+INFO  2020-12-01 18:45:13,057 [5    ] c.Infrastructure.ControllerActionInvoker - Authorization failed for the request at filter 'Abp.AspNetCore.Mvc.Antiforgery.AbpAutoValidateAntiforgeryTokenAuthorizationFilter'.
+INFO  2020-12-01 18:45:13,059 [5    ] icrosoft.AspNetCore.Mvc.StatusCodeResult - Executing HttpStatusCodeResult, setting HTTP status code 400
+INFO  2020-12-01 18:45:13,061 [5    ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Controllers.TokenAuthController.Authenticate (UET.EGarden.Web.Core) in 3.8733ms
+INFO  2020-12-01 18:45:13,062 [5    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Controllers.TokenAuthController.Authenticate (UET.EGarden.Web.Core)'
+INFO  2020-12-01 18:45:13,064 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 16.7016ms 400 
+INFO  2020-12-01 18:45:16,308 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-bundle.js.map  
+INFO  2020-12-01 18:45:16,313 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-standalone-preset.js.map  
+INFO  2020-12-01 18:45:16,320 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 5.4518ms 404 
+INFO  2020-12-01 18:45:16,321 [5    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 8.8765ms 404 
+INFO  2020-12-01 18:45:16,323 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui.css.map  
+INFO  2020-12-01 18:45:16,326 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 2.962ms 404 
+INFO  2020-12-01 18:45:36,699 [35   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 POST http://localhost:21021/api/TokenAuth/Authenticate application/json 54
+INFO  2020-12-01 18:45:36,702 [35   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2020-12-01 18:45:36,704 [35   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2020-12-01 18:45:36,706 [35   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Controllers.TokenAuthController.Authenticate (UET.EGarden.Web.Core)'
+INFO  2020-12-01 18:45:36,712 [35   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Authenticate", controller = "TokenAuth", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[UET.EGarden.Models.TokenAuth.AuthenticateResultModel] Authenticate(UET.EGarden.Models.TokenAuth.AuthenticateModel) on controller UET.EGarden.Controllers.TokenAuthController (UET.EGarden.Web.Core).
+ERROR 2020-12-01 18:45:36,714 [35   ] idateAntiforgeryTokenAuthorizationFilter - The required antiforgery header value "X-XSRF-TOKEN" is not present.
+Microsoft.AspNetCore.Antiforgery.AntiforgeryValidationException: The required antiforgery header value "X-XSRF-TOKEN" is not present.
+   at Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery.ValidateRequestAsync(HttpContext httpContext)
+   at Abp.AspNetCore.Mvc.Antiforgery.AbpValidateAntiforgeryTokenAuthorizationFilter.OnAuthorizationAsync(AuthorizationFilterContext context)
+INFO  2020-12-01 18:45:36,716 [35   ] c.Infrastructure.ControllerActionInvoker - Authorization failed for the request at filter 'Abp.AspNetCore.Mvc.Antiforgery.AbpAutoValidateAntiforgeryTokenAuthorizationFilter'.
+INFO  2020-12-01 18:45:36,720 [35   ] icrosoft.AspNetCore.Mvc.StatusCodeResult - Executing HttpStatusCodeResult, setting HTTP status code 400
+INFO  2020-12-01 18:45:36,721 [35   ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Controllers.TokenAuthController.Authenticate (UET.EGarden.Web.Core) in 7.3209ms
+INFO  2020-12-01 18:45:36,723 [35   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Controllers.TokenAuthController.Authenticate (UET.EGarden.Web.Core)'
+INFO  2020-12-01 18:45:36,725 [35   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 27.8881ms 400 
+INFO  2020-12-01 18:46:05,653 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 POST http://localhost:21021/api/TokenAuth/Authenticate application/json-patch+json 76
+INFO  2020-12-01 18:46:05,655 [4    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2020-12-01 18:46:05,656 [4    ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2020-12-01 18:46:05,659 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Controllers.TokenAuthController.Authenticate (UET.EGarden.Web.Core)'
+INFO  2020-12-01 18:46:05,667 [4    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Authenticate", controller = "TokenAuth", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[UET.EGarden.Models.TokenAuth.AuthenticateResultModel] Authenticate(UET.EGarden.Models.TokenAuth.AuthenticateModel) on controller UET.EGarden.Controllers.TokenAuthController (UET.EGarden.Web.Core).
+ERROR 2020-12-01 18:46:05,668 [4    ] idateAntiforgeryTokenAuthorizationFilter - The required antiforgery header value "X-XSRF-TOKEN" is not present.
+Microsoft.AspNetCore.Antiforgery.AntiforgeryValidationException: The required antiforgery header value "X-XSRF-TOKEN" is not present.
+   at Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery.ValidateRequestAsync(HttpContext httpContext)
+   at Abp.AspNetCore.Mvc.Antiforgery.AbpValidateAntiforgeryTokenAuthorizationFilter.OnAuthorizationAsync(AuthorizationFilterContext context)
+INFO  2020-12-01 18:46:05,672 [4    ] c.Infrastructure.ControllerActionInvoker - Authorization failed for the request at filter 'Abp.AspNetCore.Mvc.Antiforgery.AbpAutoValidateAntiforgeryTokenAuthorizationFilter'.
+INFO  2020-12-01 18:46:05,675 [4    ] icrosoft.AspNetCore.Mvc.StatusCodeResult - Executing HttpStatusCodeResult, setting HTTP status code 400
+INFO  2020-12-01 18:46:05,677 [4    ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Controllers.TokenAuthController.Authenticate (UET.EGarden.Web.Core) in 7.5133ms
+INFO  2020-12-01 18:46:05,679 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Controllers.TokenAuthController.Authenticate (UET.EGarden.Web.Core)'
+INFO  2020-12-01 18:46:05,681 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 27.6544ms 400 
+DEBUG 2020-12-01 18:47:07,508 [2    ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2020-12-01 18:47:07,511 [2    ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2020-12-01 18:47:07,511 [2    ] , Culture=neutral, PublicKeyToken=null]] - Stop background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[UET.EGarden.MultiTenancy.Tenant, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[UET.EGarden.Authorization.Users.User, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2020-12-01 18:47:07,512 [2    ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2020-12-01 18:47:07,512 [2    ] , Culture=neutral, PublicKeyToken=null]] - WaitToStop background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[UET.EGarden.MultiTenancy.Tenant, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[UET.EGarden.Authorization.Users.User, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2020-12-01 18:47:07,512 [2    ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2020-12-01 18:56:45,773 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2020-12-01 18:56:45,857 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2020-12-01 18:56:45,873 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.Web.Host.Startup.EGardenWebHostModule, UET.EGarden.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:56:45,875 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EGardenWebCoreModule, UET.EGarden.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:56:45,876 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EGardenApplicationModule, UET.EGarden.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:56:45,876 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EGardenCoreModule, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:56:45,877 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:56:45,877 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:56:45,877 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:56:45,878 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:56:45,878 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EntityFrameworkCore.EGardenEntityFrameworkModule, UET.EGarden.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:56:45,879 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:56:45,879 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:56:45,879 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:56:45,880 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:56:45,880 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:56:45,880 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:56:45,884 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2020-12-01 18:56:45,964 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-01 18:56:45,964 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-01 18:56:45,965 [1    ] o.Configuration.LanguageManagementConfig - Converted EGarden (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-01 18:56:45,965 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-01 18:56:46,333 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: UET.EGarden.EntityFrameworkCore.EGardenDbContext, UET.EGarden.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:56:47,081 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2020-12-01 18:56:47,123 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2020-12-01 18:56:47,133 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2020-12-01 18:56:47,138 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EGarden
+DEBUG 2020-12-01 18:56:47,144 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2020-12-01 18:56:47,315 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2020-12-01 18:56:47,426 [1    ] , Culture=neutral, PublicKeyToken=null]] - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[UET.EGarden.MultiTenancy.Tenant, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[UET.EGarden.Authorization.Users.User, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2020-12-01 18:56:47,474 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 8 classes define auto mapping attributes
+DEBUG 2020-12-01 18:56:47,474 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2020-12-01 18:56:47,479 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Users.Dto.CreateUserDto
+DEBUG 2020-12-01 18:56:47,480 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Users.Dto.UserDto
+DEBUG 2020-12-01 18:56:47,480 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2020-12-01 18:56:47,480 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Sessions.Dto.UserLoginInfoDto
+DEBUG 2020-12-01 18:56:47,480 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Roles.Dto.PermissionDto
+DEBUG 2020-12-01 18:56:47,480 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2020-12-01 18:56:47,481 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.MultiTenancy.Dto.TenantDto
+INFO  2020-12-01 18:56:49,730 [1    ] tCore.Builder.RequestLocalizationOptions - Supported Request Localization Cultures: en,es-MX,fr,de,it,nl,pt-BR,tr,ru,ar,ja,zh-Hans
+INFO  2020-12-01 18:56:50,036 [1    ] taProtection.KeyManagement.XmlKeyManager - User profile is available. Using 'C:\Users\ADMIN\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+INFO  2020-12-01 18:56:51,018 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2020-12-01 18:56:51,198 [14   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Web.Host.Controllers.HomeController.Index (UET.EGarden.Web.Host)'
+INFO  2020-12-01 18:56:54,396 [14   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller UET.EGarden.Web.Host.Controllers.HomeController (UET.EGarden.Web.Host).
+INFO  2020-12-01 18:56:55,618 [4    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2020-12-01 18:56:55,627 [4    ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Web.Host.Controllers.HomeController.Index (UET.EGarden.Web.Host) in 1224.3201ms
+INFO  2020-12-01 18:56:55,629 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Web.Host.Controllers.HomeController.Index (UET.EGarden.Web.Host)'
+INFO  2020-12-01 18:56:55,641 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 4653.5969ms 302 
+INFO  2020-12-01 18:56:55,663 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2020-12-01 18:56:55,840 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 176.9657ms 200 text/html;charset=utf-8
+INFO  2020-12-01 18:56:55,889 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/ui/abp.swagger.js  
+INFO  2020-12-01 18:56:55,891 [12   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/ui/abp.js  
+INFO  2020-12-01 18:56:55,900 [12   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger/ui/abp.js was not modified
+INFO  2020-12-01 18:56:55,901 [4    ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger/ui/abp.swagger.js was not modified
+INFO  2020-12-01 18:56:55,904 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 15.4748ms 304 application/javascript
+INFO  2020-12-01 18:56:55,906 [12   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 15.4748ms 304 application/javascript
+INFO  2020-12-01 18:56:56,157 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/AntiForgery/SetCookie  
+INFO  2020-12-01 18:56:56,164 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Web.Host.Controllers.AntiForgeryController.SetCookie (UET.EGarden.Web.Host)'
+INFO  2020-12-01 18:56:56,174 [4    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "SetCookie", controller = "AntiForgery", area = ""}. Executing controller action with signature Void SetCookie() on controller UET.EGarden.Web.Host.Controllers.AntiForgeryController (UET.EGarden.Web.Host).
+INFO  2020-12-01 18:56:56,202 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2020-12-01 18:56:56,209 [14   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-12-01 18:56:56,261 [14   ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Web.Host.Controllers.AntiForgeryController.SetCookie (UET.EGarden.Web.Host) in 85.0425ms
+INFO  2020-12-01 18:56:56,267 [14   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Web.Host.Controllers.AntiForgeryController.SetCookie (UET.EGarden.Web.Host)'
+INFO  2020-12-01 18:56:56,269 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 112.4971ms 200 application/json; charset=utf-8
+INFO  2020-12-01 18:56:56,398 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 196.245ms 200 application/json;charset=utf-8
+INFO  2020-12-01 18:57:06,076 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 POST http://localhost:21021/api/TokenAuth/Authenticate application/json 54
+INFO  2020-12-01 18:57:06,082 [4    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2020-12-01 18:57:06,083 [4    ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2020-12-01 18:57:06,086 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Controllers.TokenAuthController.Authenticate (UET.EGarden.Web.Core)'
+INFO  2020-12-01 18:57:06,105 [4    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Authenticate", controller = "TokenAuth", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[UET.EGarden.Models.TokenAuth.AuthenticateResultModel] Authenticate(UET.EGarden.Models.TokenAuth.AuthenticateModel) on controller UET.EGarden.Controllers.TokenAuthController (UET.EGarden.Web.Core).
+ERROR 2020-12-01 18:57:06,110 [4    ] idateAntiforgeryTokenAuthorizationFilter - The required antiforgery header value "X-XSRF-TOKEN" is not present.
+Microsoft.AspNetCore.Antiforgery.AntiforgeryValidationException: The required antiforgery header value "X-XSRF-TOKEN" is not present.
+   at Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery.ValidateRequestAsync(HttpContext httpContext)
+   at Abp.AspNetCore.Mvc.Antiforgery.AbpValidateAntiforgeryTokenAuthorizationFilter.OnAuthorizationAsync(AuthorizationFilterContext context)
+INFO  2020-12-01 18:57:06,140 [4    ] c.Infrastructure.ControllerActionInvoker - Authorization failed for the request at filter 'Abp.AspNetCore.Mvc.Antiforgery.AbpAutoValidateAntiforgeryTokenAuthorizationFilter'.
+INFO  2020-12-01 18:57:06,146 [4    ] icrosoft.AspNetCore.Mvc.StatusCodeResult - Executing HttpStatusCodeResult, setting HTTP status code 400
+INFO  2020-12-01 18:57:06,147 [4    ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Controllers.TokenAuthController.Authenticate (UET.EGarden.Web.Core) in 40.3866ms
+INFO  2020-12-01 18:57:06,149 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Controllers.TokenAuthController.Authenticate (UET.EGarden.Web.Core)'
+INFO  2020-12-01 18:57:06,151 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 75.0352ms 400 
+DEBUG 2020-12-01 18:57:25,384 [2    ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2020-12-01 18:57:25,386 [2    ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2020-12-01 18:57:25,386 [2    ] , Culture=neutral, PublicKeyToken=null]] - Stop background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[UET.EGarden.MultiTenancy.Tenant, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[UET.EGarden.Authorization.Users.User, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2020-12-01 18:57:25,387 [2    ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2020-12-01 18:57:25,387 [2    ] , Culture=neutral, PublicKeyToken=null]] - WaitToStop background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[UET.EGarden.MultiTenancy.Tenant, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[UET.EGarden.Authorization.Users.User, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2020-12-01 18:57:25,387 [2    ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2020-12-01 18:57:29,553 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2020-12-01 18:57:29,568 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2020-12-01 18:57:29,584 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.Web.Host.Startup.EGardenWebHostModule, UET.EGarden.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:57:29,586 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EGardenWebCoreModule, UET.EGarden.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:57:29,586 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EGardenApplicationModule, UET.EGarden.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:57:29,586 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EGardenCoreModule, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:57:29,587 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:57:29,587 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:57:29,587 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:57:29,587 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:57:29,588 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EntityFrameworkCore.EGardenEntityFrameworkModule, UET.EGarden.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:57:29,588 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:57:29,588 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:57:29,588 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:57:29,589 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:57:29,589 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:57:29,589 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:57:29,591 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2020-12-01 18:57:29,634 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-01 18:57:29,634 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-01 18:57:29,634 [1    ] o.Configuration.LanguageManagementConfig - Converted EGarden (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-01 18:57:29,634 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-01 18:57:29,894 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: UET.EGarden.EntityFrameworkCore.EGardenDbContext, UET.EGarden.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-01 18:57:30,222 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2020-12-01 18:57:30,261 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2020-12-01 18:57:30,285 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2020-12-01 18:57:30,288 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EGarden
+DEBUG 2020-12-01 18:57:30,292 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2020-12-01 18:57:30,349 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2020-12-01 18:57:30,396 [1    ] , Culture=neutral, PublicKeyToken=null]] - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[UET.EGarden.MultiTenancy.Tenant, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[UET.EGarden.Authorization.Users.User, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2020-12-01 18:57:30,447 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 8 classes define auto mapping attributes
+DEBUG 2020-12-01 18:57:30,447 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2020-12-01 18:57:30,452 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Users.Dto.CreateUserDto
+DEBUG 2020-12-01 18:57:30,453 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Users.Dto.UserDto
+DEBUG 2020-12-01 18:57:30,453 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2020-12-01 18:57:30,454 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Sessions.Dto.UserLoginInfoDto
+DEBUG 2020-12-01 18:57:30,454 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Roles.Dto.PermissionDto
+DEBUG 2020-12-01 18:57:30,454 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2020-12-01 18:57:30,454 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.MultiTenancy.Dto.TenantDto
+INFO  2020-12-01 18:57:32,394 [1    ] tCore.Builder.RequestLocalizationOptions - Supported Request Localization Cultures: en,es-MX,fr,de,it,nl,pt-BR,tr,ru,ar,ja,zh-Hans
+INFO  2020-12-01 18:57:32,533 [1    ] taProtection.KeyManagement.XmlKeyManager - User profile is available. Using 'C:\Users\ADMIN\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+INFO  2020-12-01 18:57:33,001 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2020-12-01 18:57:33,125 [11   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Web.Host.Controllers.HomeController.Index (UET.EGarden.Web.Host)'
+INFO  2020-12-01 18:57:34,158 [11   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller UET.EGarden.Web.Host.Controllers.HomeController (UET.EGarden.Web.Host).
+INFO  2020-12-01 18:57:34,701 [6    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2020-12-01 18:57:34,705 [6    ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Web.Host.Controllers.HomeController.Index (UET.EGarden.Web.Host) in 543.6339ms
+INFO  2020-12-01 18:57:34,705 [6    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Web.Host.Controllers.HomeController.Index (UET.EGarden.Web.Host)'
+INFO  2020-12-01 18:57:34,712 [6    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 1724.2271ms 302 
+INFO  2020-12-01 18:57:34,718 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2020-12-01 18:57:34,861 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 143.2943ms 200 text/html;charset=utf-8
+INFO  2020-12-01 18:57:35,136 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/AntiForgery/SetCookie  
+INFO  2020-12-01 18:57:35,140 [11   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Web.Host.Controllers.AntiForgeryController.SetCookie (UET.EGarden.Web.Host)'
+INFO  2020-12-01 18:57:35,147 [11   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "SetCookie", controller = "AntiForgery", area = ""}. Executing controller action with signature Void SetCookie() on controller UET.EGarden.Web.Host.Controllers.AntiForgeryController (UET.EGarden.Web.Host).
+INFO  2020-12-01 18:57:35,167 [6    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-12-01 18:57:35,179 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2020-12-01 18:57:35,184 [6    ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Web.Host.Controllers.AntiForgeryController.SetCookie (UET.EGarden.Web.Host) in 36.7957ms
+INFO  2020-12-01 18:57:35,184 [6    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Web.Host.Controllers.AntiForgeryController.SetCookie (UET.EGarden.Web.Host)'
+INFO  2020-12-01 18:57:35,184 [6    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 47.7689ms 200 application/json; charset=utf-8
+INFO  2020-12-01 18:57:35,335 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 155.9746ms 200 application/json;charset=utf-8
+INFO  2020-12-01 18:57:54,841 [6    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 POST http://localhost:21021/api/TokenAuth/Authenticate application/json-patch+json 76
+INFO  2020-12-01 18:57:54,845 [6    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2020-12-01 18:57:54,845 [6    ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2020-12-01 18:57:54,847 [6    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Controllers.TokenAuthController.Authenticate (UET.EGarden.Web.Core)'
+INFO  2020-12-01 18:57:54,869 [6    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Authenticate", controller = "TokenAuth", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[UET.EGarden.Models.TokenAuth.AuthenticateResultModel] Authenticate(UET.EGarden.Models.TokenAuth.AuthenticateModel) on controller UET.EGarden.Controllers.TokenAuthController (UET.EGarden.Web.Core).
+ERROR 2020-12-01 18:57:54,872 [6    ] idateAntiforgeryTokenAuthorizationFilter - The required antiforgery header value "X-XSRF-TOKEN" is not present.
+Microsoft.AspNetCore.Antiforgery.AntiforgeryValidationException: The required antiforgery header value "X-XSRF-TOKEN" is not present.
+   at Microsoft.AspNetCore.Antiforgery.DefaultAntiforgery.ValidateRequestAsync(HttpContext httpContext)
+   at Abp.AspNetCore.Mvc.Antiforgery.AbpValidateAntiforgeryTokenAuthorizationFilter.OnAuthorizationAsync(AuthorizationFilterContext context)
+INFO  2020-12-01 18:57:54,885 [6    ] c.Infrastructure.ControllerActionInvoker - Authorization failed for the request at filter 'Abp.AspNetCore.Mvc.Antiforgery.AbpAutoValidateAntiforgeryTokenAuthorizationFilter'.
+INFO  2020-12-01 18:57:54,888 [6    ] icrosoft.AspNetCore.Mvc.StatusCodeResult - Executing HttpStatusCodeResult, setting HTTP status code 400
+INFO  2020-12-01 18:57:54,888 [6    ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Controllers.TokenAuthController.Authenticate (UET.EGarden.Web.Core) in 18.9334ms
+INFO  2020-12-01 18:57:54,888 [6    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Controllers.TokenAuthController.Authenticate (UET.EGarden.Web.Core)'
+INFO  2020-12-01 18:57:54,889 [6    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 48.4975ms 400 
+DEBUG 2020-12-01 18:58:11,295 [2    ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2020-12-01 18:58:11,297 [2    ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2020-12-01 18:58:11,297 [2    ] , Culture=neutral, PublicKeyToken=null]] - Stop background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[UET.EGarden.MultiTenancy.Tenant, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[UET.EGarden.Authorization.Users.User, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2020-12-01 18:58:11,298 [2    ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2020-12-01 18:58:11,298 [2    ] , Culture=neutral, PublicKeyToken=null]] - WaitToStop background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[UET.EGarden.MultiTenancy.Tenant, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[UET.EGarden.Authorization.Users.User, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2020-12-01 18:58:11,298 [2    ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2020-12-02 16:57:09,278 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2020-12-02 16:57:09,592 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2020-12-02 16:57:09,608 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.Web.Host.Startup.EGardenWebHostModule, UET.EGarden.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-02 16:57:09,610 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EGardenWebCoreModule, UET.EGarden.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-02 16:57:09,610 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EGardenApplicationModule, UET.EGarden.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-02 16:57:09,610 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EGardenCoreModule, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-02 16:57:09,611 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-02 16:57:09,611 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-02 16:57:09,611 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-02 16:57:09,611 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-02 16:57:09,612 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EntityFrameworkCore.EGardenEntityFrameworkModule, UET.EGarden.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-02 16:57:09,613 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-02 16:57:09,613 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-02 16:57:09,613 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-02 16:57:09,613 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-02 16:57:09,613 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-02 16:57:09,614 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-02 16:57:09,616 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2020-12-02 16:57:09,841 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-02 16:57:09,841 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-02 16:57:09,841 [1    ] o.Configuration.LanguageManagementConfig - Converted EGarden (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-02 16:57:09,841 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-02 16:57:10,413 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: UET.EGarden.EntityFrameworkCore.EGardenDbContext, UET.EGarden.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-02 16:57:11,304 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2020-12-02 16:57:11,352 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2020-12-02 16:57:11,371 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2020-12-02 16:57:11,375 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EGarden
+DEBUG 2020-12-02 16:57:11,380 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2020-12-02 16:57:11,582 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2020-12-02 16:57:11,704 [1    ] , Culture=neutral, PublicKeyToken=null]] - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[UET.EGarden.MultiTenancy.Tenant, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[UET.EGarden.Authorization.Users.User, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2020-12-02 16:57:11,761 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 8 classes define auto mapping attributes
+DEBUG 2020-12-02 16:57:11,761 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2020-12-02 16:57:11,771 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Users.Dto.CreateUserDto
+DEBUG 2020-12-02 16:57:11,771 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Users.Dto.UserDto
+DEBUG 2020-12-02 16:57:11,772 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2020-12-02 16:57:11,772 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Sessions.Dto.UserLoginInfoDto
+DEBUG 2020-12-02 16:57:11,772 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Roles.Dto.PermissionDto
+DEBUG 2020-12-02 16:57:11,772 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2020-12-02 16:57:11,772 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.MultiTenancy.Dto.TenantDto

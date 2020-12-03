@@ -9,7 +9,6 @@ namespace UET.EGarden.Authorization
         public PermissionChecker(UserManager userManager)
             : base(userManager)
         {
-
         }
     }
 }

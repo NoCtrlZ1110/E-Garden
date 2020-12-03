@@ -2,66 +2,46 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Abp.Authorization.Users;
-using Abp.Configuration;
+using Abp.Domain.Services;
 using Abp.IdentityFramework;
-using Abp.Linq;
-using Abp.Notifications;
 using Abp.Runtime.Session;
 using Abp.UI;
-using Microsoft.AspNetCore.Identity;
 using UET.EGarden.Authorization.Roles;
-using UET.EGarden.Configuration;
-using UET.EGarden.Debugging;
 using UET.EGarden.MultiTenancy;
-using UET.EGarden.Notifications;
 
 namespace UET.EGarden.Authorization.Users
 {
-    public class UserRegistrationManager : EGardenDomainServiceBase
+    public class UserRegistrationManager : DomainService
     {
         public IAbpSession AbpSession { get; set; }
-        public IAsyncQueryableExecuter AsyncQueryableExecuter { get; set; }
 
         private readonly TenantManager _tenantManager;
         private readonly UserManager _userManager;
         private readonly RoleManager _roleManager;
-        private readonly IUserEmailer _userEmailer;
-        private readonly INotificationSubscriptionManager _notificationSubscriptionManager;
-        private readonly IAppNotifier _appNotifier;
-        private readonly IUserPolicy _userPolicy;
-        
+        private readonly IPasswordHasher<User> _passwordHasher;
 
         public UserRegistrationManager(
             TenantManager tenantManager,
             UserManager userManager,
             RoleManager roleManager,
-            IUserEmailer userEmailer,
-            INotificationSubscriptionManager notificationSubscriptionManager,
-            IAppNotifier appNotifier,
-            IUserPolicy userPolicy)
+            IPasswordHasher<User> passwordHasher)
         {
             _tenantManager = tenantManager;
             _userManager = userManager;
             _roleManager = roleManager;
-            _userEmailer = userEmailer;
-            _notificationSubscriptionManager = notificationSubscriptionManager;
-            _appNotifier = appNotifier;
-            _userPolicy = userPolicy;
+            _passwordHasher = passwordHasher;
 
             AbpSession = NullAbpSession.Instance;
-            AsyncQueryableExecuter = NullAsyncQueryableExecuter.Instance;
         }
 
-        public async Task<User> RegisterAsync(string name, string surname, string emailAddress, string userName, string plainPassword, bool isEmailConfirmed, string emailActivationLink)
+        public async Task<User> RegisterAsync(string name, string surname, string emailAddress, string userName, string plainPassword, bool isEmailConfirmed)
         {
             CheckForTenant();
-            CheckSelfRegistrationIsEnabled();
 
             var tenant = await GetActiveTenantAsync();
-            var isNewRegisteredUserActiveByDefault = await SettingManager.GetSettingValueAsync<bool>(AppSettings.UserManagement.IsNewRegisteredUserActiveByDefault);
-
-            await _userPolicy.CheckMaxUserCountAsync(tenant.Id);
 
             var user = new User
             {
@@ -69,34 +49,23 @@ namespace UET.EGarden.Authorization.Users
                 Name = name,
                 Surname = surname,
                 EmailAddress = emailAddress,
-                IsActive = isNewRegisteredUserActiveByDefault,
+                IsActive = true,
                 UserName = userName,
                 IsEmailConfirmed = isEmailConfirmed,
                 Roles = new List<UserRole>()
             };
 
             user.SetNormalizedNames();
-
-            var defaultRoles = await AsyncQueryableExecuter.ToListAsync(_roleManager.Roles.Where(r => r.IsDefault));
-            foreach (var defaultRole in defaultRoles)
+           
+            foreach (var defaultRole in await _roleManager.Roles.Where(r => r.IsDefault).ToListAsync())
             {
                 user.Roles.Add(new UserRole(tenant.Id, user.Id, defaultRole.Id));
             }
 
-            await _userManager.InitializeOptionsAsync(AbpSession.TenantId);
+            await _userManager.InitializeOptionsAsync(tenant.Id);
+
             CheckErrors(await _userManager.CreateAsync(user, plainPassword));
             await CurrentUnitOfWork.SaveChangesAsync();
-
-            if (!user.IsEmailConfirmed)
-            {
-                user.SetNewEmailConfirmationCode();
-                await _userEmailer.SendEmailActivationLinkAsync(user, emailActivationLink);
-            }
-
-            //Notifications
-            await _notificationSubscriptionManager.SubscribeToAllAvailableNotificationsAsync(user.ToUserIdentifier());
-            await _appNotifier.WelcomeToTheApplicationAsync(user);
-            await _appNotifier.NewUserRegisteredAsync(user);
 
             return user;
         }
@@ -107,19 +76,6 @@ namespace UET.EGarden.Authorization.Users
             {
                 throw new InvalidOperationException("Can not register host users!");
             }
-        }
-
-        private void CheckSelfRegistrationIsEnabled()
-        {
-            if (!SettingManager.GetSettingValue<bool>(AppSettings.UserManagement.AllowSelfRegistration))
-            {
-                throw new UserFriendlyException(L("SelfUserRegistrationIsDisabledMessage_Detail"));
-            }
-        }
-
-        private bool UseCaptchaOnRegistration()
-        {
-            return SettingManager.GetSettingValue<bool>(AppSettings.UserManagement.UseCaptchaOnRegistration);
         }
 
         private async Task<Tenant> GetActiveTenantAsync()

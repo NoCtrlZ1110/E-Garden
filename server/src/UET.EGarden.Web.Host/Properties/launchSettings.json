@@ -3,8 +3,8 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "https://localhost:44301/",
-      "sslPort": 44301
+      "applicationUrl": "http://localhost:21021/",
+      "sslPort": 0
     }
   },
   "profiles": {
@@ -15,27 +15,14 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Mobile": {
-      "commandName": "Project",
-      "launchBrowser": true,
-      "applicationUrl": "https://0.0.0.0:44301",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
-    },
     "UET.EGarden.Web.Host": {
       "commandName": "Project",
       "launchBrowser": true,
-      "applicationUrl": "https://localhost:44301",
+      "launchUrl": "http://localhost:21021",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      }
-    },
-    "Docker": {
-      "commandName": "Docker",
-      "launchBrowser": true,
-      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
-      "publishAllPorts": true
+      },
+      "applicationUrl": "http://localhost:21021/"
     }
   }
 }

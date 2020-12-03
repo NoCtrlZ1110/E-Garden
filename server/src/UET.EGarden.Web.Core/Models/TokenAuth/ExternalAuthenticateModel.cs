@@ -1,23 +1,19 @@
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using Abp.Authorization.Users;
 
-namespace UET.EGarden.Web.Models.TokenAuth
+namespace UET.EGarden.Models.TokenAuth
 {
     public class ExternalAuthenticateModel
     {
         [Required]
-        [MaxLength(UserLogin.MaxLoginProviderLength)]
+        [StringLength(UserLogin.MaxLoginProviderLength)]
         public string AuthProvider { get; set; }
 
         [Required]
-        [MaxLength(UserLogin.MaxProviderKeyLength)]
+        [StringLength(UserLogin.MaxProviderKeyLength)]
         public string ProviderKey { get; set; }
 
         [Required]
         public string ProviderAccessCode { get; set; }
-
-        public string ReturnUrl { get; set; }
-
-        public bool? SingleSignIn { get; set; }
     }
 }

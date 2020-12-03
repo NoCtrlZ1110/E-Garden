@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.IdentityModel.Tokens;
 
-namespace UET.EGarden.Web.Authentication.JwtBearer
+namespace UET.EGarden.Authentication.JwtBearer
 {
     public class TokenAuthConfiguration
     {
@@ -13,8 +13,6 @@ namespace UET.EGarden.Web.Authentication.JwtBearer
 
         public SigningCredentials SigningCredentials { get; set; }
 
-        public TimeSpan AccessTokenExpiration { get; set; }
-
-        public TimeSpan RefreshTokenExpiration { get; set; }
+        public TimeSpan Expiration { get; set; }
     }
 }

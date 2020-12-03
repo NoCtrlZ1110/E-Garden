@@ -1,4 +1,4 @@
-﻿using Abp.Authorization.Users;
+using Abp.Authorization.Users;
 using Abp.Domain.Repositories;
 using Abp.Domain.Uow;
 using Abp.Linq;
@@ -7,18 +7,15 @@ using UET.EGarden.Authorization.Roles;
 
 namespace UET.EGarden.Authorization.Users
 {
-    /// <summary>
-    /// Used to perform database operations for <see cref="UserManager"/>.
-    /// </summary>
     public class UserStore : AbpUserStore<Role, User>
     {
         public UserStore(
-            IRepository<User, long> userRepository,
-            IRepository<UserLogin, long> userLoginRepository,
-            IRepository<UserRole, long> userRoleRepository,
-            IRepository<Role> roleRepository,
-            IAsyncQueryableExecuter asyncQueryableExecuter, 
             IUnitOfWorkManager unitOfWorkManager,
+            IRepository<User, long> userRepository,
+            IRepository<Role> roleRepository,
+            IAsyncQueryableExecuter asyncQueryableExecuter,
+            IRepository<UserRole, long> userRoleRepository,
+            IRepository<UserLogin, long> userLoginRepository,
             IRepository<UserClaim, long> userClaimRepository,
             IRepository<UserPermissionSetting, long> userPermissionSettingRepository,
             IRepository<UserOrganizationUnit, long> userOrganizationUnitRepository,

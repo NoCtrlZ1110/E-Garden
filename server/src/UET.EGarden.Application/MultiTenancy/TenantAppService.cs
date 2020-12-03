@@ -1,151 +1,123 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Dynamic.Core;
+﻿using System.Linq;
 using System.Threading.Tasks;
-using Abp;
-using Abp.Application.Features;
+using Abp.Application.Services;
 using Abp.Application.Services.Dto;
 using Abp.Authorization;
-using Abp.Authorization.Users;
-using Abp.Domain.Uow;
-using Abp.Events.Bus;
+using Abp.Domain.Repositories;
 using Abp.Extensions;
+using Abp.IdentityFramework;
 using Abp.Linq.Extensions;
+using Abp.MultiTenancy;
 using Abp.Runtime.Security;
-using Microsoft.EntityFrameworkCore;
 using UET.EGarden.Authorization;
-using UET.EGarden.Editions.Dto;
+using UET.EGarden.Authorization.Roles;
+using UET.EGarden.Authorization.Users;
+using UET.EGarden.Editions;
 using UET.EGarden.MultiTenancy.Dto;
-using UET.EGarden.Url;
+using Microsoft.AspNetCore.Identity;
 
 namespace UET.EGarden.MultiTenancy
 {
-    [AbpAuthorize(AppPermissions.Pages_Tenants)]
-    public class TenantAppService : EGardenAppServiceBase, ITenantAppService
+    [AbpAuthorize(PermissionNames.Pages_Tenants)]
+    public class TenantAppService : AsyncCrudAppService<Tenant, TenantDto, int, PagedTenantResultRequestDto, CreateTenantDto, TenantDto>, ITenantAppService
     {
-        public IAppUrlService AppUrlService { get; set; }
-        public IEventBus EventBus { get; set; }
+        private readonly TenantManager _tenantManager;
+        private readonly EditionManager _editionManager;
+        private readonly UserManager _userManager;
+        private readonly RoleManager _roleManager;
+        private readonly IAbpZeroDbMigrator _abpZeroDbMigrator;
 
-        public TenantAppService()
+        public TenantAppService(
+            IRepository<Tenant, int> repository,
+            TenantManager tenantManager,
+            EditionManager editionManager,
+            UserManager userManager,
+            RoleManager roleManager,
+            IAbpZeroDbMigrator abpZeroDbMigrator)
+            : base(repository)
         {
-            AppUrlService = NullAppUrlService.Instance;
-            EventBus = NullEventBus.Instance;
+            _tenantManager = tenantManager;
+            _editionManager = editionManager;
+            _userManager = userManager;
+            _roleManager = roleManager;
+            _abpZeroDbMigrator = abpZeroDbMigrator;
         }
 
-        public async Task<PagedResultDto<TenantListDto>> GetTenants(GetTenantsInput input)
+        public override async Task<TenantDto> CreateAsync(CreateTenantDto input)
         {
-            var query = TenantManager.Tenants
-                .Include(t => t.Edition)
-                .WhereIf(!input.Filter.IsNullOrWhiteSpace(), t => t.Name.Contains(input.Filter) || t.TenancyName.Contains(input.Filter))
-                .WhereIf(input.CreationDateStart.HasValue, t => t.CreationTime >= input.CreationDateStart.Value)
-                .WhereIf(input.CreationDateEnd.HasValue, t => t.CreationTime <= input.CreationDateEnd.Value)
-                .WhereIf(input.SubscriptionEndDateStart.HasValue, t => t.SubscriptionEndDateUtc >= input.SubscriptionEndDateStart.Value.ToUniversalTime())
-                .WhereIf(input.SubscriptionEndDateEnd.HasValue, t => t.SubscriptionEndDateUtc <= input.SubscriptionEndDateEnd.Value.ToUniversalTime())
-                .WhereIf(input.EditionIdSpecified, t => t.EditionId == input.EditionId);
+            CheckCreatePermission();
 
-            var tenantCount = await query.CountAsync();
-            var tenants = await query.OrderBy(input.Sorting).PageBy(input).ToListAsync();
+            // Create tenant
+            var tenant = ObjectMapper.Map<Tenant>(input);
+            tenant.ConnectionString = input.ConnectionString.IsNullOrEmpty()
+                ? null
+                : SimpleStringCipher.Instance.Encrypt(input.ConnectionString);
 
-            return new PagedResultDto<TenantListDto>(
-                tenantCount,
-                ObjectMapper.Map<List<TenantListDto>>(tenants)
-                );
-        }
-
-        [AbpAuthorize(AppPermissions.Pages_Tenants_Create)]
-        [UnitOfWork(IsDisabled = true)]
-        public async Task CreateTenant(CreateTenantInput input)
-        {
-            await TenantManager.CreateWithAdminUserAsync(input.TenancyName,
-                input.Name,
-                input.AdminPassword,
-                input.AdminEmailAddress,
-                input.ConnectionString,
-                input.IsActive,
-                input.EditionId,
-                input.ShouldChangePasswordOnNextLogin,
-                input.SendActivationEmail,
-                input.SubscriptionEndDateUtc?.ToUniversalTime(),
-                input.IsInTrialPeriod,
-                AppUrlService.CreateEmailActivationUrlFormat(input.TenancyName)
-            );
-        }
-
-        [AbpAuthorize(AppPermissions.Pages_Tenants_Edit)]
-        public async Task<TenantEditDto> GetTenantForEdit(EntityDto input)
-        {
-            var tenantEditDto = ObjectMapper.Map<TenantEditDto>(await TenantManager.GetByIdAsync(input.Id));
-            tenantEditDto.ConnectionString = SimpleStringCipher.Instance.Decrypt(tenantEditDto.ConnectionString);
-            return tenantEditDto;
-        }
-
-        [AbpAuthorize(AppPermissions.Pages_Tenants_Edit)]
-        public async Task UpdateTenant(TenantEditDto input)
-        {
-            await TenantManager.CheckEditionAsync(input.EditionId, input.IsInTrialPeriod);
-
-            input.ConnectionString = SimpleStringCipher.Instance.Encrypt(input.ConnectionString);
-            var tenant = await TenantManager.GetByIdAsync(input.Id);
-
-            if (tenant.EditionId != input.EditionId)
+            var defaultEdition = await _editionManager.FindByNameAsync(EditionManager.DefaultEditionName);
+            if (defaultEdition != null)
             {
-                EventBus.Trigger(new TenantEditionChangedEventData
-                {
-                    TenantId = input.Id,
-                    OldEditionId = tenant.EditionId,
-                    NewEditionId = input.EditionId
-                });
+                tenant.EditionId = defaultEdition.Id;
             }
 
-            ObjectMapper.Map(input, tenant);
-            tenant.SubscriptionEndDateUtc = tenant.SubscriptionEndDateUtc?.ToUniversalTime();
+            await _tenantManager.CreateAsync(tenant);
+            await CurrentUnitOfWork.SaveChangesAsync(); // To get new tenant's id.
 
-            await TenantManager.UpdateAsync(tenant);
-        }
+            // Create tenant database
+            _abpZeroDbMigrator.CreateOrMigrateForTenant(tenant);
 
-        [AbpAuthorize(AppPermissions.Pages_Tenants_Delete)]
-        public async Task DeleteTenant(EntityDto input)
-        {
-            var tenant = await TenantManager.GetByIdAsync(input.Id);
-            await TenantManager.DeleteAsync(tenant);
-        }
-
-        [AbpAuthorize(AppPermissions.Pages_Tenants_ChangeFeatures)]
-        public async Task<GetTenantFeaturesEditOutput> GetTenantFeaturesForEdit(EntityDto input)
-        {
-            var features = FeatureManager.GetAll()
-                .Where(f => f.Scope.HasFlag(FeatureScopes.Tenant));
-            var featureValues = await TenantManager.GetFeatureValuesAsync(input.Id);
-
-            return new GetTenantFeaturesEditOutput
+            // We are working entities of new tenant, so changing tenant filter
+            using (CurrentUnitOfWork.SetTenantId(tenant.Id))
             {
-                Features = ObjectMapper.Map<List<FlatFeatureDto>>(features).OrderBy(f => f.DisplayName).ToList(),
-                FeatureValues = featureValues.Select(fv => new NameValueDto(fv)).ToList()
-            };
-        }
+                // Create static roles for new tenant
+                CheckErrors(await _roleManager.CreateStaticRoles(tenant.Id));
 
-        [AbpAuthorize(AppPermissions.Pages_Tenants_ChangeFeatures)]
-        public async Task UpdateTenantFeatures(UpdateTenantFeaturesInput input)
-        {
-            await TenantManager.SetFeatureValuesAsync(input.Id, input.FeatureValues.Select(fv => new NameValue(fv.Name, fv.Value)).ToArray());
-        }
+                await CurrentUnitOfWork.SaveChangesAsync(); // To get static role ids
 
-        [AbpAuthorize(AppPermissions.Pages_Tenants_ChangeFeatures)]
-        public async Task ResetTenantSpecificFeatures(EntityDto input)
-        {
-            await TenantManager.ResetAllFeaturesAsync(input.Id);
-        }
+                // Grant all permissions to admin role
+                var adminRole = _roleManager.Roles.Single(r => r.Name == StaticRoleNames.Tenants.Admin);
+                await _roleManager.GrantAllPermissionsAsync(adminRole);
 
-        public async Task UnlockTenantAdmin(EntityDto input)
-        {
-            using (CurrentUnitOfWork.SetTenantId(input.Id))
-            {
-                var tenantAdmin = await UserManager.GetAdminAsync();
-                if (tenantAdmin != null)
-                {
-                    tenantAdmin.Unlock();
-                }
+                // Create admin user for the tenant
+                var adminUser = User.CreateTenantAdminUser(tenant.Id, input.AdminEmailAddress);
+                await _userManager.InitializeOptionsAsync(tenant.Id);
+                CheckErrors(await _userManager.CreateAsync(adminUser, User.DefaultPassword));
+                await CurrentUnitOfWork.SaveChangesAsync(); // To get admin user's id
+
+                // Assign admin user to role!
+                CheckErrors(await _userManager.AddToRoleAsync(adminUser, adminRole.Name));
+                await CurrentUnitOfWork.SaveChangesAsync();
             }
+
+            return MapToEntityDto(tenant);
+        }
+
+        protected override IQueryable<Tenant> CreateFilteredQuery(PagedTenantResultRequestDto input)
+        {
+            return Repository.GetAll()
+                .WhereIf(!input.Keyword.IsNullOrWhiteSpace(), x => x.TenancyName.Contains(input.Keyword) || x.Name.Contains(input.Keyword))
+                .WhereIf(input.IsActive.HasValue, x => x.IsActive == input.IsActive);
+        }
+
+        protected override void MapToEntity(TenantDto updateInput, Tenant entity)
+        {
+            // Manually mapped since TenantDto contains non-editable properties too.
+            entity.Name = updateInput.Name;
+            entity.TenancyName = updateInput.TenancyName;
+            entity.IsActive = updateInput.IsActive;
+        }
+
+        public override async Task DeleteAsync(EntityDto<int> input)
+        {
+            CheckDeletePermission();
+
+            var tenant = await _tenantManager.GetByIdAsync(input.Id);
+            await _tenantManager.DeleteAsync(tenant);
+        }
+
+        private void CheckErrors(IdentityResult identityResult)
+        {
+            identityResult.CheckErrors(LocalizationManager);
         }
     }
 }
+

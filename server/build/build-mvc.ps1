@@ -3,8 +3,7 @@
 $buildFolder = (Get-Item -Path "./" -Verbose).FullName
 $slnFolder = Join-Path $buildFolder "../"
 $outputFolder = Join-Path $buildFolder "outputs"
-$webMvcFolder = Join-Path $slnFolder "src/tmss.Web.Mvc"
-$webPublicFolder = Join-Path $slnFolder "src/tmss.Web.Public"
+$webMvcFolder = Join-Path $slnFolder "src/AbpCompanyName.AbpProjectName.Web.Mvc"
 
 ## CLEAR ######################################################################
 
@@ -19,28 +18,15 @@ dotnet restore
 ## PUBLISH WEB MVC PROJECT ###################################################
 
 Set-Location $webMvcFolder
-dotnet publish --output (Join-Path $outputFolder "Mvc") --configuration Release
-
-## PUBLISH WEB PUBLIC PROJECT ###################################################
-
-Set-Location $webPublicFolder
-dotnet publish --output (Join-Path $outputFolder "Public") --configuration Release
+dotnet publish --output (Join-Path $outputFolder "Mvc")
 
 ## CREATE DOCKER IMAGES #######################################################
 
 # Mvc
 Set-Location (Join-Path $outputFolder "Mvc")
 
-docker rmi zero/mvc -f
-docker build -t zero/mvc .
-
-## CREATE DOCKER IMAGES #######################################################
-
-# Mvc
-Set-Location (Join-Path $outputFolder "Public")
-
-docker rmi zero/public -f
-docker build -t zero/public .
+docker rmi abp/mvc -f
+docker build -t abp/mvc .
 
 ## DOCKER COMPOSE FILES #######################################################
 

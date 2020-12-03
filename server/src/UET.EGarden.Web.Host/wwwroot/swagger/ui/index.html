@@ -69,8 +69,22 @@
     <script src="swagger-ui-bundle.js"></script>
     <script src="swagger-ui-standalone-preset.js"></script>
     <script src="ui/abp.js"></script>
+    <script src="ui/abp.swagger.js"></script>
+
     <script>
         window.onload = function () {
+            var authToken = abp.auth.getToken();
+            if (authToken) {
+                fetch("/AntiForgery/SetCookie",
+                    {
+                        headers: {
+                            "Authorization": 'Bearer ' + authToken
+                        }
+                    });
+            } else {
+                fetch("/AntiForgery/SetCookie");
+            }
+
             var configObject = JSON.parse('%(ConfigObject)');
 
             // Apply mandatory parameters
@@ -78,27 +92,51 @@
             configObject.presets = [SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset];
             configObject.layout = "StandaloneLayout";
             configObject.requestInterceptor = function (request) {
-                var token = abp.security.antiForgery.getToken();
-                request.headers[abp.security.antiForgery.tokenHeaderName] = token;
+                var token = abp.auth.getToken();
+                request.headers.Authorization = token ? "Bearer " + token : null;
+                var antiForgeryToken = abp.security.antiForgery.getToken();
+                if (antiForgeryToken) {
+                    request.headers[abp.security.antiForgery.tokenHeaderName] = antiForgeryToken;
+                }
                 return request;
             };
-
             if (!configObject.hasOwnProperty("oauth2RedirectUrl")) {
                 configObject.oauth2RedirectUrl = window.location + "oauth2-redirect.html"; // use the built-in default
             }
-
+            function getAuthorizeButtonText() {
+                return abp.auth.getToken() ? 'Logout' : 'Authorize';
+            }
+            function getAuthorizeButtonCssClass() {
+                return abp.auth.getToken() ? 'cancel' : 'authorize';
+            }
             configObject.plugins = [
                 function (system) {
                     return {
                         components: {
                             authorizeBtn: function () {
-                                return null;
+                                return system.React.createElement("button",
+                                    {
+                                        id: "authorize",
+                                        className: "btn " + getAuthorizeButtonCssClass(),
+                                        style: {
+                                            lineHeight: "normal"
+                                        },
+                                        onClick: function () {
+                                            if (abp.auth.getToken()) {
+                                                abp.swagger.logout();
+                                                location.reload();
+                                            } else {
+                                                abp.swagger.openAuthDialog(function () {
+                                                    location.reload();
+                                                });
+                                            }
+                                        }
+                                    }, getAuthorizeButtonText());
                             }
                         }
                     }
                 }
             ];
-
             // Build a system
             SwaggerUIBundle(configObject);
         }

@@ -1,4 +1,4 @@
-namespace UET.EGarden.Web.Models.TokenAuth
+﻿namespace UET.EGarden.Models.TokenAuth
 {
     public class ExternalAuthenticateResultModel
     {
@@ -9,11 +9,5 @@ namespace UET.EGarden.Web.Models.TokenAuth
         public int ExpireInSeconds { get; set; }
 
         public bool WaitingForActivation { get; set; }
-
-        public string ReturnUrl { get; set; }
-
-        public string RefreshToken { get; set; }
-
-        public int RefreshTokenExpireInSeconds { get; set; }
     }
 }

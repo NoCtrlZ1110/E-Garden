@@ -1,6 +1,6 @@
-﻿using Abp.Dependency;
+﻿using Microsoft.Extensions.DependencyInjection;
 using Castle.Windsor.MsDependencyInjection;
-using Microsoft.Extensions.DependencyInjection;
+using Abp.Dependency;
 using UET.EGarden.Identity;
 
 namespace UET.EGarden.Migrator.DependencyInjection

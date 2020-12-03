@@ -1,16 +1,15 @@
 ﻿using System;
+using Castle.Facilities.Logging;
 using Abp;
+using Abp.Castle.Logging.Log4Net;
 using Abp.Collections.Extensions;
 using Abp.Dependency;
-using Castle.Facilities.Logging;
-using Abp.Castle.Logging.Log4Net;
-using Abp.PlugIns;
 
 namespace UET.EGarden.Migrator
 {
     public class Program
     {
-        private static bool _skipConnVerification;
+        private static bool _quietMode;
 
         public static void Main(string[] args)
         {
@@ -19,21 +18,28 @@ namespace UET.EGarden.Migrator
             using (var bootstrapper = AbpBootstrapper.Create<EGardenMigratorModule>())
             {
                 bootstrapper.IocManager.IocContainer
-                    .AddFacility<LoggingFacility>(f => f.UseAbpLog4Net()
-                        .WithConfig("log4net.config")
+                    .AddFacility<LoggingFacility>(
+                        f => f.UseAbpLog4Net().WithConfig("log4net.config")
                     );
 
                 bootstrapper.Initialize();
 
                 using (var migrateExecuter = bootstrapper.IocManager.ResolveAsDisposable<MultiTenantMigrateExecuter>())
                 {
-                    migrateExecuter.Object.Run(_skipConnVerification);
+                    var migrationSucceeded = migrateExecuter.Object.Run(_quietMode);
+                    
+                    if (_quietMode)
+                    {
+                        // exit clean (with exit code 0) if migration is a success, otherwise exit with code 1
+                        var exitCode = Convert.ToInt32(!migrationSucceeded);
+                        Environment.Exit(exitCode);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Press ENTER to exit...");
+                        Console.ReadLine();
+                    }
                 }
-
-                if (_skipConnVerification) return;
-                
-                Console.WriteLine("Press ENTER to exit...");
-                Console.ReadLine();
             }
         }
 
@@ -46,9 +52,11 @@ namespace UET.EGarden.Migrator
 
             foreach (var arg in args)
             {
-                if (arg == "-s")
+                switch (arg)
                 {
-                    _skipConnVerification = true;
+                    case "-q":
+                        _quietMode = true;
+                        break;
                 }
             }
         }
