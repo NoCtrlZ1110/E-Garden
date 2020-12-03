@@ -2,6 +2,7 @@ import 'package:dotted_border/dotted_border.dart';
 import 'package:e_garden/configs/AppConfig.dart';
 import 'package:e_garden/screens/dictionary/home_dictionary.dart';
 import 'package:e_garden/screens/notes/notes.dart';
+import 'package:e_garden/screens/notes/test.dart';
 import 'package:e_garden/screens/study/study.dart';
 import 'package:e_garden/widgets/custom_app_bar.dart';
 import 'package:flutter/cupertino.dart';
@@ -34,29 +35,22 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: WillPopScope(
-          onWillPop: () async => false,
-          child: Scaffold(
-            key: _drawerKey,
-            backgroundColor: Colors.white,
-            appBar: CustomAppBar(
-              height: SizeConfig.blockSizeVertical * 8,
-              child: Row(
-                children: [
-                  IconButton(
-                      icon: Icon(Icons.menu, color: Colors.green, size: SizeConfig.blockSizeVertical * 4,),
-                      onPressed: () {
-                        _drawerKey.currentState.openDrawer();
-                      }),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Image.asset(
-                    "assets/images/logo_text.png",
-                    height: SizeConfig.blockSizeVertical * 5,
-                  ),
-                ],
+    return WillPopScope(
+        onWillPop: () async => false,
+        child: Scaffold(
+          body: Column(
+            children: [
+              Expanded(
+                child: TabBarView(
+                  controller: _controller,
+                  physics: BouncingScrollPhysics(),
+                  children: [
+                    StudyScreen(),
+                    HomeDictionaryScreen(),
+                    // CalendarPage()
+                    Test()
+                  ],
+                ),
               ),
             ),
             drawer: Drawer(
