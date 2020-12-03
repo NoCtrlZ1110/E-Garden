@@ -9,19 +9,19 @@ using Abp.Events.Bus.Entities;
 using Abp.MultiTenancy;
 using Abp.Runtime.Session;
 using Abp.TestBase;
-using UET.EasyAccommod.Authorization.Users;
-using UET.EasyAccommod.EntityFrameworkCore;
-using UET.EasyAccommod.EntityFrameworkCore.Seed.Host;
-using UET.EasyAccommod.EntityFrameworkCore.Seed.Tenants;
-using UET.EasyAccommod.MultiTenancy;
+using UET.EGarden.Authorization.Users;
+using UET.EGarden.EntityFrameworkCore;
+using UET.EGarden.EntityFrameworkCore.Seed.Host;
+using UET.EGarden.EntityFrameworkCore.Seed.Tenants;
+using UET.EGarden.MultiTenancy;
 
-namespace UET.EasyAccommod.Tests
+namespace UET.EGarden.Tests
 {
-    public abstract class EasyAccommodTestBase : AbpIntegratedTestBase<EasyAccommodTestModule>
+    public abstract class EGardenTestBase : AbpIntegratedTestBase<EGardenTestModule>
     {
-        protected EasyAccommodTestBase()
+        protected EGardenTestBase()
         {
-            void NormalizeDbContext(EasyAccommodDbContext context)
+            void NormalizeDbContext(EGardenDbContext context)
             {
                 context.EntityChangeEventHelper = NullEntityChangeEventHelper.Instance;
                 context.EventBus = NullEventBus.Instance;
@@ -57,31 +57,31 @@ namespace UET.EasyAccommod.Tests
             return new DisposeAction(() => AbpSession.TenantId = previousTenantId);
         }
 
-        protected void UsingDbContext(Action<EasyAccommodDbContext> action)
+        protected void UsingDbContext(Action<EGardenDbContext> action)
         {
             UsingDbContext(AbpSession.TenantId, action);
         }
 
-        protected Task UsingDbContextAsync(Func<EasyAccommodDbContext, Task> action)
+        protected Task UsingDbContextAsync(Func<EGardenDbContext, Task> action)
         {
             return UsingDbContextAsync(AbpSession.TenantId, action);
         }
 
-        protected T UsingDbContext<T>(Func<EasyAccommodDbContext, T> func)
+        protected T UsingDbContext<T>(Func<EGardenDbContext, T> func)
         {
             return UsingDbContext(AbpSession.TenantId, func);
         }
 
-        protected Task<T> UsingDbContextAsync<T>(Func<EasyAccommodDbContext, Task<T>> func)
+        protected Task<T> UsingDbContextAsync<T>(Func<EGardenDbContext, Task<T>> func)
         {
             return UsingDbContextAsync(AbpSession.TenantId, func);
         }
 
-        protected void UsingDbContext(int? tenantId, Action<EasyAccommodDbContext> action)
+        protected void UsingDbContext(int? tenantId, Action<EGardenDbContext> action)
         {
             using (UsingTenantId(tenantId))
             {
-                using (var context = LocalIocManager.Resolve<EasyAccommodDbContext>())
+                using (var context = LocalIocManager.Resolve<EGardenDbContext>())
                 {
                     action(context);
                     context.SaveChanges();
@@ -89,11 +89,11 @@ namespace UET.EasyAccommod.Tests
             }
         }
 
-        protected async Task UsingDbContextAsync(int? tenantId, Func<EasyAccommodDbContext, Task> action)
+        protected async Task UsingDbContextAsync(int? tenantId, Func<EGardenDbContext, Task> action)
         {
             using (UsingTenantId(tenantId))
             {
-                using (var context = LocalIocManager.Resolve<EasyAccommodDbContext>())
+                using (var context = LocalIocManager.Resolve<EGardenDbContext>())
                 {
                     await action(context);
                     await context.SaveChangesAsync();
@@ -101,13 +101,13 @@ namespace UET.EasyAccommod.Tests
             }
         }
 
-        protected T UsingDbContext<T>(int? tenantId, Func<EasyAccommodDbContext, T> func)
+        protected T UsingDbContext<T>(int? tenantId, Func<EGardenDbContext, T> func)
         {
             T result;
 
             using (UsingTenantId(tenantId))
             {
-                using (var context = LocalIocManager.Resolve<EasyAccommodDbContext>())
+                using (var context = LocalIocManager.Resolve<EGardenDbContext>())
                 {
                     result = func(context);
                     context.SaveChanges();
@@ -117,13 +117,13 @@ namespace UET.EasyAccommod.Tests
             return result;
         }
 
-        protected async Task<T> UsingDbContextAsync<T>(int? tenantId, Func<EasyAccommodDbContext, Task<T>> func)
+        protected async Task<T> UsingDbContextAsync<T>(int? tenantId, Func<EGardenDbContext, Task<T>> func)
         {
             T result;
 
             using (UsingTenantId(tenantId))
             {
-                using (var context = LocalIocManager.Resolve<EasyAccommodDbContext>())
+                using (var context = LocalIocManager.Resolve<EGardenDbContext>())
                 {
                     result = await func(context);
                     await context.SaveChangesAsync();

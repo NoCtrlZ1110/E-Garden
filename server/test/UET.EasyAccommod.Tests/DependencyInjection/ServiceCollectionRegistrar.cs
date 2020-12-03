@@ -4,10 +4,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Castle.MicroKernel.Registration;
 using Castle.Windsor.MsDependencyInjection;
 using Abp.Dependency;
-using UET.EasyAccommod.EntityFrameworkCore;
-using UET.EasyAccommod.Identity;
+using UET.EGarden.EntityFrameworkCore;
+using UET.EGarden.Identity;
 
-namespace UET.EasyAccommod.Tests.DependencyInjection
+namespace UET.EGarden.Tests.DependencyInjection
 {
     public static class ServiceCollectionRegistrar
     {
@@ -21,12 +21,12 @@ namespace UET.EasyAccommod.Tests.DependencyInjection
 
             var serviceProvider = WindsorRegistrationHelper.CreateServiceProvider(iocManager.IocContainer, services);
 
-            var builder = new DbContextOptionsBuilder<EasyAccommodDbContext>();
+            var builder = new DbContextOptionsBuilder<EGardenDbContext>();
             builder.UseInMemoryDatabase(Guid.NewGuid().ToString()).UseInternalServiceProvider(serviceProvider);
 
             iocManager.IocContainer.Register(
                 Component
-                    .For<DbContextOptions<EasyAccommodDbContext>>()
+                    .For<DbContextOptions<EGardenDbContext>>()
                     .Instance(builder.Options)
                     .LifestyleSingleton()
             );

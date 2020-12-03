@@ -3,12 +3,12 @@ using Microsoft.EntityFrameworkCore;
 using Shouldly;
 using Xunit;
 using Abp.Application.Services.Dto;
-using UET.EasyAccommod.Users;
-using UET.EasyAccommod.Users.Dto;
+using UET.EGarden.Users;
+using UET.EGarden.Users.Dto;
 
-namespace UET.EasyAccommod.Tests.Users
+namespace UET.EGarden.Tests.Users
 {
-    public class UserAppService_Tests : EasyAccommodTestBase
+    public class UserAppService_Tests : EGardenTestBase
     {
         private readonly IUserAppService _userAppService;
 

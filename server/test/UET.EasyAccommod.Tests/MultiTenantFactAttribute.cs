@@ -1,12 +1,12 @@
 ﻿using Xunit;
 
-namespace UET.EasyAccommod.Tests
+namespace UET.EGarden.Tests
 {
     public sealed class MultiTenantFactAttribute : FactAttribute
     {
         public MultiTenantFactAttribute()
         {
-            if (!EasyAccommodConsts.MultiTenancyEnabled)
+            if (!EGardenConsts.MultiTenancyEnabled)
             {
                 Skip = "MultiTenancy is disabled.";
             }

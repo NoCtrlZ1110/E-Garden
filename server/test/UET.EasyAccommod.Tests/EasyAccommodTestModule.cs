@@ -9,22 +9,22 @@ using Abp.Net.Mail;
 using Abp.TestBase;
 using Abp.Zero.Configuration;
 using Abp.Zero.EntityFrameworkCore;
-using UET.EasyAccommod.EntityFrameworkCore;
-using UET.EasyAccommod.Tests.DependencyInjection;
+using UET.EGarden.EntityFrameworkCore;
+using UET.EGarden.Tests.DependencyInjection;
 
-namespace UET.EasyAccommod.Tests
+namespace UET.EGarden.Tests
 {
     [DependsOn(
-        typeof(EasyAccommodApplicationModule),
-        typeof(EasyAccommodEntityFrameworkModule),
+        typeof(EGardenApplicationModule),
+        typeof(EGardenEntityFrameworkModule),
         typeof(AbpTestBaseModule)
         )]
-    public class EasyAccommodTestModule : AbpModule
+    public class EGardenTestModule : AbpModule
     {
-        public EasyAccommodTestModule(EasyAccommodEntityFrameworkModule EasyAccommodEntityFrameworkModule)
+        public EGardenTestModule(EGardenEntityFrameworkModule EGardenEntityFrameworkModule)
         {
-            EasyAccommodEntityFrameworkModule.SkipDbContextRegistration = true;
-            EasyAccommodEntityFrameworkModule.SkipDbSeed = true;
+            EGardenEntityFrameworkModule.SkipDbContextRegistration = true;
+            EGardenEntityFrameworkModule.SkipDbSeed = true;
         }
 
         public override void PreInitialize()
@@ -40,7 +40,7 @@ namespace UET.EasyAccommod.Tests
             // Use database for language management
             Configuration.Modules.Zero().LanguageManagement.EnableDbLocalization();
 
-            RegisterFakeService<AbpZeroDbMigrator<EasyAccommodDbContext>>();
+            RegisterFakeService<AbpZeroDbMigrator<EGardenDbContext>>();
 
             Configuration.ReplaceService<IEmailSender, NullEmailSender>(DependencyLifeStyle.Transient);
         }

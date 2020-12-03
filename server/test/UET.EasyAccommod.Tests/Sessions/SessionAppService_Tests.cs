@@ -1,11 +1,11 @@
 ﻿using System.Threading.Tasks;
 using Shouldly;
 using Xunit;
-using UET.EasyAccommod.Sessions;
+using UET.EGarden.Sessions;
 
-namespace UET.EasyAccommod.Tests.Sessions
+namespace UET.EGarden.Tests.Sessions
 {
-    public class SessionAppService_Tests : EasyAccommodTestBase
+    public class SessionAppService_Tests : EGardenTestBase
     {
         private readonly ISessionAppService _sessionAppService;
 
