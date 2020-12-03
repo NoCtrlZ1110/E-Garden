@@ -1,5 +1,5 @@
+import 'package:e_garden/utils/light_color.dart';
 import 'package:e_garden/widgets/back_button.dart';
-import 'file:///D:/Project/AndroidStudioProjects/E-Garden/mobile/lib/utils/light_color.dart';
 import 'package:flutter/material.dart';
 
 import 'component/my_textField.dart';
@@ -39,102 +39,102 @@ class CreateNewTaskPage extends StatelessWidget {
                   SizedBox(height: 20),
                   Container(
                       child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      MyTextField(label: 'Title'),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.end,
                         children: <Widget>[
-                          MyTextField(label: 'Title'),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.end,
-                            children: <Widget>[
-                              Expanded(
-                                child: MyTextField(
-                                  label: 'Date',
-                                  icon: downwardIcon,
-                                ),
-                              ),
-                              //HomePage.calendarIcon(),
-                            ],
-                          )
+                          Expanded(
+                            child: MyTextField(
+                              label: 'Date',
+                              icon: downwardIcon,
+                            ),
+                          ),
+                          //HomePage.calendarIcon(),
                         ],
-                      ))
+                      )
+                    ],
+                  ))
                 ],
               ),
             ),
             Expanded(
                 child: SingleChildScrollView(
-                  padding: EdgeInsets.symmetric(horizontal: 20),
-                  child: Column(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: Column(
+                children: <Widget>[
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: <Widget>[
-                          Expanded(
-                              child: MyTextField(
-                                label: 'Start Time',
-                                icon: downwardIcon,
-                              )),
-                          SizedBox(width: 40),
-                          Expanded(
-                            child: MyTextField(
-                              label: 'End Time',
-                              icon: downwardIcon,
-                            ),
-                          ),
-                        ],
+                      Expanded(
+                          child: MyTextField(
+                        label: 'Start Time',
+                        icon: downwardIcon,
+                      )),
+                      SizedBox(width: 40),
+                      Expanded(
+                        child: MyTextField(
+                          label: 'End Time',
+                          icon: downwardIcon,
+                        ),
                       ),
-                      SizedBox(height: 20),
-                      MyTextField(
-                        label: 'Description',
-                        minLines: 3,
-                        maxLines: 3,
-                      ),
-                      SizedBox(height: 20),
-                      // Container(
-                      //   alignment: Alignment.topLeft,
-                      //   child: Column(
-                      //     crossAxisAlignment: CrossAxisAlignment.start,
-                      //     children: <Widget>[
-                      //       Text(
-                      //         'Category',
-                      //         style: TextStyle(
-                      //           fontSize: 18,
-                      //           color: Colors.black54,
-                      //         ),
-                      //       ),
-                      //       Wrap(
-                      //         crossAxisAlignment: WrapCrossAlignment.start,
-                      //         //direction: Axis.vertical,
-                      //         alignment: WrapAlignment.start,
-                      //         verticalDirection: VerticalDirection.down,
-                      //         runSpacing: 0,
-                      //         //textDirection: TextDirection.rtl,
-                      //         spacing: 10.0,
-                      //         children: <Widget>[
-                      //           Chip(
-                      //             label: Text("SPORT APP"),
-                      //             backgroundColor: LightColors.kRed,
-                      //             labelStyle: TextStyle(color: Colors.white),
-                      //           ),
-                      //           Chip(
-                      //             label: Text("MEDICAL APP"),
-                      //           ),
-                      //           Chip(
-                      //             label: Text("RENT APP"),
-                      //           ),
-                      //           Chip(
-                      //             label: Text("NOTES"),
-                      //           ),
-                      //           Chip(
-                      //             label: Text("GAMING PLATFORM APP"),
-                      //           ),
-                      //         ],
-                      //       ),
-                      //     ],
-                      //   ),
-                      // )
                     ],
                   ),
-                )),
+                  SizedBox(height: 20),
+                  MyTextField(
+                    label: 'Description',
+                    minLines: 3,
+                    maxLines: 3,
+                  ),
+                  SizedBox(height: 20),
+                  // Container(
+                  //   alignment: Alignment.topLeft,
+                  //   child: Column(
+                  //     crossAxisAlignment: CrossAxisAlignment.start,
+                  //     children: <Widget>[
+                  //       Text(
+                  //         'Category',
+                  //         style: TextStyle(
+                  //           fontSize: 18,
+                  //           color: Colors.black54,
+                  //         ),
+                  //       ),
+                  //       Wrap(
+                  //         crossAxisAlignment: WrapCrossAlignment.start,
+                  //         //direction: Axis.vertical,
+                  //         alignment: WrapAlignment.start,
+                  //         verticalDirection: VerticalDirection.down,
+                  //         runSpacing: 0,
+                  //         //textDirection: TextDirection.rtl,
+                  //         spacing: 10.0,
+                  //         children: <Widget>[
+                  //           Chip(
+                  //             label: Text("SPORT APP"),
+                  //             backgroundColor: LightColors.kRed,
+                  //             labelStyle: TextStyle(color: Colors.white),
+                  //           ),
+                  //           Chip(
+                  //             label: Text("MEDICAL APP"),
+                  //           ),
+                  //           Chip(
+                  //             label: Text("RENT APP"),
+                  //           ),
+                  //           Chip(
+                  //             label: Text("NOTES"),
+                  //           ),
+                  //           Chip(
+                  //             label: Text("GAMING PLATFORM APP"),
+                  //           ),
+                  //         ],
+                  //       ),
+                  //     ],
+                  //   ),
+                  // )
+                ],
+              ),
+            )),
             Container(
               height: 80,
               width: width,

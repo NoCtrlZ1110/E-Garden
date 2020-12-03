@@ -1,5 +1,4 @@
-import 'package:e_garden/widgets/back_button.dart';
-import 'file:///D:/Project/AndroidStudioProjects/E-Garden/mobile/lib/utils/light_color.dart';
+import 'package:e_garden/utils/light_color.dart';
 import 'package:flutter/material.dart';
 
 import 'component/calender.dart';
@@ -16,7 +15,6 @@ class CalendarPage extends StatelessWidget {
         maxLines: 1,
         style:
             TextStyle(fontSize: 20.0, color: Colors.black12, letterSpacing: 5),
-
       ),
     );
   }
@@ -155,7 +153,6 @@ class CalendarPage extends StatelessWidget {
                                 title: 'Project Research',
                                 subtitle:
                                     'Discuss with the colleagues about the future plan',
-
                                 boxColor: LightColors.kLightYellow2,
                               ),
                               _dashedText(),
@@ -173,7 +170,6 @@ class CalendarPage extends StatelessWidget {
                                 title: 'Design Meeting',
                                 subtitle:
                                     'Discuss with designers for new task for the medical app',
-
                                 boxColor: LightColors.kLightGreen,
                               ),
                             ],
