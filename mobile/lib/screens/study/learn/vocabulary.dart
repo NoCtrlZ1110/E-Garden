@@ -45,20 +45,18 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
                                   )
                                 : card(
                                     model,
-                                    FittedBox(
-                                        child: Image.asset(
+                                    Image.asset(
                                       model.wordImages[model.index],
                                       fit: BoxFit.fill,
-                                    )),
+                                    ),
                                   ),
                             back: (!model.isFrontCard)
                                 ? card(
                                     model,
-                                    FittedBox(
-                                        child: Image.asset(
+                                    Image.asset(
                                       model.wordImages[model.index],
                                       fit: BoxFit.fill,
-                                    )),
+                                    ),
                                   )
                                 : card(
                                     model,

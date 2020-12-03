@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
 
 class LearnModel extends ChangeNotifier {
-  List<String> _words = ['Tree', "Sun", 'Table', 'Car', 'Cup'];
+  List<String> _words = ['Tree', "Sun", 'Sleep', 'Car', 'Hot'];
 
   get words => _words;
-  List<String> _meaningWords = ['Cái cây', "Mặt trời", 'Cái bàn', 'Ô tô', 'Cái chén'];
+  List<String> _meaningWords = ['Cái cây', "Mặt trời", 'Đi ngủ', 'Ô tô', 'Nóng'];
 
   get meaningWords => _meaningWords;
   List<String> _exampleWords = [
     "This is a tree.",
     "The sun rises at 5.am.",
-    "My class has 40 tables",
+    "The girl is sleeping",
     'My brother has a black car.',
-    "This cup is small."
+    "It's hot today"
   ];
   List <String> wordImages = [
     'assets/images/tree.jpg',
     'assets/images/sun.png',
-    'assets/images/table.jpg',
+    'assets/images/sleep.jpg',
     'assets/images/car.jpg',
-    'assets/images/cup.jpg'
+    'assets/images/hot.jpg'
   ];
 
   get exampleWords => _exampleWords;
@@ -51,7 +51,7 @@ class LearnModel extends ChangeNotifier {
 
   get grammar => _grammar;
 
-  List<String> _typeWords = ['Noun', "Noun", 'Adjective', 'Adjective', 'Noun'];
+  List<String> _typeWords = ['Noun', "Noun", 'Verb', 'Noun', 'Adjective'];
 
   get typeWords => _typeWords;
   List<String> _typeSentences = ['Example', "Example", 'Example', 'Example', 'Example'];
