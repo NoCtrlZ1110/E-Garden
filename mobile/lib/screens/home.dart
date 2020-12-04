@@ -2,8 +2,8 @@ import 'package:dotted_border/dotted_border.dart';
 import 'package:e_garden/configs/AppConfig.dart';
 import 'package:e_garden/screens/dictionary/home_dictionary.dart';
 import 'package:e_garden/screens/notes/notes.dart';
-import 'package:e_garden/screens/notes/test.dart';
 import 'package:e_garden/screens/study/study.dart';
+import 'package:e_garden/screens/user.profile/edit.user.profile.dart';
 import 'package:e_garden/widgets/custom_app_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -35,22 +35,33 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
 
   @override
   Widget build(BuildContext context) {
-    return WillPopScope(
-        onWillPop: () async => false,
-        child: Scaffold(
-          body: Column(
-            children: [
-              Expanded(
-                child: TabBarView(
-                  controller: _controller,
-                  physics: BouncingScrollPhysics(),
-                  children: [
-                    StudyScreen(),
-                    HomeDictionaryScreen(),
-                    // CalendarPage()
-                    Test()
-                  ],
-                ),
+    return SafeArea(
+      child: WillPopScope(
+          onWillPop: () async => false,
+          child: Scaffold(
+            key: _drawerKey,
+            backgroundColor: Colors.white,
+            appBar: CustomAppBar(
+              height: SizeConfig.blockSizeVertical * 8,
+              child: Row(
+                children: [
+                  IconButton(
+                      icon: Icon(
+                        Icons.menu,
+                        color: Colors.green,
+                        size: SizeConfig.blockSizeVertical * 4,
+                      ),
+                      onPressed: () {
+                        _drawerKey.currentState.openDrawer();
+                      }),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Image.asset(
+                    "assets/images/logo_text.png",
+                    height: SizeConfig.blockSizeVertical * 5,
+                  ),
+                ],
               ),
             ),
             drawer: Drawer(
@@ -107,13 +118,13 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                                         children: [
                                           Text(
                                             'Learn',
-                                            style:
-                                            TextStyle(fontSize: 18, fontWeight: FontWeight.w600, color: Colors.black45),
+                                            style: TextStyle(
+                                                fontSize: 18, fontWeight: FontWeight.w600, color: Colors.black45),
                                           ),
                                           Text(
                                             20.toString(),
-                                            style:
-                                            TextStyle(fontSize: 18, fontWeight: FontWeight.w600, color: Colors.black45),
+                                            style: TextStyle(
+                                                fontSize: 18, fontWeight: FontWeight.w600, color: Colors.black45),
                                           )
                                         ],
                                       )),
@@ -129,13 +140,13 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                                       children: [
                                         Text(
                                           'Review',
-                                          style:
-                                          TextStyle(fontSize: 18, fontWeight: FontWeight.w600, color: Colors.black45),
+                                          style: TextStyle(
+                                              fontSize: 18, fontWeight: FontWeight.w600, color: Colors.black45),
                                         ),
                                         Text(
                                           20.toString(),
-                                          style:
-                                          TextStyle(fontSize: 18, fontWeight: FontWeight.w600, color: Colors.black45),
+                                          style: TextStyle(
+                                              fontSize: 18, fontWeight: FontWeight.w600, color: Colors.black45),
                                         )
                                       ],
                                     ),
@@ -155,7 +166,10 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                   Container(
                       height: SizeConfig.blockSizeVertical * 8,
                       child: RaisedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pop(context);
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => EditProfile()));
+                        },
                         child: Row(
                           children: [
                             Icon(Icons.edit_outlined, color: Colors.green),
@@ -201,7 +215,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                               width: SizeConfig.blockSizeHorizontal * 5,
                             ),
                             Text(
-                              'Report',
+                              'Feedback',
                               style: TextStyle(fontSize: 20),
                             ),
                           ],
@@ -285,6 +299,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
           )),
     );
   }
+
   Future<void> _showLogoutDialog() async {
     return showDialog<void>(
       barrierDismissible: false,
