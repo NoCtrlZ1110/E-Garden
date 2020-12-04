@@ -1,189 +1,77 @@
+import 'package:e_garden/configs/AppConfig.dart';
+import 'package:e_garden/core/services/note/note_model.service.dart';
+import 'package:e_garden/screens/notes/component/task_container.dart';
+import 'package:e_garden/widgets/custom_app_bar.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:e_garden/utils/light_color.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:table_calendar/table_calendar.dart';
 
-import 'component/calender.dart';
-import 'component/task_container.dart';
-import 'create_new_note.dart';
-import 'date_list.dart';
+class CalendarPage extends StatefulWidget {
+  @override
+  _CalendarPageState createState() => _CalendarPageState();
+}
 
-class CalendarPage extends StatelessWidget {
-  Widget _dashedText() {
-    return Container(
-      padding: EdgeInsets.symmetric(vertical: 15),
-      child: Text(
-        '------------------------------------------',
-        maxLines: 1,
-        style:
-            TextStyle(fontSize: 20.0, color: Colors.black12, letterSpacing: 5),
-      ),
-    );
-  }
+class _CalendarPageState extends State<CalendarPage> {
+  CalendarController _calendarController = CalendarController();
+  Map<String, dynamic> params = {"UserId": 1};
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: LightColors.kLightYellow,
-      body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.fromLTRB(
-            20,
-            20,
-            20,
-            0,
+      body: Stack(
+        children: [
+          Container(
+            width: SizeConfig.screenWidth,
+            height: SizeConfig.screenHeight,
+            decoration: BoxDecoration(
+             // image: DecorationImage(image: AssetImage("assets/images/login/bg_screen.png"), fit: BoxFit.fill),
+              borderRadius:
+                  BorderRadius.only(topLeft: const Radius.circular(20.0), topRight: const Radius.circular(20.0)),
+            ),
           ),
-          child: Column(
-            children: <Widget>[
-              Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
-                    Text(
-                      'Today',
-                      style: TextStyle(
-                          fontSize: 30.0, fontWeight: FontWeight.w700),
-                    ),
-                    Container(
-                      height: 40.0,
-                      width: 120,
-                      decoration: BoxDecoration(
-                        color: LightColors.kGreen,
-                        borderRadius: BorderRadius.circular(30),
-                      ),
-                      child: FlatButton(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => CreateNewTaskPage(),
-                            ),
-                          );
-                        },
-                        child: Center(
-                          child: Text(
-                            'Add task',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.w700,
-                                fontSize: 16),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ]),
-              SizedBox(height: 10),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: <Widget>[
-                  Text(
-                    'Productive Day, Sourav',
-                    style: TextStyle(
-                      fontSize: 18.0,
-                      color: Colors.grey,
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(height: 30),
-              Align(
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'April, 2020',
-                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 20),
-                ),
-              ),
-              SizedBox(height: 20.0),
-              Container(
-                height: 58.0,
-                child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: days.length,
-                  itemBuilder: (BuildContext context, int index) {
-                    return CalendarDates(
-                      day: days[index],
-                      date: dates[index],
-                      dayColor: index == 0 ? LightColors.kRed : Colors.black54,
-                      dateColor:
-                          index == 0 ? LightColors.kRed : LightColors.kDarkBlue,
-                    );
+          Column(
+            children: [
+              _buildTableCalendar(),
+              Expanded(
+                child: Consumer<NoteModel>(
+                  builder: (_, notes, __) {
+                    return FutureBuilder(
+                        future: notes.fetchListNote(params),
+                        builder: (context, snapshot) {
+                          return (snapshot.hasData) ? Container(child: Text("Load"),) : Center(child: CircularProgressIndicator());
+                        });
                   },
                 ),
-              ),
-              Expanded(
-                child: SingleChildScrollView(
-                  child: Container(
-                    padding: EdgeInsets.symmetric(vertical: 20.0),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        Expanded(
-                          flex: 1,
-                          child: ListView.builder(
-                            itemCount: time.length,
-                            shrinkWrap: true,
-                            physics: NeverScrollableScrollPhysics(),
-                            itemBuilder: (BuildContext context, int index) =>
-                                Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(vertical: 15.0),
-                              child: Align(
-                                alignment: Alignment.centerLeft,
-                                child: Text(
-                                  '${time[index]} ${time[index] > 8 ? 'PM' : 'AM'}',
-                                  style: TextStyle(
-                                    fontSize: 16.0,
-                                    color: Colors.black54,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          width: 20,
-                        ),
-                        Expanded(
-                          flex: 5,
-                          child: ListView(
-                            shrinkWrap: true,
-                            physics: NeverScrollableScrollPhysics(),
-                            children: <Widget>[
-                              _dashedText(),
-                              TaskContainer(
-                                title: 'Project Research',
-                                subtitle:
-                                    'Discuss with the colleagues about the future plan',
-                                boxColor: LightColors.kLightYellow2,
-                              ),
-                              _dashedText(),
-                              TaskContainer(
-                                title: 'Work on Medical App',
-                                subtitle: 'Add medicine tab',
-                                boxColor: LightColors.kLavender,
-                              ),
-                              TaskContainer(
-                                title: 'Call',
-                                subtitle: 'Call to david',
-                                boxColor: LightColors.kPalePink,
-                              ),
-                              TaskContainer(
-                                title: 'Design Meeting',
-                                subtitle:
-                                    'Discuss with designers for new task for the medical app',
-                                boxColor: LightColors.kLightGreen,
-                              ),
-                            ],
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                ),
-              ),
+              )
             ],
           ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildTableCalendar() {
+    return TableCalendar(
+      calendarController: _calendarController,
+      startingDayOfWeek: StartingDayOfWeek.monday,
+      initialSelectedDay: DateTime.now(),
+      initialCalendarFormat: CalendarFormat.week,
+      calendarStyle: CalendarStyle(
+        selectedColor: Colors.redAccent,
+        todayColor: Colors.green,
+        markersColor: Colors.green,
+        outsideDaysVisible: false,
+      ),
+      headerStyle: HeaderStyle(
+        formatButtonTextStyle: TextStyle().copyWith(color: Colors.white, fontSize: 15.0),
+        formatButtonDecoration: BoxDecoration(
+          color: Colors.blue,
+          borderRadius: BorderRadius.circular(16.0),
         ),
       ),
+      onDaySelected: (day, events, holidays) {},
     );
   }
 }

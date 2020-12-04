@@ -3,11 +3,12 @@ import 'dart:io';
 
 import 'package:dio/adapter.dart';
 import 'package:dio/dio.dart';
+import 'package:e_garden/application.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 class API {
-  static String baseUrl = "";
+  static String baseUrl = "https://uetegarden.azurewebsites.net/";
   final Dio dio = Dio(
     BaseOptions(
       connectTimeout: 30000,
@@ -25,7 +26,10 @@ class API {
     };
 //    dio.interceptors
     dio.interceptors.add(InterceptorsWrapper(onRequest: (RequestOptions options) async {
-
+      Application.sharePreference.hasKey("token") ? options.headers["Authorization"] = "Bearer ${Application.sharePreference.getString("token")}" : {};
+      Application.sharePreference.hasKey("tenantId") ? options.headers["Abp.TenantId"] = "${Application.sharePreference.getInt("tenantId")}" : {};
+      Application.sharePreference.hasKey("userId") ? options.headers["Abp.userId"] = "${Application.sharePreference.getInt("userId")}" : {};
+      print(options.uri);
       // print(options.data);
       // print(options.headers['Abp.userId']);
       // Do something before request is sent
@@ -42,6 +46,17 @@ class API {
       handleTimeOutException(e.type);
       // Refresh Token
       print(e.message);
+      if (e.response?.statusCode == 401) {
+        Map<String, dynamic> data = <String, dynamic>{
+          "refreshToken": await Application.sharePreference.getString("refreshToken"),
+        };
+        var response = await dio.post("/api/TokenAuth/RefreshToken", data: data);
+        if (response.statusCode == 200) {
+          var newAccessToken = response.data["data"]["accessToken"]; // get new access token from response
+          Application.sharePreference.putString("accessToken", "$newAccessToken");
+          return dio.request(e.request.baseUrl + e.request.path, options: e.request);
+        }
+      }
       return e.response; //continue
     }));
   }

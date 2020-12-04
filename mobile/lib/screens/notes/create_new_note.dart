@@ -1,7 +1,7 @@
 import 'package:e_garden/utils/light_color.dart';
 import 'package:e_garden/widgets/back_button.dart';
 import 'package:flutter/material.dart';
-
+import '../../utils/light_color.dart';
 import 'component/my_textField.dart';
 import 'component/top_container.dart';
 
