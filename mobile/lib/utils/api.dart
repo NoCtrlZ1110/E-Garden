@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 class API {
-  static String baseUrl = "";
+  static String baseUrl = "https://uetegarden.azurewebsites.net/";
   final Dio dio = Dio(
     BaseOptions(
       connectTimeout: 30000,

@@ -1,5 +1,5 @@
-import 'file:///D:/Project/AndroidStudioProjects/E-Garden/mobile/lib/utils/light_color.dart';
 import 'package:flutter/material.dart';
+import '../../../utils/light_color.dart';
 
 class TopContainer extends StatelessWidget {
   final double height;

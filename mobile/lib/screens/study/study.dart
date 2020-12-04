@@ -4,11 +4,11 @@ import 'package:e_garden/screens/study/review.dart';
 import 'package:e_garden/screens/study/study.provider.dart';
 import 'package:e_garden/widgets/custom_buton_component.dart';
 import 'package:e_garden/widgets/custom_tile.dart';
-import 'file:///D:/Project/AndroidStudioProjects/E-Garden/mobile/lib/utils/light_color.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
+import '../../utils/light_color.dart';
 import 'learn.dart';
 
 class StudyScreen extends StatefulWidget {
