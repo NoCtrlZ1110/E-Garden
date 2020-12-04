@@ -3,6 +3,7 @@ import 'package:e_garden/core/services/note/note_model.service.dart';
 import 'package:e_garden/screens/notes/component/task_container.dart';
 import 'package:e_garden/widgets/custom_app_bar.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:e_garden/utils/light_color.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:table_calendar/table_calendar.dart';
