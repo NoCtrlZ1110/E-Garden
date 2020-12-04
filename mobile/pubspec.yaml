@@ -100,6 +100,9 @@ flutter:
           weight: 700
         - asset: assets/fonts/Quicksand-SemiBold.ttf
           weight: 500
+    - family: UD
+      fonts:
+        - asset: assets/fonts/AutoMobileBold-4oq4.ttf
 
 
   # To add custom fonts to your application, add a fonts section here,

@@ -33,6 +33,8 @@ class AppColors {
   static const Color buttonShadow = Color(0xFF1ea88d);
   static const Color buttonBlend1 = Color(0xFF3DCC85);
   static const Color buttonBlend2 = Color(0xFF4FC1A6);
+  static const Color border = Color(0xFF2FCB89);
+  static const Color mainGreen = Color(0xFF509F21);
 }
 
 class SizeConfig {

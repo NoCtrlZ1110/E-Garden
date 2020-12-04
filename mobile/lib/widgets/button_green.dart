@@ -7,6 +7,7 @@ class ButtonGreen extends StatefulWidget {
   final double height, width;
   final Icon icon;
   final Function press;
+  final Color textColor;
 
   ButtonGreen({
     Key key,
@@ -14,6 +15,7 @@ class ButtonGreen extends StatefulWidget {
     @required this.width,
     @required this.text,
     this.icon,
+    this.textColor,
     @required this.press,
   }) : super(key: key);
 
@@ -80,9 +82,10 @@ class _ButtonGreenState extends State<ButtonGreen> {
                     Text(
                       widget.text,
                       style: TextStyle(
-                          color: Colors.white,
+                          color: widget.textColor == null ? Colors.white : widget.textColor,
                           fontSize: widget.height / 2,
-                          fontWeight: FontWeight.w600),
+                          fontWeight: FontWeight.w600,
+                      ),
                     ),
                     Expanded(child: SizedBox()),
                   ]),
