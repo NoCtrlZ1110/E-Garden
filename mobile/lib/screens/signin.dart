@@ -1,15 +1,12 @@
 import 'package:e_garden/configs/AppConfig.dart';
 import 'package:e_garden/core/services/user/user_model.service.dart';
-import 'package:e_garden/main.dart';
 import 'package:e_garden/screens/home.dart';
-import 'package:e_garden/screens/study/study.dart';
-import 'package:e_garden/widgets/button_green.dart';
+import 'package:e_garden/widgets/custom_buton_component.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:provider/provider.dart';
-import 'package:e_garden/application.dart';
 
 class SignIn extends StatefulWidget {
   @override
@@ -22,8 +19,8 @@ class SignIn extends StatefulWidget {
 class _SignInState extends State<SignIn> {
   final GlobalKey<FormBuilderState> _fbKey = GlobalKey<FormBuilderState>();
 
-  // TextEditingController _username = TextEditingController();
-  // TextEditingController _password = TextEditingController();
+  TextEditingController _username = TextEditingController();
+  TextEditingController _password = TextEditingController();
   bool switcherValue = false;
   bool review = false;
   Map<String, dynamic> params;
@@ -68,24 +65,29 @@ class _SignInState extends State<SignIn> {
                     SizedBox(
                       width: SizeConfig.safeBlockHorizontal * 80,
                       child: FormBuilderTextField(
+                        controller: _username,
                         attribute: "user_name",
                         validators: [FormBuilderValidators.required()],
                         style: TextStyle(fontSize: SizeConfig.safeBlockVertical * 2.5, color: AppColors.green),
                         // controller: _username,
                         decoration: InputDecoration(
-                          prefixIcon: Icon(Icons.account_circle, color: AppColors.mainGreen,),
+                          prefixIcon: Icon(
+                            Icons.account_circle,
+                            color: AppColors.mainGreen,
+                          ),
                           contentPadding: EdgeInsets.only(
                               left: SizeConfig.safeBlockHorizontal * 5,
                               right: SizeConfig.safeBlockHorizontal * 3,
                               top: SizeConfig.safeBlockVertical * 2,
                               bottom: SizeConfig.safeBlockVertical * 2),
-                          focusedBorder: OutlineInputBorder(
+                          enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(25.0),
                             borderSide: BorderSide(
-                              color: AppColors.mainGreen,
+                              color: AppColors.border,
+                              width: 2.0,
                             ),
                           ),
-                          enabledBorder: OutlineInputBorder(
+                          focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(25.0),
                             borderSide: BorderSide(
                               color: AppColors.border,
@@ -106,13 +108,17 @@ class _SignInState extends State<SignIn> {
                     SizedBox(
                       width: SizeConfig.safeBlockHorizontal * 80,
                       child: FormBuilderTextField(
+                        controller: _password,
                         validators: [FormBuilderValidators.required()],
                         attribute: "password",
                         style: TextStyle(fontSize: SizeConfig.safeBlockVertical * 2.5, color: AppColors.green),
                         obscureText: !review,
                         // controller: _password,
                         decoration: InputDecoration(
-                          prefixIcon: Icon(Icons.vpn_key_rounded, color: AppColors.mainGreen,),
+                          prefixIcon: Icon(
+                            Icons.vpn_key_rounded,
+                            color: AppColors.mainGreen,
+                          ),
                           suffixIcon: IconButton(
                             icon: !review ? Icon(Icons.visibility_off) : Icon(Icons.visibility),
                             onPressed: () {
@@ -126,12 +132,6 @@ class _SignInState extends State<SignIn> {
                               right: SizeConfig.safeBlockHorizontal * 3,
                               top: SizeConfig.safeBlockVertical * 2,
                               bottom: SizeConfig.safeBlockVertical * 2),
-                          focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(25.0),
-                            borderSide: BorderSide(
-                              color: AppColors.mainGreen,
-                            ),
-                          ),
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(25.0),
                             borderSide: BorderSide(
@@ -139,7 +139,13 @@ class _SignInState extends State<SignIn> {
                               width: 2.0,
                             ),
                           ),
-
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(25.0),
+                            borderSide: BorderSide(
+                              color: AppColors.border,
+                              width: 2.0,
+                            ),
+                          ),
                           labelText: "Password",
                           alignLabelWithHint: false,
                           labelStyle: TextStyle(
@@ -175,11 +181,17 @@ class _SignInState extends State<SignIn> {
                     ),
                     user.status == Status.Authenticating
                         ? Center(child: CircularProgressIndicator())
-                        : ButtonGreen(
-                            height: SizeConfig.safeBlockVertical * 7,
-                            width: SizeConfig.safeBlockHorizontal * 40,
-                            text: "Log In",
-                            press: () async {
+                        : CustomButton(
+                            child: Text(
+                              'SIGN IN',
+                              style: TextStyle(color: Colors.white, fontSize: 23, fontWeight: FontWeight.w800),
+                            ),
+                            radius: 18,
+                            height: SizeConfig.blockSizeVertical * 5,
+                            width: SizeConfig.blockSizeHorizontal * 30,
+                            shadowColor: AppColors.btnShadow,
+                            backgroundColor: AppColors.buttonColor,
+                            onPressed: () async {
                               (_fbKey.currentState.saveAndValidate())
                                   ? (await user.login(_fbKey.currentState.value))
                                       ? Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()))
@@ -204,11 +216,13 @@ class _SignInState extends State<SignIn> {
                             },
                           ),
                     SizedBox(height: 15),
-                    Text('Not a member yet? Sign up now!', style: TextStyle(
-                      color: AppColors.green,
-                      fontSize: SizeConfig.blockSizeVertical * 2,
-                      fontWeight: FontWeight.w600
-                    ),),
+                    Text(
+                      'Not a member yet? Sign up now!',
+                      style: TextStyle(
+                          color: AppColors.green,
+                          fontSize: SizeConfig.blockSizeVertical * 2,
+                          fontWeight: FontWeight.w600),
+                    ),
                     SizedBox(height: 20),
                   ],
                 ),

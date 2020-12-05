@@ -30,40 +30,17 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
     _controller.dispose();
   }
 
-  static List<Widget> _widgetOptions = <Widget>[StudyScreen(), HomeDictionaryScreen(), CalendarPage()];
   GlobalKey<ScaffoldState> _drawerKey = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
+    List<Widget> _widgetOptions = <Widget>[StudyScreen(), HomeDictionaryScreen(), CalendarPage()];
     return SafeArea(
       child: WillPopScope(
           onWillPop: () async => false,
           child: Scaffold(
             key: _drawerKey,
-            backgroundColor: Colors.white,
-            appBar: CustomAppBar(
-              height: SizeConfig.blockSizeVertical * 8,
-              child: Row(
-                children: [
-                  IconButton(
-                      icon: Icon(
-                        Icons.menu,
-                        color: Colors.green,
-                        size: SizeConfig.blockSizeVertical * 4,
-                      ),
-                      onPressed: () {
-                        _drawerKey.currentState.openDrawer();
-                      }),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Image.asset(
-                    "assets/images/logo_text.png",
-                    height: SizeConfig.blockSizeVertical * 5,
-                  ),
-                ],
-              ),
-            ),
+            backgroundColor: AppColors.background,
             drawer: Drawer(
               child: Column(
                 children: <Widget>[
@@ -253,18 +230,50 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                 ],
               ),
             ),
+            appBar: CustomAppBar(
+              height: SizeConfig.blockSizeVertical * 10,
+              child: Row(
+                children: [
+                  IconButton(
+                      icon: Icon(
+                        Icons.menu,
+                        color: Colors.green,
+                        size: SizeConfig.blockSizeVertical * 4,
+                      ),
+                      onPressed: () {
+                        _drawerKey.currentState.openDrawer();
+                      }),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Image.asset(
+                    "assets/images/logo_text.png",
+                    height: SizeConfig.blockSizeVertical * 5,
+                  ),
+                ],
+              ),
+            ),
             body: Column(
               children: [
-                Expanded(
-                  child: TabBarView(
-                    controller: _controller,
-                    physics: BouncingScrollPhysics(),
-                    children: [StudyScreen(), HomeDictionaryScreen(), CalendarPage()],
+                Container(
+                  height: SizeConfig.blockSizeVertical * 77,
+                  child: Stack(
+                    children: [
+                      Image.asset(
+                        'assets/images/background_items.png',
+                        height: SizeConfig.blockSizeVertical * 90,
+                        fit: BoxFit.fitHeight,
+                      ),
+                      TabBarView(
+                        controller: _controller,
+                        physics: BouncingScrollPhysics(),
+                        children: [StudyScreen(), HomeDictionaryScreen(), CalendarPage()],
+                      ),
+                    ],
                   ),
                 ),
-                Container(
-                  width: double.infinity,
-                  height: 60,
+                Expanded(
+                    child: Container(
                   decoration: BoxDecoration(color: const Color(0xFFF1F1F1), boxShadow: [
                     BoxShadow(
                       color: Colors.grey,
@@ -281,19 +290,22 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                       indicatorSize: TabBarIndicatorSize.tab,
                       tabs: [
                         Tab(
-                          icon: Icon(Icons.home),
+                          icon: Icon(
+                            Icons.home,
+                            size: 30,
+                          ),
                         ),
                         Tab(
-                          icon: Icon(Icons.search),
+                          icon: Icon(Icons.search, size: 30),
                         ),
                         Tab(
-                          icon: Icon(Icons.event_note),
+                          icon: Icon(Icons.event_note, size: 30),
                         ),
                       ],
                       controller: _controller,
                     ),
                   ),
-                ),
+                ))
               ],
             ),
           )),
