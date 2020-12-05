@@ -14,19 +14,19 @@ class LightColors {
 
   static const Color kDarkBlue = Color(0xFF0D253F);
 
-  List<Color> bookColor = [
-    Color(0xFF00AB08),
-    Color(0xFF4ae54a),
-    Color(0xFF00ab5e),
-    Color(0xFF26D701),
-    Color(0xFF0f9200),
+  List<Color> buttonLightColor = [
+    Color(0xFF3ccc86),
+    Color(0xFF58abf7),
+    Color(0xFFff97a6),
+    Color(0xFFf8c559),
+    Color(0xFF33cccc),
   ];
 
-  List <Color> buttonLightColor = [
-    Color(0xFF26D701),
-    Color(0xFFa4fab6),
-    Color(0xFF54e360),
-    Color(0xFF95F985),
-    Color(0xFF4ae54a),
+  List<Color> bookColor = [
+    Color(0xFF35a870),
+    Color(0xFF3f93e0),
+    Color(0xFFfd8795),
+    Color(0xFFecad5a),
+    Color(0xFF3eb1d7),
   ];
 }
