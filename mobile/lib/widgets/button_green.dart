@@ -82,9 +82,11 @@ class _ButtonGreenState extends State<ButtonGreen> {
                     Text(
                       widget.text,
                       style: TextStyle(
-                          color: widget.textColor == null ? Colors.white : widget.textColor,
-                          fontSize: widget.height / 2,
-                          fontWeight: FontWeight.w600,
+                        color: widget.textColor == null
+                            ? Colors.white
+                            : widget.textColor,
+                        fontSize: widget.height / 2.75,
+                        fontWeight: FontWeight.w600,
                       ),
                     ),
                     Expanded(child: SizedBox()),

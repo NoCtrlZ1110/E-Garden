@@ -13,7 +13,8 @@ class HomeScreen extends StatefulWidget {
   _HomeScreenState createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateMixin {
+class _HomeScreenState extends State<HomeScreen>
+    with SingleTickerProviderStateMixin {
   TabController _controller;
 
   @override
@@ -77,11 +78,15 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                             children: [
                               Text(
                                 'Nguyễn Thị Xuân',
-                                style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600, color: Colors.black45),
+                                style: TextStyle(
+                                    fontSize: 25,
+                                    fontWeight: FontWeight.w600,
+                                    color: Colors.black45),
                               ),
                               SizedBox(height: 10),
                               Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
                                 children: [
                                   DottedBorder(
                                       padding: EdgeInsets.all(15),
@@ -96,12 +101,16 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                                           Text(
                                             'Learn',
                                             style: TextStyle(
-                                                fontSize: 18, fontWeight: FontWeight.w600, color: Colors.black45),
+                                                fontSize: 18,
+                                                fontWeight: FontWeight.w600,
+                                                color: Colors.black45),
                                           ),
                                           Text(
                                             20.toString(),
                                             style: TextStyle(
-                                                fontSize: 18, fontWeight: FontWeight.w600, color: Colors.black45),
+                                                fontSize: 18,
+                                                fontWeight: FontWeight.w600,
+                                                color: Colors.black45),
                                           )
                                         ],
                                       )),
@@ -118,12 +127,16 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                                         Text(
                                           'Review',
                                           style: TextStyle(
-                                              fontSize: 18, fontWeight: FontWeight.w600, color: Colors.black45),
+                                              fontSize: 18,
+                                              fontWeight: FontWeight.w600,
+                                              color: Colors.black45),
                                         ),
                                         Text(
                                           20.toString(),
                                           style: TextStyle(
-                                              fontSize: 18, fontWeight: FontWeight.w600, color: Colors.black45),
+                                              fontSize: 18,
+                                              fontWeight: FontWeight.w600,
+                                              color: Colors.black45),
                                         )
                                       ],
                                     ),
@@ -145,7 +158,10 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                       child: RaisedButton(
                         onPressed: () {
                           Navigator.pop(context);
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => EditProfile()));
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => EditProfile()));
                         },
                         child: Row(
                           children: [
@@ -320,7 +336,10 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
         return AlertDialog(
           title: Text(
             'Logout',
-            style: TextStyle(color: AppColors.green, fontWeight: FontWeight.bold, fontSize: 20),
+            style: TextStyle(
+                color: AppColors.green,
+                fontWeight: FontWeight.bold,
+                fontSize: 20),
           ),
           content: SingleChildScrollView(
             child: Text(

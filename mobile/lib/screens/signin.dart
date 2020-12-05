@@ -59,7 +59,10 @@ class _SignInState extends State<SignIn> {
                     SizedBox(height: SizeConfig.blockSizeVertical * 2),
                     Text(
                       "E-Garden",
-                      style: TextStyle(fontSize: 50, color: Colors.white, fontWeight: FontWeight.w600),
+                      style: TextStyle(
+                          fontSize: 50,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600),
                     ),
                     SizedBox(height: SizeConfig.blockSizeVertical * 18),
                     SizedBox(
@@ -68,7 +71,9 @@ class _SignInState extends State<SignIn> {
                         controller: _username,
                         attribute: "user_name",
                         validators: [FormBuilderValidators.required()],
-                        style: TextStyle(fontSize: SizeConfig.safeBlockVertical * 2.5, color: AppColors.green),
+                        style: TextStyle(
+                            fontSize: SizeConfig.safeBlockVertical * 2.5,
+                            color: AppColors.green),
                         // controller: _username,
                         decoration: InputDecoration(
                           prefixIcon: Icon(
@@ -97,8 +102,9 @@ class _SignInState extends State<SignIn> {
                           labelText: "Username",
                           hintText: "Enter Username",
                           alignLabelWithHint: false,
-                          labelStyle:
-                              TextStyle(fontSize: SizeConfig.safeBlockVertical * 2.5, fontWeight: FontWeight.w500),
+                          labelStyle: TextStyle(
+                              fontSize: SizeConfig.safeBlockVertical * 2.5,
+                              fontWeight: FontWeight.w500),
                         ),
                       ),
                     ),
@@ -111,7 +117,9 @@ class _SignInState extends State<SignIn> {
                         controller: _password,
                         validators: [FormBuilderValidators.required()],
                         attribute: "password",
-                        style: TextStyle(fontSize: SizeConfig.safeBlockVertical * 2.5, color: AppColors.green),
+                        style: TextStyle(
+                            fontSize: SizeConfig.safeBlockVertical * 2.5,
+                            color: AppColors.green),
                         obscureText: !review,
                         // controller: _password,
                         decoration: InputDecoration(
@@ -120,7 +128,9 @@ class _SignInState extends State<SignIn> {
                             color: AppColors.mainGreen,
                           ),
                           suffixIcon: IconButton(
-                            icon: !review ? Icon(Icons.visibility_off) : Icon(Icons.visibility),
+                            icon: !review
+                                ? Icon(Icons.visibility_off)
+                                : Icon(Icons.visibility),
                             onPressed: () {
                               setState(() {
                                 review = !review;
@@ -184,7 +194,10 @@ class _SignInState extends State<SignIn> {
                         : CustomButton(
                             child: Text(
                               'SIGN IN',
-                              style: TextStyle(color: Colors.white, fontSize: 23, fontWeight: FontWeight.w800),
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 23,
+                                  fontWeight: FontWeight.w800),
                             ),
                             radius: 18,
                             height: SizeConfig.blockSizeVertical * 5,
@@ -193,8 +206,13 @@ class _SignInState extends State<SignIn> {
                             backgroundColor: AppColors.buttonColor,
                             onPressed: () async {
                               (_fbKey.currentState.saveAndValidate())
-                                  ? (await user.login(_fbKey.currentState.value))
-                                      ? Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()))
+                                  ? (await user
+                                          .login(_fbKey.currentState.value))
+                                      ? Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  HomeScreen()))
                                       : Fluttertoast.showToast(
                                           msg: user.message,
                                           toastLength: Toast.LENGTH_SHORT,
