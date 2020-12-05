@@ -27,7 +27,6 @@ class API {
 //    dio.interceptors
     dio.interceptors.add(InterceptorsWrapper(onRequest: (RequestOptions options) async {
       Application.sharePreference.hasKey("token") ? options.headers["Authorization"] = "Bearer ${Application.sharePreference.getString("token")}" : {};
-      Application.sharePreference.hasKey("tenantId") ? options.headers["Abp.TenantId"] = "${Application.sharePreference.getInt("tenantId")}" : {};
       Application.sharePreference.hasKey("userId") ? options.headers["Abp.userId"] = "${Application.sharePreference.getInt("userId")}" : {};
       print(options.uri);
       // print(options.data);

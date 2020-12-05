@@ -54,7 +54,6 @@ class UserModel extends ChangeNotifier {
       notifyListeners();
       return true;
     } on NetworkException catch (e) {
-      print(1);
       _status = Status.Unauthenticated;
       notifyListeners();
       _message =
