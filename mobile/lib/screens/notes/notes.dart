@@ -20,8 +20,9 @@ class _CalendarPageState extends State<CalendarPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Stack(
+    return Container(
+      height: SizeConfig.blockSizeVertical * 65,
+      child: Stack(
         children: [
           Container(
             width: SizeConfig.screenWidth,
@@ -43,9 +44,9 @@ class _CalendarPageState extends State<CalendarPage> {
                         future: notes.fetchListNote(params),
                         builder: (context, snapshot) {
                           return (snapshot.hasData)
-                              // ? _buildListNote(notes.listNote)
+                          // ? _buildListNote(notes.listNote)
                               ? _buildList(notes.listNote)
-                              //? note()
+                          //? note()
                               : Center(child: CircularProgressIndicator());
                         });
                   },

@@ -102,7 +102,8 @@ flutter:
           weight: 500
     - family: UD
       fonts:
-        - asset: assets/fonts/AutoMobileBold-4oq4.ttf
+        - asset: assets/fonts/UDDigiKyokashoN-R.ttc
+
 
 
   # To add custom fonts to your application, add a fonts section here,
