@@ -11,7 +11,9 @@ class DetailContainer extends StatefulWidget {
   String example;
   Function previous;
   Function next;
+
   DetailContainer({this.next, this.previous, this.type, this.example});
+
   @override
   _DetailContainerState createState() => _DetailContainerState();
 }
@@ -30,77 +32,74 @@ class _DetailContainerState extends State<DetailContainer> {
       radius: Radius.circular(20),
       child: Container(
         width: SizeConfig.screenWidth * 0.8,
-        height: 220,
-        child: Stack(
+        margin: EdgeInsets.only(top: 15, bottom: 20),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            Positioned(
-              child: Text(
-                widget.type,
-                style: TextStyle(fontSize: 28, color: AppColors.green),
-              ),
-              left: 25,
-              top: 20,
-            ),
-            Positioned(
-              child: GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      bookmark = !bookmark;
-                    });
-                    Fluttertoast.showToast(
-                        msg: bookmark ? "Bookmarked!" : "Removed bookmark",
-                        toastLength: Toast.LENGTH_SHORT,
-                        timeInSecForIosWeb: 1,
-                        backgroundColor: Colors.red,
-                        textColor: Colors.white,
-                        fontSize: 16.0);
-                  },
-                  child: Icon(
-                    bookmark ? Icons.bookmark_outlined : Icons.bookmark_border,
-                    color: AppColors.red,
-                    size: 45,
-                  )),
-              top: 20,
-              right: 20,
-            ),
-            Positioned(
-              left: 20,
-              top: 80,
-              child: Container(
-                width: SizeConfig.screenWidth * 0.8,
-                child: Text(
-                  widget.example,
-                  style: TextStyle(fontSize: 20, color: AppColors.brown),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Text(
+                  widget.type,
+                  style: TextStyle(fontSize: 28, color: AppColors.green),
                 ),
+                SizedBox(width: 20,),
+                GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        bookmark = !bookmark;
+                      });
+                      Fluttertoast.showToast(
+                          msg: bookmark ? "Bookmarked!" : "Removed bookmark",
+                          toastLength: Toast.LENGTH_SHORT,
+                          timeInSecForIosWeb: 1,
+                          backgroundColor: Colors.red,
+                          textColor: Colors.white,
+                          fontSize: 16.0);
+                    },
+                    child: Icon(
+                      bookmark ? Icons.bookmark_outlined : Icons.bookmark_border,
+                      color: AppColors.red,
+                      size: 45,
+                    ))
+              ],
+            ),
+            SizedBox(height: 15,),
+            Container(
+              margin: EdgeInsets.only(left: 20),
+              width: SizeConfig.screenWidth * 0.73,
+              child: Text(
+                widget.example,
+                style: TextStyle(fontSize: 20, color: AppColors.brown),
               ),
             ),
-            Positioned(
-              child: ButtonGreen(
-                press: () {
-                  if (widget.previous != null) {
-                    widget.previous();
-                  }
-                },
-                height: 40,
-                width: 130,
-                text: 'Previous',
+            SizedBox(height: 20),
+            Container(
+              child: Row(
+                children: [
+                  ButtonGreen(
+                    press: () {
+                      if (widget.previous != null) {
+                        widget.previous();
+                      }
+                    },
+                    height: 40,
+                    width: 130,
+                    text: 'Previous',
+                  ),
+                  ButtonGreen(
+                    press: () {
+                      if (widget.previous != null) {
+                        widget.next();
+                      }
+                    },
+                    height: 40,
+                    width: 130,
+                    text: 'Next',
+                  )
+                ],
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
               ),
-              bottom: 20,
-              left: 20,
-            ),
-            Positioned(
-              child: ButtonGreen(
-                press: () {
-                  if (widget.previous != null) {
-                    widget.next();
-                  }
-                },
-                height: 40,
-                width: 130,
-                text: 'Next',
-              ),
-              bottom: 20,
-              right: 20,
             )
           ],
         ),

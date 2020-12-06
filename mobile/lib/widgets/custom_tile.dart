@@ -56,7 +56,7 @@ class _TileWidgetState extends State<TileWidget> {
           Positioned(
             child: Container(
               alignment: Alignment.centerLeft,
-              width: SizeConfig.screenWidth * 0.7,
+              width: SizeConfig.screenWidth * 0.6,
               height: 80,
               child: FittedBox(
                 fit: BoxFit.fitWidth,

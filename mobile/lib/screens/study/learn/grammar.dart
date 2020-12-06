@@ -19,7 +19,7 @@ class _GrammarScreenState extends State<GrammarScreen> {
       child: Consumer<LearnModel>(builder: (_, model, __) => Scaffold(
         appBar: TextAppBar(
           text: "GRAMMAR",
-          height: 100,
+          height: SizeConfig.blockSizeVertical * 8,
         ),
         body: SingleChildScrollView(
           child: Center(
@@ -35,11 +35,7 @@ class _GrammarScreenState extends State<GrammarScreen> {
                   padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(10),
-                        topRight: Radius.circular(10),
-                        bottomLeft: Radius.circular(10),
-                        bottomRight: Radius.circular(10)),
+                    borderRadius: BorderRadius.circular(10),
                     boxShadow: [
                       BoxShadow(
                         color: Colors.grey.withOpacity(0.5),
