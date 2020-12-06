@@ -1,5 +1,6 @@
 import 'package:e_garden/configs/AppConfig.dart';
 import 'package:e_garden/core/services/note/note_model.service.dart';
+import 'package:e_garden/screens/notes/create_new_note.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
@@ -13,17 +14,48 @@ class TaskContainer extends StatelessWidget {
   final List<Color> ListColor = [
     Colors.yellow,
     Colors.lightBlueAccent,
-    Colors.cyanAccent[100]
+    Colors.cyanAccent[100],
+    Colors.deepPurple[200]
   ];
 
-  TaskContainer({this.isDone, this.title, this.subtitle, this.num});
+  final int noteId;
+
+  TaskContainer(
+      {this.isDone, this.title, this.subtitle, this.num, this.noteId});
 
   @override
   Widget build(BuildContext context) {
     print(num);
     return Consumer<NoteModel>(
       builder: (_, noteModel, __) => GestureDetector(
-        onTap: () {},
+        onTap: () => Navigator.push(context,
+            MaterialPageRoute(builder: (context) => CreateNewTaskPage(noteId))),
+        onLongPress: () {
+          showCupertinoDialog(
+            context: context,
+            builder: (context) {
+              return CupertinoAlertDialog(
+                title: Text('Have you completed the note?'),
+                // content: Text(
+                //     'Your current location will be displayed on the map and used for directions, nearby search results, and estimated travel times.'),
+                actions: <Widget>[
+                  CupertinoDialogAction(
+                      child: Text('Not Complete'),
+                      onPressed: () async {
+                        Navigator.of(context).pop();
+                      await noteModel.setNoteDone(false, noteId);
+                      }),
+                  CupertinoDialogAction(
+                      child: Text('Complete'),
+                      onPressed: () async {
+                        Navigator.of(context).pop();
+                        await noteModel.setNoteDone(true, noteId);
+                      }),
+                ],
+              );
+            },
+          );
+        },
         child: Container(
           alignment: Alignment.center,
           width: SizeConfig.blockSizeHorizontal * 50,

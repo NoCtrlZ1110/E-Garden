@@ -10,7 +10,7 @@ Notes _$NotesFromJson(Map<String, dynamic> json) {
   return Notes(
     items: (json['items'] as List)
         ?.map(
-            (e) => e == null ? null : Items.fromJson(e as Map<String, dynamic>))
+            (e) => e == null ? null : Note.fromJson(e as Map<String, dynamic>))
         ?.toList(),
   );
 }
@@ -19,12 +19,13 @@ Map<String, dynamic> _$NotesToJson(Notes instance) => <String, dynamic>{
       'items': instance.items?.map((e) => e?.toJson())?.toList(),
     };
 
-Items _$ItemsFromJson(Map<String, dynamic> json) {
-  return Items(
+Note _$NoteFromJson(Map<String, dynamic> json) {
+  return Note(
     userId: json['userId'] as int,
+    hexCode: json['hexCode'] as String,
+    date: json['date'] == null ? null : DateTime.parse(json['date'] as String),
     startTime: json['startTime'] as String,
     endTime: json['endTime'] as String,
-    date: json['date'] as String,
     titleNote: json['titleNote'] as String,
     detailNote: json['detailNote'] as String,
     status: json['status'] as bool,
@@ -32,11 +33,12 @@ Items _$ItemsFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$ItemsToJson(Items instance) => <String, dynamic>{
+Map<String, dynamic> _$NoteToJson(Note instance) => <String, dynamic>{
       'userId': instance.userId,
+      'date': instance.date?.toIso8601String(),
       'startTime': instance.startTime,
       'endTime': instance.endTime,
-      'date': instance.date,
+      'hexCode': instance.hexCode,
       'titleNote': instance.titleNote,
       'detailNote': instance.detailNote,
       'status': instance.status,

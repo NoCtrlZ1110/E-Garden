@@ -1067,3 +1067,827 @@ DEBUG 2020-12-02 16:57:11,772 [1    ] Abp.AutoMapper.AbpAutoMapperModule       -
 DEBUG 2020-12-02 16:57:11,772 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Roles.Dto.PermissionDto
 DEBUG 2020-12-02 16:57:11,772 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.MultiTenancy.Dto.CreateTenantDto
 DEBUG 2020-12-02 16:57:11,772 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.MultiTenancy.Dto.TenantDto
+DEBUG 2020-12-03 15:00:37,894 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2020-12-03 15:00:38,177 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2020-12-03 15:00:38,189 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.Web.Host.Startup.EGardenWebHostModule, UET.EGarden.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-03 15:00:38,191 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EGardenWebCoreModule, UET.EGarden.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-03 15:00:38,192 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EGardenApplicationModule, UET.EGarden.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-03 15:00:38,192 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EGardenCoreModule, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-03 15:00:38,192 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-03 15:00:38,192 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-03 15:00:38,193 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-03 15:00:38,193 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-03 15:00:38,193 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EntityFrameworkCore.EGardenEntityFrameworkModule, UET.EGarden.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-03 15:00:38,193 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-03 15:00:38,194 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-03 15:00:38,194 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-03 15:00:38,194 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-03 15:00:38,194 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-03 15:00:38,194 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-03 15:00:38,196 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2020-12-03 15:00:38,329 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-03 15:00:38,329 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-03 15:00:38,329 [1    ] o.Configuration.LanguageManagementConfig - Converted EGarden (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-03 15:00:38,329 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-03 15:00:38,763 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: UET.EGarden.EntityFrameworkCore.EGardenDbContext, UET.EGarden.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-03 15:00:39,656 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2020-12-03 15:00:39,710 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2020-12-03 15:00:39,719 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2020-12-03 15:00:39,723 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EGarden
+DEBUG 2020-12-03 15:00:39,728 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2020-12-03 15:00:39,918 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2020-12-03 15:00:40,029 [1    ] , Culture=neutral, PublicKeyToken=null]] - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[UET.EGarden.MultiTenancy.Tenant, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[UET.EGarden.Authorization.Users.User, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2020-12-03 15:00:40,083 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 8 classes define auto mapping attributes
+DEBUG 2020-12-03 15:00:40,084 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2020-12-03 15:00:40,090 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Users.Dto.CreateUserDto
+DEBUG 2020-12-03 15:00:40,090 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Users.Dto.UserDto
+DEBUG 2020-12-03 15:00:40,090 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2020-12-03 15:00:40,090 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Sessions.Dto.UserLoginInfoDto
+DEBUG 2020-12-03 15:00:40,091 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Roles.Dto.PermissionDto
+DEBUG 2020-12-03 15:00:40,091 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2020-12-03 15:00:40,091 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.MultiTenancy.Dto.TenantDto
+FATAL 2020-12-03 15:01:02,310 [1    ] Abp.AbpBootstrapper                      - Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Description'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at UET.EGarden.EntityFrameworkCore.Seed.Host.HostRoleAndUserCreator.CreateHostRoleAndUsers() in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\Seed\Host\HostRoleAndUserCreator.cs:line 33
+   at UET.EGarden.EntityFrameworkCore.Seed.Host.HostRoleAndUserCreator.Create() in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\Seed\Host\HostRoleAndUserCreator.cs:line 26
+   at UET.EGarden.EntityFrameworkCore.Seed.Host.InitialHostDbBuilder.Create() in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\Seed\Host\InitialHostDbBuilder.cs:line 16
+   at UET.EGarden.EntityFrameworkCore.Seed.SeedHelper.SeedHostDb(EGardenDbContext context) in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\Seed\SeedHelper.cs:line 25
+   at UET.EGarden.EntityFrameworkCore.Seed.SeedHelper.WithDbContext[TDbContext](IIocResolver iocResolver, Action`1 contextAction) in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\Seed\SeedHelper.cs:line 42
+   at UET.EGarden.EntityFrameworkCore.Seed.SeedHelper.SeedHostDb(IIocResolver iocResolver) in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\Seed\SeedHelper.cs:line 17
+   at UET.EGarden.EntityFrameworkCore.EGardenEntityFrameworkModule.PostInitialize() in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\EasyAccommodEntityFrameworkModule.cs:line 46
+   at Abp.Modules.AbpModuleManager.<>c.<StartModules>b__15_2(AbpModuleInfo module)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at Abp.Modules.AbpModuleManager.StartModules()
+   at Abp.AbpBootstrapper.Initialize()
+ClientConnectionId:75168dda-8914-4d07-a540-62725deb8a62
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Description'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at UET.EGarden.EntityFrameworkCore.Seed.Host.HostRoleAndUserCreator.CreateHostRoleAndUsers() in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\Seed\Host\HostRoleAndUserCreator.cs:line 33
+   at UET.EGarden.EntityFrameworkCore.Seed.Host.HostRoleAndUserCreator.Create() in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\Seed\Host\HostRoleAndUserCreator.cs:line 26
+   at UET.EGarden.EntityFrameworkCore.Seed.Host.InitialHostDbBuilder.Create() in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\Seed\Host\InitialHostDbBuilder.cs:line 16
+   at UET.EGarden.EntityFrameworkCore.Seed.SeedHelper.SeedHostDb(EGardenDbContext context) in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\Seed\SeedHelper.cs:line 25
+   at UET.EGarden.EntityFrameworkCore.Seed.SeedHelper.WithDbContext[TDbContext](IIocResolver iocResolver, Action`1 contextAction) in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\Seed\SeedHelper.cs:line 42
+   at UET.EGarden.EntityFrameworkCore.Seed.SeedHelper.SeedHostDb(IIocResolver iocResolver) in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\Seed\SeedHelper.cs:line 17
+   at UET.EGarden.EntityFrameworkCore.EGardenEntityFrameworkModule.PostInitialize() in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\EasyAccommodEntityFrameworkModule.cs:line 46
+   at Abp.Modules.AbpModuleManager.<>c.<StartModules>b__15_2(AbpModuleInfo module)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at Abp.Modules.AbpModuleManager.StartModules()
+   at Abp.AbpBootstrapper.Initialize()
+ClientConnectionId:75168dda-8914-4d07-a540-62725deb8a62
+Error Number:207,State:1,Class:16
+FATAL 2020-12-03 15:01:05,490 [1    ] Microsoft.AspNetCore.Hosting.WebHost     - Application startup exception
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Description'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at UET.EGarden.EntityFrameworkCore.Seed.Host.HostRoleAndUserCreator.CreateHostRoleAndUsers() in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\Seed\Host\HostRoleAndUserCreator.cs:line 33
+   at UET.EGarden.EntityFrameworkCore.Seed.Host.HostRoleAndUserCreator.Create() in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\Seed\Host\HostRoleAndUserCreator.cs:line 26
+   at UET.EGarden.EntityFrameworkCore.Seed.Host.InitialHostDbBuilder.Create() in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\Seed\Host\InitialHostDbBuilder.cs:line 16
+   at UET.EGarden.EntityFrameworkCore.Seed.SeedHelper.SeedHostDb(EGardenDbContext context) in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\Seed\SeedHelper.cs:line 25
+   at UET.EGarden.EntityFrameworkCore.Seed.SeedHelper.WithDbContext[TDbContext](IIocResolver iocResolver, Action`1 contextAction) in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\Seed\SeedHelper.cs:line 42
+   at UET.EGarden.EntityFrameworkCore.Seed.SeedHelper.SeedHostDb(IIocResolver iocResolver) in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\Seed\SeedHelper.cs:line 17
+   at UET.EGarden.EntityFrameworkCore.EGardenEntityFrameworkModule.PostInitialize() in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\EasyAccommodEntityFrameworkModule.cs:line 46
+   at Abp.Modules.AbpModuleManager.<>c.<StartModules>b__15_2(AbpModuleInfo module)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at Abp.Modules.AbpModuleManager.StartModules()
+   at Abp.AbpBootstrapper.Initialize()
+   at Abp.AspNetCore.AbpApplicationBuilderExtensions.InitializeAbp(IApplicationBuilder app)
+   at Abp.AspNetCore.AbpApplicationBuilderExtensions.UseAbp(IApplicationBuilder app, Action`1 optionsAction)
+   at UET.EGarden.Web.Host.Startup.Startup.Configure(IApplicationBuilder app, ILoggerFactory loggerFactory) in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.Web.Host\Startup\Startup.cs:line 103
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.Invoke(Object instance, IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.<>c__DisplayClass4_0.<Build>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Filters.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.WebHost.BuildApplication()
+ClientConnectionId:75168dda-8914-4d07-a540-62725deb8a62
+Error Number:207,State:1,Class:16
+DEBUG 2020-12-03 15:01:24,501 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2020-12-03 15:01:24,516 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2020-12-03 15:01:24,530 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.Web.Host.Startup.EGardenWebHostModule, UET.EGarden.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-03 15:01:24,532 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EGardenWebCoreModule, UET.EGarden.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-03 15:01:24,532 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EGardenApplicationModule, UET.EGarden.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-03 15:01:24,533 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EGardenCoreModule, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-03 15:01:24,533 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-03 15:01:24,533 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-03 15:01:24,533 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-03 15:01:24,533 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-03 15:01:24,534 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EntityFrameworkCore.EGardenEntityFrameworkModule, UET.EGarden.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-03 15:01:24,534 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-03 15:01:24,534 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-03 15:01:24,534 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-03 15:01:24,535 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-03 15:01:24,535 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-03 15:01:24,535 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-03 15:01:24,537 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2020-12-03 15:01:24,580 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-03 15:01:24,580 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-03 15:01:24,580 [1    ] o.Configuration.LanguageManagementConfig - Converted EGarden (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-03 15:01:24,580 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-03 15:01:24,824 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: UET.EGarden.EntityFrameworkCore.EGardenDbContext, UET.EGarden.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-03 15:01:25,146 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2020-12-03 15:01:25,178 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2020-12-03 15:01:25,198 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2020-12-03 15:01:25,201 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EGarden
+DEBUG 2020-12-03 15:01:25,205 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2020-12-03 15:01:25,248 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2020-12-03 15:01:25,273 [1    ] , Culture=neutral, PublicKeyToken=null]] - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[UET.EGarden.MultiTenancy.Tenant, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[UET.EGarden.Authorization.Users.User, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2020-12-03 15:01:25,310 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 8 classes define auto mapping attributes
+DEBUG 2020-12-03 15:01:25,310 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2020-12-03 15:01:25,315 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Users.Dto.CreateUserDto
+DEBUG 2020-12-03 15:01:25,315 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Users.Dto.UserDto
+DEBUG 2020-12-03 15:01:25,315 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2020-12-03 15:01:25,316 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Sessions.Dto.UserLoginInfoDto
+DEBUG 2020-12-03 15:01:25,316 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Roles.Dto.PermissionDto
+DEBUG 2020-12-03 15:01:25,316 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2020-12-03 15:01:25,316 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.MultiTenancy.Dto.TenantDto
+INFO  2020-12-03 15:01:27,151 [1    ] tCore.Builder.RequestLocalizationOptions - Supported Request Localization Cultures: en,es-MX,fr,de,it,nl,pt-BR,tr,ru,ar,ja,zh-Hans
+INFO  2020-12-03 15:01:27,718 [1    ] taProtection.KeyManagement.XmlKeyManager - User profile is available. Using 'C:\Users\ADMIN\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+INFO  2020-12-03 15:01:28,488 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2020-12-03 15:01:28,715 [8    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Web.Host.Controllers.HomeController.Index (UET.EGarden.Web.Host)'
+INFO  2020-12-03 15:01:29,785 [8    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller UET.EGarden.Web.Host.Controllers.HomeController (UET.EGarden.Web.Host).
+INFO  2020-12-03 15:01:30,327 [14   ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2020-12-03 15:01:30,331 [14   ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Web.Host.Controllers.HomeController.Index (UET.EGarden.Web.Host) in 543.3317ms
+INFO  2020-12-03 15:01:30,332 [14   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Web.Host.Controllers.HomeController.Index (UET.EGarden.Web.Host)'
+INFO  2020-12-03 15:01:30,340 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 1853.0975ms 302 
+INFO  2020-12-03 15:01:30,347 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger  
+INFO  2020-12-03 15:01:30,364 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 17.3957ms 301 
+INFO  2020-12-03 15:01:30,367 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2020-12-03 15:01:30,482 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 114.6874ms 200 text/html;charset=utf-8
+INFO  2020-12-03 15:01:30,500 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-bundle.js  
+INFO  2020-12-03 15:01:30,500 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui.css  
+INFO  2020-12-03 15:01:30,520 [11   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+INFO  2020-12-03 15:01:30,521 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 20.4822ms 200 text/css
+INFO  2020-12-03 15:01:30,525 [9    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+INFO  2020-12-03 15:01:30,525 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 25.705ms 200 application/javascript
+INFO  2020-12-03 15:01:30,600 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/swagger-ui-standalone-preset.js  
+INFO  2020-12-03 15:01:30,609 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/ui/abp.js  
+INFO  2020-12-03 15:01:30,612 [8    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger/ui/abp.js'. Physical path: 'C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.Web.Host\wwwroot\swagger\ui\abp.js'
+INFO  2020-12-03 15:01:30,612 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 3.475ms 200 application/javascript
+INFO  2020-12-03 15:01:30,617 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/ui/abp.swagger.js  
+INFO  2020-12-03 15:01:30,618 [8    ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger/ui/abp.swagger.js'. Physical path: 'C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.Web.Host\wwwroot\swagger\ui\abp.swagger.js'
+INFO  2020-12-03 15:01:30,618 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 1.2661ms 200 application/javascript
+INFO  2020-12-03 15:01:30,621 [14   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+INFO  2020-12-03 15:01:30,621 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 21.1329ms 200 application/javascript
+INFO  2020-12-03 15:01:30,841 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/AntiForgery/SetCookie  
+INFO  2020-12-03 15:01:30,846 [14   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Web.Host.Controllers.AntiForgeryController.SetCookie (UET.EGarden.Web.Host)'
+INFO  2020-12-03 15:01:30,861 [14   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "SetCookie", controller = "AntiForgery", area = ""}. Executing controller action with signature Void SetCookie() on controller UET.EGarden.Web.Host.Controllers.AntiForgeryController (UET.EGarden.Web.Host).
+INFO  2020-12-03 15:01:30,879 [14   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-12-03 15:01:30,884 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2020-12-03 15:01:30,895 [14   ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Web.Host.Controllers.AntiForgeryController.SetCookie (UET.EGarden.Web.Host) in 33.6614ms
+INFO  2020-12-03 15:01:30,895 [14   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Web.Host.Controllers.AntiForgeryController.SetCookie (UET.EGarden.Web.Host)'
+INFO  2020-12-03 15:01:30,895 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 54.2028ms 200 application/json; charset=utf-8
+INFO  2020-12-03 15:01:31,040 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 156.3183ms 200 application/json;charset=utf-8
+DEBUG 2020-12-03 15:01:35,613 [2    ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2020-12-03 15:01:35,615 [2    ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2020-12-03 15:01:35,615 [2    ] , Culture=neutral, PublicKeyToken=null]] - Stop background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[UET.EGarden.MultiTenancy.Tenant, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[UET.EGarden.Authorization.Users.User, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2020-12-03 15:01:35,616 [2    ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2020-12-03 15:01:35,616 [2    ] , Culture=neutral, PublicKeyToken=null]] - WaitToStop background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[UET.EGarden.MultiTenancy.Tenant, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[UET.EGarden.Authorization.Users.User, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2020-12-03 15:01:35,616 [2    ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2020-12-06 16:15:33,212 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2020-12-06 16:15:33,465 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2020-12-06 16:15:33,477 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.Web.Host.Startup.EGardenWebHostModule, UET.EGarden.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:15:33,479 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EGardenWebCoreModule, UET.EGarden.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:15:33,480 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EGardenApplicationModule, UET.EGarden.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:15:33,480 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EGardenCoreModule, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:15:33,480 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:15:33,480 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:15:33,480 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:15:33,481 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:15:33,481 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EntityFrameworkCore.EGardenEntityFrameworkModule, UET.EGarden.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:15:33,481 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:15:33,481 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:15:33,482 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:15:33,482 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:15:33,482 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:15:33,482 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:15:33,485 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2020-12-06 16:15:33,645 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-06 16:15:33,646 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-06 16:15:33,646 [1    ] o.Configuration.LanguageManagementConfig - Converted EGarden (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-06 16:15:33,646 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-06 16:15:34,153 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: UET.EGarden.EntityFrameworkCore.EGardenDbContext, UET.EGarden.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:15:34,953 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2020-12-06 16:15:35,007 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2020-12-06 16:15:35,017 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2020-12-06 16:15:35,021 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EGarden
+DEBUG 2020-12-06 16:15:35,026 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2020-12-06 16:15:35,189 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2020-12-06 16:15:35,296 [1    ] , Culture=neutral, PublicKeyToken=null]] - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[UET.EGarden.MultiTenancy.Tenant, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[UET.EGarden.Authorization.Users.User, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2020-12-06 16:15:35,354 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 8 classes define auto mapping attributes
+DEBUG 2020-12-06 16:15:35,354 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2020-12-06 16:15:35,361 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Users.Dto.CreateUserDto
+DEBUG 2020-12-06 16:15:35,361 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Users.Dto.UserDto
+DEBUG 2020-12-06 16:15:35,361 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2020-12-06 16:15:35,362 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Sessions.Dto.UserLoginInfoDto
+DEBUG 2020-12-06 16:15:35,362 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Roles.Dto.PermissionDto
+DEBUG 2020-12-06 16:15:35,362 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2020-12-06 16:15:35,362 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.MultiTenancy.Dto.TenantDto
+FATAL 2020-12-06 16:15:52,258 [1    ] Abp.AbpBootstrapper                      - Microsoft.Data.SqlClient.SqlException (0x80131904): Windows logins are not supported in this version of SQL Server.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CheckPoolBlockingPeriod(Exception e)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.<>c__DisplayClass26_0.<BeginTransaction>b__0(DatabaseFacade database)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.<>c__DisplayClass12_0`2.<Execute>b__0(DbContext c, TState s)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.Execute[TState,TResult](IExecutionStrategy strategy, TState state, Func`2 operation, Func`2 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.Execute[TState,TResult](IExecutionStrategy strategy, TState state, Func`2 operation)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.BeginTransaction(DatabaseFacade databaseFacade, IsolationLevel isolationLevel)
+   at Abp.EntityFrameworkCore.Uow.DbContextEfCoreTransactionStrategy.CreateDbContext[TDbContext](String connectionString, IDbContextResolver dbContextResolver)
+   at Abp.EntityFrameworkCore.Uow.EfCoreUnitOfWork.GetOrCreateDbContext[TDbContext](Nullable`1 multiTenancySide, String name)
+   at Abp.EntityFrameworkCore.Uow.UnitOfWorkExtensions.GetDbContext[TDbContext](IActiveUnitOfWork unitOfWork, Nullable`1 multiTenancySide, String name)
+   at UET.EGarden.EntityFrameworkCore.Seed.SeedHelper.WithDbContext[TDbContext](IIocResolver iocResolver, Action`1 contextAction) in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\Seed\SeedHelper.cs:line 40
+   at UET.EGarden.EntityFrameworkCore.Seed.SeedHelper.SeedHostDb(IIocResolver iocResolver) in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\Seed\SeedHelper.cs:line 17
+   at UET.EGarden.EntityFrameworkCore.EGardenEntityFrameworkModule.PostInitialize() in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\EasyAccommodEntityFrameworkModule.cs:line 46
+   at Abp.Modules.AbpModuleManager.<>c.<StartModules>b__15_2(AbpModuleInfo module)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at Abp.Modules.AbpModuleManager.StartModules()
+   at Abp.AbpBootstrapper.Initialize()
+ClientConnectionId:f76b5799-c599-4b45-a3f6-475f99cb75ac
+Error Number:40607,State:1,Class:20
+Microsoft.Data.SqlClient.SqlException (0x80131904): Windows logins are not supported in this version of SQL Server.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CheckPoolBlockingPeriod(Exception e)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.<>c__DisplayClass26_0.<BeginTransaction>b__0(DatabaseFacade database)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.<>c__DisplayClass12_0`2.<Execute>b__0(DbContext c, TState s)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.Execute[TState,TResult](IExecutionStrategy strategy, TState state, Func`2 operation, Func`2 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.Execute[TState,TResult](IExecutionStrategy strategy, TState state, Func`2 operation)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.BeginTransaction(DatabaseFacade databaseFacade, IsolationLevel isolationLevel)
+   at Abp.EntityFrameworkCore.Uow.DbContextEfCoreTransactionStrategy.CreateDbContext[TDbContext](String connectionString, IDbContextResolver dbContextResolver)
+   at Abp.EntityFrameworkCore.Uow.EfCoreUnitOfWork.GetOrCreateDbContext[TDbContext](Nullable`1 multiTenancySide, String name)
+   at Abp.EntityFrameworkCore.Uow.UnitOfWorkExtensions.GetDbContext[TDbContext](IActiveUnitOfWork unitOfWork, Nullable`1 multiTenancySide, String name)
+   at UET.EGarden.EntityFrameworkCore.Seed.SeedHelper.WithDbContext[TDbContext](IIocResolver iocResolver, Action`1 contextAction) in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\Seed\SeedHelper.cs:line 40
+   at UET.EGarden.EntityFrameworkCore.Seed.SeedHelper.SeedHostDb(IIocResolver iocResolver) in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\Seed\SeedHelper.cs:line 17
+   at UET.EGarden.EntityFrameworkCore.EGardenEntityFrameworkModule.PostInitialize() in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\EasyAccommodEntityFrameworkModule.cs:line 46
+   at Abp.Modules.AbpModuleManager.<>c.<StartModules>b__15_2(AbpModuleInfo module)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at Abp.Modules.AbpModuleManager.StartModules()
+   at Abp.AbpBootstrapper.Initialize()
+ClientConnectionId:f76b5799-c599-4b45-a3f6-475f99cb75ac
+Error Number:40607,State:1,Class:20
+FATAL 2020-12-06 16:15:57,305 [1    ] Microsoft.AspNetCore.Hosting.WebHost     - Application startup exception
+Microsoft.Data.SqlClient.SqlException (0x80131904): Windows logins are not supported in this version of SQL Server.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CheckPoolBlockingPeriod(Exception e)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.BeginTransaction(IsolationLevel isolationLevel)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.<>c__DisplayClass26_0.<BeginTransaction>b__0(DatabaseFacade database)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.<>c__DisplayClass12_0`2.<Execute>b__0(DbContext c, TState s)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.Execute[TState,TResult](IExecutionStrategy strategy, TState state, Func`2 operation, Func`2 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ExecutionStrategyExtensions.Execute[TState,TResult](IExecutionStrategy strategy, TState state, Func`2 operation)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.BeginTransaction(DatabaseFacade databaseFacade, IsolationLevel isolationLevel)
+   at Abp.EntityFrameworkCore.Uow.DbContextEfCoreTransactionStrategy.CreateDbContext[TDbContext](String connectionString, IDbContextResolver dbContextResolver)
+   at Abp.EntityFrameworkCore.Uow.EfCoreUnitOfWork.GetOrCreateDbContext[TDbContext](Nullable`1 multiTenancySide, String name)
+   at Abp.EntityFrameworkCore.Uow.UnitOfWorkExtensions.GetDbContext[TDbContext](IActiveUnitOfWork unitOfWork, Nullable`1 multiTenancySide, String name)
+   at UET.EGarden.EntityFrameworkCore.Seed.SeedHelper.WithDbContext[TDbContext](IIocResolver iocResolver, Action`1 contextAction) in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\Seed\SeedHelper.cs:line 40
+   at UET.EGarden.EntityFrameworkCore.Seed.SeedHelper.SeedHostDb(IIocResolver iocResolver) in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\Seed\SeedHelper.cs:line 17
+   at UET.EGarden.EntityFrameworkCore.EGardenEntityFrameworkModule.PostInitialize() in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\EasyAccommodEntityFrameworkModule.cs:line 46
+   at Abp.Modules.AbpModuleManager.<>c.<StartModules>b__15_2(AbpModuleInfo module)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at Abp.Modules.AbpModuleManager.StartModules()
+   at Abp.AbpBootstrapper.Initialize()
+   at Abp.AspNetCore.AbpApplicationBuilderExtensions.InitializeAbp(IApplicationBuilder app)
+   at Abp.AspNetCore.AbpApplicationBuilderExtensions.UseAbp(IApplicationBuilder app, Action`1 optionsAction)
+   at UET.EGarden.Web.Host.Startup.Startup.Configure(IApplicationBuilder app, ILoggerFactory loggerFactory) in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.Web.Host\Startup\Startup.cs:line 103
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.Invoke(Object instance, IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.<>c__DisplayClass4_0.<Build>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Filters.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.WebHost.BuildApplication()
+ClientConnectionId:f76b5799-c599-4b45-a3f6-475f99cb75ac
+Error Number:40607,State:1,Class:20
+DEBUG 2020-12-06 16:16:11,889 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2020-12-06 16:16:11,950 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2020-12-06 16:16:11,971 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.Web.Host.Startup.EGardenWebHostModule, UET.EGarden.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:16:11,973 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EGardenWebCoreModule, UET.EGarden.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:16:11,973 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EGardenApplicationModule, UET.EGarden.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:16:11,973 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EGardenCoreModule, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:16:11,974 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:16:11,974 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:16:11,974 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:16:11,974 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:16:11,975 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EntityFrameworkCore.EGardenEntityFrameworkModule, UET.EGarden.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:16:11,975 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:16:11,975 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:16:11,975 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:16:11,975 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:16:11,976 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:16:11,976 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:16:11,978 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2020-12-06 16:16:12,054 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-06 16:16:12,054 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-06 16:16:12,054 [1    ] o.Configuration.LanguageManagementConfig - Converted EGarden (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-06 16:16:12,054 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-06 16:16:12,427 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: UET.EGarden.EntityFrameworkCore.EGardenDbContext, UET.EGarden.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:16:13,226 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2020-12-06 16:16:13,271 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2020-12-06 16:16:13,283 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2020-12-06 16:16:13,287 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EGarden
+DEBUG 2020-12-06 16:16:13,292 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2020-12-06 16:16:13,459 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2020-12-06 16:16:13,560 [1    ] , Culture=neutral, PublicKeyToken=null]] - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[UET.EGarden.MultiTenancy.Tenant, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[UET.EGarden.Authorization.Users.User, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2020-12-06 16:16:13,607 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 8 classes define auto mapping attributes
+DEBUG 2020-12-06 16:16:13,607 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2020-12-06 16:16:13,613 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Users.Dto.CreateUserDto
+DEBUG 2020-12-06 16:16:13,613 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Users.Dto.UserDto
+DEBUG 2020-12-06 16:16:13,613 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2020-12-06 16:16:13,613 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Sessions.Dto.UserLoginInfoDto
+DEBUG 2020-12-06 16:16:13,614 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Roles.Dto.PermissionDto
+DEBUG 2020-12-06 16:16:13,614 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2020-12-06 16:16:13,614 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.MultiTenancy.Dto.TenantDto
+FATAL 2020-12-06 16:16:45,172 [1    ] Abp.AbpBootstrapper                      - Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Description'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at UET.EGarden.EntityFrameworkCore.Seed.Host.HostRoleAndUserCreator.CreateHostRoleAndUsers() in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\Seed\Host\HostRoleAndUserCreator.cs:line 33
+   at UET.EGarden.EntityFrameworkCore.Seed.Host.HostRoleAndUserCreator.Create() in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\Seed\Host\HostRoleAndUserCreator.cs:line 26
+   at UET.EGarden.EntityFrameworkCore.Seed.Host.InitialHostDbBuilder.Create() in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\Seed\Host\InitialHostDbBuilder.cs:line 16
+   at UET.EGarden.EntityFrameworkCore.Seed.SeedHelper.SeedHostDb(EGardenDbContext context) in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\Seed\SeedHelper.cs:line 25
+   at UET.EGarden.EntityFrameworkCore.Seed.SeedHelper.WithDbContext[TDbContext](IIocResolver iocResolver, Action`1 contextAction) in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\Seed\SeedHelper.cs:line 42
+   at UET.EGarden.EntityFrameworkCore.Seed.SeedHelper.SeedHostDb(IIocResolver iocResolver) in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\Seed\SeedHelper.cs:line 17
+   at UET.EGarden.EntityFrameworkCore.EGardenEntityFrameworkModule.PostInitialize() in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\EasyAccommodEntityFrameworkModule.cs:line 46
+   at Abp.Modules.AbpModuleManager.<>c.<StartModules>b__15_2(AbpModuleInfo module)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at Abp.Modules.AbpModuleManager.StartModules()
+   at Abp.AbpBootstrapper.Initialize()
+ClientConnectionId:8bc16eb8-a5a7-40e1-93b9-1cf49dddc71c
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Description'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at UET.EGarden.EntityFrameworkCore.Seed.Host.HostRoleAndUserCreator.CreateHostRoleAndUsers() in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\Seed\Host\HostRoleAndUserCreator.cs:line 33
+   at UET.EGarden.EntityFrameworkCore.Seed.Host.HostRoleAndUserCreator.Create() in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\Seed\Host\HostRoleAndUserCreator.cs:line 26
+   at UET.EGarden.EntityFrameworkCore.Seed.Host.InitialHostDbBuilder.Create() in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\Seed\Host\InitialHostDbBuilder.cs:line 16
+   at UET.EGarden.EntityFrameworkCore.Seed.SeedHelper.SeedHostDb(EGardenDbContext context) in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\Seed\SeedHelper.cs:line 25
+   at UET.EGarden.EntityFrameworkCore.Seed.SeedHelper.WithDbContext[TDbContext](IIocResolver iocResolver, Action`1 contextAction) in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\Seed\SeedHelper.cs:line 42
+   at UET.EGarden.EntityFrameworkCore.Seed.SeedHelper.SeedHostDb(IIocResolver iocResolver) in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\Seed\SeedHelper.cs:line 17
+   at UET.EGarden.EntityFrameworkCore.EGardenEntityFrameworkModule.PostInitialize() in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\EasyAccommodEntityFrameworkModule.cs:line 46
+   at Abp.Modules.AbpModuleManager.<>c.<StartModules>b__15_2(AbpModuleInfo module)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at Abp.Modules.AbpModuleManager.StartModules()
+   at Abp.AbpBootstrapper.Initialize()
+ClientConnectionId:8bc16eb8-a5a7-40e1-93b9-1cf49dddc71c
+Error Number:207,State:1,Class:16
+FATAL 2020-12-06 16:16:46,424 [1    ] Microsoft.AspNetCore.Hosting.WebHost     - Application startup exception
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Description'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at UET.EGarden.EntityFrameworkCore.Seed.Host.HostRoleAndUserCreator.CreateHostRoleAndUsers() in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\Seed\Host\HostRoleAndUserCreator.cs:line 33
+   at UET.EGarden.EntityFrameworkCore.Seed.Host.HostRoleAndUserCreator.Create() in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\Seed\Host\HostRoleAndUserCreator.cs:line 26
+   at UET.EGarden.EntityFrameworkCore.Seed.Host.InitialHostDbBuilder.Create() in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\Seed\Host\InitialHostDbBuilder.cs:line 16
+   at UET.EGarden.EntityFrameworkCore.Seed.SeedHelper.SeedHostDb(EGardenDbContext context) in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\Seed\SeedHelper.cs:line 25
+   at UET.EGarden.EntityFrameworkCore.Seed.SeedHelper.WithDbContext[TDbContext](IIocResolver iocResolver, Action`1 contextAction) in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\Seed\SeedHelper.cs:line 42
+   at UET.EGarden.EntityFrameworkCore.Seed.SeedHelper.SeedHostDb(IIocResolver iocResolver) in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\Seed\SeedHelper.cs:line 17
+   at UET.EGarden.EntityFrameworkCore.EGardenEntityFrameworkModule.PostInitialize() in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.EntityFrameworkCore\EntityFrameworkCore\EasyAccommodEntityFrameworkModule.cs:line 46
+   at Abp.Modules.AbpModuleManager.<>c.<StartModules>b__15_2(AbpModuleInfo module)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at Abp.Modules.AbpModuleManager.StartModules()
+   at Abp.AbpBootstrapper.Initialize()
+   at Abp.AspNetCore.AbpApplicationBuilderExtensions.InitializeAbp(IApplicationBuilder app)
+   at Abp.AspNetCore.AbpApplicationBuilderExtensions.UseAbp(IApplicationBuilder app, Action`1 optionsAction)
+   at UET.EGarden.Web.Host.Startup.Startup.Configure(IApplicationBuilder app, ILoggerFactory loggerFactory) in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.Web.Host\Startup\Startup.cs:line 103
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.Invoke(Object instance, IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.<>c__DisplayClass4_0.<Build>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Filters.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.WebHost.BuildApplication()
+ClientConnectionId:8bc16eb8-a5a7-40e1-93b9-1cf49dddc71c
+Error Number:207,State:1,Class:16
+DEBUG 2020-12-06 16:17:17,943 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2020-12-06 16:17:17,997 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2020-12-06 16:17:18,010 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.Web.Host.Startup.EGardenWebHostModule, UET.EGarden.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:17:18,012 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EGardenWebCoreModule, UET.EGarden.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:17:18,012 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EGardenApplicationModule, UET.EGarden.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:17:18,013 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EGardenCoreModule, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:17:18,013 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:17:18,013 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:17:18,013 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:17:18,014 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:17:18,014 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EntityFrameworkCore.EGardenEntityFrameworkModule, UET.EGarden.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:17:18,014 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:17:18,014 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:17:18,014 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:17:18,015 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:17:18,015 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:17:18,015 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:17:18,018 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2020-12-06 16:17:18,081 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-06 16:17:18,081 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-06 16:17:18,082 [1    ] o.Configuration.LanguageManagementConfig - Converted EGarden (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-06 16:17:18,082 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-06 16:17:18,386 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: UET.EGarden.EntityFrameworkCore.EGardenDbContext, UET.EGarden.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:17:19,099 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2020-12-06 16:17:19,142 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2020-12-06 16:17:19,152 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2020-12-06 16:17:19,156 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EGarden
+DEBUG 2020-12-06 16:17:19,161 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2020-12-06 16:17:19,338 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2020-12-06 16:17:19,437 [1    ] , Culture=neutral, PublicKeyToken=null]] - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[UET.EGarden.MultiTenancy.Tenant, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[UET.EGarden.Authorization.Users.User, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2020-12-06 16:17:19,485 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 8 classes define auto mapping attributes
+DEBUG 2020-12-06 16:17:19,485 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2020-12-06 16:17:19,491 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Users.Dto.CreateUserDto
+DEBUG 2020-12-06 16:17:19,491 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Users.Dto.UserDto
+DEBUG 2020-12-06 16:17:19,491 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2020-12-06 16:17:19,492 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Sessions.Dto.UserLoginInfoDto
+DEBUG 2020-12-06 16:17:19,492 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Roles.Dto.PermissionDto
+DEBUG 2020-12-06 16:17:19,492 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2020-12-06 16:17:19,492 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.MultiTenancy.Dto.TenantDto
+INFO  2020-12-06 16:17:21,729 [1    ] tCore.Builder.RequestLocalizationOptions - Supported Request Localization Cultures: en,es-MX,fr,de,it,nl,pt-BR,tr,ru,ar,ja,zh-Hans
+INFO  2020-12-06 16:17:22,093 [1    ] taProtection.KeyManagement.XmlKeyManager - User profile is available. Using 'C:\Users\ADMIN\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+INFO  2020-12-06 16:17:23,073 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2020-12-06 16:17:23,244 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Web.Host.Controllers.HomeController.Index (UET.EGarden.Web.Host)'
+INFO  2020-12-06 16:17:26,888 [4    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller UET.EGarden.Web.Host.Controllers.HomeController (UET.EGarden.Web.Host).
+INFO  2020-12-06 16:17:28,152 [12   ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2020-12-06 16:17:28,164 [12   ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Web.Host.Controllers.HomeController.Index (UET.EGarden.Web.Host) in 1268.8024ms
+INFO  2020-12-06 16:17:28,166 [12   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Web.Host.Controllers.HomeController.Index (UET.EGarden.Web.Host)'
+INFO  2020-12-06 16:17:28,181 [12   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 5115.892ms 302 
+INFO  2020-12-06 16:17:28,211 [12   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2020-12-06 16:17:28,428 [12   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 217.2164ms 200 text/html;charset=utf-8
+INFO  2020-12-06 16:17:28,545 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/ui/abp.swagger.js  
+INFO  2020-12-06 16:17:28,547 [12   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/ui/abp.js  
+INFO  2020-12-06 16:17:28,556 [12   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger/ui/abp.js was not modified
+INFO  2020-12-06 16:17:28,558 [14   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger/ui/abp.swagger.js was not modified
+INFO  2020-12-06 16:17:28,563 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 16.2599ms 304 application/javascript
+INFO  2020-12-06 16:17:28,563 [12   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 14.4314ms 304 application/javascript
+INFO  2020-12-06 16:17:28,719 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/AntiForgery/SetCookie  
+INFO  2020-12-06 16:17:28,756 [13   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2020-12-06 16:17:28,852 [13   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-12-06 16:17:28,852 [4    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-12-06 16:17:28,984 [7    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Web.Host.Controllers.AntiForgeryController.SetCookie (UET.EGarden.Web.Host)'
+INFO  2020-12-06 16:17:28,993 [7    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "SetCookie", controller = "AntiForgery", area = ""}. Executing controller action with signature Void SetCookie() on controller UET.EGarden.Web.Host.Controllers.AntiForgeryController (UET.EGarden.Web.Host).
+INFO  2020-12-06 16:17:29,016 [15   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-12-06 16:17:29,030 [15   ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Web.Host.Controllers.AntiForgeryController.SetCookie (UET.EGarden.Web.Host) in 35.822ms
+INFO  2020-12-06 16:17:29,032 [15   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Web.Host.Controllers.AntiForgeryController.SetCookie (UET.EGarden.Web.Host)'
+INFO  2020-12-06 16:17:29,035 [15   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 316.1108ms 200 application/json; charset=utf-8
+INFO  2020-12-06 16:17:29,150 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 394.2602ms 200 application/json;charset=utf-8
+INFO  2020-12-06 16:17:53,598 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 POST http://localhost:21021/api/services/app/UserNote/CreateOrUpdateNote application/json-patch+json 167
+INFO  2020-12-06 16:17:53,603 [11   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2020-12-06 16:17:53,606 [11   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2020-12-06 16:17:53,611 [11   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-12-06 16:17:53,615 [11   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Note.UserNoteAppService.CreateOrUpdateNote (UET.EGarden.Application)'
+INFO  2020-12-06 16:17:53,631 [11   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "CreateOrUpdateNote", controller = "UserNote"}. Executing controller action with signature System.Threading.Tasks.Task CreateOrUpdateNote(UET.EGarden.Note.Dto.InputCreate.CreateOrUpdateNoteInput) on controller UET.EGarden.Note.UserNoteAppService (UET.EGarden.Application).
+INFO  2020-12-06 16:17:54,511 [4    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-12-06 16:17:54,514 [4    ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Note.UserNoteAppService.CreateOrUpdateNote (UET.EGarden.Application) in 880.8044ms
+INFO  2020-12-06 16:17:54,516 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Note.UserNoteAppService.CreateOrUpdateNote (UET.EGarden.Application)'
+INFO  2020-12-06 16:17:54,517 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 919.2379ms 200 application/json; charset=utf-8
+INFO  2020-12-06 16:18:03,789 [7    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/UserNote/GetListNoteByUser?UserId=1  
+INFO  2020-12-06 16:18:03,795 [7    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-12-06 16:18:03,806 [7    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Note.UserNoteAppService.GetListNoteByUser (UET.EGarden.Application)'
+INFO  2020-12-06 16:18:03,819 [7    ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetListNoteByUser", controller = "UserNote"}. Executing controller action with signature Abp.Application.Services.Dto.ListResultDto`1[UET.EGarden.Note.Dto.Output.ListNoteByUserIdDto] GetListNoteByUser(UET.EGarden.Note.Dto.InputGet.GetListNoteByUserInput) on controller UET.EGarden.Note.UserNoteAppService (UET.EGarden.Application).
+INFO  2020-12-06 16:18:03,864 [11   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-12-06 16:18:03,872 [11   ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Note.UserNoteAppService.GetListNoteByUser (UET.EGarden.Application) in 52.0748ms
+INFO  2020-12-06 16:18:03,874 [11   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Note.UserNoteAppService.GetListNoteByUser (UET.EGarden.Application)'
+INFO  2020-12-06 16:18:03,875 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 86.7908ms 200 application/json; charset=utf-8
+INFO  2020-12-06 16:18:12,463 [13   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 POST http://localhost:21021/api/services/app/UserNote/CreateOrUpdateNote application/json-patch+json 167
+INFO  2020-12-06 16:18:12,466 [13   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2020-12-06 16:18:12,468 [13   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2020-12-06 16:18:12,473 [13   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-12-06 16:18:12,477 [13   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Note.UserNoteAppService.CreateOrUpdateNote (UET.EGarden.Application)'
+INFO  2020-12-06 16:18:12,482 [13   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "CreateOrUpdateNote", controller = "UserNote"}. Executing controller action with signature System.Threading.Tasks.Task CreateOrUpdateNote(UET.EGarden.Note.Dto.InputCreate.CreateOrUpdateNoteInput) on controller UET.EGarden.Note.UserNoteAppService (UET.EGarden.Application).
+ERROR 2020-12-06 16:18:12,692 [12   ] Mvc.ExceptionHandling.AbpExceptionFilter - Missing type map configuration or unsupported mapping.
+
+Mapping types:
+CreateOrUpdateNoteInput -> Task`1
+UET.EGarden.Note.Dto.InputCreate.CreateOrUpdateNoteInput -> System.Threading.Tasks.Task`1[[UET.EGarden.Note.UserNote, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+CreateOrUpdateNoteInput -> Task`1
+UET.EGarden.Note.Dto.InputCreate.CreateOrUpdateNoteInput -> System.Threading.Tasks.Task`1[[UET.EGarden.Note.UserNote, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+   at lambda_method(Closure , CreateOrUpdateNoteInput , Task`1 , ResolutionContext )
+   at Abp.AutoMapper.AutoMapperObjectMapper.Map[TSource,TDestination](TSource source, TDestination destination)
+   at UET.EGarden.Note.UserNoteAppService.Update(CreateOrUpdateNoteInput input) in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.Application\Note\UserNoteAppService.cs:line 61
+   at UET.EGarden.Note.UserNoteAppService.CreateOrUpdateNote(CreateOrUpdateNoteInput input) in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.Application\Note\UserNoteAppService.cs:line 31
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+INFO  2020-12-06 16:18:12,973 [12   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-12-06 16:18:12,977 [12   ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Note.UserNoteAppService.CreateOrUpdateNote (UET.EGarden.Application) in 493.1299ms
+INFO  2020-12-06 16:18:12,979 [12   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Note.UserNoteAppService.CreateOrUpdateNote (UET.EGarden.Application)'
+INFO  2020-12-06 16:18:12,981 [12   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 517.9785ms 500 application/json; charset=utf-8
+INFO  2020-12-06 16:18:30,599 [15   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 POST http://localhost:21021/api/services/app/UserNote/CreateOrUpdateNote application/json-patch+json 167
+INFO  2020-12-06 16:18:30,601 [15   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2020-12-06 16:18:30,603 [15   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2020-12-06 16:18:30,605 [15   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-12-06 16:18:30,608 [15   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Note.UserNoteAppService.CreateOrUpdateNote (UET.EGarden.Application)'
+INFO  2020-12-06 16:18:30,613 [15   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "CreateOrUpdateNote", controller = "UserNote"}. Executing controller action with signature System.Threading.Tasks.Task CreateOrUpdateNote(UET.EGarden.Note.Dto.InputCreate.CreateOrUpdateNoteInput) on controller UET.EGarden.Note.UserNoteAppService (UET.EGarden.Application).
+ERROR 2020-12-06 16:18:40,703 [15   ] Mvc.ExceptionHandling.AbpExceptionFilter - Missing type map configuration or unsupported mapping.
+
+Mapping types:
+CreateOrUpdateNoteInput -> Task`1
+UET.EGarden.Note.Dto.InputCreate.CreateOrUpdateNoteInput -> System.Threading.Tasks.Task`1[[UET.EGarden.Note.UserNote, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+CreateOrUpdateNoteInput -> Task`1
+UET.EGarden.Note.Dto.InputCreate.CreateOrUpdateNoteInput -> System.Threading.Tasks.Task`1[[UET.EGarden.Note.UserNote, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+   at lambda_method(Closure , CreateOrUpdateNoteInput , Task`1 , ResolutionContext )
+   at Abp.AutoMapper.AutoMapperObjectMapper.Map[TSource,TDestination](TSource source, TDestination destination)
+   at UET.EGarden.Note.UserNoteAppService.Update(CreateOrUpdateNoteInput input) in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.Application\Note\UserNoteAppService.cs:line 61
+   at UET.EGarden.Note.UserNoteAppService.CreateOrUpdateNote(CreateOrUpdateNoteInput input) in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.Application\Note\UserNoteAppService.cs:line 31
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+INFO  2020-12-06 16:18:40,707 [15   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-12-06 16:18:40,709 [15   ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Note.UserNoteAppService.CreateOrUpdateNote (UET.EGarden.Application) in 10095.0035ms
+INFO  2020-12-06 16:18:40,711 [15   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Note.UserNoteAppService.CreateOrUpdateNote (UET.EGarden.Application)'
+INFO  2020-12-06 16:18:40,713 [15   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 10113.8014ms 500 application/json; charset=utf-8
+INFO  2020-12-06 16:19:09,920 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 POST http://localhost:21021/api/services/app/UserNote/CreateOrUpdateNote application/json-patch+json 167
+INFO  2020-12-06 16:19:09,922 [11   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2020-12-06 16:19:09,924 [11   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2020-12-06 16:19:09,927 [11   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-12-06 16:19:09,929 [11   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Note.UserNoteAppService.CreateOrUpdateNote (UET.EGarden.Application)'
+INFO  2020-12-06 16:19:09,934 [11   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "CreateOrUpdateNote", controller = "UserNote"}. Executing controller action with signature System.Threading.Tasks.Task CreateOrUpdateNote(UET.EGarden.Note.Dto.InputCreate.CreateOrUpdateNoteInput) on controller UET.EGarden.Note.UserNoteAppService (UET.EGarden.Application).
+ERROR 2020-12-06 16:19:24,411 [4    ] Mvc.ExceptionHandling.AbpExceptionFilter - Missing type map configuration or unsupported mapping.
+
+Mapping types:
+CreateOrUpdateNoteInput -> Task`1
+UET.EGarden.Note.Dto.InputCreate.CreateOrUpdateNoteInput -> System.Threading.Tasks.Task`1[[UET.EGarden.Note.UserNote, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+CreateOrUpdateNoteInput -> Task`1
+UET.EGarden.Note.Dto.InputCreate.CreateOrUpdateNoteInput -> System.Threading.Tasks.Task`1[[UET.EGarden.Note.UserNote, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+   at lambda_method(Closure , CreateOrUpdateNoteInput , Task`1 , ResolutionContext )
+   at Abp.AutoMapper.AutoMapperObjectMapper.Map[TSource,TDestination](TSource source, TDestination destination)
+   at UET.EGarden.Note.UserNoteAppService.Update(CreateOrUpdateNoteInput input) in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.Application\Note\UserNoteAppService.cs:line 61
+   at UET.EGarden.Note.UserNoteAppService.CreateOrUpdateNote(CreateOrUpdateNoteInput input) in C:\Users\ADMIN\Documents\GitHub\E-Garden\server\src\UET.EGarden.Application\Note\UserNoteAppService.cs:line 31
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+INFO  2020-12-06 16:19:24,413 [4    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-12-06 16:19:24,415 [4    ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Note.UserNoteAppService.CreateOrUpdateNote (UET.EGarden.Application) in 14480.1973ms
+INFO  2020-12-06 16:19:24,417 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Note.UserNoteAppService.CreateOrUpdateNote (UET.EGarden.Application)'
+INFO  2020-12-06 16:19:24,419 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 14498.7613ms 500 application/json; charset=utf-8
+DEBUG 2020-12-06 16:22:15,774 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2020-12-06 16:22:15,890 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2020-12-06 16:22:15,916 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.Web.Host.Startup.EGardenWebHostModule, UET.EGarden.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:22:15,918 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EGardenWebCoreModule, UET.EGarden.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:22:15,919 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EGardenApplicationModule, UET.EGarden.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:22:15,919 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EGardenCoreModule, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:22:15,919 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:22:15,920 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:22:15,920 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:22:15,921 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:22:15,921 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: UET.EGarden.EntityFrameworkCore.EGardenEntityFrameworkModule, UET.EGarden.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:22:15,921 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:22:15,922 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:22:15,922 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:22:15,922 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:22:15,922 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:22:15,923 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=5.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:22:15,926 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2020-12-06 16:22:16,008 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-06 16:22:16,008 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-06 16:22:16,008 [1    ] o.Configuration.LanguageManagementConfig - Converted EGarden (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-06 16:22:16,008 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-06 16:22:16,603 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: UET.EGarden.EntityFrameworkCore.EGardenDbContext, UET.EGarden.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-06 16:22:17,492 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2020-12-06 16:22:17,534 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2020-12-06 16:22:17,545 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2020-12-06 16:22:17,548 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: EGarden
+DEBUG 2020-12-06 16:22:17,553 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2020-12-06 16:22:17,743 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2020-12-06 16:22:17,856 [1    ] , Culture=neutral, PublicKeyToken=null]] - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[UET.EGarden.MultiTenancy.Tenant, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[UET.EGarden.Authorization.Users.User, UET.EGarden.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2020-12-06 16:22:17,909 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 8 classes define auto mapping attributes
+DEBUG 2020-12-06 16:22:17,909 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2020-12-06 16:22:17,914 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Users.Dto.CreateUserDto
+DEBUG 2020-12-06 16:22:17,915 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Users.Dto.UserDto
+DEBUG 2020-12-06 16:22:17,915 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2020-12-06 16:22:17,915 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Sessions.Dto.UserLoginInfoDto
+DEBUG 2020-12-06 16:22:17,916 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.Roles.Dto.PermissionDto
+DEBUG 2020-12-06 16:22:17,916 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2020-12-06 16:22:17,916 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - UET.EGarden.MultiTenancy.Dto.TenantDto
+INFO  2020-12-06 16:22:20,184 [1    ] tCore.Builder.RequestLocalizationOptions - Supported Request Localization Cultures: en,es-MX,fr,de,it,nl,pt-BR,tr,ru,ar,ja,zh-Hans
+INFO  2020-12-06 16:22:20,451 [1    ] taProtection.KeyManagement.XmlKeyManager - User profile is available. Using 'C:\Users\ADMIN\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+INFO  2020-12-06 16:22:21,227 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2020-12-06 16:22:21,436 [11   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Web.Host.Controllers.HomeController.Index (UET.EGarden.Web.Host)'
+INFO  2020-12-06 16:22:25,031 [11   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller UET.EGarden.Web.Host.Controllers.HomeController (UET.EGarden.Web.Host).
+INFO  2020-12-06 16:22:26,180 [14   ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2020-12-06 16:22:26,188 [14   ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Web.Host.Controllers.HomeController.Index (UET.EGarden.Web.Host) in 1150.8777ms
+INFO  2020-12-06 16:22:26,190 [14   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Web.Host.Controllers.HomeController.Index (UET.EGarden.Web.Host)'
+INFO  2020-12-06 16:22:26,200 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 4982.7263ms 302 
+INFO  2020-12-06 16:22:26,220 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2020-12-06 16:22:26,382 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 161.5296ms 200 text/html;charset=utf-8
+INFO  2020-12-06 16:22:26,651 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/AntiForgery/SetCookie  
+INFO  2020-12-06 16:22:26,655 [14   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Web.Host.Controllers.AntiForgeryController.SetCookie (UET.EGarden.Web.Host)'
+INFO  2020-12-06 16:22:26,665 [14   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "SetCookie", controller = "AntiForgery", area = ""}. Executing controller action with signature Void SetCookie() on controller UET.EGarden.Web.Host.Controllers.AntiForgeryController (UET.EGarden.Web.Host).
+INFO  2020-12-06 16:22:26,691 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2020-12-06 16:22:26,806 [10   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-12-06 16:22:26,819 [10   ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Web.Host.Controllers.AntiForgeryController.SetCookie (UET.EGarden.Web.Host) in 152.966ms
+INFO  2020-12-06 16:22:26,821 [10   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Web.Host.Controllers.AntiForgeryController.SetCookie (UET.EGarden.Web.Host)'
+INFO  2020-12-06 16:22:26,822 [10   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 172.0925ms 200 application/json; charset=utf-8
+INFO  2020-12-06 16:22:26,862 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 172.7219ms 200 application/json;charset=utf-8
+INFO  2020-12-06 16:23:04,536 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 POST http://localhost:21021/api/services/app/UserNote/CreateOrUpdateNote application/json-patch+json 169
+INFO  2020-12-06 16:23:04,544 [9    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2020-12-06 16:23:04,545 [9    ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2020-12-06 16:23:04,550 [9    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Note.UserNoteAppService.CreateOrUpdateNote (UET.EGarden.Application)'
+INFO  2020-12-06 16:23:04,570 [9    ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "CreateOrUpdateNote", controller = "UserNote"}. Executing controller action with signature System.Threading.Tasks.Task CreateOrUpdateNote(UET.EGarden.Note.Dto.InputCreate.CreateOrUpdateNoteInput) on controller UET.EGarden.Note.UserNoteAppService (UET.EGarden.Application).
+WARN  2020-12-06 16:23:05,320 [9    ] Mvc.ExceptionHandling.AbpExceptionFilter - Method arguments are not valid! See ValidationErrors for details.
+Abp.Runtime.Validation.AbpValidationException: Method arguments are not valid! See ValidationErrors for details.
+   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.ThrowValidationError()
+   at Abp.Runtime.Validation.Interception.MethodInvocationValidator.Validate()
+   at Abp.AspNetCore.Mvc.Validation.AbpValidationActionFilter.OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+WARN  2020-12-06 16:23:05,323 [9    ] Mvc.ExceptionHandling.AbpExceptionFilter - There are 2 validation errors:
+WARN  2020-12-06 16:23:05,323 [9    ] Mvc.ExceptionHandling.AbpExceptionFilter - Error converting value "string" to type 'System.TimeSpan'. Path 'endTime', line 1, position 51. (endTime)
+WARN  2020-12-06 16:23:05,323 [9    ] Mvc.ExceptionHandling.AbpExceptionFilter - Error converting value "string" to type 'System.TimeSpan'. Path 'startTime', line 1, position 32. (startTime)
+INFO  2020-12-06 16:23:05,600 [9    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-12-06 16:23:05,605 [9    ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Note.UserNoteAppService.CreateOrUpdateNote (UET.EGarden.Application) in 1033.6402ms
+INFO  2020-12-06 16:23:05,607 [9    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Note.UserNoteAppService.CreateOrUpdateNote (UET.EGarden.Application)'
+INFO  2020-12-06 16:23:05,609 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 1072.4591ms 400 application/json; charset=utf-8
+INFO  2020-12-06 16:23:17,917 [7    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 POST http://localhost:21021/api/services/app/UserNote/CreateOrUpdateNote application/json-patch+json 167
+INFO  2020-12-06 16:23:17,919 [7    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2020-12-06 16:23:17,921 [7    ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2020-12-06 16:23:17,929 [7    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Note.UserNoteAppService.CreateOrUpdateNote (UET.EGarden.Application)'
+INFO  2020-12-06 16:23:17,937 [7    ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "CreateOrUpdateNote", controller = "UserNote"}. Executing controller action with signature System.Threading.Tasks.Task CreateOrUpdateNote(UET.EGarden.Note.Dto.InputCreate.CreateOrUpdateNoteInput) on controller UET.EGarden.Note.UserNoteAppService (UET.EGarden.Application).
+INFO  2020-12-06 16:23:23,833 [12   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-12-06 16:23:23,835 [12   ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Note.UserNoteAppService.CreateOrUpdateNote (UET.EGarden.Application) in 5896.6606ms
+INFO  2020-12-06 16:23:23,836 [12   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Note.UserNoteAppService.CreateOrUpdateNote (UET.EGarden.Application)'
+INFO  2020-12-06 16:23:23,838 [12   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 5921.3662ms 200 application/json; charset=utf-8
+INFO  2020-12-06 16:23:29,003 [12   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 POST http://localhost:21021/api/services/app/UserNote/CreateOrUpdateNote application/json-patch+json 167
+INFO  2020-12-06 16:23:29,005 [12   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2020-12-06 16:23:29,007 [12   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2020-12-06 16:23:29,009 [12   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'UET.EGarden.Note.UserNoteAppService.CreateOrUpdateNote (UET.EGarden.Application)'
+INFO  2020-12-06 16:23:29,017 [12   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "CreateOrUpdateNote", controller = "UserNote"}. Executing controller action with signature System.Threading.Tasks.Task CreateOrUpdateNote(UET.EGarden.Note.Dto.InputCreate.CreateOrUpdateNoteInput) on controller UET.EGarden.Note.UserNoteAppService (UET.EGarden.Application).
+INFO  2020-12-06 16:23:29,037 [9    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-12-06 16:23:29,039 [9    ] c.Infrastructure.ControllerActionInvoker - Executed action UET.EGarden.Note.UserNoteAppService.CreateOrUpdateNote (UET.EGarden.Application) in 20.3773ms
+INFO  2020-12-06 16:23:29,040 [9    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'UET.EGarden.Note.UserNoteAppService.CreateOrUpdateNote (UET.EGarden.Application)'
+INFO  2020-12-06 16:23:29,042 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 39.5345ms 200 application/json; charset=utf-8

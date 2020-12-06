@@ -3,7 +3,7 @@ part 'notes.g.dart';
 @JsonSerializable(nullable: true, explicitToJson: true)
 
 class Notes {
-  List<Items> items;
+  List<Note> items;
 
   Notes({this.items});
   factory Notes.fromJson(Map<String, dynamic> json) => _$NotesFromJson(json);
@@ -13,26 +13,28 @@ class Notes {
 }
 @JsonSerializable(nullable: true, explicitToJson: true)
 
-class Items {
+class Note {
   int userId;
+  DateTime date;
   String startTime;
   String endTime;
-  String date;
+  String hexCode;
   String titleNote;
   String detailNote;
   bool status;
   int id;
 
-  Items(
+  Note(
       {this.userId,
+        this.hexCode,
+        this.date,
         this.startTime,
         this.endTime,
-        this.date,
         this.titleNote,
         this.detailNote,
         this.status,
         this.id});
-  factory Items.fromJson(Map<String, dynamic> json) => _$ItemsFromJson(json);
+  factory Note.fromJson(Map<String, dynamic> json) => _$NoteFromJson(json);
 
-  Map<String, dynamic> toJson() => _$ItemsToJson(this);
+  Map<String, dynamic> toJson() => _$NoteToJson(this);
 }

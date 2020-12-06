@@ -5,6 +5,7 @@ part of 'user.dart';
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
+
 User _$UserFromJson(Map<String, dynamic> json) {
   return User(
     accessToken: json['accessToken'] as String,

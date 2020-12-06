@@ -40,7 +40,7 @@ namespace UET.EGarden.Note
 
         public ListResultDto<ListNoteByUserIdDto> GetListNoteByUser(GetListNoteByUserInput input)
         {
-            var listNote = _UserNoteRepo.GetAll().Where(un => un.UserId == input.UserId);
+            var listNote = _UserNoteRepo.GetAll().Where(un => un.UserId == input.UserId&&un.Date.Date == input.Date.Date);
             return new ListResultDto<ListNoteByUserIdDto>(ObjectMapper.Map<List<ListNoteByUserIdDto>>(listNote));
         }
 
@@ -57,8 +57,8 @@ namespace UET.EGarden.Note
         }
         protected async Task Update(CreateOrUpdateNoteInput input)
         {
-            var note = _UserNoteRepo.FirstOrDefaultAsync(input.Id);
-            await ObjectMapper.Map(input, note);
+            var note = await _UserNoteRepo.FirstOrDefaultAsync(input.Id);
+            ObjectMapper.Map(input, note);
         }
     }
 }
