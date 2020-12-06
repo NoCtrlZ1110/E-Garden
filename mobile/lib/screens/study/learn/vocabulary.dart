@@ -20,7 +20,7 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
           builder: (_, model, __) => Scaffold(
                 appBar: TextAppBar(
                   text: "VOCABULARY",
-                  height: 100,
+                  height: SizeConfig.blockSizeVertical * 8,
                 ),
                 body: SingleChildScrollView(
                   child: Center(
@@ -31,8 +31,8 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
                         ),
                         FlipCard(
                             speed: 1000,
-                            onFlipDone: (status) {
-                              model.flipCard();
+                            onFlip: () {
+                              Future.delayed(Duration(milliseconds: 500), () => model.flipCard());
                             },
                             front: (model.isFrontCard)
                                 ? card(

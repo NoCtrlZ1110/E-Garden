@@ -36,7 +36,6 @@ class UserModel extends ChangeNotifier {
           message: Map<String, dynamic>.from(
               response.data["error"] as Map<dynamic, dynamic>));
     }
-    ;
   }
 
   Future<bool> login(Map<String, dynamic> data) async {

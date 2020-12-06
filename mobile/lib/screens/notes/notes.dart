@@ -32,40 +32,25 @@ class _CalendarPageState extends State<CalendarPage> {
   Widget build(BuildContext context) {
     return Consumer<NoteModel>(builder: (_, notes, __) {
       return Scaffold(
-        body: Stack(children: [
-          Container(
-            width: SizeConfig.screenWidth,
-            height: SizeConfig.screenHeight,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage("assets/images/background_items.png"),
-                  colorFilter:
-                      ColorFilter.mode(Colors.white70, BlendMode.color),
-                  fit: BoxFit.fill),
-              borderRadius: BorderRadius.only(
-                  topLeft: const Radius.circular(20.0),
-                  topRight: const Radius.circular(20.0)),
-            ),
-          ),
-          Column(children: [
-            _buildTableCalendar(notes),
-            Expanded(
-              child: FutureBuilder(
-                  future: notes.fetchListNote(notes.params ?? params),
-                  builder: (context, snapshot) {
-                    if (snapshot.connectionState != ConnectionState.done) {
-                      return Center(child: CircularProgressIndicator());
-                    }
-                    if (snapshot.hasError) {
-                      return Center(child: CircularProgressIndicator());
-                    }
-                    if (snapshot.hasData) {
-                      return _buildList(notes.listNote);
-                    }
+        backgroundColor: Colors.transparent,
+        body: Column(children: [
+          _buildTableCalendar(notes),
+          Expanded(
+            child: FutureBuilder(
+                future: notes.fetchListNote(notes.params ?? params),
+                builder: (context, snapshot) {
+                  if (snapshot.connectionState != ConnectionState.done) {
                     return Center(child: CircularProgressIndicator());
-                  }),
-            )
-          ]),
+                  }
+                  if (snapshot.hasError) {
+                    return Center(child: CircularProgressIndicator());
+                  }
+                  if (snapshot.hasData) {
+                    return _buildList(notes.listNote);
+                  }
+                  return Center(child: CircularProgressIndicator());
+                }),
+          )
         ]),
         floatingActionButton: FutureBuilder(
             future: notes.fetchListNote(notes.params ?? params),

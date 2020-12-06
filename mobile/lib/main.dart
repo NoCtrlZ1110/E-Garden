@@ -2,6 +2,7 @@ import 'package:e_garden/application.dart';
 import 'package:e_garden/core/services/dictionary/dictionary_model.service.dart';
 import 'package:e_garden/core/services/translate/translate_model.service.dart';
 import 'package:e_garden/core/services/user/user_model.service.dart';
+import 'package:e_garden/screens/home.dart';
 import 'package:e_garden/screens/signin.dart';
 import 'package:e_garden/screens/study/learn/learn_model.dart';
 import 'package:e_garden/screens/study/study.provider.dart';
@@ -12,7 +13,6 @@ import 'package:provider/provider.dart';
 
 import 'configs/AppConfig.dart';
 import 'core/services/note/note_model.service.dart';
-import 'provider_setup.dart' as ProviderSetup;
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -62,7 +62,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Scaffold(
-      body: SignIn(),
+      body: HomeScreen(),
       // body: HomeScreen(),
     );
   }
