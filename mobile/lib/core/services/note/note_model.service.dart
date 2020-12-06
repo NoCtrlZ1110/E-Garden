@@ -13,7 +13,7 @@ class NoteModel extends ChangeNotifier {
   }
 
   Future<Notes> fetchListNote(Map<String, dynamic> params) async {
-    final response = await Application.api.get("/api/services/app/UserNote/CreateOrUpdateNote", params);
+    final response = await Application.api.get("api/services/app/UserNote/GetListNoteByUser", params);
     print(params);
     if (response.statusCode == 200) {
       _listNote = await Notes.fromJson(response.data['result'] as Map<String, dynamic>);

@@ -16,7 +16,8 @@ class DictionaryScreen extends StatefulWidget {
   DictionaryScreen({this.newWord});
 }
 
-class _DictionaryScreenState extends State<DictionaryScreen> with TickerProviderStateMixin {
+class _DictionaryScreenState extends State<DictionaryScreen>
+    with TickerProviderStateMixin {
   TextEditingController _search = TextEditingController();
   TabController _controller;
   String fetchWordValue;
@@ -46,7 +47,9 @@ class _DictionaryScreenState extends State<DictionaryScreen> with TickerProvider
               height: 100,
             ),
             body: FutureBuilder(
-              future: (widget.newWord == null) ? cart.fetchWord(fetchWordValue) : cart.fetchWord(widget.newWord),
+              future: (widget.newWord == null)
+                  ? cart.fetchWord(fetchWordValue)
+                  : cart.fetchWord(widget.newWord),
               builder: (context, snapshot) {
                 if (snapshot.connectionState != ConnectionState.done) {
                   return Center(child: CircularProgressIndicator());
@@ -67,10 +70,14 @@ class _DictionaryScreenState extends State<DictionaryScreen> with TickerProvider
                             child: FormBuilderTextField(
                               onFieldSubmitted: (value) {
                                 fetchWordValue = _search.text;
-                                Provider.of<DictionaryModel>(context, listen: false).changeWord(_search.text);
+                                Provider.of<DictionaryModel>(context,
+                                        listen: false)
+                                    .changeWord(_search.text);
                               },
                               attribute: "Hello",
-                              style: TextStyle(fontSize: SizeConfig.safeBlockVertical * 2.5, color: AppColors.green),
+                              style: TextStyle(
+                                  fontSize: SizeConfig.safeBlockVertical * 2.5,
+                                  color: AppColors.green),
                               controller: _search,
                               decoration: InputDecoration(
                                 suffixIcon: IconButton(
@@ -78,7 +85,9 @@ class _DictionaryScreenState extends State<DictionaryScreen> with TickerProvider
                                   onPressed: () async {
                                     if (_search.text.isNotEmpty) {
                                       fetchWordValue = _search.text;
-                                      Provider.of<DictionaryModel>(context, listen: false).changeWord(_search.text);
+                                      Provider.of<DictionaryModel>(context,
+                                              listen: false)
+                                          .changeWord(_search.text);
                                     }
                                   },
                                 ),
@@ -88,13 +97,17 @@ class _DictionaryScreenState extends State<DictionaryScreen> with TickerProvider
                                     top: SizeConfig.safeBlockVertical * 2,
                                     bottom: SizeConfig.safeBlockVertical * 2),
                                 border: OutlineInputBorder(
-                                    borderSide: BorderSide(color: AppColors.green, width: 5),
+                                    borderSide: BorderSide(
+                                        color: AppColors.green, width: 5),
                                     borderRadius: BorderRadius.circular(160)),
                                 labelText: "Search",
-                                hintText: "Eg: ${cart.dictionary.word.toString()}",
+                                hintText:
+                                    "Eg: ${cart.dictionary.word.toString()}",
                                 alignLabelWithHint: false,
-                                labelStyle:
-                                    TextStyle(fontSize: SizeConfig.safeBlockVertical * 2.5, fontWeight: FontWeight.w600),
+                                labelStyle: TextStyle(
+                                    fontSize:
+                                        SizeConfig.safeBlockVertical * 2.5,
+                                    fontWeight: FontWeight.w600),
                               ),
                             ),
                           ),
@@ -122,14 +135,20 @@ class _DictionaryScreenState extends State<DictionaryScreen> with TickerProvider
                               children: [
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.end,
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
                                   children: [
                                     Container(
-                                      width: SizeConfig.blockSizeHorizontal * 45,
+                                      alignment: Alignment.centerLeft,
+                                      width:
+                                          SizeConfig.blockSizeHorizontal * 45,
                                       child: FittedBox(
                                         fit: BoxFit.scaleDown,
                                         child: Text(
-                                          cart.dictionary.word[0].toUpperCase() + cart.dictionary.word.substring(1),
+                                          "  " +
+                                              cart.dictionary.word[0]
+                                                  .toUpperCase() +
+                                              cart.dictionary.word.substring(1),
                                           style: TextStyle(
                                             color: Colors.black,
                                             fontSize: 40,
@@ -142,7 +161,8 @@ class _DictionaryScreenState extends State<DictionaryScreen> with TickerProvider
                                     Expanded(
                                       child: Container(
                                         padding: EdgeInsets.only(bottom: 8.0),
-                                        width: SizeConfig.blockSizeHorizontal * 25,
+                                        width:
+                                            SizeConfig.blockSizeHorizontal * 25,
                                         child: FittedBox(
                                           fit: BoxFit.scaleDown,
                                           child: Text(
@@ -165,7 +185,8 @@ class _DictionaryScreenState extends State<DictionaryScreen> with TickerProvider
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Container(
-                                      width: SizeConfig.safeBlockHorizontal * 60,
+                                      width:
+                                          SizeConfig.safeBlockHorizontal * 60,
                                       padding: EdgeInsets.only(left: 15),
                                       child: Text(
                                         cart.type_word,
@@ -184,14 +205,18 @@ class _DictionaryScreenState extends State<DictionaryScreen> with TickerProvider
                                           size: 35,
                                         ),
                                         onPressed: () async {
-                                          if (cart.dictionary.phonetics[0].audio == null){
+                                          if (cart.dictionary.phonetics[0]
+                                                  .audio ==
+                                              null) {
                                             Fluttertoast.showToast(
-                                              msg: "Invalid Sound",
-                                              toastLength: Toast.LENGTH_SHORT,
-                                              backgroundColor: Colors.greenAccent,
-                                              fontSize: 20
-                                            );
-                                          } else await audioPlayer.play(cart.dictionary.phonetics[0].audio);
+                                                msg: "Invalid Sound",
+                                                toastLength: Toast.LENGTH_SHORT,
+                                                backgroundColor:
+                                                    Colors.greenAccent,
+                                                fontSize: 20);
+                                          } else
+                                            await audioPlayer.play(cart
+                                                .dictionary.phonetics[0].audio);
                                         },
                                       ),
                                     )
@@ -202,31 +227,41 @@ class _DictionaryScreenState extends State<DictionaryScreen> with TickerProvider
                           ),
                         ),
                         SizedBox(
-                          height: 15,
+                          height: 30,
                         ),
                         Container(
                           width: double.infinity,
                           height: 50,
-                          decoration: BoxDecoration(color: const Color(0xFFF1F1F1), boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey,
-                              blurRadius: 2.0,
-                            ),
-                          ]),
+                          decoration: BoxDecoration(
+                              color: const Color(0xFFF1F1F1),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey,
+                                  blurRadius: 2.0,
+                                ),
+                              ]),
                           child: DefaultTabController(
                             length: 2,
                             child: TabBar(
-                              unselectedLabelColor: Colors.black,
+                              unselectedLabelColor: AppColors.darkGreen,
                               indicatorSize: TabBarIndicatorSize.tab,
                               indicatorColor: Colors.teal,
-                              indicator: BoxDecoration(borderRadius: BorderRadius.circular(50), color: Colors.green),
+                              indicator: BoxDecoration(color: AppColors.green),
                               tabs: [
                                 Tab(
-                                  icon: Icon(Icons.directions_bike),
+                                  child: Text(
+                                    "Meaning",
+                                    style: TextStyle(
+                                        fontSize: 17,
+                                        fontWeight: FontWeight.bold),
+                                  ),
                                 ),
                                 Tab(
-                                  icon: Icon(
-                                    Icons.directions_car,
+                                  child: Text(
+                                    "Synonym",
+                                    style: TextStyle(
+                                        fontSize: 17,
+                                        fontWeight: FontWeight.bold),
                                   ),
                                 ),
                               ],
@@ -234,6 +269,7 @@ class _DictionaryScreenState extends State<DictionaryScreen> with TickerProvider
                             ),
                           ),
                         ),
+                        SizedBox(height: 30,),
                         Expanded(
                           child: TabBarView(controller: _controller, children: [
                             DictionaryMeaningTab(cart.definitions),

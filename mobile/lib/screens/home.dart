@@ -13,7 +13,8 @@ class HomeScreen extends StatefulWidget {
   _HomeScreenState createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateMixin {
+class _HomeScreenState extends State<HomeScreen>
+    with SingleTickerProviderStateMixin {
   TabController _controller;
 
   @override
@@ -30,40 +31,17 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
     _controller.dispose();
   }
 
-  static List<Widget> _widgetOptions = <Widget>[StudyScreen(), HomeDictionaryScreen(), CalendarPage()];
   GlobalKey<ScaffoldState> _drawerKey = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
+    List<Widget> _widgetOptions = <Widget>[StudyScreen(), HomeDictionaryScreen(), CalendarPage()];
     return SafeArea(
       child: WillPopScope(
           onWillPop: () async => false,
           child: Scaffold(
             key: _drawerKey,
-            backgroundColor: Colors.white,
-            appBar: CustomAppBar(
-              height: SizeConfig.blockSizeVertical * 8,
-              child: Row(
-                children: [
-                  IconButton(
-                      icon: Icon(
-                        Icons.menu,
-                        color: Colors.green,
-                        size: SizeConfig.blockSizeVertical * 4,
-                      ),
-                      onPressed: () {
-                        _drawerKey.currentState.openDrawer();
-                      }),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Image.asset(
-                    "assets/images/logo_text.png",
-                    height: SizeConfig.blockSizeVertical * 5,
-                  ),
-                ],
-              ),
-            ),
+            backgroundColor: AppColors.background,
             drawer: Drawer(
               child: Column(
                 children: <Widget>[
@@ -100,11 +78,15 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                             children: [
                               Text(
                                 'Nguyễn Thị Xuân',
-                                style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600, color: Colors.black45),
+                                style: TextStyle(
+                                    fontSize: 25,
+                                    fontWeight: FontWeight.w600,
+                                    color: Colors.black45),
                               ),
                               SizedBox(height: 10),
                               Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
                                 children: [
                                   DottedBorder(
                                       padding: EdgeInsets.all(15),
@@ -119,12 +101,16 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                                           Text(
                                             'Learn',
                                             style: TextStyle(
-                                                fontSize: 18, fontWeight: FontWeight.w600, color: Colors.black45),
+                                                fontSize: 18,
+                                                fontWeight: FontWeight.w600,
+                                                color: Colors.black45),
                                           ),
                                           Text(
                                             20.toString(),
                                             style: TextStyle(
-                                                fontSize: 18, fontWeight: FontWeight.w600, color: Colors.black45),
+                                                fontSize: 18,
+                                                fontWeight: FontWeight.w600,
+                                                color: Colors.black45),
                                           )
                                         ],
                                       )),
@@ -141,12 +127,16 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                                         Text(
                                           'Review',
                                           style: TextStyle(
-                                              fontSize: 18, fontWeight: FontWeight.w600, color: Colors.black45),
+                                              fontSize: 18,
+                                              fontWeight: FontWeight.w600,
+                                              color: Colors.black45),
                                         ),
                                         Text(
                                           20.toString(),
                                           style: TextStyle(
-                                              fontSize: 18, fontWeight: FontWeight.w600, color: Colors.black45),
+                                              fontSize: 18,
+                                              fontWeight: FontWeight.w600,
+                                              color: Colors.black45),
                                         )
                                       ],
                                     ),
@@ -168,7 +158,10 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                       child: RaisedButton(
                         onPressed: () {
                           Navigator.pop(context);
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => EditProfile()));
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => EditProfile()));
                         },
                         child: Row(
                           children: [
@@ -253,18 +246,50 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                 ],
               ),
             ),
+            appBar: CustomAppBar(
+              height: SizeConfig.blockSizeVertical * 10,
+              child: Row(
+                children: [
+                  IconButton(
+                      icon: Icon(
+                        Icons.menu,
+                        color: Colors.green,
+                        size: SizeConfig.blockSizeVertical * 4,
+                      ),
+                      onPressed: () {
+                        _drawerKey.currentState.openDrawer();
+                      }),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Image.asset(
+                    "assets/images/logo_text.png",
+                    height: SizeConfig.blockSizeVertical * 5,
+                  ),
+                ],
+              ),
+            ),
             body: Column(
               children: [
-                Expanded(
-                  child: TabBarView(
-                    controller: _controller,
-                    physics: BouncingScrollPhysics(),
-                    children: [StudyScreen(), HomeDictionaryScreen(), CalendarPage()],
+                Container(
+                  height: SizeConfig.blockSizeVertical * 77,
+                  child: Stack(
+                    children: [
+                      Image.asset(
+                        'assets/images/background_items.png',
+                        height: SizeConfig.blockSizeVertical * 90,
+                        fit: BoxFit.fitHeight,
+                      ),
+                      TabBarView(
+                        controller: _controller,
+                        physics: BouncingScrollPhysics(),
+                        children: [StudyScreen(), HomeDictionaryScreen(), CalendarPage()],
+                      ),
+                    ],
                   ),
                 ),
-                Container(
-                  width: double.infinity,
-                  height: 60,
+                Expanded(
+                    child: Container(
                   decoration: BoxDecoration(color: const Color(0xFFF1F1F1), boxShadow: [
                     BoxShadow(
                       color: Colors.grey,
@@ -281,19 +306,22 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                       indicatorSize: TabBarIndicatorSize.tab,
                       tabs: [
                         Tab(
-                          icon: Icon(Icons.home),
+                          icon: Icon(
+                            Icons.home,
+                            size: 30,
+                          ),
                         ),
                         Tab(
-                          icon: Icon(Icons.search),
+                          icon: Icon(Icons.search, size: 30),
                         ),
                         Tab(
-                          icon: Icon(Icons.event_note),
+                          icon: Icon(Icons.event_note, size: 30),
                         ),
                       ],
                       controller: _controller,
                     ),
                   ),
-                ),
+                ))
               ],
             ),
           )),
@@ -308,7 +336,10 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
         return AlertDialog(
           title: Text(
             'Logout',
-            style: TextStyle(color: AppColors.green, fontWeight: FontWeight.bold, fontSize: 20),
+            style: TextStyle(
+                color: AppColors.green,
+                fontWeight: FontWeight.bold,
+                fontSize: 20),
           ),
           content: SingleChildScrollView(
             child: Text(

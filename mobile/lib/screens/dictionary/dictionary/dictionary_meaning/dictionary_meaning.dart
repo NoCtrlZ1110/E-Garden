@@ -7,7 +7,8 @@ class DictionaryMeaningTab extends StatefulWidget {
   List<Meanings_Word> _definitions;
 
   @override
-  _DictionaryMeaningTabState createState() => _DictionaryMeaningTabState(_definitions);
+  _DictionaryMeaningTabState createState() =>
+      _DictionaryMeaningTabState(_definitions);
 
   DictionaryMeaningTab(this._definitions);
 }
@@ -24,9 +25,15 @@ class _DictionaryMeaningTabState extends State<DictionaryMeaningTab> {
         itemBuilder: (BuildContext context, int index) {
           return Container(
             margin: EdgeInsets.only(
-                top: SizeConfig.blockSizeVertical * 3, left: 20, right: 20, bottom: SizeConfig.blockSizeVertical * 3),
+//                top: SizeConfig.blockSizeVertical * 3,
+                left: 20,
+                right: 20,
+                bottom: SizeConfig.blockSizeVertical * 3),
             padding: EdgeInsets.only(
-                top: SizeConfig.blockSizeVertical * 3, left: 10, right: 10, bottom: SizeConfig.blockSizeVertical * 3),
+                top: SizeConfig.blockSizeVertical * 3,
+                left: 10,
+                right: 10,
+                bottom: SizeConfig.blockSizeVertical * 3),
             decoration: BoxDecoration(
               border: Border.all(color: Colors.blueAccent),
               borderRadius: BorderRadius.circular(20),
@@ -37,11 +44,16 @@ class _DictionaryMeaningTabState extends State<DictionaryMeaningTab> {
               children: [
                 Text(
                   _definitions[index].definition,
-                  style: TextStyle(fontSize: 16, color: AppColors.black, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                      fontSize: 16,
+                      color: AppColors.black,
+                      fontWeight: FontWeight.bold),
                   textAlign: TextAlign.justify,
                 ),
                 Text(
-                  _definitions[index].example != null ? "Ex: +${_definitions[index].example}" : "",
+                  _definitions[index].example != null
+                      ? "Ex: +${_definitions[index].example}"
+                      : "",
                   style: TextStyle(
                     fontSize: 16,
                     color: AppColors.grey,
