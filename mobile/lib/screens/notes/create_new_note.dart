@@ -6,6 +6,7 @@ import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
+import 'package:e_garden/screens/notes/component/time.dart';
 
 class CreateNewTaskPage extends StatefulWidget {
   @override
@@ -34,7 +35,8 @@ class _CreateNewTaskPageState extends State<CreateNewTaskPage> {
               height: SizeConfig.screenHeight,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage("assets/images/bg_screen.png"),
+                    image: AssetImage("assets/images/background_items.png"),
+                    colorFilter: ColorFilter.mode(Colors.white70, BlendMode.color),
                     fit: BoxFit.fill),
                 borderRadius: BorderRadius.only(
                     topLeft: const Radius.circular(20.0),
@@ -58,7 +60,7 @@ class _CreateNewTaskPageState extends State<CreateNewTaskPage> {
                                     child: CircularProgressIndicator());
                               }
                               if (snapshot.hasData) {
-                                return _getBody();
+                                return _getBody(notes: notes);
                               }
                               return Center(child: CircularProgressIndicator());
                             })
@@ -70,7 +72,7 @@ class _CreateNewTaskPageState extends State<CreateNewTaskPage> {
         bottomNavigationBar: Container(
           height: SizeConfig.safeBlockHorizontal * 15,
           color: Color(0xFFF4F4F4),
-          child: Padding(
+          child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 20.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -87,12 +89,13 @@ class _CreateNewTaskPageState extends State<CreateNewTaskPage> {
                           fontSize: SizeConfig.safeBlockVertical * 1.8),
                     ),
                   ),
-                  color: Color(0xFFE3161D),
+                  color: AppColors.green,
                   onPressed: () async {
                     if (_fbKey.currentState.saveAndValidate()) {
-                      if (await notes.createNote(_fbKey.currentState.value)) {
+                      if (await notes.createNote(
+                          _fbKey.currentState.value, noteId)) {
                         Fluttertoast.showToast(
-                          msg: "Thành công",
+                          msg: "Success",
                           toastLength: Toast.LENGTH_SHORT,
                           gravity: ToastGravity.BOTTOM,
                           timeInSecForIosWeb: 1,
@@ -104,7 +107,7 @@ class _CreateNewTaskPageState extends State<CreateNewTaskPage> {
                       }
                     } else {
                       Fluttertoast.showToast(
-                        msg: "Thiếu thông tin",
+                        msg: "Lack of information",
                         toastLength: Toast.LENGTH_SHORT,
                         gravity: ToastGravity.BOTTOM,
                         timeInSecForIosWeb: 1,
@@ -140,7 +143,7 @@ class _CreateNewTaskPageState extends State<CreateNewTaskPage> {
     });
   }
 
-  Widget _getBody() {
+  Widget _getBody({NoteModel notes}) {
     return SingleChildScrollView(
         padding: EdgeInsets.all(15.0),
         child: FormBuilder(
@@ -149,21 +152,21 @@ class _CreateNewTaskPageState extends State<CreateNewTaskPage> {
             children: [
               FormBuilderTextField(
                   attribute: 'title',
+                  initialValue: notes != null ? notes.noteDetail.titleNote : "",
+                  validators: [FormBuilderValidators.required()],
                   decoration: InputDecoration(labelText: "Title"),
                   maxLines: 1),
               SizedBox(height: 10.0),
               FormBuilderDateTimePicker(
                 attribute: "activity_date",
                 inputType: InputType.date,
-                initialValue: DateTime.now(),
-                // initialValue: (widget.cubit.deliveryById.deliveryInput.date == null)
-                //     ? null
-                //     : DateTime.parse("${widget.cubit.deliveryById.deliveryInput.date}"),
+                initialValue:
+                    notes != null ? notes.noteDetail.date : DateTime.now(),
                 validators: [FormBuilderValidators.required()],
                 format: DateFormat("dd-MM-yyyy"),
                 decoration: InputDecoration(labelText: "Activity Date"),
                 onChanged: (value) {
-                  //widget.cubit.delivery.deliveryInput.date = value.toString();
+
                 },
               ),
               SizedBox(height: 10.0),
@@ -175,22 +178,24 @@ class _CreateNewTaskPageState extends State<CreateNewTaskPage> {
                     attribute: "time_from",
                     initialTime: TimeOfDay(hour: 8, minute: 0),
                     inputType: InputType.time,
-                    // initialValue: (widget.cubit.deliveryById.deliveryInput.startTime == null)
-                    //     ? null
-                    //     : Time.fromString(widget.cubit.deliveryById.deliveryInput.startTime).toDateTime(),
                     decoration: InputDecoration(labelText: "Start Time"),
+                    initialValue: notes != null
+                        ? Time.fromString(notes.noteDetail.startTime)
+                            .toDateTime()
+                        : null,
                     validators: [FormBuilderValidators.required()],
                   )),
                   SizedBox(width: SizeConfig.safeBlockHorizontal * 8),
                   Expanded(
                     child: FormBuilderDateTimePicker(
                       attribute: "time_to",
-                      initialTime: TimeOfDay(hour: 8, minute: 0),
+                      initialTime: TimeOfDay(hour: 9, minute: 0),
                       decoration: InputDecoration(labelText: "End Time"),
                       inputType: InputType.time,
-                      // initialValue: (widget.cubit.deliveryById.deliveryInput.endTime == null)
-                      //     ? null
-                      //     : Time.fromString(widget.cubit.deliveryById.deliveryInput.endTime).toDateTime(),
+                      initialValue: notes != null
+                          ? Time.fromString(notes.noteDetail.endTime)
+                              .toDateTime()
+                          : null,
                       validators: [FormBuilderValidators.required()],
                     ),
                   )
@@ -199,27 +204,30 @@ class _CreateNewTaskPageState extends State<CreateNewTaskPage> {
               SizedBox(height: 10.0),
               FormBuilderTextField(
                 attribute: "note_detail",
-                // initialValue: cubit.activityById.financeProduct,
+                initialValue: notes != null ? notes.noteDetail.detailNote : "",
                 decoration: InputDecoration(labelText: "Note Detail"),
                 maxLines: null,
               ),
               SizedBox(height: 10.0),
               FormBuilderDropdown(
                 attribute: "status",
-                // initialValue: cubit.activityId != null && cubit.activityById.status != null
-                //     ? cubit.statusMap[cubit.activityById.status]
-                //     : null,
+                initialValue: notes != null
+                    ? notes.status[notes.noteDetail.status == true ? 0 : 1]
+                    : null,
                 decoration: InputDecoration(labelText: "Status"),
-                items: ["Done", "Not Done"]
+                items: ["Complete", "Uncomplete"]
                     .map((data) =>
                         DropdownMenuItem(child: Text("$data"), value: data))
                     .toList(),
-                //onChanged: (dynamic val) => cubit.changeStatus(val as String),
+               // onChanged: (value) => cubit.changeStatus(val as String),
               ),
               SizedBox(height: 10.0),
               FormBuilderColorPicker(
                 attribute: 'color_picker',
-                initialValue: Colors.white,
+                initialValue: notes != null
+                    ? Color(
+                        int.parse("0xFF${notes.noteDetail.hexCode ?? 000000}"))
+                    : Colors.transparent,
                 style: Theme.of(context).textTheme.bodyText1,
                 colorPickerType: ColorPickerType.BlockPicker,
                 decoration: InputDecoration(

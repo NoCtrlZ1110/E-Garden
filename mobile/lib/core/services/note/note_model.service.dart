@@ -2,6 +2,7 @@ import 'package:e_garden/application.dart';
 import 'package:e_garden/core/models/notes/notes.dart';
 import 'package:e_garden/utils/exception.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:intl/intl.dart'; // for date format
 
 class NoteModel extends ChangeNotifier {
   Notes _listNote;
@@ -9,6 +10,7 @@ class NoteModel extends ChangeNotifier {
 
   Notes get listNote => _listNote;
   Map<String, dynamic> _params = null;
+  List<String> status = [ "Uncomplete","Complete"];
 
   set listNote(Notes value) {
     _listNote = value;
@@ -34,7 +36,6 @@ class NoteModel extends ChangeNotifier {
     if (response.statusCode == 200) {
       _listNote =
           await Notes.fromJson(response.data['result'] as Map<String, dynamic>);
-      print(_listNote.items.toString());
       return _listNote;
     } else {
       throw NetworkException(
@@ -43,18 +44,25 @@ class NoteModel extends ChangeNotifier {
     }
   }
 
-  Future<bool> createNote(Map<String, dynamic> data) async {
-    Map<String, dynamic> params = {
-      "userId": Application.sharePreference.getInt('userId'),
-      "date": "2020-12-05T13:14:45.167Z",
-      "titleNote": "string",
-      "detailNote": "string",
-      "status": true,
-      "hexcode": "string",
-      "id": 0
+  Future<bool> createNote(Map<String, dynamic> data, int noteId) async {
+    print(data);
+    Map<String, dynamic> paramss = {
+      "userId": Application.sharePreference.getInt('userId').toString(),
+      "date": DateFormat.yMd()
+          .format(DateTime.parse(data["activity_date"].toString())),
+      "startTime":
+          DateFormat.Hm().format(DateTime.parse(data["time_from"].toString())),
+      "endTime":
+          DateFormat.Hm().format(DateTime.parse(data["time_to"].toString())),
+      "titleNote": data["title"],
+      "detailNote": data["note_detail"],
+      "status": data["status"].toString() == "Complete" ? true : false,
+      "hexcode": data["color_picker"].toString().substring(10, 16),
+      "id": noteId
     };
+    print(paramss);
     final response = await Application.api
-        .post("api/services/app/UserNote/GetListNoteByUser", params);
+        .post("api/services/app/UserNote/CreateOrUpdateNote", paramss);
     if (response.statusCode == 200) {
       return true;
     } else {
@@ -68,11 +76,10 @@ class NoteModel extends ChangeNotifier {
     if (noteId != 0) {
       final response = await Application.api
           .get("api/services/app/UserNote/GetDetailNote", {"noteId": noteId});
-      print(params);
       if (response.statusCode == 200) {
         _noteDetail = await Note.fromJson(
             response.data['result'] as Map<String, dynamic>);
-        print(_listNote.items.toString());
+        print(_noteDetail.toString());
         return _noteDetail;
       } else {
         throw NetworkException(
@@ -81,5 +88,22 @@ class NoteModel extends ChangeNotifier {
       }
     }
     return null;
+  }
+
+  Future<bool> setNoteDone(bool status, int noteId) async {
+    notifyListeners();
+    Map<String, dynamic> paramss = {
+      "status": status,
+      "id": noteId,
+    };
+    final response = await Application.api
+        .post("api/services/app/UserNote/SetDoneNoteStatus", paramss);
+    if (response.statusCode == 200) {
+      return true;
+    } else {
+      throw NetworkException(
+          message: Map<String, dynamic>.from(
+              response.data["error"] as Map<dynamic, dynamic>));
+    }
   }
 }

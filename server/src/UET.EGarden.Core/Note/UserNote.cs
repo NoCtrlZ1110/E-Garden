@@ -16,6 +16,7 @@ namespace UET.EGarden.Note
         public DateTime Date { get; set; }
         public string TitleNote { get; set; }
         public string DetailNote { get; set; }
+        public string Hexcode { get; set; }
         public bool Status { get; set; }
     }
 }

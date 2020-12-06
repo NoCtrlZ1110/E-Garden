@@ -37,6 +37,11 @@ class _CalendarPageState extends State<CalendarPage> {
             width: SizeConfig.screenWidth,
             height: SizeConfig.screenHeight,
             decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage("assets/images/background_items.png"),
+                  colorFilter:
+                      ColorFilter.mode(Colors.white70, BlendMode.color),
+                  fit: BoxFit.fill),
               borderRadius: BorderRadius.only(
                   topLeft: const Radius.circular(20.0),
                   topRight: const Radius.circular(20.0)),
@@ -62,40 +67,62 @@ class _CalendarPageState extends State<CalendarPage> {
             )
           ]),
         ]),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () => Navigator.push(context,
-              MaterialPageRoute(builder: (context) => CreateNewTaskPage(0))),
-          child: Icon(
-            Icons.add,
-            color: Colors.white,
-            size: 29,
-          ),
-          backgroundColor: AppColors.green,
-          tooltip: 'Add Note',
-          elevation: 5,
-          splashColor: Colors.grey,
-        ),
+        floatingActionButton: FutureBuilder(
+            future: notes.fetchListNote(notes.params ?? params),
+            builder: (context, snapshot) => (snapshot.hasData)
+                ? (notes.listNote.items.length != 0)
+                    ? FloatingActionButton(
+                        onPressed: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => CreateNewTaskPage(0))),
+                        child: Icon(
+                          Icons.add,
+                          color: Colors.white,
+                          size: 29,
+                        ),
+                        backgroundColor: AppColors.green,
+                        tooltip: 'Add Note',
+                        elevation: 5,
+                        splashColor: Colors.grey,
+                      )
+                    : SizedBox()
+                : SizedBox()),
         floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       );
     });
   }
 
   Widget _buildList(Notes notes) {
-    return StaggeredGridView.countBuilder(
-      crossAxisCount: 2,
-      itemCount: notes.items.length,
-      itemBuilder: (BuildContext context, int index) => Center(
-        child: TaskContainer(
-            isDone: notes.items.elementAt(index).status,
-            title: notes.items.elementAt(index).titleNote,
-            subtitle: notes.items.elementAt(index).detailNote,
-            num: index,
-            noteId: notes.items.elementAt(index).id),
-      ),
-      staggeredTileBuilder: (int index) => StaggeredTile.fit(1),
-      mainAxisSpacing: 4.0,
-      crossAxisSpacing: 4.0,
-    );
+    return (notes.items.length != 0)
+        ? StaggeredGridView.countBuilder(
+            crossAxisCount: 2,
+            itemCount: notes.items.length,
+            itemBuilder: (BuildContext context, int index) => Center(
+              child: TaskContainer(
+                  isDone: notes.items.elementAt(index).status,
+                  title: notes.items.elementAt(index).titleNote,
+                  subtitle: notes.items.elementAt(index).detailNote,
+                  num: index,
+                  noteId: notes.items.elementAt(index).id),
+            ),
+            staggeredTileBuilder: (int index) => StaggeredTile.fit(1),
+            mainAxisSpacing: 4.0,
+            crossAxisSpacing: 4.0,
+          )
+        : Center(
+            child: InkWell(
+              onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => CreateNewTaskPage(0))),
+              child: Icon(
+                Icons.note_add,
+                size: 200,
+                color: Colors.grey[300],
+              ),
+            ),
+          );
   }
 
   Widget _buildTableCalendar(NoteModel notes) {
