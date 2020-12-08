@@ -57,6 +57,7 @@ dev_dependencies:
   flip_card: ^0.4.4
   auto_size_text: ^2.1.0
   getwidget: ^1.0.0
+  convex_bottom_bar: ^2.6.0
 
 flutter_icons:
   android: "launcher_icon"

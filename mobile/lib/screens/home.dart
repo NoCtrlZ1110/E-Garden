@@ -1,21 +1,24 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:e_garden/configs/AppConfig.dart';
 import 'package:e_garden/screens/dictionary/home_dictionary.dart';
+import 'package:e_garden/screens/home.provider.dart';
 import 'package:e_garden/screens/notes/notes.dart';
 import 'package:e_garden/screens/study/study.dart';
 import 'package:e_garden/screens/user.profile/edit.user.profile.dart';
 import 'package:e_garden/widgets/custom_app_bar.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen>
-    with SingleTickerProviderStateMixin {
+class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateMixin {
   TabController _controller;
+  PageController _pageController = PageController(initialPage: 0);
 
   @override
   void initState() {
@@ -29,6 +32,7 @@ class _HomeScreenState extends State<HomeScreen>
     // TODO: implement dispose
     super.dispose();
     _controller.dispose();
+    _pageController.dispose();
   }
 
   GlobalKey<ScaffoldState> _drawerKey = GlobalKey();
@@ -39,7 +43,24 @@ class _HomeScreenState extends State<HomeScreen>
     return SafeArea(
       child: WillPopScope(
           onWillPop: () async => false,
-          child: Scaffold(
+          child: Consumer<HomeModel>(builder: (_, homeModel, __) => Scaffold(
+            bottomNavigationBar: ConvexAppBar(
+                items: [
+                  TabItem(icon: Icons.home),
+                  TabItem(icon: Icons.search),
+                  TabItem(icon: Icons.event_note_outlined)
+                ],
+                controller: _controller,
+                color: Colors.white,
+                backgroundColor: Colors.green[400],
+                onTap: (int index) {
+                  homeModel.changeItem(index);
+                  _pageController.animateToPage(
+                      homeModel.selectedItem , duration: Duration(milliseconds: 1000), curve: Curves.ease
+                  );
+                  //Navigator.push(context, MaterialPageRoute(builder: (context) => _widgetOptions[i]));
+                }
+            ),
             key: _drawerKey,
             backgroundColor: AppColors.background,
             drawer: Drawer(
@@ -78,15 +99,11 @@ class _HomeScreenState extends State<HomeScreen>
                             children: [
                               Text(
                                 'Nguyễn Thị Xuân',
-                                style: TextStyle(
-                                    fontSize: 25,
-                                    fontWeight: FontWeight.w600,
-                                    color: Colors.black45),
+                                style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600, color: Colors.black45),
                               ),
                               SizedBox(height: 10),
                               Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceAround,
+                                mainAxisAlignment: MainAxisAlignment.spaceAround,
                                 children: [
                                   DottedBorder(
                                       padding: EdgeInsets.all(15),
@@ -101,16 +118,12 @@ class _HomeScreenState extends State<HomeScreen>
                                           Text(
                                             'Learn',
                                             style: TextStyle(
-                                                fontSize: 18,
-                                                fontWeight: FontWeight.w600,
-                                                color: Colors.black45),
+                                                fontSize: 18, fontWeight: FontWeight.w600, color: Colors.black45),
                                           ),
                                           Text(
                                             20.toString(),
                                             style: TextStyle(
-                                                fontSize: 18,
-                                                fontWeight: FontWeight.w600,
-                                                color: Colors.black45),
+                                                fontSize: 18, fontWeight: FontWeight.w600, color: Colors.black45),
                                           )
                                         ],
                                       )),
@@ -127,16 +140,12 @@ class _HomeScreenState extends State<HomeScreen>
                                         Text(
                                           'Review',
                                           style: TextStyle(
-                                              fontSize: 18,
-                                              fontWeight: FontWeight.w600,
-                                              color: Colors.black45),
+                                              fontSize: 18, fontWeight: FontWeight.w600, color: Colors.black45),
                                         ),
                                         Text(
                                           20.toString(),
                                           style: TextStyle(
-                                              fontSize: 18,
-                                              fontWeight: FontWeight.w600,
-                                              color: Colors.black45),
+                                              fontSize: 18, fontWeight: FontWeight.w600, color: Colors.black45),
                                         )
                                       ],
                                     ),
@@ -158,10 +167,7 @@ class _HomeScreenState extends State<HomeScreen>
                       child: RaisedButton(
                         onPressed: () {
                           Navigator.pop(context);
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => EditProfile()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => EditProfile()));
                         },
                         child: Row(
                           children: [
@@ -280,52 +286,20 @@ class _HomeScreenState extends State<HomeScreen>
                         height: SizeConfig.blockSizeVertical * 90,
                         fit: BoxFit.fitHeight,
                       ),
-                      TabBarView(
-                        controller: _controller,
-                        physics: BouncingScrollPhysics(),
-                        children: [StudyScreen(), HomeDictionaryScreen(), CalendarPage()],
-                      ),
+                      PageView(
+                        children: _widgetOptions,
+                        controller: _pageController,
+                        onPageChanged: (index) {
+                          homeModel.changeItem(index);
+                          _controller.animateTo(homeModel.selectedItem, duration: Duration(milliseconds: 1000));
+                        },
+                      )
                     ],
                   ),
                 ),
-                Expanded(
-                    child: Container(
-                  decoration: BoxDecoration(color: const Color(0xFFF1F1F1), boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey,
-                      blurRadius: 2.0,
-                    ),
-                  ]),
-                  child: DefaultTabController(
-                    length: _widgetOptions.length,
-                    child: TabBar(
-                      indicatorWeight: 2,
-                      indicatorColor: Colors.green,
-                      unselectedLabelColor: Colors.grey,
-                      labelColor: Colors.green,
-                      indicatorSize: TabBarIndicatorSize.tab,
-                      tabs: [
-                        Tab(
-                          icon: Icon(
-                            Icons.home,
-                            size: 30,
-                          ),
-                        ),
-                        Tab(
-                          icon: Icon(Icons.search, size: 30),
-                        ),
-                        Tab(
-                          icon: Icon(Icons.event_note, size: 30),
-                        ),
-                      ],
-                      controller: _controller,
-                    ),
-                  ),
-                ))
               ],
             ),
-          )),
-    );
+          ))));
   }
 
   Future<void> _showLogoutDialog() async {
@@ -336,10 +310,7 @@ class _HomeScreenState extends State<HomeScreen>
         return AlertDialog(
           title: Text(
             'Logout',
-            style: TextStyle(
-                color: AppColors.green,
-                fontWeight: FontWeight.bold,
-                fontSize: 20),
+            style: TextStyle(color: AppColors.green, fontWeight: FontWeight.bold, fontSize: 20),
           ),
           content: SingleChildScrollView(
             child: Text(

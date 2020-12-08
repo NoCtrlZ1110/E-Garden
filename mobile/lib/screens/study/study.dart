@@ -20,96 +20,99 @@ class _StudyScreenState extends State<StudyScreen> {
   @override
   Widget build(BuildContext context) {
     return Consumer<BookModel>(
-        builder: (_, model, __) => Center(
-                child: SingleChildScrollView(
-              child: Container(
-                height: SizeConfig.blockSizeVertical * 65,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Container(
-                      height: SizeConfig.blockSizeVertical * 25,
-                      child: CarouselSlider.builder(
-                        itemBuilder: (context, index) => listClassImage(index),
-                        options: CarouselOptions(
-                            viewportFraction: 0.8,
-                            initialPage: model.getGrade(),
-                            autoPlay: false,
-                            enlargeCenterPage: true,
-                            aspectRatio: 2,
-                            onPageChanged: (index, reason) {
-                              model.setGrade(index);
-                            }),
-                        itemCount: classImage.length,
+        builder: (_, model, __) => Scaffold(
+          backgroundColor: Colors.transparent,
+          body: Center(
+                  child: SingleChildScrollView(
+                child: Container(
+                  height: SizeConfig.blockSizeVertical * 65,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        height: SizeConfig.blockSizeVertical * 25,
+                        child: CarouselSlider.builder(
+                          itemBuilder: (context, index) => listClassImage(index),
+                          options: CarouselOptions(
+                              viewportFraction: 0.8,
+                              initialPage: model.getGrade(),
+                              autoPlay: false,
+                              enlargeCenterPage: true,
+                              aspectRatio: 2,
+                              onPageChanged: (index, reason) {
+                                model.setGrade(index);
+                              }),
+                          itemCount: classImage.length,
+                        ),
                       ),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: classImage.map((url) {
-                        int index = classImage.indexOf(url);
-                        return Container(
-                          width: (model.getGrade() == index)
-                              ? SizeConfig.safeBlockHorizontal * 2.25
-                              : SizeConfig.safeBlockHorizontal * 1.5,
-                          height: (model.getGrade() == index)
-                              ? SizeConfig.safeBlockHorizontal * 2.25
-                              : SizeConfig.safeBlockHorizontal * 1.5,
-                          margin: EdgeInsets.symmetric(
-                              vertical: 10.0, horizontal: 2.0),
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: model.getGrade() == index
-                                ? LightColors().bookColor[index]
-                                : Color.fromRGBO(0, 0, 0, 0.4),
-                          ),
-                        );
-                      }).toList(),
-                    ),
-                    CustomButton(
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: classImage.map((url) {
+                          int index = classImage.indexOf(url);
+                          return Container(
+                            width: (model.getGrade() == index)
+                                ? SizeConfig.safeBlockHorizontal * 2.25
+                                : SizeConfig.safeBlockHorizontal * 1.5,
+                            height: (model.getGrade() == index)
+                                ? SizeConfig.safeBlockHorizontal * 2.25
+                                : SizeConfig.safeBlockHorizontal * 1.5,
+                            margin: EdgeInsets.symmetric(
+                                vertical: 10.0, horizontal: 2.0),
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: model.getGrade() == index
+                                  ? LightColors().bookColor[index]
+                                  : Color.fromRGBO(0, 0, 0, 0.4),
+                            ),
+                          );
+                        }).toList(),
+                      ),
+                      CustomButton(
 //                    borderColor:
 //                    LightColors().bookColor[model.getGrade()],
-                        backgroundColor:
-                            LightColors().buttonLightColor[model.getGrade()],
-                        child: TileWidget(
-                          text: "Learn",
-                          color: LightColors().bookColor[model.getGrade()],
-                          leftText: "15 Units",
-                          rightText: "95%",
-                        ),
-                        height: SizeConfig.safeBlockHorizontal * 30,
-                        width: SizeConfig.safeBlockHorizontal * 75,
-                        shadowColor: LightColors().bookColor[model.getGrade()],
-                        onPressed: () => Navigator.push(
-                              context,
-                              PageTransition(
-                                  type: PageTransitionType.rightToLeft,
-                                  duration: Duration(milliseconds: 400),
-                                  child: LearnScreen()),
-                            )),
-                    CustomButton(
+                          backgroundColor:
+                              LightColors().buttonLightColor[model.getGrade()],
+                          child: TileWidget(
+                            text: "Learn",
+                            color: LightColors().bookColor[model.getGrade()],
+                            leftText: "15 Units",
+                            rightText: "95%",
+                          ),
+                          height: SizeConfig.safeBlockHorizontal * 30,
+                          width: SizeConfig.safeBlockHorizontal * 75,
+                          shadowColor: LightColors().bookColor[model.getGrade()],
+                          onPressed: () => Navigator.push(
+                                context,
+                                PageTransition(
+                                    type: PageTransitionType.rightToLeft,
+                                    duration: Duration(milliseconds: 400),
+                                    child: LearnScreen()),
+                              )),
+                      CustomButton(
 //                        borderColor: LightColors().bookColor[model.getGrade()],
-                        backgroundColor:
-                            LightColors().buttonLightColor[model.getGrade()],
-                        child: TileWidget(
-                          color: LightColors().bookColor[model.getGrade()],
-                          text: "Review",
-                          leftText: "23 Units",
-                          rightText: "37%",
-                        ),
-                        height: SizeConfig.blockSizeVertical * 15,
-                        width: SizeConfig.safeBlockHorizontal * 75,
-                        shadowColor: LightColors().bookColor[model.getGrade()],
-                        onPressed: () => Navigator.push(
-                              context,
-                              PageTransition(
-                                  type: PageTransitionType.rightToLeft,
-                                  duration: Duration(milliseconds: 400),
-                                  child: ReviewScreen()),
-                            )),
-                  ],
+                          backgroundColor:
+                              LightColors().buttonLightColor[model.getGrade()],
+                          child: TileWidget(
+                            color: LightColors().bookColor[model.getGrade()],
+                            text: "Review",
+                            leftText: "23 Units",
+                            rightText: "37%",
+                          ),
+                          height: SizeConfig.blockSizeVertical * 15,
+                          width: SizeConfig.safeBlockHorizontal * 75,
+                          shadowColor: LightColors().bookColor[model.getGrade()],
+                          onPressed: () => Navigator.push(
+                                context,
+                                PageTransition(
+                                    type: PageTransitionType.rightToLeft,
+                                    duration: Duration(milliseconds: 400),
+                                    child: ReviewScreen()),
+                              )),
+                    ],
+                  ),
                 ),
-              ),
-            )));
+              )),
+        ));
   }
 
   listClassImage(int index) {

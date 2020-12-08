@@ -2,9 +2,13 @@ import 'package:e_garden/application.dart';
 import 'package:e_garden/core/services/dictionary/dictionary_model.service.dart';
 import 'package:e_garden/core/services/translate/translate_model.service.dart';
 import 'package:e_garden/core/services/user/user_model.service.dart';
+import 'package:e_garden/screens/dictionary/home_dictionary.dart';
 import 'package:e_garden/screens/home.dart';
+import 'package:e_garden/screens/home.provider.dart';
+import 'package:e_garden/screens/notes/notes.dart';
 import 'package:e_garden/screens/signin.dart';
 import 'package:e_garden/screens/study/learn/learn_model.dart';
+import 'package:e_garden/screens/study/study.dart';
 import 'package:e_garden/screens/study/study.provider.dart';
 import 'package:e_garden/utils/api.dart';
 import 'package:e_garden/utils/shared_preferences.dart';
@@ -26,6 +30,7 @@ Future<void> main() async {
       ChangeNotifierProvider(create: (_) => LearnModel()),
       ChangeNotifierProvider(create: (_) => NoteModel()),
       ChangeNotifierProvider(create: (_) => UserModel()),
+      ChangeNotifierProvider(create: (_) => HomeModel()),
     ],
     child: E_Garden(),
   ));
@@ -41,6 +46,12 @@ class E_Garden extends StatelessWidget {
           primarySwatch: Colors.green,
           visualDensity: VisualDensity.adaptivePlatformDensity,
           fontFamily: 'QuickSand'),
+      initialRoute: '/',
+      routes: {
+        '/study': (context) => StudyScreen(),
+        '/dictionary': (context) => HomeDictionaryScreen(),
+        'notes': (context) => CalendarPage()
+      },
       home: HomePage(title: 'E-Garden'),
       debugShowCheckedModeBanner: false,
       color: AppColors.green,
@@ -62,7 +73,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Scaffold(
-      body: HomeScreen(),
+      body: SignIn(),
       // body: HomeScreen(),
     );
   }

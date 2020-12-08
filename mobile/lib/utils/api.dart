@@ -11,9 +11,9 @@ class API {
   static String baseUrl = "https://uetegarden.azurewebsites.net/";
   final Dio dio = Dio(
     BaseOptions(
-      connectTimeout: 3000,
-      sendTimeout: 6000,
-      receiveTimeout: 3000,
+      connectTimeout: 6000,
+      sendTimeout: 10000,
+      receiveTimeout: 6000,
       contentType: 'application/json; charset=utf-8',
       baseUrl: baseUrl,
     ),
