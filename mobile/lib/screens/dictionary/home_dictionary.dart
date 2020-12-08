@@ -17,50 +17,54 @@ class HomeDictionaryScreen extends StatefulWidget {
 class _HomeDictionaryScreenState extends State<HomeDictionaryScreen> {
   @override
   Widget build(BuildContext context) {
-    return Consumer<BookModel>(builder: (_, model, __) => SingleChildScrollView(
-      child: Container(
-        height: SizeConfig.blockSizeVertical * 77,
-        child: Column(
-          children: [
-            Expanded(child: SizedBox()),
-            CustomButton(
-              backgroundColor: Colors.blue[300],
-              child: TileWidget(
-                text: "Dictionary",
-                color: Colors.indigo,
-              ),
-              height: SizeConfig.safeBlockHorizontal * 40,
-              width: SizeConfig.safeBlockHorizontal * 80,
-              shadowColor: Colors.indigo,
-              onPressed: () => Navigator.push(
-                context,
-                PageTransition(
-                    type: PageTransitionType.rightToLeft,
-                    duration: Duration(milliseconds: 400),
-                    child: DictionaryScreen()),
-              ),
-            ),
-            SizedBox(
-              height: SizeConfig.blockSizeVertical * 10,
-            ),
-            CustomButton(
-                backgroundColor: Colors.green[300],
+    return Consumer<BookModel>(builder: (_, model, __) => Scaffold(
+      backgroundColor: Colors.transparent,
+      body: SingleChildScrollView(
+        child: Container(
+          alignment: Alignment.center,
+          height: SizeConfig.blockSizeVertical * 77,
+          child: Column(
+            children: [
+              Expanded(child: SizedBox()),
+              CustomButton(
+                backgroundColor: Colors.blue[300],
                 child: TileWidget(
-                  text: "Translate",
-                  color: Colors.green,
+                  text: "Dictionary",
+                  color: Colors.indigo,
                 ),
                 height: SizeConfig.safeBlockHorizontal * 40,
                 width: SizeConfig.safeBlockHorizontal * 80,
-                shadowColor: Colors.green,
+                shadowColor: Colors.indigo,
                 onPressed: () => Navigator.push(
                   context,
                   PageTransition(
                       type: PageTransitionType.rightToLeft,
                       duration: Duration(milliseconds: 400),
-                      child: TranslateScreen()),
-                )),
-            Expanded(child: SizedBox()),
-          ],
+                      child: DictionaryScreen()),
+                ),
+              ),
+              SizedBox(
+                height: SizeConfig.blockSizeVertical * 10,
+              ),
+              CustomButton(
+                  backgroundColor: Colors.green[300],
+                  child: TileWidget(
+                    text: "Translate",
+                    color: Colors.green,
+                  ),
+                  height: SizeConfig.safeBlockHorizontal * 40,
+                  width: SizeConfig.safeBlockHorizontal * 80,
+                  shadowColor: Colors.green,
+                  onPressed: () => Navigator.push(
+                    context,
+                    PageTransition(
+                        type: PageTransitionType.rightToLeft,
+                        duration: Duration(milliseconds: 400),
+                        child: TranslateScreen()),
+                  )),
+              Expanded(child: SizedBox()),
+            ],
+          ),
         ),
       ),
     ),
