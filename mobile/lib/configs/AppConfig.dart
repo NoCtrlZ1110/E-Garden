@@ -34,10 +34,10 @@ class AppColors {
   static const Color buttonBlend1 = Color(0xFF3DCC85);
   static const Color buttonBlend2 = Color(0xFF4FC1A6);
   static const Color border = Color(0xFF2FCB89);
-  static const Color mainGreen = Color(0xFF509F21);
+  static const Color mainGreen = Color(0xFF3DCC85);
   static const Color background = Colors.white;
-  static const Color buttonColor = Color(0xFF87C567);
-  static const Color btnShadow = Color(0xFF55A64C);
+  static const Color buttonColor = Color(0xFF3DCC85);
+  static const Color btnShadow = Color(0xFF2A9A70);
 }
 
 class SizeConfig {

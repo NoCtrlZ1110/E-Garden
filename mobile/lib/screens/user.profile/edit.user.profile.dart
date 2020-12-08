@@ -21,7 +21,10 @@ class _EditProfileState extends State<EditProfile> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-          appBar: AppBar(),
+          appBar: AppBar(
+            backgroundColor: AppColors.green,
+            title: Text("Edit Profile"),
+          ),
           body: Container(
             color: Colors.white,
             child: ListView(
@@ -42,7 +45,8 @@ class _EditProfileState extends State<EditProfile> {
                                     decoration: BoxDecoration(
                                       shape: BoxShape.circle,
                                       image: DecorationImage(
-                                        image: ExactAssetImage('assets/images/avt.jpg'),
+                                        image: ExactAssetImage(
+                                            'assets/images/avt.jpg'),
                                         fit: BoxFit.cover,
                                       ),
                                     )),
@@ -83,7 +87,10 @@ class _EditProfileState extends State<EditProfile> {
                               child: GestureDetector(
                                 child: Text(
                                   'Edit Personal Information',
-                                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold, color: Colors.blue),
+                                  style: TextStyle(
+                                      fontSize: 18.0,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.blue),
                                 ),
                                 onTap: () {
                                   setState(() {
@@ -93,24 +100,29 @@ class _EditProfileState extends State<EditProfile> {
                               ),
                             ),
                             Padding(
-                                padding: EdgeInsets.only(left: 25.0, right: 25.0, top: 25.0),
+                                padding: EdgeInsets.only(
+                                    left: 25.0, right: 25.0, top: 25.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   children: <Widget>[
                                     Column(
-                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
                                       mainAxisSize: MainAxisSize.min,
                                       children: <Widget>[
                                         Text(
                                           'Name',
-                                          style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
+                                          style: TextStyle(
+                                              fontSize: 16.0,
+                                              fontWeight: FontWeight.bold),
                                         ),
                                       ],
                                     ),
                                   ],
                                 )),
                             Padding(
-                                padding: EdgeInsets.only(left: 25.0, right: 25.0, top: 2.0),
+                                padding: EdgeInsets.only(
+                                    left: 25.0, right: 25.0, top: 2.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   children: <Widget>[
@@ -126,67 +138,81 @@ class _EditProfileState extends State<EditProfile> {
                                   ],
                                 )),
                             Padding(
-                                padding: EdgeInsets.only(left: 25.0, right: 25.0, top: 25.0),
+                                padding: EdgeInsets.only(
+                                    left: 25.0, right: 25.0, top: 25.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   children: <Widget>[
                                     Column(
-                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
                                       mainAxisSize: MainAxisSize.min,
                                       children: <Widget>[
                                         Text(
                                           'User name',
-                                          style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
+                                          style: TextStyle(
+                                              fontSize: 16.0,
+                                              fontWeight: FontWeight.bold),
                                         ),
                                       ],
                                     ),
                                   ],
                                 )),
                             Padding(
-                                padding: EdgeInsets.only(left: 25.0, right: 25.0, top: 2.0),
+                                padding: EdgeInsets.only(
+                                    left: 25.0, right: 25.0, top: 2.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   children: <Widget>[
                                     Flexible(
                                       child: TextField(
-                                        decoration: const InputDecoration(hintText: "xuannguyen"),
+                                        decoration: const InputDecoration(
+                                            hintText: "xuannguyen"),
                                         enabled: !_status,
                                       ),
                                     ),
                                   ],
                                 )),
                             Padding(
-                                padding: EdgeInsets.only(left: 25.0, right: 25.0, top: 25.0),
+                                padding: EdgeInsets.only(
+                                    left: 25.0, right: 25.0, top: 25.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   children: <Widget>[
                                     Column(
-                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
                                       mainAxisSize: MainAxisSize.min,
                                       children: <Widget>[
                                         Text(
                                           'Email',
-                                          style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
+                                          style: TextStyle(
+                                              fontSize: 16.0,
+                                              fontWeight: FontWeight.bold),
                                         ),
                                       ],
                                     ),
                                   ],
                                 )),
                             Padding(
-                                padding: EdgeInsets.only(left: 25.0, right: 25.0, top: 2.0),
+                                padding: EdgeInsets.only(
+                                    left: 25.0, right: 25.0, top: 2.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   children: <Widget>[
                                     Flexible(
                                       child: TextField(
-                                        decoration: const InputDecoration(hintText: "xuan123dthhbg@gmail.com"),
+                                        decoration: const InputDecoration(
+                                            hintText:
+                                                "xuan123dthhbg@gmail.com"),
                                         enabled: !_status,
                                       ),
                                     ),
                                   ],
                                 )),
                             Padding(
-                                padding: EdgeInsets.only(left: 25.0, right: 25.0, top: 25.0),
+                                padding: EdgeInsets.only(
+                                    left: 25.0, right: 25.0, top: 25.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment: MainAxisAlignment.start,
@@ -195,7 +221,9 @@ class _EditProfileState extends State<EditProfile> {
                                       child: Container(
                                         child: Text(
                                           'Age',
-                                          style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
+                                          style: TextStyle(
+                                              fontSize: 16.0,
+                                              fontWeight: FontWeight.bold),
                                         ),
                                       ),
                                       flex: 2,
@@ -204,7 +232,9 @@ class _EditProfileState extends State<EditProfile> {
                                       child: Container(
                                         child: Text(
                                           'Gender',
-                                          style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
+                                          style: TextStyle(
+                                              fontSize: 16.0,
+                                              fontWeight: FontWeight.bold),
                                         ),
                                       ),
                                       flex: 2,
@@ -212,7 +242,8 @@ class _EditProfileState extends State<EditProfile> {
                                   ],
                                 )),
                             Padding(
-                                padding: EdgeInsets.only(left: 25.0, right: 25.0, top: 2.0),
+                                padding: EdgeInsets.only(
+                                    left: 25.0, right: 25.0, top: 2.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment: MainAxisAlignment.start,
@@ -221,7 +252,8 @@ class _EditProfileState extends State<EditProfile> {
                                       child: Padding(
                                         padding: EdgeInsets.only(right: 10.0),
                                         child: TextField(
-                                          decoration: const InputDecoration(hintText: "20"),
+                                          decoration: const InputDecoration(
+                                              hintText: "20"),
                                           enabled: !_status,
                                         ),
                                       ),
@@ -237,8 +269,12 @@ class _EditProfileState extends State<EditProfile> {
                                           });
                                         },
                                         elevation: 16,
-                                        items: <String>['Female', 'Male', 'Other']
-                                            .map<DropdownMenuItem<String>>((String value) {
+                                        items: <String>[
+                                          'Female',
+                                          'Male',
+                                          'Other'
+                                        ].map<DropdownMenuItem<String>>(
+                                            (String value) {
                                           return DropdownMenuItem<String>(
                                             value: value,
                                             child: Text(value),
@@ -262,7 +298,6 @@ class _EditProfileState extends State<EditProfile> {
     );
   }
 
-
   Widget _getActionButtons() {
     return Padding(
       padding: EdgeInsets.only(left: 25.0, right: 25.0, top: 45.0),
@@ -284,7 +319,8 @@ class _EditProfileState extends State<EditProfile> {
                     FocusScope.of(context).requestFocus(FocusNode());
                   });
                 },
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20.0)),
               )),
             ),
             flex: 2,
@@ -303,7 +339,8 @@ class _EditProfileState extends State<EditProfile> {
                     FocusScope.of(context).requestFocus(FocusNode());
                   });
                 },
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20.0)),
               )),
             ),
             flex: 2,
