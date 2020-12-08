@@ -9,6 +9,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
+
 import 'learn.dart';
 
 class StudyScreen extends StatefulWidget {
@@ -21,8 +22,8 @@ class _StudyScreenState extends State<StudyScreen> {
   Widget build(BuildContext context) {
     return Consumer<BookModel>(
         builder: (_, model, __) => Scaffold(
-          backgroundColor: Colors.transparent,
-          body: Center(
+              backgroundColor: Colors.transparent,
+              body: Center(
                   child: SingleChildScrollView(
                 child: Container(
                   height: SizeConfig.blockSizeVertical * 65,
@@ -32,7 +33,8 @@ class _StudyScreenState extends State<StudyScreen> {
                       Container(
                         height: SizeConfig.blockSizeVertical * 25,
                         child: CarouselSlider.builder(
-                          itemBuilder: (context, index) => listClassImage(index),
+                          itemBuilder: (context, index) =>
+                              listClassImage(index),
                           options: CarouselOptions(
                               viewportFraction: 0.8,
                               initialPage: model.getGrade(),
@@ -67,9 +69,10 @@ class _StudyScreenState extends State<StudyScreen> {
                           );
                         }).toList(),
                       ),
+                      SizedBox(
+                        height: 10,
+                      ),
                       CustomButton(
-//                    borderColor:
-//                    LightColors().bookColor[model.getGrade()],
                           backgroundColor:
                               LightColors().buttonLightColor[model.getGrade()],
                           child: TileWidget(
@@ -80,7 +83,8 @@ class _StudyScreenState extends State<StudyScreen> {
                           ),
                           height: SizeConfig.safeBlockHorizontal * 30,
                           width: SizeConfig.safeBlockHorizontal * 75,
-                          shadowColor: LightColors().bookColor[model.getGrade()],
+                          shadowColor:
+                              LightColors().bookColor[model.getGrade()],
                           onPressed: () => Navigator.push(
                                 context,
                                 PageTransition(
@@ -88,8 +92,10 @@ class _StudyScreenState extends State<StudyScreen> {
                                     duration: Duration(milliseconds: 400),
                                     child: LearnScreen()),
                               )),
+                      SizedBox(
+                        height: 15,
+                      ),
                       CustomButton(
-//                        borderColor: LightColors().bookColor[model.getGrade()],
                           backgroundColor:
                               LightColors().buttonLightColor[model.getGrade()],
                           child: TileWidget(
@@ -100,7 +106,8 @@ class _StudyScreenState extends State<StudyScreen> {
                           ),
                           height: SizeConfig.blockSizeVertical * 15,
                           width: SizeConfig.safeBlockHorizontal * 75,
-                          shadowColor: LightColors().bookColor[model.getGrade()],
+                          shadowColor:
+                              LightColors().bookColor[model.getGrade()],
                           onPressed: () => Navigator.push(
                                 context,
                                 PageTransition(
@@ -112,7 +119,7 @@ class _StudyScreenState extends State<StudyScreen> {
                   ),
                 ),
               )),
-        ));
+            ));
   }
 
   listClassImage(int index) {
