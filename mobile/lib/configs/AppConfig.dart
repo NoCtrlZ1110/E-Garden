@@ -22,7 +22,7 @@ class AppColors {
   static const Color lightTeal = Color(0xFF2CDAB1);
   static const Color lightYellow = Color(0xFFFFCE4B);
   static const Color lilac = Color(0xFFA890F0);
-  static const Color green = Color(0xFF3DCC85);
+  static const Color green = Color(0xFF2eb180);
   static const Color darkGreen = Color(0xFF008A51);
   static const Color pink = Color(0xFFF85888);
   static const Color purple = Color(0xFF7C538C);
@@ -34,9 +34,9 @@ class AppColors {
   static const Color buttonBlend1 = Color(0xFF3DCC85);
   static const Color buttonBlend2 = Color(0xFF4FC1A6);
   static const Color border = Color(0xFF2FCB89);
-  static const Color mainGreen = Color(0xFF3DCC85);
+  static const Color mainGreen = Color(0xFF2eb180);
   static const Color background = Colors.white;
-  static const Color buttonColor = Color(0xFF3DCC85);
+  static const Color buttonColor = Color(0xFF2eb180);
   static const Color btnShadow = Color(0xFF2A9A70);
 }
 

@@ -71,6 +71,7 @@ class _HomeScreenState extends State<HomeScreen>
                       backgroundColor: AppColors.background,
                       drawer: Drawer(
                         child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
                             Container(
                               color: Colors.white,
@@ -101,9 +102,11 @@ class _HomeScreenState extends State<HomeScreen>
                                           )),
                                     ),
                                   ),
-                                  SizedBox(height: 50),
+//                                  SizedBox(height: 50),
                                   Center(
                                     child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
                                       children: [
                                         Text(
                                           'Nguyễn Thị Xuân',
@@ -188,115 +191,123 @@ class _HomeScreenState extends State<HomeScreen>
                                 ],
                               ),
                             ),
-                            SizedBox(
-                              height: 10,
-                            ),
                             Container(
-                                margin: EdgeInsets.fromLTRB(50, 0, 0, 0),
-                                height: SizeConfig.blockSizeVertical * 8,
-                                child: RaisedButton(
-                                  onPressed: () {
-                                    Navigator.pop(context);
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                EditProfile()));
-                                  },
-                                  child: Row(
-                                    children: [
-                                      Icon(Icons.edit_outlined,
-                                          color: Colors.green),
-                                      SizedBox(
-                                        width:
-                                            SizeConfig.blockSizeHorizontal * 8,
-                                      ),
-                                      Text(
-                                        'Edit Profile',
-                                        style: TextStyle(fontSize: 20),
-                                      ),
-                                    ],
-                                  ),
-                                  splashColor: Colors.green,
-                                  elevation: 0,
-                                  color: Colors.transparent,
-                                )),
-                            Container(
-                                margin: EdgeInsets.fromLTRB(50, 0, 0, 0),
-                                height: SizeConfig.blockSizeVertical * 8,
-                                child: RaisedButton(
-                                  onPressed: () {},
-                                  child: Row(
-                                    children: [
-                                      Icon(Icons.menu_book,
-                                          color: Colors.green),
-                                      SizedBox(
-                                        width:
-                                            SizeConfig.blockSizeHorizontal * 8,
-                                      ),
-                                      Text(
-                                        'Achievements',
-                                        style: TextStyle(fontSize: 20),
-                                      ),
-                                    ],
-                                  ),
-                                  splashColor: Colors.greenAccent,
-                                  elevation: 0,
-                                  color: Colors.transparent,
-                                )),
-                            Container(
-                                margin: EdgeInsets.fromLTRB(50, 0, 0, 0),
-                                height: SizeConfig.blockSizeVertical * 8,
-                                child: RaisedButton(
-                                  onPressed: () {},
-                                  child: Row(
-                                    children: [
-                                      Icon(Icons.flag_outlined,
-                                          color: Colors.green),
-                                      SizedBox(
-                                        width:
-                                            SizeConfig.blockSizeHorizontal * 8,
-                                      ),
-                                      Text(
-                                        'Feedback',
-                                        style: TextStyle(fontSize: 20),
-                                      ),
-                                    ],
-                                  ),
-                                  splashColor: Colors.greenAccent,
-                                  color: Colors.transparent,
-                                  elevation: 0,
-                                )),
-                            Container(
-                                margin: EdgeInsets.fromLTRB(50, 0, 0, 0),
-                                height: SizeConfig.blockSizeVertical * 8,
-                                child: RaisedButton(
-                                  onPressed: () {
-                                    _showLogoutDialog();
-                                  },
-                                  child: Row(
-                                    children: [
-                                      Icon(Icons.logout, color: Colors.green),
-                                      SizedBox(
-                                        width:
-                                            SizeConfig.blockSizeHorizontal * 8,
-                                      ),
-                                      Text(
-                                        'Logout',
-                                        style: TextStyle(fontSize: 20),
-                                      ),
-                                    ],
-                                  ),
-                                  splashColor: Colors.greenAccent,
-                                  color: Colors.transparent,
-                                  elevation: 0,
-                                )),
-                            Expanded(child: SizedBox()),
-                            Image.asset(
-                              "assets/images/logo_text.png",
-                              height: SizeConfig.blockSizeVertical * 5,
-                            ),
-                            Expanded(child: SizedBox())
+                              color: Colors.white,
+                              child: Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Container(
+                                      margin: EdgeInsets.fromLTRB(50, 0, 0, 0),
+                                      height: SizeConfig.blockSizeVertical * 8,
+                                      child: RaisedButton(
+                                        onPressed: () {
+                                          Navigator.pop(context);
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      EditProfile()));
+                                        },
+                                        child: Row(
+                                          children: [
+                                            Icon(Icons.edit_outlined,
+                                                color: Colors.green),
+                                            SizedBox(
+                                              width: SizeConfig
+                                                      .blockSizeHorizontal *
+                                                  8,
+                                            ),
+                                            Text(
+                                              'Edit Profile',
+                                              style: TextStyle(fontSize: 20),
+                                            ),
+                                          ],
+                                        ),
+                                        splashColor: Colors.green,
+                                        elevation: 0,
+                                        color: Colors.transparent,
+                                      )),
+                                  Container(
+                                      margin: EdgeInsets.fromLTRB(50, 0, 0, 0),
+                                      height: SizeConfig.blockSizeVertical * 8,
+                                      child: RaisedButton(
+                                        onPressed: () {},
+                                        child: Row(
+                                          children: [
+                                            Icon(Icons.menu_book,
+                                                color: Colors.green),
+                                            SizedBox(
+                                              width: SizeConfig
+                                                      .blockSizeHorizontal *
+                                                  8,
+                                            ),
+                                            Text(
+                                              'Achievements',
+                                              style: TextStyle(fontSize: 20),
+                                            ),
+                                          ],
+                                        ),
+                                        splashColor: Colors.greenAccent,
+                                        elevation: 0,
+                                        color: Colors.transparent,
+                                      )),
+                                  Container(
+                                      margin: EdgeInsets.fromLTRB(50, 0, 0, 0),
+                                      height: SizeConfig.blockSizeVertical * 8,
+                                      child: RaisedButton(
+                                        onPressed: () {},
+                                        child: Row(
+                                          children: [
+                                            Icon(Icons.announcement,
+                                                color: Colors.green),
+                                            SizedBox(
+                                              width: SizeConfig
+                                                      .blockSizeHorizontal *
+                                                  8,
+                                            ),
+                                            Text(
+                                              'Feedback',
+                                              style: TextStyle(fontSize: 20),
+                                            ),
+                                          ],
+                                        ),
+                                        splashColor: Colors.greenAccent,
+                                        color: Colors.transparent,
+                                        elevation: 0,
+                                      )),
+                                  Container(
+                                      margin: EdgeInsets.fromLTRB(50, 0, 0, 0),
+                                      height: SizeConfig.blockSizeVertical * 8,
+                                      child: RaisedButton(
+                                        onPressed: () {
+                                          _showLogoutDialog();
+                                        },
+                                        child: Row(
+                                          children: [
+                                            Icon(Icons.logout,
+                                                color: Colors.green),
+                                            SizedBox(
+                                              width: SizeConfig
+                                                      .blockSizeHorizontal *
+                                                  8,
+                                            ),
+                                            Text(
+                                              'Logout',
+                                              style: TextStyle(fontSize: 20),
+                                            ),
+                                          ],
+                                        ),
+                                        splashColor: Colors.greenAccent,
+                                        color: Colors.transparent,
+                                        elevation: 0,
+                                      )),
+                                  SizedBox(
+                                    height: 80,
+                                  )
+                                ],
+                              ),
+                            )
                           ],
                         ),
                       ),

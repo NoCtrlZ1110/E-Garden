@@ -1,6 +1,7 @@
 import 'package:e_garden/configs/AppConfig.dart';
 import 'package:e_garden/core/services/user/user_model.service.dart';
 import 'package:e_garden/screens/home.dart';
+import 'package:e_garden/screens/signup.dart';
 import 'package:e_garden/widgets/custom_buton_component.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -233,12 +234,18 @@ class _SignInState extends State<SignIn> {
                           },
                         ),
                   SizedBox(height: 30),
-                  Text(
-                    'Not a member yet? Sign up now!',
-                    style: TextStyle(
-                        color: AppColors.green,
-                        fontSize: SizeConfig.blockSizeVertical * 2,
-                        fontWeight: FontWeight.w600),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => SignUp()));
+                    },
+                    child: Text(
+                      'Not a member yet? Sign up now!',
+                      style: TextStyle(
+                          color: AppColors.green,
+                          fontSize: SizeConfig.blockSizeVertical * 2,
+                          fontWeight: FontWeight.w600),
+                    ),
                   ),
                   SizedBox(height: 20),
                 ],
