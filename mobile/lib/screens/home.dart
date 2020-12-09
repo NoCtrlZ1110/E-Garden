@@ -1,5 +1,6 @@
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:dotted_border/dotted_border.dart';
+import 'package:e_garden/application.dart';
 import 'package:e_garden/configs/AppConfig.dart';
 import 'package:e_garden/screens/dictionary/home_dictionary.dart';
 import 'package:e_garden/screens/home.provider.dart';
@@ -19,7 +20,8 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen>
     with SingleTickerProviderStateMixin {
   TabController _controller;
-  PageController _pageController = PageController(initialPage: 0);
+  PageController _pageController = PageController();
+  bool isSwipe = false;
 
   @override
   void initState() {
@@ -40,319 +42,307 @@ class _HomeScreenState extends State<HomeScreen>
 
   @override
   Widget build(BuildContext context) {
-    List<Widget> _widgetOptions = <Widget>[
-      StudyScreen(),
-      HomeDictionaryScreen(),
-      CalendarPage()
-    ];
-    return Container(
-        child: WillPopScope(
-            onWillPop: () async => false,
-            child: Consumer<HomeModel>(
-                builder: (_, homeModel, __) => Scaffold(
-                      bottomNavigationBar: ConvexAppBar(
-                          items: [
-                            TabItem(icon: Icons.home),
-                            TabItem(icon: Icons.search),
-                            TabItem(icon: Icons.event_note_outlined)
-                          ],
-                          controller: _controller,
-                          color: Colors.white,
-                          backgroundColor: AppColors.green,
-                          onTap: (int index) {
-                            homeModel.changeItem(index);
-                            _pageController.animateToPage(
-                                homeModel.selectedItem,
-                                duration: Duration(milliseconds: 1000),
-                                curve: Curves.ease);
-                            //Navigator.push(context, MaterialPageRoute(builder: (context) => _widgetOptions[i]));
-                          }),
-                      key: _drawerKey,
-                      backgroundColor: AppColors.background,
-                      drawer: Drawer(
-                        child: Column(
-                          children: <Widget>[
-                            Container(
-                              color: Colors.white,
-                              child: Column(
+    List<Widget> _widgetOptions = <Widget>[StudyScreen(), HomeDictionaryScreen(), CalendarPage()];
+    return SafeArea(
+      child: WillPopScope(
+          onWillPop: () async => false,
+          child: Consumer<HomeModel>(builder: (_, homeModel, __) => Scaffold(
+            bottomNavigationBar: ConvexAppBar(
+              height: SizeConfig.blockSizeVertical * 7,
+                items: [
+                  TabItem(icon: Icons.home),
+                  TabItem(icon: Icons.search),
+                  TabItem(icon: Icons.event_note_outlined)
+                ],
+                controller: _controller,
+                color: Colors.white,
+                backgroundColor: Colors.green[400],
+                onTap: (int index) {
+                  _pageController.animateToPage(
+                      index , duration: Duration(milliseconds: 1000), curve: Curves.ease
+                  );
+                }
+            ),
+            key: _drawerKey,
+            backgroundColor: AppColors.background,
+            drawer: Drawer(
+              child: Column(
+                children: <Widget>[
+                  Container(
+                    color: Colors.white,
+                    child: Column(
+                      children: [
+                        SizedBox(height: 50),
+                        Container(
+                          height: SizeConfig.blockSizeVertical * 20,
+                          decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              border: Border.all(
+                                color: AppColors.green,
+                                width: 10,
+                              )),
+                          alignment: Alignment.center,
+                          child: Container(
+                            decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                border: Border.all(
+                                  color: Colors.white,
+                                )),
+                            child: ClipRRect(
+                                borderRadius:
+                                BorderRadius.circular(180),
+                                child: Image.asset(
+                                  'assets/images/avt.jpg',
+                                  fit: BoxFit.fill,
+                                )),
+                          ),
+                        ),
+                        SizedBox(height: 50),
+                        Center(
+                          child: Column(
+                            children: [
+                              Text(
+                                'Nguyễn Thị Xuân',
+                                style: TextStyle(
+                                    fontSize: 25,
+                                    fontWeight: FontWeight.w600,
+                                    color: Colors.black45),
+                              ),
+                              SizedBox(height: 30),
+                              Row(
+                                mainAxisAlignment:
+                                MainAxisAlignment.center,
                                 children: [
-                                  SizedBox(height: 50),
-                                  Container(
-                                    height: SizeConfig.blockSizeVertical * 20,
-                                    decoration: BoxDecoration(
-                                        shape: BoxShape.circle,
-                                        border: Border.all(
-                                          color: AppColors.green,
-                                          width: 10,
-                                        )),
-                                    alignment: Alignment.center,
-                                    child: Container(
-                                      decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                          border: Border.all(
-                                            color: Colors.white,
-                                          )),
-                                      child: ClipRRect(
-                                          borderRadius:
-                                              BorderRadius.circular(180),
-                                          child: Image.asset(
-                                            'assets/images/avt.jpg',
-                                            fit: BoxFit.fill,
-                                          )),
-                                    ),
-                                  ),
-                                  SizedBox(height: 50),
-                                  Center(
+                                  DottedBorder(
+                                      padding: EdgeInsets.all(15),
+                                      dashPattern: [6, 6],
+                                      borderType: BorderType.RRect,
+                                      color: AppColors.green,
+                                      strokeWidth: 2,
+                                      strokeCap: StrokeCap.round,
+                                      radius: Radius.circular(20),
+                                      child: Column(
+                                        children: [
+                                          Text(
+                                            'Learn',
+                                            style: TextStyle(
+                                                fontSize: 18,
+                                                fontWeight:
+                                                FontWeight.w600,
+                                                color:
+                                                Colors.black45),
+                                          ),
+                                          Text(
+                                            20.toString(),
+                                            style: TextStyle(
+                                                fontSize: 18,
+                                                fontWeight:
+                                                FontWeight.w600,
+                                                color:
+                                                Colors.black45),
+                                          )
+                                        ],
+                                      )),
+                                  SizedBox(width: 30),
+                                  DottedBorder(
+                                    padding: EdgeInsets.all(15),
+                                    dashPattern: [6, 6],
+                                    borderType: BorderType.RRect,
+                                    color: AppColors.green,
+                                    strokeWidth: 2,
+                                    // strokeCap: StrokeCap.round,
+                                    radius: Radius.circular(20),
                                     child: Column(
                                       children: [
                                         Text(
-                                          'Nguyễn Thị Xuân',
+                                          'Review',
                                           style: TextStyle(
-                                              fontSize: 25,
-                                              fontWeight: FontWeight.w600,
+                                              fontSize: 18,
+                                              fontWeight:
+                                              FontWeight.w600,
                                               color: Colors.black45),
                                         ),
-                                        SizedBox(height: 30),
-                                        Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: [
-                                            DottedBorder(
-                                                padding: EdgeInsets.all(15),
-                                                dashPattern: [6, 6],
-                                                borderType: BorderType.RRect,
-                                                color: AppColors.green,
-                                                strokeWidth: 2,
-                                                strokeCap: StrokeCap.round,
-                                                radius: Radius.circular(20),
-                                                child: Column(
-                                                  children: [
-                                                    Text(
-                                                      'Learn',
-                                                      style: TextStyle(
-                                                          fontSize: 18,
-                                                          fontWeight:
-                                                              FontWeight.w600,
-                                                          color:
-                                                              Colors.black45),
-                                                    ),
-                                                    Text(
-                                                      20.toString(),
-                                                      style: TextStyle(
-                                                          fontSize: 18,
-                                                          fontWeight:
-                                                              FontWeight.w600,
-                                                          color:
-                                                              Colors.black45),
-                                                    )
-                                                  ],
-                                                )),
-                                            SizedBox(width: 30),
-                                            DottedBorder(
-                                              padding: EdgeInsets.all(15),
-                                              dashPattern: [6, 6],
-                                              borderType: BorderType.RRect,
-                                              color: AppColors.green,
-                                              strokeWidth: 2,
-                                              // strokeCap: StrokeCap.round,
-                                              radius: Radius.circular(20),
-                                              child: Column(
-                                                children: [
-                                                  Text(
-                                                    'Review',
-                                                    style: TextStyle(
-                                                        fontSize: 18,
-                                                        fontWeight:
-                                                            FontWeight.w600,
-                                                        color: Colors.black45),
-                                                  ),
-                                                  Text(
-                                                    20.toString(),
-                                                    style: TextStyle(
-                                                        fontSize: 18,
-                                                        fontWeight:
-                                                            FontWeight.w600,
-                                                        color: Colors.black45),
-                                                  )
-                                                ],
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                        SizedBox(
-                                          height: 30,
+                                        Text(
+                                          20.toString(),
+                                          style: TextStyle(
+                                              fontSize: 18,
+                                              fontWeight:
+                                              FontWeight.w600,
+                                              color: Colors.black45),
                                         )
                                       ],
                                     ),
                                   ),
                                 ],
                               ),
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Container(
-                                margin: EdgeInsets.fromLTRB(50, 0, 0, 0),
-                                height: SizeConfig.blockSizeVertical * 8,
-                                child: RaisedButton(
-                                  onPressed: () {
-                                    Navigator.pop(context);
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                EditProfile()));
-                                  },
-                                  child: Row(
-                                    children: [
-                                      Icon(Icons.edit_outlined,
-                                          color: Colors.green),
-                                      SizedBox(
-                                        width:
-                                            SizeConfig.blockSizeHorizontal * 8,
-                                      ),
-                                      Text(
-                                        'Edit Profile',
-                                        style: TextStyle(fontSize: 20),
-                                      ),
-                                    ],
-                                  ),
-                                  splashColor: Colors.green,
-                                  elevation: 0,
-                                  color: Colors.transparent,
-                                )),
-                            Container(
-                                margin: EdgeInsets.fromLTRB(50, 0, 0, 0),
-                                height: SizeConfig.blockSizeVertical * 8,
-                                child: RaisedButton(
-                                  onPressed: () {},
-                                  child: Row(
-                                    children: [
-                                      Icon(Icons.menu_book,
-                                          color: Colors.green),
-                                      SizedBox(
-                                        width:
-                                            SizeConfig.blockSizeHorizontal * 8,
-                                      ),
-                                      Text(
-                                        'Achievements',
-                                        style: TextStyle(fontSize: 20),
-                                      ),
-                                    ],
-                                  ),
-                                  splashColor: Colors.greenAccent,
-                                  elevation: 0,
-                                  color: Colors.transparent,
-                                )),
-                            Container(
-                                margin: EdgeInsets.fromLTRB(50, 0, 0, 0),
-                                height: SizeConfig.blockSizeVertical * 8,
-                                child: RaisedButton(
-                                  onPressed: () {},
-                                  child: Row(
-                                    children: [
-                                      Icon(Icons.flag_outlined,
-                                          color: Colors.green),
-                                      SizedBox(
-                                        width:
-                                            SizeConfig.blockSizeHorizontal * 8,
-                                      ),
-                                      Text(
-                                        'Feedback',
-                                        style: TextStyle(fontSize: 20),
-                                      ),
-                                    ],
-                                  ),
-                                  splashColor: Colors.greenAccent,
-                                  color: Colors.transparent,
-                                  elevation: 0,
-                                )),
-                            Container(
-                                margin: EdgeInsets.fromLTRB(50, 0, 0, 0),
-                                height: SizeConfig.blockSizeVertical * 8,
-                                child: RaisedButton(
-                                  onPressed: () {
-                                    _showLogoutDialog();
-                                  },
-                                  child: Row(
-                                    children: [
-                                      Icon(Icons.logout, color: Colors.green),
-                                      SizedBox(
-                                        width:
-                                            SizeConfig.blockSizeHorizontal * 8,
-                                      ),
-                                      Text(
-                                        'Logout',
-                                        style: TextStyle(fontSize: 20),
-                                      ),
-                                    ],
-                                  ),
-                                  splashColor: Colors.greenAccent,
-                                  color: Colors.transparent,
-                                  elevation: 0,
-                                )),
-                            Expanded(child: SizedBox()),
-                            Image.asset(
-                              "assets/images/logo_text.png",
-                              height: SizeConfig.blockSizeVertical * 5,
-                            ),
-                            Expanded(child: SizedBox())
-                          ],
+                              SizedBox(
+                                height: 30,
+                              )
+                            ],
+                          ),
                         ),
-                      ),
-                      appBar: CustomAppBar(
-                        height: SizeConfig.blockSizeVertical * 15,
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Container(
+                      margin: EdgeInsets.fromLTRB(50, 0, 0, 0),
+                      height: SizeConfig.blockSizeVertical * 8,
+                      child: RaisedButton(
+                        onPressed: () {
+                          Navigator.pop(context);
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      EditProfile()));
+                        },
                         child: Row(
                           children: [
-                            IconButton(
-                                icon: Icon(
-                                  Icons.menu,
-                                  color: Colors.green,
-                                  size: SizeConfig.blockSizeVertical * 4,
-                                ),
-                                onPressed: () {
-                                  _drawerKey.currentState.openDrawer();
-                                }),
+                            Icon(Icons.edit_outlined,
+                                color: Colors.green),
                             SizedBox(
-                              width: 20,
+                              width:
+                              SizeConfig.blockSizeHorizontal * 8,
                             ),
-                            Image.asset(
-                              "assets/images/logo_text.png",
-                              height: SizeConfig.blockSizeVertical * 5,
+                            Text(
+                              'Edit Profile',
+                              style: TextStyle(fontSize: 20),
                             ),
                           ],
                         ),
-                      ),
-                      body: Column(
-                        children: [
-                          Container(
-                            height: SizeConfig.blockSizeVertical * 77,
-                            child: Stack(
-                              children: [
-                                Opacity(
-                                    opacity: 0.4,
-                                    child: Image.asset(
-                                      'assets/images/background_items.png',
-                                      height: SizeConfig.blockSizeVertical * 90,
-                                      fit: BoxFit.fitHeight,
-                                    )),
-                                SafeArea(
-                                    child: PageView(
-                                  children: _widgetOptions,
-                                  controller: _pageController,
-                                  onPageChanged: (index) {
-                                    homeModel.changeItem(index);
-                                    _controller.animateTo(
-                                        homeModel.selectedItem,
-                                        duration: Duration(milliseconds: 1000));
-                                  },
-                                ))
-                              ],
+                        splashColor: Colors.green,
+                        elevation: 0,
+                        color: Colors.transparent,
+                      )),
+                  Container(
+                      margin: EdgeInsets.fromLTRB(50, 0, 0, 0),
+                      height: SizeConfig.blockSizeVertical * 8,
+                      child: RaisedButton(
+                        onPressed: () {},
+                        child: Row(
+                          children: [
+                            Icon(Icons.menu_book,
+                                color: Colors.green),
+                            SizedBox(
+                              width:
+                              SizeConfig.blockSizeHorizontal * 8,
                             ),
-                          ),
-                        ],
+                            Text(
+                              'Achievements',
+                              style: TextStyle(fontSize: 20),
+                            ),
+                          ],
+                        ),
+                        splashColor: Colors.greenAccent,
+                        elevation: 0,
+                        color: Colors.transparent,
+                      )),
+                  Container(
+                      margin: EdgeInsets.fromLTRB(50, 0, 0, 0),
+                      height: SizeConfig.blockSizeVertical * 8,
+                      child: RaisedButton(
+                        onPressed: () {},
+                        child: Row(
+                          children: [
+                            Icon(Icons.flag_outlined,
+                                color: Colors.green),
+                            SizedBox(
+                              width:
+                              SizeConfig.blockSizeHorizontal * 8,
+                            ),
+                            Text(
+                              'Feedback',
+                              style: TextStyle(fontSize: 20),
+                            ),
+                          ],
+                        ),
+                        splashColor: Colors.greenAccent,
+                        color: Colors.transparent,
+                        elevation: 0,
+                      )),
+                  Container(
+                      margin: EdgeInsets.fromLTRB(50, 0, 0, 0),
+                      height: SizeConfig.blockSizeVertical * 8,
+                      child: RaisedButton(
+                        onPressed: () {
+                          _showLogoutDialog();
+                        },
+                        child: Row(
+                          children: [
+                            Icon(Icons.logout, color: Colors.green),
+                            SizedBox(
+                              width:
+                              SizeConfig.blockSizeHorizontal * 8,
+                            ),
+                            Text(
+                              'Logout',
+                              style: TextStyle(fontSize: 20),
+                            ),
+                          ],
+                        ),
+                        splashColor: Colors.greenAccent,
+                        color: Colors.transparent,
+                        elevation: 0,
+                      )),
+                  Expanded(child: SizedBox()),
+                  Image.asset(
+                    "assets/images/logo_text.png",
+                    height: SizeConfig.blockSizeVertical * 5,
+                  ),
+                  Expanded(child: SizedBox())
+                ],
+              ),
+            ),
+            appBar: CustomAppBar(
+              height: SizeConfig.blockSizeVertical * 10,
+              child: Row(
+                children: [
+                  IconButton(
+                      icon: Icon(
+                        Icons.menu,
+                        color: Colors.green,
+                        size: SizeConfig.blockSizeVertical * 4,
                       ),
-                    ))));
+                      onPressed: () {
+                        _drawerKey.currentState.openDrawer();
+                      }),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Image.asset(
+                    "assets/images/logo_text.png",
+                    height: SizeConfig.blockSizeVertical * 5,
+                  ),
+                ],
+              ),
+            ),
+            body: Column(
+              children: [
+                Container(
+                  height: SizeConfig.blockSizeVertical * 75,
+                  child: Stack(
+                    children: [
+                      Opacity(
+                          opacity: 0.4,
+                          child: Image.asset(
+                            'assets/images/background_items.png',
+                            height: SizeConfig.blockSizeVertical * 90,
+                            fit: BoxFit.fitHeight,
+                          )),
+                      PageView(
+                        children: _widgetOptions,
+                        physics: NeverScrollableScrollPhysics(),
+                        controller: _pageController,
+                      )
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ))));
   }
 
   Future<void> _showLogoutDialog() async {
@@ -381,6 +371,7 @@ class _HomeScreenState extends State<HomeScreen>
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
               onPressed: () {
+                Application.sharePreference.clear();
                 int count = 0;
                 Navigator.of(context).popUntil((_) => count++ >= 3);
               },

@@ -26,12 +26,12 @@ class _StudyScreenState extends State<StudyScreen> {
               body: Center(
                   child: SingleChildScrollView(
                 child: Container(
-                  height: SizeConfig.blockSizeVertical * 65,
+                  height: SizeConfig.blockSizeVertical * 75,
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Container(
-                        height: SizeConfig.blockSizeVertical * 25,
+                        width: SizeConfig.screenWidth,
                         child: CarouselSlider.builder(
                           itemBuilder: (context, index) =>
                               listClassImage(index),
@@ -58,8 +58,7 @@ class _StudyScreenState extends State<StudyScreen> {
                             height: (model.getGrade() == index)
                                 ? SizeConfig.safeBlockHorizontal * 2.25
                                 : SizeConfig.safeBlockHorizontal * 1.5,
-                            margin: EdgeInsets.symmetric(
-                                vertical: 10.0, horizontal: 2.0),
+                            margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 2.0),
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
                               color: model.getGrade() == index
@@ -69,32 +68,25 @@ class _StudyScreenState extends State<StudyScreen> {
                           );
                         }).toList(),
                       ),
-                      SizedBox(
-                        height: 10,
-                      ),
                       CustomButton(
                           backgroundColor:
-                              LightColors().buttonLightColor[model.getGrade()],
+                          LightColors().buttonLightColor[model.getGrade()],
                           child: TileWidget(
-                            text: "Learn",
                             color: LightColors().bookColor[model.getGrade()],
-                            leftText: "15 Units",
-                            rightText: "95%",
+                            text: "Learn",
+                            leftText: "23 Units",
+                            rightText: "37%",
                           ),
-                          height: SizeConfig.safeBlockHorizontal * 30,
-                          width: SizeConfig.safeBlockHorizontal * 75,
-                          shadowColor:
-                              LightColors().bookColor[model.getGrade()],
+                          height: SizeConfig.blockSizeVertical * 15,
+                          width: SizeConfig.safeBlockHorizontal * 70,
+                          shadowColor: LightColors().bookColor[model.getGrade()],
                           onPressed: () => Navigator.push(
-                                context,
-                                PageTransition(
-                                    type: PageTransitionType.rightToLeft,
-                                    duration: Duration(milliseconds: 400),
-                                    child: LearnScreen()),
-                              )),
-                      SizedBox(
-                        height: 15,
-                      ),
+                            context,
+                            PageTransition(
+                                type: PageTransitionType.rightToLeft,
+                                duration: Duration(milliseconds: 400),
+                                child: LearnScreen()),
+                          )),
                       CustomButton(
                           backgroundColor:
                               LightColors().buttonLightColor[model.getGrade()],
@@ -105,9 +97,8 @@ class _StudyScreenState extends State<StudyScreen> {
                             rightText: "37%",
                           ),
                           height: SizeConfig.blockSizeVertical * 15,
-                          width: SizeConfig.safeBlockHorizontal * 75,
-                          shadowColor:
-                              LightColors().bookColor[model.getGrade()],
+                          width: SizeConfig.safeBlockHorizontal * 70,
+                          shadowColor: LightColors().bookColor[model.getGrade()],
                           onPressed: () => Navigator.push(
                                 context,
                                 PageTransition(
