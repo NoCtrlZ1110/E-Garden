@@ -77,16 +77,20 @@ class _StudyScreenState extends State<StudyScreen> {
                             leftText: "23 Units",
                             rightText: "37%",
                           ),
-                          height: SizeConfig.blockSizeVertical * 15,
-                          width: SizeConfig.safeBlockHorizontal * 70,
-                          shadowColor: LightColors().bookColor[model.getGrade()],
+                          height: SizeConfig.safeBlockHorizontal * 30,
+                          width: SizeConfig.safeBlockHorizontal * 75,
+                          shadowColor:
+                              LightColors().bookColor[model.getGrade()],
                           onPressed: () => Navigator.push(
-                            context,
-                            PageTransition(
-                                type: PageTransitionType.rightToLeft,
-                                duration: Duration(milliseconds: 400),
-                                child: LearnScreen()),
-                          )),
+                                context,
+                                PageTransition(
+                                    type: PageTransitionType.rightToLeft,
+                                    duration: Duration(milliseconds: 400),
+                                    child: LearnScreen(model.getGrade()+1)),
+                              )),
+                      SizedBox(
+                        height: 15,
+                      ),
                       CustomButton(
                           backgroundColor:
                               LightColors().buttonLightColor[model.getGrade()],

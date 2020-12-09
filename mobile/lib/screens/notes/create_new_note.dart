@@ -27,7 +27,7 @@ class _CreateNewTaskPageState extends State<CreateNewTaskPage> {
     return Consumer<NoteModel>(builder: (_, notes, __) {
       return Scaffold(
         backgroundColor: AppColors.green,
-        appBar: staticAppbar(title: "Create new note"),
+        appBar: staticAppbar(title: noteId==0?"Create new note":"Edit note"),
         body: Stack(
           children: [
             Container(
@@ -212,7 +212,7 @@ class _CreateNewTaskPageState extends State<CreateNewTaskPage> {
               FormBuilderDropdown(
                 attribute: "status",
                 initialValue: notes != null
-                    ? notes.status[notes.noteDetail.status == true ? 0 : 1]
+                    ? notes.status[notes.noteDetail.status != true ? 0 : 1]
                     : null,
                 decoration: InputDecoration(labelText: "Status"),
                 items: ["Complete", "Uncomplete"]

@@ -5,7 +5,7 @@ using UET.EGarden.Authorization.Users;
 using UET.EGarden.MultiTenancy;
 using UET.EGarden.Note;
 using UET.EGarden.Study;
-
+using UET.EGarden.UserProfile;
 namespace UET.EGarden.EntityFrameworkCore
 {
     public class EGardenDbContext : AbpZeroDbContext<Tenant, Role, User, EGardenDbContext>
@@ -16,6 +16,8 @@ namespace UET.EGarden.EntityFrameworkCore
         public DbSet<Unit> Units { get; set; }
         public DbSet<Vocabulary> Vocabularies { get; set; }
         public DbSet<LesonTreeWord> LesonTreeWords { get; set; }
+        public DbSet<UserDetail> userProfiles { get; set; }
+        public DbSet<UserAchieverment> UserAchieverments { get; set; }
 
         public EGardenDbContext(DbContextOptions<EGardenDbContext> options)
             : base(options)
