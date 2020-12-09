@@ -1,12 +1,15 @@
 import 'package:e_garden/configs/AppConfig.dart';
 import 'package:e_garden/core/services/user/user_model.service.dart';
 import 'package:e_garden/screens/home.dart';
+import 'package:e_garden/screens/user.profile/user.provider.dart';
 import 'package:e_garden/widgets/custom_buton_component.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:provider/provider.dart';
+
+import '../application.dart';
 
 class SignIn extends StatefulWidget {
   @override
@@ -18,9 +21,6 @@ class SignIn extends StatefulWidget {
 
 class _SignInState extends State<SignIn> {
   final GlobalKey<FormBuilderState> _fbKey = GlobalKey<FormBuilderState>();
-
-  TextEditingController _username = TextEditingController();
-  TextEditingController _password = TextEditingController();
   bool switcherValue = false;
   bool review = false;
   Map<String, dynamic> params;
@@ -28,51 +28,67 @@ class _SignInState extends State<SignIn> {
   @override
   void initState() {
     super.initState();
-    // _username = TextEditingController(text: "");
-    // _password = TextEditingController(text: "");
   }
 
   @override
   Widget build(BuildContext context) {
-    final user = Provider.of<UserModel>(context);
     // TODO: implement build
-    return Scaffold(
-      body: SingleChildScrollView(
-        child: FormBuilder(
-          key: _fbKey,
-          child: Stack(
-            children: [
-              Image.asset(
-                'assets/images/header.png',
-                width: SizeConfig.screenWidth,
-                fit: BoxFit.fitWidth,
-              ),
-              Column(
+    return SingleChildScrollView(
+      child: FormBuilder(
+        key: _fbKey,
+        child: Column(
+          children: [
+            Container(
+              height: SizeConfig.blockSizeVertical * 50,
+              width: SizeConfig.screenWidth,
+              child: Stack(
                 children: [
-                  SizedBox(height: SizeConfig.blockSizeVertical * 7),
-                  Center(
-                      child: Image.asset(
-                    'assets/images/logoApp.png',
-                    height: SizeConfig.blockSizeVertical * 20,
-                  )),
-                  SizedBox(height: SizeConfig.blockSizeVertical * 2),
-                  Text(
-                    "E-Garden",
-                    style: TextStyle(
-                        fontSize: 50,
-                        color: Colors.white,
-                        fontWeight: FontWeight.w600),
+                  Image.asset(
+                    'assets/images/header.png',
+                    width: SizeConfig.screenWidth,
+                    fit: BoxFit.fitWidth,
                   ),
-                  SizedBox(height: SizeConfig.blockSizeVertical * 13),
+                  Container(
+                    height: SizeConfig.blockSizeVertical * 50,
+                    width: SizeConfig.screenWidth,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Image.asset(
+                          'assets/images/logoApp.png',
+                          height: SizeConfig.blockSizeVertical * 20,
+                        ),
+                        Text(
+                          "E-Garden",
+                          style: TextStyle(fontSize: 50, color: Colors.white, fontWeight: FontWeight.w600),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        )
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Container(
+              height: SizeConfig.screenHeight * 0.5,
+              width: SizeConfig.screenWidth,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  SizedBox(
+                    height: 10,
+                  ),
                   SizedBox(
                     width: SizeConfig.safeBlockHorizontal * 80,
                     child: FormBuilderTextField(
-                      controller: _username,
                       attribute: "user_name",
                       validators: [FormBuilderValidators.required()],
-                      style: TextStyle(
-                          fontSize: SizeConfig.safeBlockVertical * 2.5,
-                          color: AppColors.green),
+                      style: TextStyle(fontSize: SizeConfig.safeBlockVertical * 2.5, color: AppColors.green),
                       // controller: _username,
                       decoration: InputDecoration(
                         prefixIcon: Icon(
@@ -101,24 +117,17 @@ class _SignInState extends State<SignIn> {
                         labelText: "Username",
                         hintText: "Enter Username",
                         alignLabelWithHint: false,
-                        labelStyle: TextStyle(
-                            fontSize: SizeConfig.safeBlockVertical * 2.5,
-                            fontWeight: FontWeight.w500),
+                        labelStyle:
+                            TextStyle(fontSize: SizeConfig.safeBlockVertical * 2.5, fontWeight: FontWeight.w500),
                       ),
                     ),
                   ),
                   SizedBox(
-                    height: SizeConfig.safeBlockVertical * 3,
-                  ),
-                  SizedBox(
                     width: SizeConfig.safeBlockHorizontal * 80,
                     child: FormBuilderTextField(
-                      controller: _password,
                       validators: [FormBuilderValidators.required()],
                       attribute: "password",
-                      style: TextStyle(
-                          fontSize: SizeConfig.safeBlockVertical * 2.5,
-                          color: AppColors.green),
+                      style: TextStyle(fontSize: SizeConfig.safeBlockVertical * 2.5, color: AppColors.green),
                       obscureText: !review,
                       // controller: _password,
                       decoration: InputDecoration(
@@ -127,9 +136,7 @@ class _SignInState extends State<SignIn> {
                           color: AppColors.mainGreen,
                         ),
                         suffixIcon: IconButton(
-                          icon: !review
-                              ? Icon(Icons.visibility_off)
-                              : Icon(Icons.visibility),
+                          icon: !review ? Icon(Icons.visibility_off) : Icon(Icons.visibility),
                           onPressed: () {
                             setState(() {
                               review = !review;
@@ -165,74 +172,58 @@ class _SignInState extends State<SignIn> {
                       ),
                     ),
                   ),
-                  // SizedBox(
-                  //   height: SizeConfig.safeBlockVertical * 5,
-                  // ),
-                  // Row(
-                  //   mainAxisAlignment: MainAxisAlignment.center,
-                  //   children: [
-                  //     Checkbox(
-                  //         value: switcherValue,
-                  //         onChanged: (change) => setState(() {
-                  //               switcherValue = change;
-                  //             })),
-                  //     SizedBox(
-                  //       width: SizeConfig.safeBlockHorizontal * 1,
-                  //     ),
-                  //     Text(
-                  //       "Remember Account",
-                  //       style: TextStyle(
-                  //           color: Color(0xFF848484),
-                  //           fontWeight: FontWeight.w600),
-                  //     )
-                  //   ],
-                  // ),
-                  SizedBox(
-                    height: SizeConfig.safeBlockVertical * 5,
+                  Container(
+                    child: Consumer<UserModel>(
+                        builder: (_, model, __) => (model.status != Status.Authenticating)
+                            ? CustomButton(
+                                child: Text(
+                                  'SIGN IN',
+                                  style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w800),
+                                ),
+                                radius: 30,
+                                height: SizeConfig.blockSizeVertical * 6,
+                                width: SizeConfig.blockSizeHorizontal * 30,
+                                shadowColor: AppColors.btnShadow,
+                                backgroundColor: AppColors.buttonColor,
+                                onPressed: () async {
+                                  model.status = Status.Authenticating;
+                                  (_fbKey.currentState.saveAndValidate())
+                                      ? Login.loginUser(_fbKey.currentState.value).then((value) => {
+                                            if (Application.user.userId != null)
+                                              {
+                                                model.status = Status.Authenticated,
+                                                Navigator.push(
+                                                    context, MaterialPageRoute(builder: (context) => HomeScreen()))
+                                              }
+                                            else
+                                              {
+                                                model.status = Status.Unauthenticated,
+                                                Fluttertoast.showToast(
+                                                  msg: "Username or password error!",
+                                                  toastLength: Toast.LENGTH_SHORT,
+                                                  gravity: ToastGravity.BOTTOM,
+                                                  timeInSecForIosWeb: 1,
+                                                  backgroundColor: Colors.black45,
+                                                  textColor: Colors.white,
+                                                  fontSize: 16.0,
+                                                )
+                                              }
+                                          })
+                                      : Fluttertoast.showToast(
+                                          msg: "Invalid value",
+                                          toastLength: Toast.LENGTH_SHORT,
+                                          gravity: ToastGravity.BOTTOM,
+                                          timeInSecForIosWeb: 1,
+                                          backgroundColor: Colors.black45,
+                                          textColor: Colors.white,
+                                          fontSize: 16.0,
+                                        );
+                                },
+                              )
+                            : Center(
+                                child: CircularProgressIndicator(),
+                              )),
                   ),
-                  user.status == Status.Authenticating
-                      ? Center(child: CircularProgressIndicator())
-                      : CustomButton(
-                          child: Text(
-                            'SIGN IN',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 20,
-                                fontWeight: FontWeight.w800),
-                          ),
-                          radius: 30,
-                          height: SizeConfig.blockSizeVertical * 6,
-                          width: SizeConfig.blockSizeHorizontal * 30,
-                          shadowColor: AppColors.btnShadow,
-                          backgroundColor: AppColors.buttonColor,
-                          onPressed: () async {
-                            (_fbKey.currentState.saveAndValidate())
-                                ? (await user.login(_fbKey.currentState.value))
-                                    ? Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) => HomeScreen()))
-                                    : Fluttertoast.showToast(
-                                        msg: user.message,
-                                        toastLength: Toast.LENGTH_SHORT,
-                                        gravity: ToastGravity.BOTTOM,
-                                        timeInSecForIosWeb: 1,
-                                        backgroundColor: Colors.black45,
-                                        textColor: Colors.white,
-                                        fontSize: 16.0,
-                                      )
-                                : Fluttertoast.showToast(
-                                    msg: "Invalid Value",
-                                    toastLength: Toast.LENGTH_SHORT,
-                                    gravity: ToastGravity.BOTTOM,
-                                    timeInSecForIosWeb: 1,
-                                    backgroundColor: Colors.black45,
-                                    textColor: Colors.white,
-                                    fontSize: 16.0,
-                                  );
-                          },
-                        ),
-                  SizedBox(height: 30),
                   Text(
                     'Not a member yet? Sign up now!',
                     style: TextStyle(
@@ -240,11 +231,13 @@ class _SignInState extends State<SignIn> {
                         fontSize: SizeConfig.blockSizeVertical * 2,
                         fontWeight: FontWeight.w600),
                   ),
-                  SizedBox(height: 20),
+                  SizedBox(
+                    height: 10,
+                  )
                 ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

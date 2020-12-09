@@ -12,7 +12,7 @@ class API {
   final Dio dio = Dio(
     BaseOptions(
       connectTimeout: 6000,
-      sendTimeout: 10000,
+      sendTimeout: 15000,
       receiveTimeout: 6000,
       contentType: 'application/json; charset=utf-8',
       baseUrl: baseUrl,
@@ -20,10 +20,10 @@ class API {
   );
 
   API() {
-    (dio.httpClientAdapter as DefaultHttpClientAdapter).onHttpClientCreate = (HttpClient client) {
-      client.badCertificateCallback = (X509Certificate cert, String host, int port) => true;
-      return client;
-    };
+    // (dio.httpClientAdapter as DefaultHttpClientAdapter).onHttpClientCreate = (HttpClient client) {
+    //   client.badCertificateCallback = (X509Certificate cert, String host, int port) => true;
+    //   return client;
+    // };
 //    dio.interceptors
     dio.interceptors.add(InterceptorsWrapper(onRequest: (RequestOptions options) async {
       Application.sharePreference.hasKey("token") ? options.headers["Authorization"] = "Bearer ${Application.sharePreference.getString("token")}" : {};
