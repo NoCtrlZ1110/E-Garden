@@ -21,41 +21,42 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
   Widget build(BuildContext context) {
     var model = Provider.of<LearnModel>(context, listen: false);
     return SafeArea(
-        child: FutureBuilder(
-      future: model.fetchListVocab(bookId: widget.bookId, unitId: widget.unitId),
-      builder: (context, snapshot) {
-        if (snapshot.connectionState != ConnectionState.done) {
-          return Center(child: CircularProgressIndicator());
-        }
-        if (snapshot.hasError) {
-          return Center(child: CircularProgressIndicator());
-        }
-        if (snapshot.hasData) {
-          return Scaffold(
-              appBar: TextAppBar(
-                text: "VOCABULARY",
-                height: SizeConfig.blockSizeVertical * 8,
-              ),
-              body: Container(
-                height: SizeConfig.screenHeight,
-                width: double.infinity,
-                child: Stack(
-                  children: [
-                    Positioned(
-                        bottom: 0,
-                        child: Opacity(
-                            opacity: 0.7,
-                            child: Image.asset(
-                              'assets/images/backgroundlearn.png',
-                              width: SizeConfig.screenWidth,
-                              fit: BoxFit.fitWidth,
-                            ))),
-                    PageView.builder(
-                        onPageChanged: (value) {
-                          if (!model.isFrontCard) model.flipCard();
-                        },
-                        itemCount: model.words.items.length,
-                        itemBuilder: (BuildContext context, int index) => Center(
+        child: Scaffold(
+            appBar: TextAppBar(
+              text: "VOCABULARY",
+              height: SizeConfig.blockSizeVertical * 8,
+              grade: "Grade ${widget.bookId}",
+            ),
+            body: FutureBuilder(
+              future: model.fetchListVocab(bookId: widget.bookId, unitId: widget.unitId),
+              builder: (context, snapshot) {
+                if (snapshot.connectionState != ConnectionState.done) {
+                  return Center(child: CircularProgressIndicator());
+                }
+                if (snapshot.hasError) {
+                  return Center(child: CircularProgressIndicator());
+                }
+                if (snapshot.hasData){
+                  return Container(
+                    height: SizeConfig.screenHeight,
+                    width: double.infinity,
+                    child: Stack(
+                      children: [
+                        Positioned(
+                            bottom: 0,
+                            child: Opacity(
+                                opacity: 0.7,
+                                child: Image.asset(
+                                  'assets/images/backgroundlearn.png',
+                                  width: SizeConfig.screenWidth,
+                                  fit: BoxFit.fitWidth,
+                                ))),
+                        PageView.builder(
+                            onPageChanged: (value) {
+                              if (!model.isFrontCard) model.flipCard();
+                            },
+                            itemCount: model.words.items.length,
+                            itemBuilder: (BuildContext context, int index) => Center(
                               child: Column(
                                 children: [
                                   SizedBox(
@@ -103,13 +104,13 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
                                 ],
                               ),
                             )),
-                  ],
-                ),
-              ));
-        }
-        return CircularProgressIndicator();
-      },
-    ));
+                      ],
+                    ),
+                  );
+                }
+                return CircularProgressIndicator();
+              },
+            )));
   }
 
   Widget card(LearnModel model, Widget child) {

@@ -201,7 +201,8 @@ class _LearnScreenState extends State<LearnScreen> {
                                           PageTransition(
                                               type: PageTransitionType.rightToLeft,
                                               duration: Duration(milliseconds: 400),
-                                              child: GrammarScreen()),
+                                              child: GrammarScreen(bookId: widget.bookId,
+                                                unitId: model.listUnit.items[model.unitIndex - 1].id,)),
                                         )),
                                 CustomButton(
                                     backgroundColor: LightColors().buttonLightColor[widget.bookId - 1],
