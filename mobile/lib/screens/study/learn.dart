@@ -1,8 +1,9 @@
 import 'package:e_garden/configs/AppConfig.dart';
 import 'package:e_garden/screens/study/study.provider.dart';
 import 'package:e_garden/utils/light_color.dart';
-import 'package:e_garden/widgets/custom_buton_component.dart';
-import 'package:e_garden/widgets/custom_tile.dart';
+import 'package:e_garden/widgets/card.model.dart';
+import 'package:e_garden/widgets/courses.model.dart';
+import 'package:e_garden/widgets/custom_app_bar.dart';
 import 'package:e_garden/widgets/unit_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -28,213 +29,214 @@ class _LearnScreenState extends State<LearnScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Consumer<BookModel>(builder: (_, model, __) {
-        return FutureBuilder(
-          future: model.fetchListUnit(widget.bookId),
-          builder: (context, snapshot) {
-            if (snapshot.hasData) {
-              return Scaffold(
-                key: _drawerKey,
-                backgroundColor: AppColors.background,
-                endDrawer: Container(
-                    alignment: Alignment.center,
-                    width: SizeConfig.blockSizeHorizontal * 45,
-                    child: Drawer(
-                      child: ListView.separated(
-                        separatorBuilder: (context, index) {
-                          return Divider(
-                            height: 2,
-                            thickness: 2,
-                            endIndent: 20,
-                            indent: 20,
-                            color: LightColors().bookColor[widget.bookId - 1],
-                          );
-                        },
-                        itemBuilder: (context, index) {
-                          return unitModel(index + 1, context, model.listUnit.items[index].id);
-                        },
-                        itemCount: model.listUnit.items.length,
-                      ),
-                    )),
-                body: Stack(
-                  children: [
-                    Image.asset(
-                      'assets/images/background_items.png',
-                      width: SizeConfig.screenWidth,
-                      height: SizeConfig.blockSizeVertical * 90,
-                      fit: BoxFit.cover,
+        return Scaffold(
+          key: _drawerKey,
+          backgroundColor: AppColors.background,
+          endDrawer: Container(
+              alignment: Alignment.center,
+              width: SizeConfig.blockSizeHorizontal * 45,
+              child: Drawer(
+                child: ListView.separated(
+                  separatorBuilder: (context, index) {
+                    return Divider(
+                      height: 2,
+                      thickness: 2,
+                      endIndent: 20,
+                      indent: 20,
+                      color: LightColors().bookColor[widget.bookId - 1],
+                    );
+                  },
+                  itemBuilder: (context, index) {
+                    return unitModel(
+                        index + 1, context, (model.listUnit != null) ? model.listUnit.items[index].id : 1);
+                  },
+                  itemCount: (model.listUnit != null) ? model.listUnit.items.length : 1,
+                ),
+              )),
+          appBar: CustomAppBar(
+            height: SizeConfig.blockSizeVertical * 10,
+            color: Colors.transparent,
+            child: Stack(
+              alignment: Alignment.center,
+              children: [
+                Center(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      border: Border.all(color: AppColors.green),
+                      borderRadius: BorderRadius.circular(15),
                     ),
-                    SingleChildScrollView(
-                      child: Column(
-                        children: [
-                          SizedBox(
-                            height: SizeConfig.blockSizeVertical * 4,
+                    child: Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Text(
+                        'LEARN',
+                        style: TextStyle(color: AppColors.green, fontWeight: FontWeight.w700, fontSize: 30),
+                      ),
+                    ),
+                  ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    GestureDetector(
+                      child: Container(
+                        margin: EdgeInsets.only(left: 10),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10), border: Border.all(color: AppColors.green)),
+                        child: Padding(
+                          padding: const EdgeInsets.all(7),
+                          child: Icon(
+                            Icons.arrow_back_ios_rounded,
+                            color: AppColors.green,
+                            size: 30,
                           ),
-                          Stack(
-                            alignment: Alignment.center,
-                            children: [
-                              Center(
-                                child: Container(
-                                  width: SizeConfig.blockSizeHorizontal * 40,
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(15),
-                                      color: LightColors().bookColor[widget.bookId - 1]),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(10),
-                                    child: Row(
-                                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                                      children: [
-                                        Image.asset('assets/images/logoApp.png',
-                                            height: SizeConfig.blockSizeVertical * 4),
-                                        Text(
-                                          'LEARN',
-                                          style:
-                                          TextStyle(color: Colors.white, fontWeight: FontWeight.w700, fontSize: 25),
-                                        )
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  GestureDetector(
-                                    child: Container(
-                                      margin: EdgeInsets.only(left: 10),
-                                      decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.circular(10),
-                                          color: LightColors().bookColor[widget.bookId - 1]),
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(10),
-                                        child: Icon(
-                                          Icons.arrow_back_ios_rounded,
-                                          color: Colors.white,
-                                        ),
-                                      ),
-                                    ),
-                                    onTap: () {
-                                      Navigator.pop(context);
-                                    },
-                                  ),
-                                  SizedBox(width: 10),
-                                  GestureDetector(
-                                    onTap: () {
-                                      _drawerKey.currentState.openEndDrawer();
-                                    },
-                                    child: Container(
-                                      margin: EdgeInsets.only(right: 10),
-                                      decoration: BoxDecoration(
-                                          color: LightColors().bookColor[widget.bookId - 1],
-                                          borderRadius: BorderRadius.circular(15)),
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(10),
-                                        child: Text(
-                                          model.listUnit.items[model.unitIndex - 1].name,
-                                          style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-
-                                ],
-                              ),
-                            ],
+                        ),
+                      ),
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        _drawerKey.currentState.openEndDrawer();
+                      },
+                      child: Container(
+                        margin: EdgeInsets.only(right: 10),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10), border: Border.all(color: AppColors.green)),
+                        child: Padding(
+                          padding: const EdgeInsets.all(10),
+                          child: Text(
+                            (model.listUnit != null) ? model.listUnit.items[model.unitIndex - 1].name : 'Unit 1',
+                            style: TextStyle(color: AppColors.green, fontWeight: FontWeight.w700, fontSize: 20),
                           ),
-                          SizedBox(
-                            height: SizeConfig.blockSizeVertical * 4,
-                          ),
-                          Container(
-                            width: SizeConfig.blockSizeHorizontal * 80,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(15),
-                                color: LightColors().bookColor[widget.bookId - 1]),
-                            child: Padding(
-                              padding: const EdgeInsets.all(10),
-                              child: Text(
-                                model.listUnit.items[model.unitIndex - 1].description,
-                                style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700, fontSize: 25),
-                              ),
-                            ),
-                          ),
-                          SizedBox(
-                            height: SizeConfig.blockSizeVertical * 7,
-                          ),
-                          Container(
-                            height: SizeConfig.blockSizeVertical * 65,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                                CustomButton(
-                                    backgroundColor: LightColors().buttonLightColor[widget.bookId - 1],
-                                    child: TileWidget(
-                                      text: "Vocabulary",
-                                      color: LightColors().bookColor[widget.bookId - 1],
-                                      leftText: model.listUnit.items.length.toString() + ' Units',
-                                      rightText: "95%",
-                                    ),
-                                    height: SizeConfig.safeBlockHorizontal * 30,
-                                    width: SizeConfig.safeBlockHorizontal * 70,
-                                    shadowColor: LightColors().bookColor[widget.bookId - 1],
-                                    onPressed: () => Navigator.push(
-                                          context,
-                                          PageTransition(
-                                              type: PageTransitionType.rightToLeft,
-                                              duration: Duration(milliseconds: 400),
-                                              child: VocabularyScreen(
-                                                bookId: widget.bookId,
-                                                unitId: model.listUnit.items[model.unitIndex - 1].id,
-                                              )),
-                                        )),
-                                CustomButton(
-                                    backgroundColor: LightColors().buttonLightColor[widget.bookId - 1],
-                                    child: TileWidget(
-                                      text: "Grammar",
-                                      color: LightColors().bookColor[widget.bookId - 1],
-                                      leftText: model.listUnit.items.length.toString() + ' Units',
-                                      rightText: "37%",
-                                    ),
-                                    height: SizeConfig.safeBlockHorizontal * 30,
-                                    width: SizeConfig.safeBlockHorizontal * 70,
-                                    shadowColor: LightColors().bookColor[widget.bookId - 1],
-                                    onPressed: () => Navigator.push(
-                                          context,
-                                          PageTransition(
-                                              type: PageTransitionType.rightToLeft,
-                                              duration: Duration(milliseconds: 400),
-                                              child: GrammarScreen(bookId: widget.bookId,
-                                                unitId: model.listUnit.items[model.unitIndex - 1].id,)),
-                                        )),
-                                CustomButton(
-                                    backgroundColor: LightColors().buttonLightColor[widget.bookId - 1],
-                                    child: TileWidget(
-                                      color: LightColors().bookColor[widget.bookId - 1],
-                                      text: "Listening",
-                                      leftText: "51 Units",
-                                      rightText: "09%",
-                                    ),
-                                    height: SizeConfig.safeBlockHorizontal * 30,
-                                    width: SizeConfig.safeBlockHorizontal * 70,
-                                    shadowColor: LightColors().bookColor[widget.bookId - 1],
-                                    onPressed: () => Navigator.push(
-                                          context,
-                                          PageTransition(
-                                              type: PageTransitionType.rightToLeft,
-                                              duration: Duration(milliseconds: 400),
-                                              child: ListeningScreen()),
-                                        )),
-                              ],
-                            ),
-                          )
-                        ],
-                        mainAxisAlignment: MainAxisAlignment.center,
+                        ),
                       ),
                     ),
                   ],
                 ),
-              );
-            }
-            return Center(child: Container(child: CircularProgressIndicator(backgroundColor: Colors.white,), height: 50, width: 50));
-          },
+              ],
+            ),
+          ),
+          body: Stack(
+            children: [
+              Image.asset(
+                'assets/images/background_items.png',
+                width: SizeConfig.screenWidth,
+                height: SizeConfig.screenHeight,
+                fit: BoxFit.cover,
+              ),
+              FutureBuilder(
+                future: model.fetchListUnit(widget.bookId),
+                builder: (context, snapshot) {
+                  if (snapshot.hasData) {
+                    return SingleChildScrollView(
+                      child: Column(
+                        children: [
+                          SizedBox(
+                            height: SizeConfig.blockSizeVertical,
+                          ),
+                          CardModel(
+                            width: SizeConfig.blockSizeHorizontal * 85,
+                            height: SizeConfig.blockSizeVertical * 25,
+                            backgroundColor: Color(0xFFa9dc35),
+                            backgroundImagePath: 'assets/images/backgroundBtn.png',
+                            labelText: model.listUnit.items[model.unitIndex - 1].description,
+                            radius: 30,
+                            childText: 'Learn with flashcards!',
+                            radiusBtn: 50,
+                            learn: true,
+                          ),
+                          Container(
+                            height: SizeConfig.blockSizeVertical * 60,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Container(
+                                  child: Text(
+                                    'Courses',
+                                    style: TextStyle(fontWeight: FontWeight.w800, fontSize: 25),
+                                  ),
+                                  alignment: Alignment.centerLeft,
+                                  margin: EdgeInsets.only(left: SizeConfig.blockSizeHorizontal * 5),
+                                ),
+                                CourseModel(
+                                  height: SizeConfig.safeBlockHorizontal * 25,
+                                  width: SizeConfig.safeBlockHorizontal * 90,
+                                  labelText: 'Vocabulary',
+                                  childText: "${model.listUnit.items[model.unitIndex - 1].totalWord} Words",
+                                  imageChildPath: 'assets/images/animal2.png',
+                                  radius: 25,
+                                  radiusBtn: 30,
+                                  backgroundImageColor: Color(0xFF63d3ff),
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      PageTransition(
+                                          type: PageTransitionType.rightToLeft,
+                                          duration: Duration(milliseconds: 400),
+                                          child: VocabularyScreen(
+                                            bookId: widget.bookId,
+                                            unitId: model.listUnit.items[model.unitIndex - 1].id,
+                                          )),
+                                    );
+                                  },
+                                ),
+                                CourseModel(
+                                  height: SizeConfig.safeBlockHorizontal * 25,
+                                  width: SizeConfig.safeBlockHorizontal * 90,
+                                  labelText: 'Grammar',
+                                  childText: "${model.listUnit.items[model.unitIndex - 1].totalSentence} Sentences",
+                                  radius: 25,
+                                  radiusBtn: 30,
+                                  imageChildPath: 'assets/images/animal1.png',
+                                  backgroundImageColor: Color(0xFF9192ff),
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      PageTransition(
+                                          type: PageTransitionType.rightToLeft,
+                                          duration: Duration(milliseconds: 400),
+                                          child: GrammarScreen(
+                                            bookId: widget.bookId,
+                                            unitId: model.listUnit.items[model.unitIndex - 1].id,
+                                          )),
+                                    );
+                                  },
+                                ),
+                                CourseModel(
+                                  height: SizeConfig.safeBlockHorizontal * 25,
+                                  width: SizeConfig.safeBlockHorizontal * 90,
+                                  labelText: 'Listening',
+                                  childText: "${model.listUnit.items[model.unitIndex - 1].totalSentence} Sentences",
+                                  radius: 25,
+                                  radiusBtn: 30,
+                                  imageChildPath: 'assets/images/animal4.png',
+                                  backgroundImageColor: Color(0xffF9C477),
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      PageTransition(
+                                          type: PageTransitionType.rightToLeft,
+                                          duration: Duration(milliseconds: 400),
+                                          child: ListeningScreen()),
+                                    );
+                                  },
+                                ),
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
+                    );
+                  }
+                  return Center(child: CircularProgressIndicator());
+                },
+              ),
+            ],
+          ),
         );
       }),
     );

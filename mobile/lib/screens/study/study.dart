@@ -103,7 +103,7 @@ class _StudyScreenState extends State<StudyScreen> {
                                 PageTransition(
                                     type: PageTransitionType.rightToLeft,
                                     duration: Duration(milliseconds: 400),
-                                    child: ReviewScreen()),
+                                    child: ReviewScreen(bookId: model.getGrade() + 1,)),
                               )),
                     ],
                   ),

@@ -58,8 +58,8 @@ class E_Garden extends StatelessWidget {
       routes: {
         '/study': (context) => StudyScreen(),
         '/dictionary': (context) => HomeDictionaryScreen(),
-        'notes': (context) => CalendarPage(),
-        'home': (context) => HomeScreen()
+        '/notes': (context) => CalendarPage(),
+        '/home': (context) => HomeScreen()
       },
       home: HomePage(title: 'E-Garden'),
       debugShowCheckedModeBanner: false,
