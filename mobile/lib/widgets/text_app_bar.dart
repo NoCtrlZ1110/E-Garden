@@ -1,4 +1,5 @@
 import 'package:e_garden/configs/AppConfig.dart';
+import 'package:e_garden/screens/study/study.provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -6,11 +7,13 @@ class TextAppBar extends StatefulWidget implements PreferredSizeWidget {
   String text;
   double height;
   Color color;
+  String grade;
 
   TextAppBar({
     @required this.text,
     this.height = kToolbarHeight,
     this.color,
+    this.grade
   });
 
   @override
@@ -21,7 +24,6 @@ class TextAppBar extends StatefulWidget implements PreferredSizeWidget {
 }
 
 class _TextAppBarState extends State<TextAppBar> {
-  var dropdownValue = "Unit 1";
 
   @override
   Widget build(BuildContext context) {
@@ -33,6 +35,7 @@ class _TextAppBarState extends State<TextAppBar> {
           child: Stack(
         children: [
           Container(
+            alignment: Alignment.center,
             width: SizeConfig.screenWidth,
             margin: EdgeInsets.symmetric(horizontal: 15, vertical: SizeConfig.blockSizeVertical),
             child: Row(
@@ -56,42 +59,7 @@ class _TextAppBarState extends State<TextAppBar> {
                     Navigator.pop(context);
                   },
                 ),
-                DropdownButton<String>(
-                  value: dropdownValue,
-                  icon: Icon(
-                    Icons.arrow_downward,
-                    size: 16,
-                    color: AppColors.green,
-                  ),
-                  iconSize: 24,
-                  elevation: 16,
-                  style: TextStyle(color: AppColors.green, fontWeight: FontWeight.w700, fontSize: 18),
-                  onChanged: (String newValue) {
-                    setState(() {
-                      dropdownValue = newValue;
-                    });
-                  },
-                  items: <String>[
-                    'Unit 1',
-                    'Unit 2',
-                    'Unit 3',
-                    'Unit 4',
-                    'Unit 5',
-                    'Unit 6',
-                    'Unit 7',
-                    'Unit 8',
-                    'Unit 9',
-                    'Unit 10'
-                  ].map<DropdownMenuItem<String>>((String value) {
-                    return DropdownMenuItem<String>(
-                      value: value,
-                      child: Text(
-                        value,
-                        style: TextStyle(fontFamily: "QuickSand"),
-                      ),
-                    );
-                  }).toList(),
-                ),
+                Text(widget.grade, style: TextStyle(color: AppColors.green, fontWeight: FontWeight.w700, fontSize: 18),),
               ],
             ),
           ),

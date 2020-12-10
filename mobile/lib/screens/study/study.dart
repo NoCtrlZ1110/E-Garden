@@ -72,7 +72,7 @@ class _StudyScreenState extends State<StudyScreen> {
                           child: TileWidget(
                             color: LightColors().bookColor[model.getGrade()],
                             text: "Learn",
-                            leftText: model.listUnit.items.length.toString() + ' Units',
+                            leftText: '20 Units',
                             rightText: "37%",
                           ),
                           height: SizeConfig.blockSizeVertical * 15,
@@ -92,7 +92,7 @@ class _StudyScreenState extends State<StudyScreen> {
                           child: TileWidget(
                             color: LightColors().bookColor[model.getGrade()],
                             text: "Review",
-                            leftText: "23 Units",
+                            leftText: "20 Units",
                             rightText: "37%",
                           ),
                           height: SizeConfig.blockSizeVertical * 15,
