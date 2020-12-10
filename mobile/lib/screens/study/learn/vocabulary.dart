@@ -133,6 +133,7 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
         ),
         child: FittedBox(
           child: child,
+          fit: BoxFit.fill,
         ));
   }
 }
