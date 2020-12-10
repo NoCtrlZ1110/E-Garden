@@ -33,8 +33,7 @@ class _StudyScreenState extends State<StudyScreen> {
                       Container(
                         width: SizeConfig.screenWidth,
                         child: CarouselSlider.builder(
-                          itemBuilder: (context, index) =>
-                              listClassImage(index),
+                          itemBuilder: (context, index) => listClassImage(index),
                           options: CarouselOptions(
                               viewportFraction: 0.8,
                               initialPage: model.getGrade(),
@@ -69,31 +68,27 @@ class _StudyScreenState extends State<StudyScreen> {
                         }).toList(),
                       ),
                       CustomButton(
-                          backgroundColor:
-                          LightColors().buttonLightColor[model.getGrade()],
+                          backgroundColor: LightColors().buttonLightColor[model.getGrade()],
                           child: TileWidget(
                             color: LightColors().bookColor[model.getGrade()],
                             text: "Learn",
-                            leftText: "23 Units",
+                            leftText: model.listUnit.items.length.toString() + ' Units',
                             rightText: "37%",
                           ),
-                          height: SizeConfig.safeBlockHorizontal * 30,
-                          width: SizeConfig.safeBlockHorizontal * 75,
-                          shadowColor:
-                              LightColors().bookColor[model.getGrade()],
-                          onPressed: () => Navigator.push(
-                                context,
-                                PageTransition(
-                                    type: PageTransitionType.rightToLeft,
-                                    duration: Duration(milliseconds: 400),
-                                    child: LearnScreen(model.getGrade()+1)),
-                              )),
-                      SizedBox(
-                        height: 15,
-                      ),
+                          height: SizeConfig.blockSizeVertical * 15,
+                          width: SizeConfig.safeBlockHorizontal * 70,
+                          shadowColor: LightColors().bookColor[model.getGrade()],
+                          onPressed: () async {
+                            Navigator.push(
+                              context,
+                              PageTransition(
+                                  type: PageTransitionType.rightToLeft,
+                                  duration: Duration(milliseconds: 400),
+                                  child: LearnScreen(model.getGrade() + 1)),
+                            );
+                          }),
                       CustomButton(
-                          backgroundColor:
-                              LightColors().buttonLightColor[model.getGrade()],
+                          backgroundColor: LightColors().buttonLightColor[model.getGrade()],
                           child: TileWidget(
                             color: LightColors().bookColor[model.getGrade()],
                             text: "Review",

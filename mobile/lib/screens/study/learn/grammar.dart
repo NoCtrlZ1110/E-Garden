@@ -1,5 +1,5 @@
 import 'package:e_garden/configs/AppConfig.dart';
-import 'package:e_garden/screens/study/learn/learn_model.dart';
+import 'package:e_garden/screens/study/learn/learn.provider.dart';
 import 'package:e_garden/widgets/detail_container.dart';
 import 'package:e_garden/widgets/text_app_bar.dart';
 import 'package:flutter/cupertino.dart';
@@ -70,10 +70,10 @@ class _GrammarScreenState extends State<GrammarScreen> {
                   type: model.typeSentences[model.index] != null ?  model.typeSentences[model.index] : '',
                   example: model.exampleSentences[model.index],
                   previous: (){
-                    model.decrease(model.index);
+                    model.decrease(model.index, model.words.items.length);
                   },
                   next: (){
-                    model.increase(model.index);
+                    model.increase(model.index, model.words.items.length);
                   },
                 ),
               ],
