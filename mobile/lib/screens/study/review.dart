@@ -1,5 +1,5 @@
 import 'package:e_garden/configs/AppConfig.dart';
-import 'package:e_garden/screens/study/learn/learn_model.dart';
+import 'package:e_garden/screens/study/learn/learn.provider.dart';
 import 'package:e_garden/screens/study/review/select_grammar_topic.dart';
 import 'package:e_garden/screens/study/review/select_vocabulary_topic.dart';
 import 'package:e_garden/screens/study/study.provider.dart';
@@ -38,7 +38,7 @@ class _ReviewScreenState extends State<ReviewScreen> {
                             child: TileWidget(
                               text: "Vocabulary",
                               color: LightColors().bookColor[model.getGrade()],
-                              leftText: "15 Units",
+                              leftText: model.listUnit.items.length.toString() + ' Units',
                               rightText: "95%",
                             ),
                             height: SizeConfig.safeBlockHorizontal * 40,

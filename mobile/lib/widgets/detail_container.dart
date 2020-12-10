@@ -74,33 +74,6 @@ class _DetailContainerState extends State<DetailContainer> {
               ),
             ),
             SizedBox(height: 20),
-            Container(
-              child: Row(
-                children: [
-                  ButtonGreen(
-                    press: () {
-                      if (widget.previous != null) {
-                        widget.previous();
-                      }
-                    },
-                    height: 40,
-                    width: 130,
-                    text: 'Previous',
-                  ),
-                  ButtonGreen(
-                    press: () {
-                      if (widget.previous != null) {
-                        widget.next();
-                      }
-                    },
-                    height: 40,
-                    width: 130,
-                    text: 'Next',
-                  )
-                ],
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-              ),
-            )
           ],
         ),
       ),

@@ -1,7 +1,14 @@
 import 'package:json_annotation/json_annotation.dart';
 part 'vocabulary.g.dart';
 @JsonSerializable(nullable: true, explicitToJson: true)
+class ListVocabulary{
+  List<Vocabulary> items;
+  ListVocabulary({this.items});
+  factory ListVocabulary.fromJson(Map<String, dynamic> json) => _$ListVocabularyFromJson(json);
 
+  Map<String, dynamic> toJson() => _$ListVocabularyToJson(this);
+}
+@JsonSerializable(nullable: true, explicitToJson: true)
 class Vocabulary {
   int bookId;
   int unitId;

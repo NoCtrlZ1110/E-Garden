@@ -7,7 +7,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'learn_model.dart';
+import 'learn.provider.dart';
 
 class ListeningScreen extends StatefulWidget {
   @override

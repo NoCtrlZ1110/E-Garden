@@ -7,7 +7,7 @@ import 'package:e_garden/screens/home.dart';
 import 'package:e_garden/screens/home.provider.dart';
 import 'package:e_garden/screens/notes/notes.dart';
 import 'package:e_garden/screens/signin.dart';
-import 'package:e_garden/screens/study/learn/learn_model.dart';
+import 'package:e_garden/screens/study/learn/learn.provider.dart';
 import 'package:e_garden/screens/study/study.dart';
 import 'package:e_garden/screens/study/study.provider.dart';
 import 'package:e_garden/screens/user.profile/user.provider.dart';

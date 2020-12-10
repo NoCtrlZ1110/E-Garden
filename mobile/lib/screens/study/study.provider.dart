@@ -6,11 +6,23 @@ class BookModel extends ChangeNotifier {
   int _current = 0;
 
   getGrade() => _current;
-  int _unit = 1;
+  int _unit;
   ListUnit _listUnit;
   Unit _unitDetail;
 
+  int _unitIndex = 1;
+  get unitIndex => _unitIndex;
+  void setUnitIndex(int value){
+    _unitIndex = value;
+    notifyListeners();
+  }
+
   get unit => _unit;
+
+  set unit(int value) {
+    _unit = value;
+    notifyListeners();
+  }
 
   ListUnit get listUnit => _listUnit;
 
@@ -24,13 +36,13 @@ class BookModel extends ChangeNotifier {
     notifyListeners();
   }
 
-  Future<ListUnit> fetchListUnit(Map<String, dynamic> params) async {
-    _listUnit = await UnitService.fetchListUnit(params);
+  Future<ListUnit> fetchListUnit(int params) async {
+    _listUnit = await UnitService.fetchListUnit({"bookId":params});
     return _listUnit;
   }
 
-  Future<Unit> fetchUnitDetail() async {
-    _unitDetail = await UnitService.fetchUnitDetail({"unitId": _unit});
+  Future<Unit> fetchUnitDetail(int unitId) async {
+    _unitDetail = await UnitService.fetchUnitDetail({"unitId": unitId});
     print("_________________________");
     return _unitDetail;
   }

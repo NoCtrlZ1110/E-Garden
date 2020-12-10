@@ -45,8 +45,8 @@ class _SignInState extends State<SignIn> {
                 children: [
                   Image.asset(
                     'assets/images/header.png',
-                    width: SizeConfig.screenWidth,
-                    fit: BoxFit.fitWidth,
+                    height: SizeConfig.blockSizeVertical * 50,
+                    fit: BoxFit.fill,
                   ),
                   Container(
                     height: SizeConfig.blockSizeVertical * 50,

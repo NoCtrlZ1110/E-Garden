@@ -5,12 +5,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-Widget unitModel(int index, context){
+Widget unitModel(int index, context, int unitId){
   return Consumer<BookModel>(builder: (_, model, __) => Container(
       height: SizeConfig.blockSizeVertical * 12,
       child: GestureDetector(
         onTap: (){
-          model.changeUnit(index);
+          model.changeUnit(unitId);
+          model.setUnitIndex(index);
           Navigator.pop(context);
         },
         child: Stack(

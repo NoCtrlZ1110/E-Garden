@@ -6,6 +6,20 @@ part of 'vocabulary.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
+ListVocabulary _$ListVocabularyFromJson(Map<String, dynamic> json) {
+  return ListVocabulary(
+    items: (json['items'] as List)
+        ?.map((e) =>
+            e == null ? null : Vocabulary.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+  );
+}
+
+Map<String, dynamic> _$ListVocabularyToJson(ListVocabulary instance) =>
+    <String, dynamic>{
+      'items': instance.items?.map((e) => e?.toJson())?.toList(),
+    };
+
 Vocabulary _$VocabularyFromJson(Map<String, dynamic> json) {
   return Vocabulary(
     bookId: json['bookId'] as int,
