@@ -9,68 +9,73 @@ import 'package:page_transition/page_transition.dart';
 class SelectVocabularyTopic extends StatefulWidget {
   @override
   _SelectVocabularyTopicState createState() => _SelectVocabularyTopicState();
+  final int bookId;
+  SelectVocabularyTopic({this.bookId});
 }
 
 class _SelectVocabularyTopicState extends State<SelectVocabularyTopic> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: TextAppBar(
-        text: "Select Topic",
-        height: 100,
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SizedBox(
-              height: 30,
-            ),
-            Container(
-              alignment: Alignment.center,
-              height: SizeConfig.screenHeight - 150,
-              width: SizeConfig.screenWidth,
-              child: ListView.builder(
-                  itemCount: 10,
-                  itemBuilder: (BuildContext context, int index) {
-                    return Center(
-                      child: Column(
-                        children: [
-                          CustomButton(
-                            height: 100,
-                            width: SizeConfig.screenWidth * 0.8,
-                            onPressed: () => {
-                              Navigator.push(
-                                context,
-                                PageTransition(
-                                    type: PageTransitionType.rightToLeft,
-                                    duration: Duration(milliseconds: 400),
-                                    child: ReviewVocabularyScreen()),
-                              )
-                            },
-                            shadowColor: AppColors.buttonShadow,
-                            borderColor: AppColors.green,
-                            radius: 10,
-                            child: Text(
-                              "Topic ${index}",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                  color: AppColors.darkGreen),
+    return SafeArea(
+      child: Scaffold(
+        appBar: TextAppBar(
+          text: "Select Topic",
+          height: SizeConfig.blockSizeVertical * 8,
+          grade: "Grade ${widget.bookId}",
+        ),
+        body: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(
+                height: 30,
+              ),
+              Container(
+                alignment: Alignment.center,
+                height: SizeConfig.screenHeight - 150,
+                width: SizeConfig.screenWidth,
+                child: ListView.builder(
+                    itemCount: 10,
+                    itemBuilder: (BuildContext context, int index) {
+                      return Center(
+                        child: Column(
+                          children: [
+                            CustomButton(
+                              height: 100,
+                              width: SizeConfig.screenWidth * 0.8,
+                              onPressed: () => {
+                                Navigator.push(
+                                  context,
+                                  PageTransition(
+                                      type: PageTransitionType.rightToLeft,
+                                      duration: Duration(milliseconds: 400),
+                                      child: ReviewVocabularyScreen(bookId: widget.bookId,)),
+                                )
+                              },
+                              shadowColor: AppColors.buttonShadow,
+                              borderColor: AppColors.green,
+                              radius: 10,
+                              child: Text(
+                                "Topic ${index + 1}",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
+                                    color: AppColors.darkGreen),
+                              ),
                             ),
-                          ),
-                          Divider(
-                            height: 30,
-                            indent: 60,
-                            endIndent: 60,
-                          )
-                        ],
-                      ),
-                    );
-                  }),
-            ),
-          ],
+                            Divider(
+                              height: 30,
+                              indent: 60,
+                              endIndent: 60,
+                            )
+                          ],
+                        ),
+                      );
+                    }),
+              ),
+            ],
+          ),
         ),
       ),
     );

@@ -47,8 +47,7 @@ class _LearnScreenState extends State<LearnScreen> {
                     );
                   },
                   itemBuilder: (context, index) {
-                    return unitModel(
-                        index + 1, context, (model.listUnit != null) ? model.listUnit.items[index].id : 1);
+                    return unitModel(index + 1, context, (model.listUnit != null) ? model.listUnit.items[index].id : 1);
                   },
                   itemCount: (model.listUnit != null) ? model.listUnit.items.length : 1,
                 ),
@@ -221,7 +220,9 @@ class _LearnScreenState extends State<LearnScreen> {
                                       PageTransition(
                                           type: PageTransitionType.rightToLeft,
                                           duration: Duration(milliseconds: 400),
-                                          child: ListeningScreen()),
+                                          child: ListeningScreen(
+                                            bookId: widget.bookId,
+                                          )),
                                     );
                                   },
                                 ),

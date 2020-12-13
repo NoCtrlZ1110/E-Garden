@@ -68,7 +68,7 @@ class _CardModelState extends State<CardModel> {
                     style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w800,
-                        fontSize: (widget.learn) ? widget.height / 6.4 : widget.height / 5.5),
+                        fontSize: (widget.learn) ? widget.height / 8 : widget.height / 7),
                   ),
                 ),
                 Text(

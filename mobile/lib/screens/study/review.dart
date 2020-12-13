@@ -56,7 +56,7 @@ class _ReviewScreenState extends State<ReviewScreen> {
                                 PageTransition(
                                     type: PageTransitionType.rightToLeft,
                                     duration: Duration(milliseconds: 400),
-                                    child: SelectVocabularyTopic()),
+                                    child: SelectVocabularyTopic(bookId: widget.bookId,)),
                               ),
                             ),
                             SizedBox(
@@ -77,7 +77,7 @@ class _ReviewScreenState extends State<ReviewScreen> {
                                 PageTransition(
                                     type: PageTransitionType.rightToLeft,
                                     duration: Duration(milliseconds: 400),
-                                    child: SelectGrammarTopic()),
+                                    child: SelectGrammarTopic(bookId: widget.bookId,)),
                               )
                             ),
                             SizedBox(

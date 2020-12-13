@@ -18,6 +18,8 @@ class Vocabulary {
   String translate;
   int ordering;
   int id;
+  String image;
+  String sound;
 
   Vocabulary(
       {this.bookId,
@@ -27,7 +29,7 @@ class Vocabulary {
         this.example,
         this.translate,
         this.ordering,
-        this.id});
+        this.id, this.image, this.sound});
   factory Vocabulary.fromJson(Map<String, dynamic> json) => _$VocabularyFromJson(json);
 
   Map<String, dynamic> toJson() => _$VocabularyToJson(this);

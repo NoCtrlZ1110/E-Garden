@@ -16,8 +16,8 @@ ListUnit _$ListUnitFromJson(Map<String, dynamic> json) {
 }
 
 Map<String, dynamic> _$ListUnitToJson(ListUnit instance) => <String, dynamic>{
-  'items': instance.items?.map((e) => e?.toJson())?.toList(),
-};
+      'items': instance.items?.map((e) => e?.toJson())?.toList(),
+    };
 
 Unit _$UnitFromJson(Map<String, dynamic> json) {
   return Unit(
@@ -31,10 +31,10 @@ Unit _$UnitFromJson(Map<String, dynamic> json) {
 }
 
 Map<String, dynamic> _$UnitToJson(Unit instance) => <String, dynamic>{
-  'name': instance.name,
-  'description': instance.description,
-  'bookId': instance.bookId,
-  'totalWord': instance.totalWord,
-  'totalSentence': instance.totalSentence,
-  'id': instance.id,
-};
+      'name': instance.name,
+      'description': instance.description,
+      'bookId': instance.bookId,
+      'totalWord': instance.totalWord,
+      'totalSentence': instance.totalSentence,
+      'id': instance.id,
+    };

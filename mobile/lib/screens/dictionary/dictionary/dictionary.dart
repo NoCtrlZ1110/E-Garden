@@ -44,7 +44,8 @@ class _DictionaryScreenState extends State<DictionaryScreen>
         child: Scaffold(
             appBar: TextAppBar(
               text: "DICTIONARY",
-              height: 100,
+              height: SizeConfig.blockSizeVertical * 8,
+              grade: '',
             ),
             body: FutureBuilder(
               future: (widget.newWord == null)

@@ -30,6 +30,8 @@ Vocabulary _$VocabularyFromJson(Map<String, dynamic> json) {
     translate: json['translate'] as String,
     ordering: json['ordering'] as int,
     id: json['id'] as int,
+    image: json['image'] as String,
+    sound: json['sound'] as String,
   );
 }
 
@@ -43,4 +45,6 @@ Map<String, dynamic> _$VocabularyToJson(Vocabulary instance) =>
       'translate': instance.translate,
       'ordering': instance.ordering,
       'id': instance.id,
+      'image': instance.image,
+      'sound': instance.sound,
     };

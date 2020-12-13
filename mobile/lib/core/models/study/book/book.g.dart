@@ -16,8 +16,8 @@ ListBook _$ListBookFromJson(Map<String, dynamic> json) {
 }
 
 Map<String, dynamic> _$ListBookToJson(ListBook instance) => <String, dynamic>{
-  'items': instance.items?.map((e) => e?.toJson())?.toList(),
-};
+      'items': instance.items?.map((e) => e?.toJson())?.toList(),
+    };
 
 Book _$BookFromJson(Map<String, dynamic> json) {
   return Book(
@@ -34,13 +34,13 @@ Book _$BookFromJson(Map<String, dynamic> json) {
 }
 
 Map<String, dynamic> _$BookToJson(Book instance) => <String, dynamic>{
-  'name': instance.name,
-  'description': instance.description,
-  'bookColor': instance.bookColor,
-  'bookImage': instance.bookImage,
-  'grade': instance.grade,
-  'totalWord': instance.totalWord,
-  'totalSentence': instance.totalSentence,
-  'totalUnit': instance.totalUnit,
-  'id': instance.id,
-};
+      'name': instance.name,
+      'description': instance.description,
+      'bookColor': instance.bookColor,
+      'bookImage': instance.bookImage,
+      'grade': instance.grade,
+      'totalWord': instance.totalWord,
+      'totalSentence': instance.totalSentence,
+      'totalUnit': instance.totalUnit,
+      'id': instance.id,
+    };

@@ -1,3 +1,4 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:e_garden/configs/AppConfig.dart';
 import 'package:e_garden/widgets/button_green.dart';
@@ -11,8 +12,10 @@ class DetailContainer extends StatefulWidget {
   String example;
   Function previous;
   Function next;
+  String sound;
+  bool isGrammar;
 
-  DetailContainer({this.next, this.previous, this.type, this.example});
+  DetailContainer({this.next, this.previous, this.type, this.example, this.sound, this.isGrammar});
 
   @override
   _DetailContainerState createState() => _DetailContainerState();
@@ -20,6 +23,13 @@ class DetailContainer extends StatefulWidget {
 
 class _DetailContainerState extends State<DetailContainer> {
   bool bookmark = false;
+  AudioPlayer audioPlayer = AudioPlayer();
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    audioPlayer.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -43,28 +53,21 @@ class _DetailContainerState extends State<DetailContainer> {
                   widget.type,
                   style: TextStyle(fontSize: 28, color: AppColors.green),
                 ),
-                SizedBox(width: 20,),
-                GestureDetector(
-                    onTap: () {
-                      setState(() {
-                        bookmark = !bookmark;
-                      });
-                      Fluttertoast.showToast(
-                          msg: bookmark ? "Bookmarked!" : "Removed bookmark",
-                          toastLength: Toast.LENGTH_SHORT,
-                          timeInSecForIosWeb: 1,
-                          backgroundColor: Colors.red,
-                          textColor: Colors.white,
-                          fontSize: 16.0);
-                    },
-                    child: Icon(
-                      bookmark ? Icons.bookmark_outlined : Icons.bookmark_border,
+                SizedBox(
+                  width: 20,
+                ),
+                (!widget.isGrammar) ? IconButton(
+                    icon: Icon(
+                      Icons.volume_down,
                       color: AppColors.red,
-                      size: 45,
-                    ))
+                      size: 35,
+                    ),
+                    onPressed: () async => await audioPlayer.play(widget.sound)) : SizedBox()
               ],
             ),
-            SizedBox(height: 15,),
+            SizedBox(
+              height: 15,
+            ),
             Container(
               margin: EdgeInsets.only(left: 20),
               width: SizeConfig.screenWidth * 0.73,

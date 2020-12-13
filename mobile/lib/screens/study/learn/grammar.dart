@@ -73,6 +73,7 @@ class _GrammarScreenState extends State<GrammarScreen> {
                           color: AppColors.green),
                     ),
                     DetailContainer(
+                      isGrammar: true,
                       type: model.typeSentences[model.index] != null ?  model.typeSentences[model.index] : '',
                       example: model.exampleSentences[model.index],
                     ),
