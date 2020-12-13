@@ -63,7 +63,7 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
                                     height: 50,
                                   ),
                                   FlipCard(
-                                      speed: 1000,
+                                      speed: 600,
                                       onFlip: () {
                                         model.flipCard();
                                       },
@@ -77,8 +77,8 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
                                       ),
                                       back: card(
                                         model,
-                                        Image.asset(
-                                          'assets/images/logo.png',
+                                        Image.network(
+                                          model.words.items[index].image,
                                           fit: BoxFit.fill,
                                         ),
                                       )),
@@ -95,6 +95,8 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
                                   ),
                                   DetailContainer(
                                     //type: model.typeWords[model.index],
+                                    isGrammar: false,
+                                    sound: model.words.items[index].sound,
                                     type: 'Noun',
                                     example: model.words.items[index].example,
                                   ),
@@ -131,9 +133,6 @@ class _VocabularyScreenState extends State<VocabularyScreen> {
             ),
           ],
         ),
-        child: FittedBox(
-          child: child,
-          fit: BoxFit.fill,
-        ));
+        child: child);
   }
 }

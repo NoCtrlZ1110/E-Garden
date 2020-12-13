@@ -14,6 +14,8 @@ import 'package:fluttertoast/fluttertoast.dart';
 class ReviewVocabularyScreen extends StatefulWidget {
   @override
   _ReviewVocabularyScreenState createState() => _ReviewVocabularyScreenState();
+  final int bookId;
+  ReviewVocabularyScreen({this.bookId});
 }
 
 class _ReviewVocabularyScreenState extends State<ReviewVocabularyScreen> {
@@ -127,124 +129,127 @@ class _ReviewVocabularyScreenState extends State<ReviewVocabularyScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: TextAppBar(
-        text: "VOCABULARY",
-        height: 100,
-      ),
-      floatingActionButton: Container(
-        height: 70,
-        child: Column(
-          children: [
-            ButtonGreen(
-              width: 100,
-              height: 50,
-              text: count.toString() + '/' + max_length.toString(),
-              press: () {},
-            )
-          ],
+    return SafeArea(
+      child: Scaffold(
+        appBar: TextAppBar(
+          text: "VOCABULARY",
+          height: SizeConfig.blockSizeVertical * 8,
+          grade: 'Grade ${widget.bookId}',
         ),
-      ),
-      body: SingleChildScrollView(
-        child: Center(
+        floatingActionButton: Container(
+          height: 70,
           child: Column(
             children: [
-              SizedBox(
-                height: 40,
-              ),
-              Row(
-                children: [
-                  SizedBox(
-                    width: 40,
-                  ),
-                  DottedBorder(
-                    dashPattern: [4, 1],
-                    borderType: BorderType.RRect,
-                    color: AppColors.darkGreen,
-                    strokeWidth: 2,
-                    strokeCap: StrokeCap.round,
-                    radius: Radius.circular(3),
-                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                    child: Text(
-                      "Q",
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 25,
-                          color: AppColors.darkGreen),
+              ButtonGreen(
+                width: 100,
+                height: 50,
+                text: count.toString() + '/' + max_length.toString(),
+                press: () {},
+              )
+            ],
+          ),
+        ),
+        body: SingleChildScrollView(
+          child: Center(
+            child: Column(
+              children: [
+                SizedBox(
+                  height: 40,
+                ),
+                Row(
+                  children: [
+                    SizedBox(
+                      width: 40,
                     ),
+                    DottedBorder(
+                      dashPattern: [4, 1],
+                      borderType: BorderType.RRect,
+                      color: AppColors.darkGreen,
+                      strokeWidth: 2,
+                      strokeCap: StrokeCap.round,
+                      radius: Radius.circular(3),
+                      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                      child: Text(
+                        "Q",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 25,
+                            color: AppColors.darkGreen),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Container(
+                      width: SizeConfig.screenWidth * 0.6,
+                      child: Text(
+                        "Write the words given in the box next to their meaning",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 19,
+                            color: AppColors.darkGreen),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 40,
+                ),
+                Container(
+                  padding: EdgeInsets.all(20),
+                  height: 150,
+                  alignment: Alignment.center,
+                  width: SizeConfig.screenWidth * 0.78,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(20),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Color.fromRGBO(0, 0, 0, 0.1),
+                        offset: Offset(2, 2),
+                        blurRadius: 10,
+                        spreadRadius: 2,
+                      )
+                    ],
                   ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Container(
-                    width: SizeConfig.screenWidth * 0.6,
-                    child: Text(
-                      "Write the words given in the box next to their meaning",
+                  child: Text(sentence,
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 19,
-                          color: AppColors.darkGreen),
-                    ),
+                          color: AppColors.green)),
+                ),
+                SizedBox(
+                  height: 40,
+                ),
+                Container(
+                  width: SizeConfig.screenWidth * 0.8,
+                  height: 400,
+                  child: GridView.count(
+                    childAspectRatio: 100 / 85,
+                    crossAxisCount: 2,
+                    children: List.generate(4, (index) {
+                      return Center(
+                          child: CustomButton(
+                        height: SizeConfig.blockSizeVertical * 15,
+                        width: SizeConfig.blockSizeHorizontal * 38,
+                        onPressed: () => {handleAnswer()},
+                        shadowColor: AppColors.buttonShadow,
+                        borderColor: AppColors.green,
+                        radius: 10,
+                        child: Text(
+                          keys.elementAt(index),
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: AppColors.darkGreen),
+                        ),
+                      ));
+                    }),
                   ),
-                ],
-              ),
-              SizedBox(
-                height: 40,
-              ),
-              Container(
-                padding: EdgeInsets.all(20),
-                height: 150,
-                alignment: Alignment.center,
-                width: SizeConfig.screenWidth * 0.78,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(20),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Color.fromRGBO(0, 0, 0, 0.1),
-                      offset: Offset(2, 2),
-                      blurRadius: 10,
-                      spreadRadius: 2,
-                    )
-                  ],
-                ),
-                child: Text(sentence,
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 19,
-                        color: AppColors.green)),
-              ),
-              SizedBox(
-                height: 40,
-              ),
-              Container(
-                width: SizeConfig.screenWidth * 0.8,
-                height: 400,
-                child: GridView.count(
-                  childAspectRatio: 100 / 85,
-                  crossAxisCount: 2,
-                  children: List.generate(4, (index) {
-                    return Center(
-                        child: CustomButton(
-                      height: SizeConfig.blockSizeVertical * 15,
-                      width: SizeConfig.blockSizeHorizontal * 38,
-                      onPressed: () => {handleAnswer()},
-                      shadowColor: AppColors.buttonShadow,
-                      borderColor: AppColors.green,
-                      radius: 10,
-                      child: Text(
-                        keys.elementAt(index),
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            color: AppColors.darkGreen),
-                      ),
-                    ));
-                  }),
-                ),
-              )
-            ],
+                )
+              ],
+            ),
           ),
         ),
       ),

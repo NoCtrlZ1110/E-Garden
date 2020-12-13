@@ -44,6 +44,9 @@ class _EditProfileState extends State<EditProfile> {
                                     height: SizeConfig.blockSizeHorizontal * 35,
                                     decoration: BoxDecoration(
                                       shape: BoxShape.circle,
+                                      border: Border.all(
+                                        color: AppColors.green
+                                      ),
                                       image: DecorationImage(
                                         image: ExactAssetImage(
                                             'assets/images/avt.jpg'),
@@ -260,7 +263,7 @@ class _EditProfileState extends State<EditProfile> {
                                       flex: 2,
                                     ),
                                     Flexible(
-                                      child: DropdownButton(
+                                      child: (!_status) ? DropdownButton(
                                         icon: Icon(Icons.arrow_drop_down),
                                         value: dropdownValue,
                                         onChanged: (String newValue) {
@@ -280,6 +283,14 @@ class _EditProfileState extends State<EditProfile> {
                                             child: Text(value),
                                           );
                                         }).toList(),
+                                      ) : Padding(
+                                        padding: EdgeInsets.only(right: 10.0),
+                                        child: TextField(
+                                          decoration: const InputDecoration(
+                                            border: InputBorder.none,
+                                              hintText: "Female"),
+                                          enabled: false,
+                                        ),
                                       ),
                                       flex: 2,
                                     ),

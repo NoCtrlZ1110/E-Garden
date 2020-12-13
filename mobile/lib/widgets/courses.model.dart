@@ -34,7 +34,7 @@ class _CourseModelState extends State<CourseModel> {
       width: widget.width,
       height: widget.height,
       decoration:
-          BoxDecoration(borderRadius: BorderRadius.circular(widget.radius), color: Colors.grey[300], boxShadow: [
+          BoxDecoration(borderRadius: BorderRadius.circular(widget.radius), color: Color(0xFF0fb1a2).withOpacity(0.7), boxShadow: [
         BoxShadow(
           color: Colors.grey.withOpacity(0.4),
           spreadRadius: 5,
@@ -62,11 +62,11 @@ class _CourseModelState extends State<CourseModel> {
               Expanded(child: SizedBox()),
               Text(
                 widget.labelText,
-                style: TextStyle(fontSize: 23, color: Colors.black.withOpacity(0.75), fontWeight: FontWeight.w800),
+                style: TextStyle(fontSize: 23, color: Colors.white, fontWeight: FontWeight.w800),
               ),
               Text(
                 widget.childText,
-                style: TextStyle(fontSize: 18, color: Colors.grey, fontWeight: FontWeight.w700),
+                style: TextStyle(fontSize: 15, color: Colors.white.withOpacity(0.75), fontWeight: FontWeight.w700),
               ),
               Expanded(child: SizedBox()),
             ],
@@ -75,24 +75,28 @@ class _CourseModelState extends State<CourseModel> {
           Column(
             children: [
               Expanded(child: SizedBox()),
+              SizedBox(height: 5),
               GestureDetector(
                 onTap: widget.onTap,
                 child: Container(
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
-                    child: Text(
-                      'Start',
-                      style: TextStyle(fontWeight: FontWeight.w800, color: Color(0xFFff8076)),
+                    padding: const EdgeInsets.only(left: 10, top: 5, bottom: 5),
+                    child: Row(
+                      children: [
+                        Text(
+                          'Start',
+                          style: TextStyle(fontWeight: FontWeight.w800, color: Color(0xFF0fb1a2)),
+                        ),
+                        Icon(Icons.navigate_next_sharp, color: Color(0xFF0fb1a2), size: 25)
+                      ],
                     ),
                   ),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(widget.radius),
-                    color: Colors.grey.withOpacity(0.25),
+                    color: Colors.white,
                   ),
                 ),
               ),
-              GestureDetector(
-                  onTap: widget.onTap, child: Icon(Icons.navigate_next_sharp, color: Color(0xFFff8076), size: 35)),
               Expanded(child: SizedBox()),
             ],
           ),
