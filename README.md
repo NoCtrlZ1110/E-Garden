@@ -2,6 +2,6 @@
 App for learning English
 
 # Platform
-- Mobile: Flutter
-- Server: NodeJs + TypeScript
-- Database: MongoDB
+- Mobile: Flutter (dart)
+- Server: dotNet Core (C#)
+- Database: SQL Server
